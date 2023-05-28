@@ -18,20 +18,22 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'UsName',
-        'UsUser',
-        'UsPassword',
-    ];
+    /** MSSQLServer */
+    // protected $fillable = [
+    //     'UsName',
+    //     'UsUser',
+    //     'UsPassword',
+    // ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'UsPassword',
-    ];
+    /** MSSQLServer */
+    // protected $hidden = [
+    //     'UsPassword',
+    // ];
 
     /**
      * The attributes that should be cast.
@@ -42,9 +44,11 @@ class User extends Authenticatable implements JWTSubject
     //     'email_verified_at' => 'datetime',
     // ];
 
-    protected $table = 'Users';
-
-    protected $primaryKey = 'UsId';
+    /**
+     * MSSQLServer
+     */
+    // protected $table = 'Users';
+    // protected $primaryKey = 'UsId';
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
@@ -73,7 +77,11 @@ class User extends Authenticatable implements JWTSubject
      */
     public function getAuthPassword()
     {
-        return $this->UsPassword;
+        /** MySQL */
+        return $this->password;
+
+        /** MSSQLServer */
+        // return $this->UsPassword;
     }
 
     public function setPasswordAttribute($value)

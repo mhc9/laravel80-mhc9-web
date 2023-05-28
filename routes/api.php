@@ -24,9 +24,9 @@ Route::get('/db-connection', function () {
         $dbname = \DB::connection()->getDatabaseName();
 
         echo "Connected successfully to the database. Database name is :".$dbname;
-     } catch(Exception $e) {
+    } catch(Exception $e) {
         echo $e->getMessage();
-     }
+    }
 });
 
 Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
