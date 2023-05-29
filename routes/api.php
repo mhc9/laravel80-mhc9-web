@@ -29,6 +29,8 @@ Route::get('/db-connection', function () {
     }
 });
 
+Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
+
 Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
     Route::post('register', 'App\Http\Controllers\AuthController@register');
     Route::post('login', 'App\Http\Controllers\AuthController@login');
