@@ -97,9 +97,9 @@ class AuthController extends Controller
     public function username()
     {
         /** MySQL */
-        // return 'email';
+        return 'email';
 
         /** MSSQLServer */
-        return 'UsUser';
+        // return 'UsUser';
     }
 }
