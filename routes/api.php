@@ -27,18 +27,17 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
 });
 
 Route::middleware('auth:api')->group(function() {
-    Route::get('/db-connection', function () {
-        try {
-            $dbconnect = \DB::connection()->getPDO();
-            $dbname = \DB::connection()->getDatabaseName();
-    
-            echo "Connected successfully to the database. Database name is :".$dbname;
-        } catch(Exception $e) {
-            echo $e->getMessage();
-        }
-    });
-
     Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
     Route::get('/equipments', 'App\Http\Controllers\EquipmentController@getAll');
 });
 
+Route::get('/db-connection', function () {
+    try {
+        $dbconnect = \DB::connection()->getPDO();
+        $dbname = \DB::connection()->getDatabaseName();
+
+        echo "Connected successfully to the database. Database name is :".$dbname;
+    } catch(Exception $e) {
+        echo $e->getMessage();
+    }
+});
