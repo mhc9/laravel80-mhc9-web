@@ -30,6 +30,13 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array<int, string>
      */
+    /** MySQL */
+    protected $hidden = [
+        'email_verified_at',
+        'password',
+        'remember_token',
+    ];
+
     /** MSSQLServer */
     // protected $hidden = [
     //     'UsPassword',
