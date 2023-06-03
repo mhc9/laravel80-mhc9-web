@@ -59,27 +59,19 @@ class EquipmentController extends Controller
     {
         /** Get params from query string */
         // $type = $req->get('type');
-        // $cate = $req->get('cate');
         // $group = $req->get('group');
         // $name = $req->get('name');
-        // $inStock = $req->get('in_stock');
-        // $haveSubitem = $req->get('have_subitem');
+        // $status = $req->get('status');
 
-        // $items = Item::with('planType','category','group','unit')
+        // $equipments = Equipment::with('type','group')
         //             ->when(!empty($type), function($q) use ($type) {
         //                 $q->where('plan_type_id', $type);
-        //             })
-        //             ->when(!empty($cate), function($q) use ($cate) {
-        //                 $q->where('category_id', $cate);
         //             })
         //             ->when(!empty($group), function($q) use ($group) {
         //                 $q->where('group_id', $group);
         //             })
-        //             ->when($inStock != '', function($q) use ($inStock) {
-        //                 $q->where('in_stock', $inStock);
-        //             })
-        //             ->when($haveSubitem != '', function($q) use ($haveSubitem) {
-        //                 $q->where('have_subitem', $haveSubitem);
+        //             ->when($status != '', function($q) use ($status) {
+        //                 $q->where('status', $status);
         //             })
         //             ->when(!empty($name), function($q) use ($name) {
         //                 $q->where(function($query) use ($name) {
@@ -87,38 +79,27 @@ class EquipmentController extends Controller
         //                     $query->orWhere('en_name', 'like', '%'.$name.'%');
         //                 });
         //             })
-        //             ->orderBy('category_id', 'ASC')
-        //             ->orderBy('item_name', 'ASC')
-        //             ->orderBy('price_per_unit', 'ASC')
         //             ->paginate(10);
 
-        // return [
-        //     'items' => $items,
-        // ];
+        // return $equipments;
     }
 
     public function getAll(Request $req)
     {
         /** Get params from query string */
         $type = $req->get('type');
+        $group = $req->get('group');
 
-        $equipments = Equipment::when(!empty($type), function($q) use ($type) {
-                        $q->where('WdType', $type);
+        $equipments = Equipment::with('type','group')
+                    ->when(!empty($type), function($q) use ($type) {
+                        $q->where('equipment_type_id', $type);
                     })
-                    // ->when(!empty($cate), function($q) use ($cate) {
-                    //     $q->where('category_id', $cate);
+                    ->when(!empty($group), function($q) use ($group) {
+                        $q->where('equipment_group_id', $group);
+                    })
+                    // ->when($status != '', function($q) use ($status) {
+                    //     $q->where('status', $status);
                     // })
-                    // ->when(!empty($group), function($q) use ($group) {
-                    //     $q->where('group_id', $group);
-                    // })
-                    // ->when(!empty($name), function($q) use ($name) {
-                    //     $q->where('item_name', 'like', '%'.$name.'%');
-                    //     $q->orWhere('en_name', 'like', '%'.$name.'%');
-                    // })
-                    // ->when($inStock != '', function($q) use ($inStock) {
-                    //     $q->where('in_stock', $inStock);
-                    // })
-                    // ->orderBy('WdDate', 'DESC')
                     ->paginate(10);
 
         return $equipments;
@@ -126,9 +107,7 @@ class EquipmentController extends Controller
 
     public function getById($id)
     {
-        // return [
-        //     'item' => Item::with('planType','category','group','unit')->find($id),
-        // ];
+        return Equipment::with('type','group')->find($id);
     }
 
     public function store(Request $req)
