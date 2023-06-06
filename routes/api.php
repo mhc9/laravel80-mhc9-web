@@ -27,8 +27,30 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
 });
 
 Route::middleware('auth:api')->group(function() {
-    Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
+    Route::get('/jobs', 'App\Http\Controllers\JobController@getAll');
+    Route::get('/jobs/{id}', 'App\Http\Controllers\JobController@getById');
+
     Route::get('/equipments', 'App\Http\Controllers\EquipmentController@getAll');
+    Route::get('/equipments/{id}', 'App\Http\Controllers\EquipmentController@getById');
+    Route::post('/equipments', 'App\Http\Controllers\EquipmentController@store');
+
+    Route::get('/equipment-types', 'App\Http\Controllers\EquipmentTypeController@getAll');
+
+    Route::get('/equipment-groups', 'App\Http\Controllers\EquipmentGroupController@getAll');
+
+    Route::get('/assets', 'App\Http\Controllers\AssetController@getAll');
+    Route::get('/assets/{id}', 'App\Http\Controllers\AssetController@getById');
+    Route::post('/assets', 'App\Http\Controllers\AssetController@store');
+
+    Route::get('/asset-types', 'App\Http\Controllers\AssetTypeController@getAll');
+
+    Route::get('/asset-categories', 'App\Http\Controllers\AssetCategoryController@getAll');
+
+    Route::get('/suppliers', 'App\Http\Controllers\SupplierController@getAll');
+    Route::get('/suppliers/{id}', 'App\Http\Controllers\SupplierController@getById');
+    Route::post('/suppliers', 'App\Http\Controllers\SupplierController@store');
+
+    Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
 });
 
 Route::get('/db-connection', function () {
