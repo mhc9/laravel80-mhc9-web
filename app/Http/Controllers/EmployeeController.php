@@ -10,7 +10,7 @@ use Illuminate\Support\MessageBag;
 use App\Models\Employee;
 use App\Models\Prefix;
 
-class EmplyeeController extends Controller
+class EmployeeController extends Controller
 {
     public function formValidate (Request $request)
     {
@@ -88,15 +88,15 @@ class EmplyeeController extends Controller
     public function getAll(Request $req)
     {
         /** Get params from query string */
-        $type = $req->get('type');
-        $group = $req->get('group');
+        $position = $req->get('position');
+        $level = $req->get('level');
 
-        $employees = Employee::with('type','group')
-                    ->when(!empty($type), function($q) use ($type) {
-                        $q->where('equipment_type_id', $type);
+        $employees = Employee::with('prefix','position','level')
+                    ->when(!empty($position), function($q) use ($position) {
+                        $q->where('position_id', $position);
                     })
-                    ->when(!empty($group), function($q) use ($group) {
-                        $q->where('equipment_group_id', $group);
+                    ->when(!empty($level), function($q) use ($level) {
+                        $q->where('level_id', $level);
                     })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
@@ -108,7 +108,7 @@ class EmplyeeController extends Controller
 
     public function getById($id)
     {
-        return Employee::with('type','group')->find($id);
+        return Employee::with('prefix','position','level')->find($id);
     }
 
     public function getFormInitialData()
@@ -132,6 +132,8 @@ class EmplyeeController extends Controller
             $employee->tel          = $req['tel'];
             $employee->email        = $req['email'];
             $employee->line_id      = $req['line_id'];
+            $employee->position_id  = $req['position_id'];
+            $employee->level_id     = $req['level_id'];
             $employee->started_at   = $req['started_at'];
             $employee->status       = 1;
             $employee->remark       = $req['remark'];
