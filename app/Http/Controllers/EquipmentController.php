@@ -123,36 +123,26 @@ class EquipmentController extends Controller
     public function store(Request $req)
     {
         try {
-            // $item = new Item();
-            // $item->plan_type_id = $req['plan_type_id'];
-            // $item->category_id  = $req['category_id'];
-            // $item->group_id     = $req['group_id'];
-            // $item->asset_no     = $req['asset_no'];
-            // $item->item_name    = $req['item_name'];
-            // $item->en_name      = $req['en_name'];
-            // $item->price_per_unit = currencyToNumber($req['price_per_unit']);
-            // $item->unit_id      = $req['unit_id'];
-            // $item->in_stock     = $req['in_stock'];
-            // $item->have_subitem = $req['have_subitem'];
-            // $item->calc_method  = $req['calc_method'];
-            // $item->is_fixcost   = $req['is_fixcost'];
-            // $item->is_repairing_item = $req['is_repairing_item'];
-            // $item->is_addon     = $req['is_addon'];
-            // $item->first_year   = $req['first_year'];
-            // $item->remark       = $req['remark'];
+            $equipment = new Equipment();
+            $equipment->description         = $req['description'];
+            $equipment->equipment_type_id   = $req['equipment_type_id'];
+            $equipment->equipment_group_id  = $req['equipment_group_id'];
+            $equipment->asset_id            = $req['asset_id'];
+            $equipment->status              = 1;
+            $equipment->remark              = $req['remark'];
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Insertion successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($equipment->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    'equipment' => $equipment
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
