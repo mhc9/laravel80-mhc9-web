@@ -134,7 +134,7 @@ class AssetController extends Controller
             $asset->date_in              = $req['date_in'];
             $asset->price_per_unit       = $req['price_per_unit'];
             $asset->unit_id              = $req['unit_id'];
-            $asset->date_id              = $req['date_id'];
+            $asset->date_in              = $req['date_in'];
             $asset->purchased_at         = $req['purchased_at'];
             $asset->obtain_type_id       = $req['obtain_type_id'];
             $asset->budget_id            = $req['budget_id'];
