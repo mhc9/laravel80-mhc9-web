@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Asset;
+use App\Models\AssetType;
+use App\Models\AssetCategory;
 
 class AssetController extends Controller
 {
@@ -59,16 +61,16 @@ class AssetController extends Controller
     {
         /** Get params from query string */
         // $type = $req->get('type');
-        // $group = $req->get('group');
+        // $category = $req->get('category');
         // $name = $req->get('name');
         // $status = $req->get('status');
 
-        // $assets = Asset::with('type','group')
+        // $assets = Asset::with('type','category')
         //             ->when(!empty($type), function($q) use ($type) {
-        //                 $q->where('plan_type_id', $type);
+        //                 $q->where('asset_type_id', $type);
         //             })
-        //             ->when(!empty($group), function($q) use ($group) {
-        //                 $q->where('group_id', $group);
+        //             ->when(!empty($category), function($q) use ($category) {
+        //                 $q->where('asset_category_id', $category);
         //             })
         //             ->when($status != '', function($q) use ($status) {
         //                 $q->where('status', $status);
@@ -88,15 +90,15 @@ class AssetController extends Controller
     {
         /** Get params from query string */
         $type = $req->get('type');
-        $group = $req->get('group');
+        $category = $req->get('category');
 
-        $assets = Asset::with('type','group')
+        $assets = Asset::with('type','category')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('asset_type_id', $type);
                     })
-                    ->when(!empty($group), function($q) use ($group) {
-                        $q->where('asset_group_id', $group);
-                    })
+                    // ->when(!empty($category), function($q) use ($category) {
+                    //     $q->where('asset_category_id', $category);
+                    // })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
@@ -107,7 +109,15 @@ class AssetController extends Controller
 
     public function getById($id)
     {
-        return Asset::with('type','group')->find($id);
+        return Asset::with('type','category')->find($id);
+    }
+
+    public function getFormInitialData()
+    {
+        return [
+            'types'         => AssetType::all(),
+            'categories'    => AssetCategory::all(),
+        ];
     }
 
     public function store(Request $req)

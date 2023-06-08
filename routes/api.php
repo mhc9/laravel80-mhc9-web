@@ -32,6 +32,7 @@ Route::middleware('auth:api')->group(function() {
 
     Route::get('/equipments', 'App\Http\Controllers\EquipmentController@getAll');
     Route::get('/equipments/{id}', 'App\Http\Controllers\EquipmentController@getById');
+    Route::get('/equipments/form/init', 'App\Http\Controllers\EquipmentController@getFormInitialData');
     Route::post('/equipments', 'App\Http\Controllers\EquipmentController@store');
 
     Route::get('/equipment-types', 'App\Http\Controllers\EquipmentTypeController@getAll');
@@ -40,6 +41,7 @@ Route::middleware('auth:api')->group(function() {
 
     Route::get('/assets', 'App\Http\Controllers\AssetController@getAll');
     Route::get('/assets/{id}', 'App\Http\Controllers\AssetController@getById');
+    Route::get('/assets/form/init', 'App\Http\Controllers\AssetController@getFormInitialData');
     Route::post('/assets', 'App\Http\Controllers\AssetController@store');
 
     Route::get('/asset-types', 'App\Http\Controllers\AssetTypeController@getAll');

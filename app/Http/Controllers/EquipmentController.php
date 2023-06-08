@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Equipment;
+use App\Models\EquipmentType;
+use App\Models\EquipmentGroup;
 
 class EquipmentController extends Controller
 {
@@ -108,6 +110,14 @@ class EquipmentController extends Controller
     public function getById($id)
     {
         return Equipment::with('type','group')->find($id);
+    }
+
+    public function getFormInitialData()
+    {
+        return [
+            'types'  => EquipmentType::all(),
+            'groups' => EquipmentGroup::all(),
+        ];
     }
 
     public function store(Request $req)
