@@ -11,6 +11,7 @@ use App\Models\Asset;
 use App\Models\AssetType;
 use App\Models\AssetCategory;
 use App\Models\Unit;
+use App\Models\Employee;
 
 class AssetController extends Controller
 {
@@ -119,6 +120,7 @@ class AssetController extends Controller
             'types'         => AssetType::all(),
             'categories'    => AssetCategory::all(),
             'units'         => Unit::all(),
+            'employees'     => Employee::whereIn('status', [1,2])->get(),
         ];
     }
 
