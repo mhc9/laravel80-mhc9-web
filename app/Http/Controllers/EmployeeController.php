@@ -9,6 +9,8 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Employee;
 use App\Models\Prefix;
+use App\Models\Position;
+use App\Models\Level;
 
 class EmployeeController extends Controller
 {
@@ -115,6 +117,8 @@ class EmployeeController extends Controller
     {
         return [
             'prefixes'  => Prefix::all(),
+            'positions' => Position::all(),
+            'levels'    => Level::all(),
         ];
     }
 
@@ -142,7 +146,7 @@ class EmployeeController extends Controller
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'equipment' => $equipment
+                    'employee'  => $employee
                 ];
             } else {
                 return [
