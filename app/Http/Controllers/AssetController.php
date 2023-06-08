@@ -10,6 +10,7 @@ use Illuminate\Support\MessageBag;
 use App\Models\Asset;
 use App\Models\AssetType;
 use App\Models\AssetCategory;
+use App\Models\Unit;
 
 class AssetController extends Controller
 {
@@ -117,42 +118,42 @@ class AssetController extends Controller
         return [
             'types'         => AssetType::all(),
             'categories'    => AssetCategory::all(),
+            'units'         => Unit::all(),
         ];
     }
 
     public function store(Request $req)
     {
         try {
-            // $item = new Item();
-            // $item->plan_type_id = $req['plan_type_id'];
-            // $item->category_id  = $req['category_id'];
-            // $item->group_id     = $req['group_id'];
-            // $item->asset_no     = $req['asset_no'];
-            // $item->item_name    = $req['item_name'];
-            // $item->en_name      = $req['en_name'];
-            // $item->price_per_unit = currencyToNumber($req['price_per_unit']);
-            // $item->unit_id      = $req['unit_id'];
-            // $item->in_stock     = $req['in_stock'];
-            // $item->have_subitem = $req['have_subitem'];
-            // $item->calc_method  = $req['calc_method'];
-            // $item->is_fixcost   = $req['is_fixcost'];
-            // $item->is_repairing_item = $req['is_repairing_item'];
-            // $item->is_addon     = $req['is_addon'];
-            // $item->first_year   = $req['first_year'];
-            // $item->remark       = $req['remark'];
+            $asset = new Asset();
+            $asset->asset_no             = $req['asset_no'];
+            $asset->name                 = $req['name'];
+            $asset->description          = $req['description'];
+            $asset->asset_type_id        = $req['asset_type_id'];
+            $asset->asset_category_id    = $req['asset_category_id'];
+            $asset->date_in              = $req['date_in'];
+            $asset->price_per_unit       = $req['price_per_unit'];
+            $asset->unit_id              = $req['unit_id'];
+            $asset->date_id              = $req['date_id'];
+            $asset->purchased_at         = $req['purchased_at'];
+            $asset->obtain_type_id       = $req['obtain_type_id'];
+            $asset->budget_id            = $req['budget_id'];
+            $asset->owner_id             = $req['owner_id'];
+            $asset->status               = $req['status'];
+            $asset->remark               = $req['remark'];
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Insertion successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($asset->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    'asset'     => $asset
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
