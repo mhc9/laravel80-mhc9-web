@@ -57,6 +57,15 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/employees/form/init', 'App\Http\Controllers\EmployeeController@getFormInitialData');
     Route::post('/employees', 'App\Http\Controllers\EmployeeController@store');
 
+    Route::get('/departments', 'App\Http\Controllers\DepartmentController@getAll');
+    Route::get('/departments/{id}', 'App\Http\Controllers\DepartmentController@getById');
+    Route::post('/departments', 'App\Http\Controllers\DepartmentController@store');
+
+    Route::get('/divisions', 'App\Http\Controllers\DivisionController@getAll');
+    Route::get('/divisions/{id}', 'App\Http\Controllers\DivisionController@getById');
+    Route::get('/divisions/form/init', 'App\Http\Controllers\DivisionController@getFormInitialData');
+    Route::post('/divisions', 'App\Http\Controllers\DivisionController@store');
+
     Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
 });
 
