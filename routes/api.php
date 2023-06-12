@@ -66,6 +66,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/divisions/{id}', 'App\Http\Controllers\DivisionController@getById');
     Route::get('/divisions/form/init', 'App\Http\Controllers\DivisionController@getFormInitialData');
     Route::post('/divisions', 'App\Http\Controllers\DivisionController@store');
+    Route::put('/divisions/{id}', 'App\Http\Controllers\DivisionController@update');
 
     Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
 });
