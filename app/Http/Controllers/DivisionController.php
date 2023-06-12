@@ -108,7 +108,7 @@ class DivisionController extends Controller
             $division = new Division();
             $division->name             = $req['name'];
             $division->department_id    = $req['department_id'];
-            $division->status           = 1;
+            $division->status           = $req['status'] ? 1 : 0;
 
             if($division->save()) {
                 return [
