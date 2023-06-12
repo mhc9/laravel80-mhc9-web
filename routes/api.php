@@ -60,7 +60,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/departments', 'App\Http\Controllers\DepartmentController@getAll');
     Route::get('/departments/{id}', 'App\Http\Controllers\DepartmentController@getById');
     Route::post('/departments', 'App\Http\Controllers\DepartmentController@store');
-    Route::post('/departments/{id}', 'App\Http\Controllers\DepartmentController@update');
+    Route::put('/departments/{id}', 'App\Http\Controllers\DepartmentController@update');
 
     Route::get('/divisions', 'App\Http\Controllers\DivisionController@getAll');
     Route::get('/divisions/{id}', 'App\Http\Controllers\DivisionController@getById');
