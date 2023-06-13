@@ -11,6 +11,7 @@ use App\Models\Asset;
 use App\Models\AssetType;
 use App\Models\AssetCategory;
 use App\Models\Unit;
+use App\Models\Brand;
 use App\Models\Employee;
 
 class AssetController extends Controller
@@ -94,7 +95,7 @@ class AssetController extends Controller
         $type = $req->get('type');
         $category = $req->get('category');
 
-        $assets = Asset::with('type','category')
+        $assets = Asset::with('type','category','brand')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('asset_type_id', $type);
                     })
@@ -111,7 +112,7 @@ class AssetController extends Controller
 
     public function getById($id)
     {
-        return Asset::with('type','category')->find($id);
+        return Asset::with('type','category','brand')->find($id);
     }
 
     public function getFormInitialData()
@@ -120,6 +121,7 @@ class AssetController extends Controller
             'types'         => AssetType::all(),
             'categories'    => AssetCategory::all(),
             'units'         => Unit::all(),
+            'brands'        => Brand::all(),
             'employees'     => Employee::whereIn('status', [1,2])->get(),
         ];
     }
@@ -133,11 +135,12 @@ class AssetController extends Controller
             $asset->description          = $req['description'];
             $asset->asset_type_id        = $req['asset_type_id'];
             $asset->asset_category_id    = $req['asset_category_id'];
-            $asset->date_in              = $req['date_in'];
             $asset->price_per_unit       = $req['price_per_unit'];
             $asset->unit_id              = $req['unit_id'];
-            $asset->date_in              = $req['date_in'];
+            $asset->brand_id             = $req['brand_id'];
             $asset->purchased_at         = $req['purchased_at'];
+            $asset->date_in              = $req['date_in'];
+            $asset->first_year           = $req['first_year'];
             $asset->obtain_type_id       = $req['obtain_type_id'];
             $asset->budget_id            = $req['budget_id'];
             $asset->owner_id             = $req['owner_id'];
