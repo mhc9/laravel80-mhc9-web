@@ -68,6 +68,11 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/divisions', 'App\Http\Controllers\DivisionController@store');
     Route::put('/divisions/{id}', 'App\Http\Controllers\DivisionController@update');
 
+    Route::get('/rooms', 'App\Http\Controllers\RoomController@getAll');
+    Route::get('/rooms/{id}', 'App\Http\Controllers\RoomController@getById');
+    Route::post('/rooms', 'App\Http\Controllers\RoomController@store');
+    Route::put('/rooms/{id}', 'App\Http\Controllers\RoomController@update');
+
     Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
 });
 
