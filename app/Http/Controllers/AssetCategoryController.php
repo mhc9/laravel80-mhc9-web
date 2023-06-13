@@ -88,14 +88,11 @@ class AssetCategoryController extends Controller
     {
         /** Get params from query string */
         $type = $req->get('type');
-        $group = $req->get('group');
+        $status = $req->get('status');
 
-        $categories = AssetCategory::with('type','group')
+        $categories = AssetCategory::with('type')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('equipment_type_id', $type);
-                    })
-                    ->when(!empty($group), function($q) use ($group) {
-                        $q->where('equipment_group_id', $group);
                     })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
@@ -107,7 +104,7 @@ class AssetCategoryController extends Controller
 
     public function getById($id)
     {
-        return AssetCategory::with('type','group')->find($id);
+        return AssetCategory::with('type')->find($id);
     }
 
     public function store(Request $req)
