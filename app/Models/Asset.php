@@ -25,4 +25,19 @@ class Asset extends Model
     {
         return $this->belongsTo(Brand::class, 'brand_id', 'id');
     }
+
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class, 'unit_id', 'id');
+    }
+
+    public function budget()
+    {
+        return $this->belongsTo(Budget::class, 'budget_id', 'id');
+    }
+
+    public function obtaining()
+    {
+        return $this->belongsTo(ObtainingType::class, 'obtain_type_id', 'id');
+    }
 }
