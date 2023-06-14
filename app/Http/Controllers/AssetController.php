@@ -12,6 +12,8 @@ use App\Models\AssetType;
 use App\Models\AssetCategory;
 use App\Models\Unit;
 use App\Models\Brand;
+use App\Models\Budget;
+use App\Models\ObtainingType;
 use App\Models\Employee;
 
 class AssetController extends Controller
@@ -122,6 +124,8 @@ class AssetController extends Controller
             'categories'    => AssetCategory::all(),
             'units'         => Unit::all(),
             'brands'        => Brand::all(),
+            'budgets'       => Budget::all(),
+            'obtainingTypes' => ObtainingType::all(),
             'employees'     => Employee::whereIn('status', [1,2])->get(),
         ];
     }
@@ -130,22 +134,23 @@ class AssetController extends Controller
     {
         try {
             $asset = new Asset();
-            $asset->asset_no             = $req['asset_no'];
-            $asset->name                 = $req['name'];
-            $asset->description          = $req['description'];
-            $asset->asset_type_id        = $req['asset_type_id'];
-            $asset->asset_category_id    = $req['asset_category_id'];
-            $asset->price_per_unit       = $req['price_per_unit'];
-            $asset->unit_id              = $req['unit_id'];
-            $asset->brand_id             = $req['brand_id'];
-            $asset->purchased_at         = $req['purchased_at'];
-            $asset->date_in              = $req['date_in'];
-            $asset->first_year           = $req['first_year'];
-            $asset->obtain_type_id       = $req['obtain_type_id'];
-            $asset->budget_id            = $req['budget_id'];
-            $asset->owner_id             = $req['owner_id'];
-            $asset->status               = $req['status'];
-            $asset->remark               = $req['remark'];
+            $asset->asset_no            = $req['asset_no'];
+            $asset->name                = $req['name'];
+            $asset->description         = $req['description'];
+            $asset->asset_type_id       = $req['asset_type_id'];
+            $asset->asset_category_id   = $req['asset_category_id'];
+            $asset->price_per_unit      = $req['price_per_unit'];
+            $asset->unit_id             = $req['unit_id'];
+            $asset->brand_id            = $req['brand_id'];
+            $asset->model               = $req['model'];
+            $asset->purchased_at        = $req['purchased_at'];
+            $asset->date_in             = $req['date_in'];
+            $asset->first_year          = $req['first_year'];
+            $asset->obtain_type_id      = $req['obtain_type_id'];
+            $asset->budget_id           = $req['budget_id'];
+            // $asset->owner_id            = $req['owner_id'];
+            $asset->status              = $req['status'];
+            $asset->remark              = $req['remark'];
 
             if($asset->save()) {
                 return [
