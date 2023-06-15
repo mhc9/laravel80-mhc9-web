@@ -97,7 +97,7 @@ class AssetController extends Controller
         $type = $req->get('type');
         $category = $req->get('category');
 
-        $assets = Asset::with('type','category','brand')
+        $assets = Asset::with('type','category','brand','budget', 'obtaining')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('asset_type_id', $type);
                     })
@@ -114,7 +114,7 @@ class AssetController extends Controller
 
     public function getById($id)
     {
-        return Asset::with('type','category','brand')->find($id);
+        return Asset::with('type','category','brand','budget', 'obtaining')->find($id);
     }
 
     public function getFormInitialData()
