@@ -148,7 +148,6 @@ class AssetController extends Controller
             $asset->first_year          = $req['first_year'];
             $asset->obtain_type_id      = $req['obtain_type_id'];
             $asset->budget_id           = $req['budget_id'];
-            // $asset->owner_id            = $req['owner_id'];
             $asset->status              = $req['status'];
             $asset->remark              = $req['remark'];
 
@@ -175,36 +174,36 @@ class AssetController extends Controller
     public function update(Request $req, $id)
     {
         try {
-            // $item = Item::find($id);
-            // $item->plan_type_id = $req['plan_type_id'];
-            // $item->category_id  = $req['category_id'];
-            // $item->group_id     = $req['group_id'];
-            // $item->asset_no     = $req['asset_no'];
-            // $item->item_name    = $req['item_name'];
-            // $item->en_name      = $req['en_name'];
-            // $item->price_per_unit = currencyToNumber($req['price_per_unit']);
-            // $item->unit_id      = $req['unit_id'];
-            // $item->in_stock     = $req['in_stock'];
-            // $item->calc_method  = $req['calc_method'];
-            // $item->have_subitem = $req['have_subitem'];
-            // $item->is_fixcost   = $req['is_fixcost'];
-            // $item->is_repairing_item = $req['is_repairing_item'];
-            // $item->is_addon     = $req['is_addon'];
-            // $item->first_year   = $req['first_year'];
-            // $item->remark       = $req['remark'];
+            $asset = Asset::find($id);
+            $asset->asset_no            = $req['asset_no'];
+            $asset->name                = $req['name'];
+            $asset->description         = $req['description'];
+            $asset->asset_type_id       = $req['asset_type_id'];
+            $asset->asset_category_id   = $req['asset_category_id'];
+            $asset->price_per_unit      = $req['price_per_unit'];
+            $asset->unit_id             = $req['unit_id'];
+            $asset->brand_id            = $req['brand_id'];
+            $asset->model               = $req['model'];
+            $asset->purchased_at        = $req['purchased_at'];
+            $asset->date_in             = $req['date_in'];
+            $asset->first_year          = $req['first_year'];
+            $asset->obtain_type_id      = $req['obtain_type_id'];
+            $asset->budget_id           = $req['budget_id'];
+            $asset->status              = $req['status'];
+            $asset->remark              = $req['remark'];
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Updating successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($asset->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Updating successfully!!',
+                    'asset'     => $asset
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
@@ -216,20 +215,20 @@ class AssetController extends Controller
     public function delete(Request $req, $id)
     {
         try {
-            // $item = Item::find($id);
+            $asset = Asset::find($id);
 
-            // if($item->delete()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Deleting successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($asset->delete()) {
+                return [
+                    'status'     => 1,
+                    'message'    => 'Deleting successfully!!',
+                    'id'         => $id
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
