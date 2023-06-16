@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
-use App\Models\AssetCategory;
+use App\Models\AssetOwnership;
 use App\Models\Asset;
 use App\Models\Employee;
 
@@ -109,7 +109,17 @@ class AssetOwnershipController extends Controller
 
     public function getById($id)
     {
-        return Asset::with('asset','owner')->find($id);
+        return AssetOwnership::with('asset','owner')->find($id);
+    }
+
+    public function getByAsset($assetId)
+    {
+        return AssetOwnership::with('asset','owner')->where('asset_id', $assetId)->paginate(10);
+    }
+
+    public function getByOwner($ownerId)
+    {
+        return AssetOwnership::with('asset','owner')->where('owner_id', $ownerId)->paginate(10);
     }
 
     public function getFormInitialData()
