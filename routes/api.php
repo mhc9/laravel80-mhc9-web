@@ -43,6 +43,8 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/assets/{id}', 'App\Http\Controllers\AssetController@getById');
     Route::get('/assets/form/init', 'App\Http\Controllers\AssetController@getFormInitialData');
     Route::post('/assets', 'App\Http\Controllers\AssetController@store');
+    Route::put('/assets/{id}', 'App\Http\Controllers\AssetController@update');
+    Route::delete('/assets/{id}', 'App\Http\Controllers\AssetController@delete');
 
     Route::get('/asset-ownerships', 'App\Http\Controllers\AssetOwnershipController@getAll');
     Route::get('/asset-ownerships/{id}', 'App\Http\Controllers\AssetOwnershipController@getById');
