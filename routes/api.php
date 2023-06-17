@@ -62,6 +62,7 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/suppliers', 'App\Http\Controllers\SupplierController@store');
 
     Route::get('/employees', 'App\Http\Controllers\EmployeeController@getAll');
+    Route::get('/employees/search', 'App\Http\Controllers\EmployeeController@search');
     Route::get('/employees/{id}', 'App\Http\Controllers\EmployeeController@getById');
     Route::get('/employees/form/init', 'App\Http\Controllers\EmployeeController@getFormInitialData');
     Route::post('/employees', 'App\Http\Controllers\EmployeeController@store');

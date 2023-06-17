@@ -61,30 +61,22 @@ class EmployeeController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        // $type = $req->get('type');
-        // $group = $req->get('group');
-        // $name = $req->get('name');
-        // $status = $req->get('status');
+        $position   = $req->get('position');
+        $level      = $req->get('level');
 
-        // $employees = Employee::with('type','group')
-        //             ->when(!empty($type), function($q) use ($type) {
-        //                 $q->where('plan_type_id', $type);
-        //             })
-        //             ->when(!empty($group), function($q) use ($group) {
-        //                 $q->where('group_id', $group);
-        //             })
-        //             ->when($status != '', function($q) use ($status) {
-        //                 $q->where('status', $status);
-        //             })
-        //             ->when(!empty($name), function($q) use ($name) {
-        //                 $q->where(function($query) use ($name) {
-        //                     $query->where('item_name', 'like', '%'.$name.'%');
-        //                     $query->orWhere('en_name', 'like', '%'.$name.'%');
-        //                 });
-        //             })
-        //             ->paginate(10);
+        $employees = Employee::with('prefix','position','level')
+                    ->when(!empty($position), function($q) use ($position) {
+                        $q->where('position_id', $position);
+                    })
+                    ->when(!empty($level), function($q) use ($level) {
+                        $q->where('level_id', $level);
+                    })
+                    // ->when($status != '', function($q) use ($status) {
+                    //     $q->where('status', $status);
+                    // })
+                    ->paginate(10);
 
-        // return $employees;
+        return $employees;
     }
 
     public function getAll(Request $req)
@@ -103,7 +95,7 @@ class EmployeeController extends Controller
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
-                    ->paginate(10);
+                    ->get();
 
         return $employees;
     }
