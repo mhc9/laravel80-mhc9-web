@@ -40,6 +40,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/equipment-groups', 'App\Http\Controllers\EquipmentGroupController@getAll');
 
     Route::get('/assets', 'App\Http\Controllers\AssetController@getAll');
+    Route::get('/assets/search', 'App\Http\Controllers\AssetController@search');
     Route::get('/assets/{id}', 'App\Http\Controllers\AssetController@getById');
     Route::get('/assets/form/init', 'App\Http\Controllers\AssetController@getFormInitialData');
     Route::post('/assets', 'App\Http\Controllers\AssetController@store');

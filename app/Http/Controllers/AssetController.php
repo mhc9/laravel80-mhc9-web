@@ -65,39 +65,13 @@ class AssetController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        // $type = $req->get('type');
-        // $category = $req->get('category');
+        $type = $req->get('type');
+        $category = $req->get('category');
         // $name = $req->get('name');
         // $status = $req->get('status');
 
-        // $assets = Asset::with('type','category')
-        //             ->when(!empty($type), function($q) use ($type) {
-        //                 $q->where('asset_type_id', $type);
-        //             })
-        //             ->when(!empty($category), function($q) use ($category) {
-        //                 $q->where('asset_category_id', $category);
-        //             })
-        //             ->when($status != '', function($q) use ($status) {
-        //                 $q->where('status', $status);
-        //             })
-        //             ->when(!empty($name), function($q) use ($name) {
-        //                 $q->where(function($query) use ($name) {
-        //                     $query->where('item_name', 'like', '%'.$name.'%');
-        //                     $query->orWhere('en_name', 'like', '%'.$name.'%');
-        //                 });
-        //             })
-        //             ->paginate(10);
-
-        // return $assets;
-    }
-
-    public function getAll(Request $req)
-    {
-        /** Get params from query string */
-        $type = $req->get('type');
-        $category = $req->get('category');
-
         $assets = Asset::with('type','category','brand','budget', 'obtaining','unit')
+                    ->with('currentOwner','currentOwner.owner','currentOwner.owner.prefix')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('asset_type_id', $type);
                     })
@@ -108,6 +82,27 @@ class AssetController extends Controller
                     //     $q->where('status', $status);
                     // })
                     ->paginate(10);
+
+        return $assets;
+    }
+
+    public function getAll(Request $req)
+    {
+        /** Get params from query string */
+        $type = $req->get('type');
+        $category = $req->get('category');
+
+        $assets = Asset::with('type','category','brand','budget', 'obtaining','unit','currentOwner')
+                    ->when(!empty($type), function($q) use ($type) {
+                        $q->where('asset_type_id', $type);
+                    })
+                    // ->when(!empty($category), function($q) use ($category) {
+                    //     $q->where('asset_category_id', $category);
+                    // })
+                    // ->when($status != '', function($q) use ($status) {
+                    //     $q->where('status', $status);
+                    // })
+                    ->get();
 
         return $assets;
     }
