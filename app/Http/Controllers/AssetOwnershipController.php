@@ -137,7 +137,6 @@ class AssetOwnershipController extends Controller
             $ownership->asset_id        = $req['asset_id'];
             $ownership->owner_id        = $req['owner_id'];
             $ownership->owned_at        = $req['owned_at'];
-            $ownership->transfered_at   = $req['transfered_at'];
             $ownership->condition       = $req['condition'];
             $ownership->status          = $req['status'];
             $ownership->remark          = $req['remark'];
