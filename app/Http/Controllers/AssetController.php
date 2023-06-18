@@ -10,6 +10,7 @@ use Illuminate\Support\MessageBag;
 use App\Models\Asset;
 use App\Models\AssetType;
 use App\Models\AssetCategory;
+use App\Models\AssetGroup;
 use App\Models\Unit;
 use App\Models\Brand;
 use App\Models\Budget;
@@ -67,11 +68,12 @@ class AssetController extends Controller
         /** Get params from query string */
         $type       = $req->get('type');
         $category   = $req->get('category');
+        $group       = $req->get('group');
         $name       = $req->get('name');
         $owner      = $req->get('owner');
         $status     = $req->get('status');
 
-        $assets = Asset::with('type','category','brand','budget', 'obtaining','unit')
+        $assets = Asset::with('group','group.category','brand','budget', 'obtaining','unit')
                     ->with('currentOwner','currentOwner.owner','currentOwner.owner.prefix')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('asset_type_id', $type);
@@ -98,16 +100,17 @@ class AssetController extends Controller
     public function getAll(Request $req)
     {
         /** Get params from query string */
-        $type = $req->get('type');
-        $category = $req->get('category');
+        $type       = $req->get('type');
+        $category   = $req->get('category');
+        $group      = $req->get('group');
 
-        $assets = Asset::with('type','category','brand','budget', 'obtaining','unit','currentOwner')
-                    ->when(!empty($type), function($q) use ($type) {
-                        $q->where('asset_type_id', $type);
-                    })
-                    // ->when(!empty($category), function($q) use ($category) {
-                    //     $q->where('asset_category_id', $category);
+        $assets = Asset::with('group','group.category','brand','budget', 'obtaining','unit','currentOwner')
+                    // ->when(!empty($type), function($q) use ($type) {
+                    //     $q->where('asset_type_id', $type);
                     // })
+                    ->when(!empty($category), function($q) use ($category) {
+                        $q->where('asset_category_id', $category);
+                    })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
@@ -118,7 +121,7 @@ class AssetController extends Controller
 
     public function getById($id)
     {
-        return Asset::with('type','category','brand','budget', 'obtaining','unit')->find($id);
+        return Asset::with('group','group.category','brand','budget', 'obtaining','unit')->find($id);
     }
 
     public function getFormInitialData()
@@ -126,6 +129,7 @@ class AssetController extends Controller
         return [
             'types'         => AssetType::all(),
             'categories'    => AssetCategory::all(),
+            'groups'        => AssetGroup::all(),
             'units'         => Unit::all(),
             'brands'        => Brand::all(),
             'budgets'       => Budget::all(),
@@ -141,8 +145,8 @@ class AssetController extends Controller
             $asset->asset_no            = $req['asset_no'];
             $asset->name                = $req['name'];
             $asset->description         = $req['description'];
-            $asset->asset_type_id       = $req['asset_type_id'];
             $asset->asset_category_id   = $req['asset_category_id'];
+            $asset->asset_group_id      = $req['asset_group_id'];
             $asset->price_per_unit      = $req['price_per_unit'];
             $asset->unit_id             = $req['unit_id'];
             $asset->brand_id            = $req['brand_id'];
@@ -182,8 +186,8 @@ class AssetController extends Controller
             $asset->asset_no            = $req['asset_no'];
             $asset->name                = $req['name'];
             $asset->description         = $req['description'];
-            $asset->asset_type_id       = $req['asset_type_id'];
             $asset->asset_category_id   = $req['asset_category_id'];
+            $asset->asset_group_id      = $req['asset_group_id'];
             $asset->price_per_unit      = $req['price_per_unit'];
             $asset->unit_id             = $req['unit_id'];
             $asset->brand_id            = $req['brand_id'];
