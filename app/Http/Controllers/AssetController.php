@@ -65,19 +65,28 @@ class AssetController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        $type = $req->get('type');
-        $category = $req->get('category');
-        // $name = $req->get('name');
-        // $status = $req->get('status');
+        $type       = $req->get('type');
+        $category   = $req->get('category');
+        $name       = $req->get('name');
+        $owner      = $req->get('owner');
+        $status     = $req->get('status');
 
         $assets = Asset::with('type','category','brand','budget', 'obtaining','unit')
                     ->with('currentOwner','currentOwner.owner','currentOwner.owner.prefix')
-                    ->when(!empty($type), function($q) use ($type) {
-                        $q->where('asset_type_id', $type);
-                    })
-                    // ->when(!empty($category), function($q) use ($category) {
-                    //     $q->where('asset_category_id', $category);
+                    // ->when(!empty($type), function($q) use ($type) {
+                    //     $q->where('asset_type_id', $type);
                     // })
+                    ->when(!empty($category), function($q) use ($category) {
+                        $q->where('asset_category_id', $category);
+                    })
+                    ->when(!empty($name), function($q) use ($name) {
+                        $q->where('name', 'like', '%'.$name.'%');
+                    })
+                    ->when(!empty($owner), function($q) use ($owner) {
+                        $q->whereHas('currentOwner', function($sq) use ($owner) {
+                            $sq->where('owner_id', $owner);
+                        });
+                    })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
