@@ -81,6 +81,9 @@ class AssetController extends Controller
                     ->when(!empty($category), function($q) use ($category) {
                         $q->where('asset_category_id', $category);
                     })
+                    ->when(!empty($group), function($q) use ($group) {
+                        $q->where('asset_group_id', $group);
+                    })
                     ->when(!empty($name), function($q) use ($name) {
                         $q->where('name', 'like', '%'.$name.'%');
                     })
@@ -110,6 +113,17 @@ class AssetController extends Controller
                     // })
                     ->when(!empty($category), function($q) use ($category) {
                         $q->where('asset_category_id', $category);
+                    })
+                    ->when(!empty($group), function($q) use ($group) {
+                        $q->where('asset_group_id', $group);
+                    })
+                    ->when(!empty($name), function($q) use ($name) {
+                        $q->where('name', 'like', '%'.$name.'%');
+                    })
+                    ->when(!empty($owner), function($q) use ($owner) {
+                        $q->whereHas('currentOwner', function($sq) use ($owner) {
+                            $sq->where('owner_id', $owner);
+                        });
                     })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
