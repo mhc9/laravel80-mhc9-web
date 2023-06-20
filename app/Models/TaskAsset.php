@@ -11,18 +11,13 @@ class Task extends Model
     // public $incrementing = false; // false = ไม่ใช้ options auto increment
     // public $timestamps = false; // false = ไม่ใช้ field updated_at และ created_at
 
-    public function group()
+    public function task()
     {
-        return $this->belongsTo(TaskGroup::class, 'task_group_id', 'id');
+        return $this->belongsTo(Task::class, 'task_id', 'id');
     }
 
-    public function reporter()
+    public function asset()
     {
-        return $this->belongsTo(Employee::class, 'reporter_id', 'id');
-    }
-
-    public function assets()
-    {
-        return $this->hasMany(TaskAsset::class, 'task_id', 'id');
+        return $this->belongsTo(Asset::class, 'asset_id', 'id');
     }
 }

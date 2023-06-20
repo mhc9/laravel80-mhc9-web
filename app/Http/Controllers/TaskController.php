@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Task;
+use App\Models\TaskType;
+use App\Models\TaskGroup;
+use App\Models\Employee;
 
 class TaskController extends Controller
 {
@@ -58,39 +61,38 @@ class TaskController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        // $type = $req->get('type');
-        // $group = $req->get('group');
-        // $name = $req->get('name');
-        // $status = $req->get('status');
+        $group      = $req->get('group');
+        $type       = $req->get('type');
+        $reporter   = $req->get('reporter');
+        $status     = $req->get('status');
 
-        // $jobs = Job::with('type','group')
-        //             ->when(!empty($type), function($q) use ($type) {
-        //                 $q->where('plan_type_id', $type);
-        //             })
-        //             ->when(!empty($group), function($q) use ($group) {
-        //                 $q->where('group_id', $group);
-        //             })
-        //             ->when($status != '', function($q) use ($status) {
-        //                 $q->where('status', $status);
-        //             })
-        //             ->when(!empty($name), function($q) use ($name) {
-        //                 $q->where(function($query) use ($name) {
-        //                     $query->where('item_name', 'like', '%'.$name.'%');
-        //                     $query->orWhere('en_name', 'like', '%'.$name.'%');
-        //                 });
-        //             })
-        //             ->paginate(10);
+        $jobs = Job::with('group','group.type','reporter','assets')
+                    ->when(!empty($group), function($q) use ($group) {
+                        $q->where('task_group_id', $group);
+                    })
+                    // ->when(!empty($type), function($q) use ($type) {
+                    //     $q->where('task_type_id', $type);
+                    // })
+                    // ->when(!empty($name), function($q) use ($name) {
+                    //     $q->where('item_name', 'like', '%'.$name.'%');
+                    // })
+                    ->when($status != '', function($q) use ($status) {
+                        $q->where('status', $status);
+                    })
+                    ->paginate(10);
 
-        // return $jobs;
+        return $jobs;
     }
 
     public function getAll(Request $req)
     {
         /** Get params from query string */
-        $type = $req->get('type');
-        $group = $req->get('group');
+        $group      = $req->get('group');
+        $type       = $req->get('type');
+        $reporter   = $req->get('reporter');
+        $status     = $req->get('status');
 
-        $tasks = Task::with('type','group')
+        $tasks = Task::with('group','group.type','reporter','assets')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('task_type_id', $type);
                     })
@@ -100,14 +102,23 @@ class TaskController extends Controller
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
-                    ->paginate(10);
+                    ->get();
 
         return $tasks;
     }
 
     public function getById($id)
     {
-        return Task::with('type','group')->find($id);
+        return Task::with('group','group.type','reporter','assets')->find($id);
+    }
+
+    public function getFormInitialData()
+    {
+        return [
+            'types'         => AssetType::all(),
+            'groups'        => AssetGroup::all(),
+            'employees'     => Employee::whereIn('status', [1,2])->get(),
+        ];
     }
 
     public function store(Request $req)
