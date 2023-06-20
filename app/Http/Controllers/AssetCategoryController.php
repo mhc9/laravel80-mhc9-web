@@ -189,7 +189,7 @@ class AssetCategoryController extends Controller
         }
     }
 
-    public function delete(Request $req, $id)
+    public function destroy(Request $req, $id)
     {
         try {
             // $item = Item::find($id);

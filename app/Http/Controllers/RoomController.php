@@ -158,7 +158,7 @@ class RoomController extends Controller
         }
     }
 
-    public function delete(Request $req, $id)
+    public function destroy(Request $req, $id)
     {
         try {
             $room = Room::find($id);

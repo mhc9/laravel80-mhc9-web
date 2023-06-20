@@ -160,7 +160,7 @@ class AssetTypeController extends Controller
         }
     }
 
-    public function delete(Request $req, $id)
+    public function destroy(Request $req, $id)
     {
         try {
             $type = AssetType::find($id);

@@ -234,7 +234,7 @@ class AssetController extends Controller
         }
     }
 
-    public function delete(Request $req, $id)
+    public function destroy(Request $req, $id)
     {
         try {
             $asset = Asset::find($id);
