@@ -29,7 +29,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
 Route::middleware('auth:api')->group(function() {
     Route::get('/tasks', 'App\Http\Controllers\TaskController@getAll');
     Route::get('/tasks/{id}', 'App\Http\Controllers\TaskController@getById');
-    Route::store('/tasks', 'App\Http\Controllers\TaskController@store');
+    Route::post('/tasks', 'App\Http\Controllers\TaskController@store');
     Route::put('/tasks/{id}', 'App\Http\Controllers\TaskController@update');
     Route::delete('/tasks/{id}', 'App\Http\Controllers\TaskController@destroy');
 
