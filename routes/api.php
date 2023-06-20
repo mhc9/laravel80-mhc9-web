@@ -27,8 +27,11 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
 });
 
 Route::middleware('auth:api')->group(function() {
-    Route::get('/jobs', 'App\Http\Controllers\JobController@getAll');
-    Route::get('/jobs/{id}', 'App\Http\Controllers\JobController@getById');
+    Route::get('/tasks', 'App\Http\Controllers\TaskController@getAll');
+    Route::get('/tasks/{id}', 'App\Http\Controllers\TaskController@getById');
+    Route::store('/tasks', 'App\Http\Controllers\TaskController@store');
+    Route::put('/tasks/{id}', 'App\Http\Controllers\TaskController@update');
+    Route::delete('/tasks/{id}', 'App\Http\Controllers\TaskController@destroy');
 
     Route::get('/equipments', 'App\Http\Controllers\EquipmentController@getAll');
     Route::get('/equipments/{id}', 'App\Http\Controllers\EquipmentController@getById');
@@ -45,7 +48,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/assets/form/init', 'App\Http\Controllers\AssetController@getFormInitialData');
     Route::post('/assets', 'App\Http\Controllers\AssetController@store');
     Route::put('/assets/{id}', 'App\Http\Controllers\AssetController@update');
-    Route::delete('/assets/{id}', 'App\Http\Controllers\AssetController@delete');
+    Route::delete('/assets/{id}', 'App\Http\Controllers\AssetController@destroy');
 
     Route::get('/asset-ownerships', 'App\Http\Controllers\AssetOwnershipController@getAll');
     Route::get('/asset-ownerships/{id}', 'App\Http\Controllers\AssetOwnershipController@getById');

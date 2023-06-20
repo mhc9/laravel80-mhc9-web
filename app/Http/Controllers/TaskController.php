@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
-use App\Models\Job;
+use App\Models\Task;
 
-class JobController extends Controller
+class TaskController extends Controller
 {
     public function formValidate (Request $request)
     {
@@ -90,24 +90,24 @@ class JobController extends Controller
         $type = $req->get('type');
         $group = $req->get('group');
 
-        $jobs = Job::with('type','group')
+        $tasks = Task::with('type','group')
                     ->when(!empty($type), function($q) use ($type) {
-                        $q->where('Job_type_id', $type);
+                        $q->where('task_type_id', $type);
                     })
                     ->when(!empty($group), function($q) use ($group) {
-                        $q->where('Job_group_id', $group);
+                        $q->where('task_group_id', $group);
                     })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
                     ->paginate(10);
 
-        return $jobs;
+        return $tasks;
     }
 
     public function getById($id)
     {
-        return Job::with('type','group')->find($id);
+        return Task::with('type','group')->find($id);
     }
 
     public function store(Request $req)
@@ -192,7 +192,7 @@ class JobController extends Controller
         }
     }
 
-    public function delete(Request $req, $id)
+    public function destroy(Request $req, $id)
     {
         try {
             // $item = Item::find($id);
