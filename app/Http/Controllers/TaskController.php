@@ -10,6 +10,7 @@ use Illuminate\Support\MessageBag;
 use App\Models\Task;
 use App\Models\TaskType;
 use App\Models\TaskGroup;
+use App\Models\TaskAsset;
 use App\Models\Employee;
 
 class TaskController extends Controller
@@ -124,36 +125,37 @@ class TaskController extends Controller
     public function store(Request $req)
     {
         try {
-            // $item = new Item();
-            // $item->plan_type_id = $req['plan_type_id'];
-            // $item->category_id  = $req['category_id'];
-            // $item->group_id     = $req['group_id'];
-            // $item->asset_no     = $req['asset_no'];
-            // $item->item_name    = $req['item_name'];
-            // $item->en_name      = $req['en_name'];
-            // $item->price_per_unit = currencyToNumber($req['price_per_unit']);
-            // $item->unit_id      = $req['unit_id'];
-            // $item->in_stock     = $req['in_stock'];
-            // $item->have_subitem = $req['have_subitem'];
-            // $item->calc_method  = $req['calc_method'];
-            // $item->is_fixcost   = $req['is_fixcost'];
-            // $item->is_repairing_item = $req['is_repairing_item'];
-            // $item->is_addon     = $req['is_addon'];
-            // $item->first_year   = $req['first_year'];
-            // $item->remark       = $req['remark'];
+            $task = new Task();
+            $task->task_date        = $req['task_date'];
+            $task->task_time        = $req['task_time'];
+            $task->task_group_id    = $req['task_group_id'];
+            $task->priority_id      = $req['priority_id'];
+            $task->description      = $req['description'];
+            $task->reporter_id      = $req['reporter_id'];
+            $task->status           = $req['status'];
+            $task->remark           = $req['remark'];
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Insertion successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($task->save()) {
+                if (count($req['assets']) > 0) {
+                    foreach($req['assets'] as $asset) {
+                        $taskAsset = new TaskAsset();
+                        $taskAsset->task_id     = $task->id;
+                        $taskAsset->asset_id    = $asset;
+                        $taskAsset->save();
+                    }
+                }
+
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    'task'      => $task
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
