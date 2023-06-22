@@ -27,6 +27,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
 });
 
 Route::middleware('auth:api')->group(function() {
+    Route::get('/tasks/search', 'App\Http\Controllers\TaskController@search');
     Route::get('/tasks', 'App\Http\Controllers\TaskController@getAll');
     Route::get('/tasks/{id}', 'App\Http\Controllers\TaskController@getById');
     Route::get('/tasks/form/init', 'App\Http\Controllers\TaskController@getFormInitialData');

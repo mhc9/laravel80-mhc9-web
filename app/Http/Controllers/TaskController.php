@@ -67,22 +67,19 @@ class TaskController extends Controller
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $jobs = Job::with('group','group.type','reporter','assets')
+        $tasks = Task::with('group','group.type','reporter','assets')
+                    ->when(!empty($type), function($q) use ($type) {
+                        $q->where('task_type_id', $type);
+                    })
                     ->when(!empty($group), function($q) use ($group) {
                         $q->where('task_group_id', $group);
                     })
-                    // ->when(!empty($type), function($q) use ($type) {
-                    //     $q->where('task_type_id', $type);
+                    // ->when($status != '', function($q) use ($status) {
+                    //     $q->where('status', $status);
                     // })
-                    // ->when(!empty($name), function($q) use ($name) {
-                    //     $q->where('item_name', 'like', '%'.$name.'%');
-                    // })
-                    ->when($status != '', function($q) use ($status) {
-                        $q->where('status', $status);
-                    })
                     ->paginate(10);
 
-        return $jobs;
+        return $tasks;
     }
 
     public function getAll(Request $req)
