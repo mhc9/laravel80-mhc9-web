@@ -115,8 +115,8 @@ class TaskController extends Controller
     public function getFormInitialData()
     {
         return [
-            'types'         => AssetType::all(),
-            'groups'        => AssetGroup::all(),
+            'types'         => TaskType::all(),
+            'groups'        => TaskGroup::all(),
             'employees'     => Employee::whereIn('status', [1,2])->get(),
         ];
     }
