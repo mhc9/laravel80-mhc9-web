@@ -13,6 +13,6 @@ class TaskGroup extends Model
 
     public function type()
     {
-        return $this->belongsTo(TaskType::class, 'asset_type_id', 'id');
+        return $this->belongsTo(TaskType::class, 'task_type_id', 'id');
     }
 }
