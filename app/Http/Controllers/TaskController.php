@@ -67,7 +67,7 @@ class TaskController extends Controller
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $tasks = Task::with('group','group.type','reporter','assets')
+        $tasks = Task::with('group','group.type','reporter','assets','assets.asset')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('task_type_id', $type);
                     })
@@ -90,7 +90,7 @@ class TaskController extends Controller
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $tasks = Task::with('group','group.type','reporter','assets')
+        $tasks = Task::with('group','group.type','reporter','assets','assets.asset')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('task_type_id', $type);
                     })
@@ -107,7 +107,7 @@ class TaskController extends Controller
 
     public function getById($id)
     {
-        return Task::with('group','group.type','reporter','assets')->find($id);
+        return Task::with('group','group.type','reporter','assets','assets.asset')->find($id);
     }
 
     public function getFormInitialData()
