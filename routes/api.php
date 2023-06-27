@@ -88,6 +88,25 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/rooms/{id}', 'App\Http\Controllers\RoomController@getById');
     Route::post('/rooms', 'App\Http\Controllers\RoomController@store');
     Route::put('/rooms/{id}', 'App\Http\Controllers\RoomController@update');
+    Route::delete('/rooms/{id}', 'App\Http\Controllers\RoomController@destroy');
+
+    Route::get('/items', 'App\Http\Controllers\ItemController@getAll');
+    Route::get('/items/{id}', 'App\Http\Controllers\ItemController@getById');
+    Route::post('/items', 'App\Http\Controllers\ItemController@store');
+    Route::put('/items/{id}', 'App\Http\Controllers\ItemController@update');
+    Route::delete('/items/{id}', 'App\Http\Controllers\ItemController@destroy');
+
+    Route::get('/requisitions', 'App\Http\Controllers\RequisitionController@getAll');
+    Route::get('/requisitions/{id}', 'App\Http\Controllers\RequisitionController@getById');
+    Route::post('/requisitions', 'App\Http\Controllers\RequisitionController@store');
+    Route::put('/requisitions/{id}', 'App\Http\Controllers\RequisitionController@update');
+    Route::delete('/requisitions/{id}', 'App\Http\Controllers\RequisitionController@destroy');
+
+    Route::get('/orders', 'App\Http\Controllers\OrderController@getAll');
+    Route::get('/orders/{id}', 'App\Http\Controllers\OrderController@getById');
+    Route::post('/orders', 'App\Http\Controllers\OrderController@store');
+    Route::put('/orders/{id}', 'App\Http\Controllers\OrderController@update');
+    Route::delete('/orders/{id}', 'App\Http\Controllers\OrderController@destroy');
 
     Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
 });
