@@ -95,4 +95,9 @@ class User extends Authenticatable implements JWTSubject
     {
         $this->attributes['password'] = $value;
     }
+
+    public function permissions()
+    {
+        return $this->hasMany(UserPermission::class, 'user_id', 'id');
+    }
 }
