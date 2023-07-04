@@ -90,6 +90,13 @@ Route::middleware('auth:api')->group(function() {
     Route::put('/rooms/{id}', 'App\Http\Controllers\RoomController@update');
     Route::delete('/rooms/{id}', 'App\Http\Controllers\RoomController@destroy');
 
+    Route::get('/activities', 'App\Http\Controllers\ActivityController@getAll');
+    Route::get('/activities/search', 'App\Http\Controllers\ActivityController@search');
+    Route::get('/activities/{id}', 'App\Http\Controllers\ActivityController@getById');
+    Route::post('/activities', 'App\Http\Controllers\ActivityController@store');
+    Route::put('/activities/{id}', 'App\Http\Controllers\ActivityController@update');
+    Route::delete('/activities/{id}', 'App\Http\Controllers\ActivityController@destroy');
+
     Route::get('/items', 'App\Http\Controllers\ItemController@getAll');
     Route::get('/items/search', 'App\Http\Controllers\ItemController@search');
     Route::get('/items/{id}', 'App\Http\Controllers\ItemController@getById');
