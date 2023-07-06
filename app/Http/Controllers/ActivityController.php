@@ -13,21 +13,21 @@ class ActivityController extends Controller
 {
     public function formValidate (Request $request)
     {
-        'name'         => 'required',
         $rules = [
-            'project_id'      => 'required',
-            'unit_id'           => 'required',
+            'name'          => 'required',
+            'project_id'    => 'required',
+            'unit_id'       => 'required',
         ];
 
         if ($request['is_addon'] != '1') {
-            $rules['category_id'] = 'required';
-            $rules['price_per_unit'] = 'required';
+            $rules['category_id']       = 'required';
+            $rules['price_per_unit']    = 'required';
         }
 
         $messages = [
-            'name.required'        => 'กรุณาระบุชื่อสินค้า/บริการ',
-            'project_id.required'     => 'กรุณาเลือกประเภทแผน',
-            'category_id.required'        => 'กรุณาเลือกประเภทสินค้า/บริการ',
+            'name.required'             => 'กรุณาระบุชื่อสินค้า/บริการ',
+            'project_id.required'       => 'กรุณาเลือกประเภทแผน',
+            'category_id.required'      => 'กรุณาเลือกประเภทสินค้า/บริการ',
             'price_per_unit.required'   => 'กรุณาระบุราคาต่อหน่วย',
             'unit_id.required'          => 'กรุณาเลือกหน่วยนับ',
         ];
@@ -58,20 +58,20 @@ class ActivityController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        $project = $req->get('project');
-        $plan = $req->get('plan');
-        // $name = $req->get('name');
-        // $status = $req->get('status');
+        $project    = $req->get('project');
+        $plan       = $req->get('plan');
+        $name       = $req->get('name');
+        $status     = $req->get('status');
 
         $activities = Activity::with('project','project.plan')
                     ->when(!empty($project), function($q) use ($project) {
                         $q->where('project_id', $project);
                     })
-                    // ->when(!empty($plan), function($q) use ($plan) {
-                    //     $q->whereHas('project.plan', function($sq) use ($plan) {
-                    //         $sq->where('plan_id', $plan);
-                    //     });
-                    // })
+                    ->when(!empty($plan), function($q) use ($plan) {
+                        $q->whereHas('project.plan', function($sq) use ($plan) {
+                            $sq->where('plan_id', $plan);
+                        });
+                    })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
