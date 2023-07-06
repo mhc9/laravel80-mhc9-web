@@ -89,20 +89,20 @@ class ActivityController extends Controller
     public function getAll(Request $req)
     {
         /** Get params from query string */
-        $project = $req->get('project');
-        $plan = $req->get('plan');
-        // $name = $req->get('name');
-        // $status = $req->get('status');
+        $project    = $req->get('project');
+        $plan       = $req->get('plan');
+        $name       = $req->get('name');
+        $status     = $req->get('status');
 
         $activities = Activity::with('project','project.plan')
                     ->when(!empty($project), function($q) use ($project) {
                         $q->where('project_id', $project);
                     })
-                    // ->when(!empty($plan), function($q) use ($plan) {
-                    //     $q->whereHas('project.plan', function($sq) use ($plan) {
-                    //         $sq->where('plan_id', $plan);
-                    //     });
-                    // })
+                    ->when(!empty($plan), function($q) use ($plan) {
+                        $q->whereHas('project.plan', function($sq) use ($plan) {
+                            $sq->where('plan_id', $plan);
+                        });
+                    })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
