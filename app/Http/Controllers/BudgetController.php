@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
-use App\Models\Activity;
+use App\Models\Budget;
 
-class ActivityController extends Controller
+class BudgetController extends Controller
 {
     public function formValidate (Request $request)
     {
@@ -63,7 +63,7 @@ class ActivityController extends Controller
         $name       = $req->get('name');
         $status     = $req->get('status');
 
-        $activities = Activity::with('project','project.plan')
+        $activities = Budget::with('type','project','project.plan')
                     ->when(!empty($project), function($q) use ($project) {
                         $q->where('project_id', $project);
                     })
@@ -94,7 +94,7 @@ class ActivityController extends Controller
         $name       = $req->get('name');
         $status     = $req->get('status');
 
-        $activities = Activity::with('project','project.plan')
+        $activities = Budget::with('type','project','project.plan')
                     ->when(!empty($project), function($q) use ($project) {
                         $q->where('project_id', $project);
                     })
@@ -116,21 +116,21 @@ class ActivityController extends Controller
 
     public function getById($id)
     {
-        return Activity::find($id);
+        return Budget::find($id);
     }
 
     public function store(Request $req)
     {
         try {
-            $activity = new Activity();
-            $activity->name      = $req['name'];
-            $activity->status    = $req['status'] ? 1 : 0;
+            $budget = new Budget();
+            $budget->name      = $req['name'];
+            $budget->status    = $req['status'] ? 1 : 0;
 
-            if($activity->save()) {
+            if($budget->save()) {
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'activity'  => $activity
+                    'Budget'  => $budget
                 ];
             } else {
                 return [
@@ -149,15 +149,15 @@ class ActivityController extends Controller
     public function update(Request $req, $id)
     {
         try {
-            $activity = Activity::find($id);
-            $activity->name     = $req['name'];
-            $activity->status   = $req['status'] ? 1 : 0;
+            $budget = Budget::find($id);
+            $budget->name     = $req['name'];
+            $budget->status   = $req['status'] ? 1 : 0;
 
-            if($activity->save()) {
+            if($budget->save()) {
                 return [
                     'status'    => 1,
                     'message'   => 'Updating successfully!!',
-                    'activity'  => $activity
+                    'Budget'  => $budget
                 ];
             } else {
                 return [
@@ -176,9 +176,9 @@ class ActivityController extends Controller
     public function destroy(Request $req, $id)
     {
         try {
-            $activity = Activity::find($id);
+            $budget = Budget::find($id);
 
-            if($activity->delete()) {
+            if($budget->delete()) {
                 return [
                     'status'    => 1,
                     'message'   => 'Deleting successfully!!',
