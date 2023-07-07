@@ -10,6 +10,7 @@ use Illuminate\Support\MessageBag;
 use App\Models\Requisition;
 use App\Models\RequisitionDetail;
 use App\Models\Item;
+use App\Models\AssetCategory;
 use App\Models\Division;
 use App\Models\Department;
 
@@ -101,7 +102,9 @@ class RequisitionController extends Controller
     public function getFormInitialData()
     {
         return [
-            'departments' => Department::all(),
+            'departments'   => Department::all(),
+            'divisions'     => Division::all(),
+            'categories'    => AssetCategory::all(),
         ];
     }
 
