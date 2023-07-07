@@ -63,6 +63,7 @@ class EmployeeController extends Controller
         /** Get params from query string */
         $position   = $req->get('position');
         $level      = $req->get('level');
+        $name       = $req->get('name');
 
         $employees = Employee::with('prefix','position','level')
                     ->when(!empty($position), function($q) use ($position) {
@@ -70,6 +71,9 @@ class EmployeeController extends Controller
                     })
                     ->when(!empty($level), function($q) use ($level) {
                         $q->where('level_id', $level);
+                    })
+                    ->when(!empty($name), function($q) use ($name) {
+                        $q->where('firstname', 'like', '%'.$name.'%');
                     })
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
