@@ -11,8 +11,8 @@ use App\Models\Requisition;
 use App\Models\RequisitionDetail;
 use App\Models\Item;
 use App\Models\AssetCategory;
-use App\Models\Division;
 use App\Models\Department;
+use App\Models\Division;
 
 class RequisitionController extends Controller
 {
@@ -99,12 +99,12 @@ class RequisitionController extends Controller
         return Division::with('department')->find($id);
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
+            'categories'    => AssetCategory::all(),
             'departments'   => Department::all(),
             'divisions'     => Division::all(),
-            'categories'    => AssetCategory::all(),
         ];
     }
 
