@@ -65,7 +65,7 @@ class EmployeeController extends Controller
         $level      = $req->get('level');
         $name       = $req->get('name');
 
-        $employees = Employee::with('prefix','position','level')
+        $employees = Employee::with('prefix','position','level','memberOf','memberOf.division')
                     ->when(!empty($position), function($q) use ($position) {
                         $q->where('position_id', $position);
                     })
@@ -89,7 +89,7 @@ class EmployeeController extends Controller
         $position = $req->get('position');
         $level = $req->get('level');
 
-        $employees = Employee::with('prefix','position','level')
+        $employees = Employee::with('prefix','position','level','memberOf','memberOf.division')
                     ->when(!empty($position), function($q) use ($position) {
                         $q->where('position_id', $position);
                     })
@@ -106,7 +106,7 @@ class EmployeeController extends Controller
 
     public function getById($id)
     {
-        return Employee::with('prefix','position','level')->find($id);
+        return Employee::with('prefix','position','level','memberOf','memberOf.division')->find($id);
     }
 
     public function getFormInitialData()

@@ -25,4 +25,9 @@ class Employee extends Model
     {
         return $this->belongsTo(Level::class, 'level_id', 'id');
     }
+
+    public function memberOf()
+    {
+        return $this->hasMany(Member::class, 'employee_id', 'id');
+    }
 }
