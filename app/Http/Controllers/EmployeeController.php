@@ -11,6 +11,8 @@ use App\Models\Employee;
 use App\Models\Prefix;
 use App\Models\Position;
 use App\Models\Level;
+use App\Models\Department;
+use App\Models\Division;
 
 class EmployeeController extends Controller
 {
@@ -115,6 +117,8 @@ class EmployeeController extends Controller
             'prefixes'  => Prefix::all(),
             'positions' => Position::all(),
             'levels'    => Level::all(),
+            'department' => Department::all(),
+            'divisions' => Division::all(),
         ];
     }
 
