@@ -70,7 +70,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/employees', 'App\Http\Controllers\EmployeeController@getAll');
     Route::get('/employees/search', 'App\Http\Controllers\EmployeeController@search');
     Route::get('/employees/{id}', 'App\Http\Controllers\EmployeeController@getById');
-    Route::get('/employees/form/init', 'App\Http\Controllers\EmployeeController@getFormInitialData');
+    Route::get('/employees/init/form', 'App\Http\Controllers\EmployeeController@getInitialFormData');
     Route::post('/employees', 'App\Http\Controllers\EmployeeController@store');
 
     Route::get('/departments', 'App\Http\Controllers\DepartmentController@getAll');

@@ -109,7 +109,7 @@ class EmployeeController extends Controller
         return Employee::with('prefix','position','level','memberOf','memberOf.division')->find($id);
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
             'prefixes'  => Prefix::all(),
