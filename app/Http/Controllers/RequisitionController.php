@@ -10,6 +10,7 @@ use Illuminate\Support\MessageBag;
 use App\Models\Requisition;
 use App\Models\RequisitionDetail;
 use App\Models\Item;
+use App\Models\AssetType;
 use App\Models\AssetCategory;
 use App\Models\Department;
 use App\Models\Division;
@@ -101,8 +102,12 @@ class RequisitionController extends Controller
 
     public function getInitialFormData()
     {
+        $types      = AssetType::with('categories')->get();
+        $categories = AssetCategory::with('type')->get();
+
         return [
-            'categories'    => AssetCategory::all(),
+            'types'         => $types,
+            'categories'    => $categories,
             'departments'   => Department::all(),
             'divisions'     => Division::all(),
         ];
