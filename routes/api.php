@@ -83,6 +83,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/divisions/init/form', 'App\Http\Controllers\DivisionController@getInitialFormData');
     Route::post('/divisions', 'App\Http\Controllers\DivisionController@store');
     Route::put('/divisions/{id}', 'App\Http\Controllers\DivisionController@update');
+    Route::delete('/divisions/{id}', 'App\Http\Controllers\DivisionController@destroy');
 
     Route::get('/rooms', 'App\Http\Controllers\RoomController@getAll');
     Route::get('/rooms/{id}', 'App\Http\Controllers\RoomController@getById');
