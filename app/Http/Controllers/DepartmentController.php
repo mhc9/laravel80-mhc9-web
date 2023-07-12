@@ -140,20 +140,19 @@ class DepartmentController extends Controller
     public function destroy(Request $req, $id)
     {
         try {
-            // $item = Item::find($id);
+            $department = Department::find($id);
 
-            // if($item->delete()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Deleting successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($department->delete()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Deleting successfully!!'
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
