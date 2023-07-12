@@ -102,13 +102,14 @@ class RequisitionController extends Controller
 
     public function getInitialFormData()
     {
-        $types      = AssetType::with('categories')->get();
-        $categories = AssetCategory::with('type')->get();
+        $types          = AssetType::with('categories')->get();
+        $categories     = AssetCategory::with('type')->get();
+        $departments    = Department::with('divisions')->get();
 
         return [
             'types'         => $types,
             'categories'    => $categories,
-            'departments'   => Department::all(),
+            'departments'   => $departments,
             'divisions'     => Division::all(),
         ];
     }
