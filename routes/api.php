@@ -80,7 +80,7 @@ Route::middleware('auth:api')->group(function() {
 
     Route::get('/divisions', 'App\Http\Controllers\DivisionController@getAll');
     Route::get('/divisions/{id}', 'App\Http\Controllers\DivisionController@getById');
-    Route::get('/divisions/form/init', 'App\Http\Controllers\DivisionController@getFormInitialData');
+    Route::get('/divisions/init/form', 'App\Http\Controllers\DivisionController@getInitialFormData');
     Route::post('/divisions', 'App\Http\Controllers\DivisionController@store');
     Route::put('/divisions/{id}', 'App\Http\Controllers\DivisionController@update');
 

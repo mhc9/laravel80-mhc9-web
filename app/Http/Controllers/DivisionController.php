@@ -95,7 +95,7 @@ class DivisionController extends Controller
         return Division::with('department')->find($id);
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
             'departments' => Department::all(),
