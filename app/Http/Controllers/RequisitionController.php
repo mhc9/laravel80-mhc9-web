@@ -56,49 +56,44 @@ class RequisitionController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        // $department  = $req->get('department');
-        // $name        = $req->get('name');
-        // $status      = $req->get('status');
+        $category   = $req->get('category');
+        $requester  = $req->get('requester');
+        $status     = $req->get('status');
 
-        // $departments = Division::with('department')
-        //             ->when(!empty($department), function($q) use ($department) {
-        //                 $q->where('plan_department_id', $department);
-        //             })
-        //             ->when($status != '', function($q) use ($status) {
-        //                 $q->where('status', $status);
-        //             })
-        //             ->when(!empty($name), function($q) use ($name) {
-        //                 $q->where(function($query) use ($name) {
-        //                     $query->where('name', 'like', '%'.$name.'%');
-        //                     $query->orWhere('name', 'like', '%'.$name.'%');
-        //                 });
-        //             })
-        //             ->paginate(10);
+        $requisitions = Requisition::with('details')
+                            ->when(!empty($category), function($q) use ($category) {
+                                $q->where('category_id', $category);
+                            })
+                            ->when($status != '', function($q) use ($status) {
+                                $q->where('status', $status);
+                            })
+                            ->paginate(10);
 
-        // return $departments;
+        return $requisitions;
     }
 
     public function getAll(Request $req)
     {
         /** Get params from query string */
-        $department = $req->get('department');
+        $category   = $req->get('category');
+        $requester  = $req->get('requester');
         $status     = $req->get('status');
 
-        $departments = Division::with('department')
-                    ->when(!empty($department), function($q) use ($department) {
-                        $q->where('department_id', $department);
-                    })
-                    ->when($status != '', function($q) use ($status) {
-                        $q->where('status', $status);
-                    })
-                    ->paginate(10);
+        $requisitions = Requisition::with('details')
+                            ->when(!empty($category), function($q) use ($category) {
+                                $q->where('category_id', $category);
+                            })
+                            ->when($status != '', function($q) use ($status) {
+                                $q->where('status', $status);
+                            })
+                            ->get();
 
-        return $departments;
+        return $requisitions;
     }
 
     public function getById($id)
     {
-        return Division::with('department')->find($id);
+        return Requisition::with('details')->find($id);
     }
 
     public function getInitialFormData()
