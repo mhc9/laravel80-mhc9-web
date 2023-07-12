@@ -14,6 +14,7 @@ use App\Models\AssetType;
 use App\Models\AssetCategory;
 use App\Models\Department;
 use App\Models\Division;
+use App\Models\Committee;
 
 class RequisitionController extends Controller
 {
@@ -117,16 +118,48 @@ class RequisitionController extends Controller
     public function store(Request $req)
     {
         try {
-            $division = new Division();
-            $division->name             = $req['name'];
-            $division->department_id    = $req['department_id'];
-            $division->status           = $req['status'] ? 1 : 0;
+            $requisition = new Requisition();
+            $requisition->pr_no         = $req['pr_no'];
+            $requisition->pr_date       = $req['pr_date'];
+            $requisition->order_type_id = $req['order_type_id'];
+            $requisition->category_id   = $req['category_id'];
+            $requisition->topic         = $req['topic'];
+            $requisition->year          = $req['year'];
+            $requisition->budget_id     = $req['budget_id'];
+            $requisition->project_id    = $req['project_id'];
+            $requisition->requester_id  = $req['requester_id'];
+            $requisition->division_id   = $req['division_id'];
+            $requisition->reason        = $req['reason'];
+            $requisition->item_count    = $req['item_count'];
+            $requisition->net_total     = $req['net_total'];
+            $requisition->status        = 0;
 
-            if($division->save()) {
+            if($requisition->save()) {
+                /** Insert items to RequisitionDetail */
+                foreach($req['items'] as $item) {
+                    $detail = new RequisitionDetail();
+                    $detail->pr_id      = $requisition->id;
+                    $detail->item_id    = $item['item_id'];
+                    $detail->amount     = $item['amount'];
+                    $detail->price      = $item['price'];
+                    $detail->unit_id    = $item['unit_id'];
+                    $detail->total      = $item['total'];
+                    $detail->save();
+                }
+
+                /** Insert committees */
+                foreach($req['committees'] as $employee) {
+                    $committee = new Committee();
+                    $committee->employee_id         = $employee['id'];
+                    $committee->requisition_id      = $requisition->id;
+                    $committee->committee_type_id   = 2;
+                    $committee->save();
+                }
+
                 return [
-                    'status'    => 1,
-                    'message'   => 'Insertion successfully!!',
-                    'division'  => $division
+                    'status'        => 1,
+                    'message'       => 'Insertion successfully!!',
+                    'requisition'   => $requisition
                 ];
             } else {
                 return [
