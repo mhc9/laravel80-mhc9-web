@@ -102,6 +102,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/items', 'App\Http\Controllers\ItemController@getAll');
     Route::get('/items/search', 'App\Http\Controllers\ItemController@search');
     Route::get('/items/{id}', 'App\Http\Controllers\ItemController@getById');
+    Route::get('/items/init/form', 'App\Http\Controllers\ItemController@getInitialFormData');
     Route::post('/items', 'App\Http\Controllers\ItemController@store');
     Route::put('/items/{id}', 'App\Http\Controllers\ItemController@update');
     Route::delete('/items/{id}', 'App\Http\Controllers\ItemController@destroy');

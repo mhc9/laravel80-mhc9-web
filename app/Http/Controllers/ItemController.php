@@ -89,7 +89,7 @@ class ItemController extends Controller
         return Item::with('department')->find($id);
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
             'categories'    => AssetCategory::all(),
