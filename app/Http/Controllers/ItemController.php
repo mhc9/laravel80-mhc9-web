@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Item;
+use App\Models\AssetType;
 use App\Models\AssetCategory;
 use App\Models\Unit;
 
@@ -91,7 +92,10 @@ class ItemController extends Controller
 
     public function getInitialFormData()
     {
+        $types          = AssetType::with('categories')->get();
+
         return [
+            'types'         => $types,
             'categories'    => AssetCategory::all(),
             'units'         => Unit::all(),
         ];
@@ -100,23 +104,24 @@ class ItemController extends Controller
     public function store(Request $req)
     {
         try {
-            $item = new Item();
-            $item->name             = $req['name'];
-            $item->department_id    = $req['department_id'];
-            $item->status           = $req['status'] ? 1 : 0;
+            var_dump($req['img_url']);
+            // $item = new Item();
+            // $item->name             = $req['name'];
+            // $item->department_id    = $req['department_id'];
+            // $item->status           = $req['status'] ? 1 : 0;
 
-            if($item->save()) {
-                return [
-                    'status'    => 1,
-                    'message'   => 'Insertion successfully!!',
-                    'item'      => $item
-                ];
-            } else {
-                return [
-                    'status'    => 0,
-                    'message'   => 'Something went wrong!!'
-                ];
-            }
+            // if($item->save()) {
+            //     return [
+            //         'status'    => 1,
+            //         'message'   => 'Insertion successfully!!',
+            //         'item'      => $item
+            //     ];
+            // } else {
+            //     return [
+            //         'status'    => 0,
+            //         'message'   => 'Something went wrong!!'
+            //     ];
+            // }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
