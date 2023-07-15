@@ -104,24 +104,38 @@ class ItemController extends Controller
     public function store(Request $req)
     {
         try {
-            var_dump($req['img_url']);
-            // $item = new Item();
-            // $item->name             = $req['name'];
-            // $item->department_id    = $req['department_id'];
-            // $item->status           = $req['status'] ? 1 : 0;
+            $item = new Item();
+            $item->name         = $req['name'];
+            $item->category_id  = $req['category_id'];
+            $item->cost         = $req['cost'];
+            $item->price        = $req['price'];
+            $item->unit_id      = $req['unit_id'];
+            $item->description  = $req['description'];
+            // $item->status       = $req['status'] ? 1 : 0;
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Insertion successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+
+            if ($req->file('img_url')) {
+                $file = $req->file('img_url');
+                $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
+                $destinationPath = 'uploads/products/thumbnails/';
+
+                if ($file->move($destinationPath, $fileName)) {
+                    $item->img_url = $fileName;
+                }
+            }
+
+            if($item->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    'item'      => $item
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
