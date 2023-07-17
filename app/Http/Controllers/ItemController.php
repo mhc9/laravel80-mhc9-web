@@ -53,16 +53,21 @@ class ItemController extends Controller
     {
         /** Get params from query string */
         $category   = $req->get('category');
+        $name       = $req->get('name');
         $status     = $req->get('status');
+        $pageSize   = $req->get('limit') ? $req->get('limit') : 10;
 
         $items = Item::with('category','unit')
                     ->when(!empty($category), function($q) use ($category) {
                         $q->where('category_id', $category);
                     })
+                    ->when(!empty($name), function($q) use ($name) {
+                        $q->where('name', 'like', '%'.$name.'%');
+                    })
                     ->when($status != '', function($q) use ($status) {
                         $q->where('status', $status);
                     })
-                    ->paginate(10);
+                    ->paginate($pageSize);
 
         return $items;
     }
@@ -70,12 +75,16 @@ class ItemController extends Controller
     public function getAll(Request $req)
     {
         /** Get params from query string */
-        $category = $req->get('category');
+        $category   = $req->get('category');
+        $name       = $req->get('name');
         $status     = $req->get('status');
 
         $item = Item::with('category','unit')
                     ->when(!empty($category), function($q) use ($category) {
                         $q->where('category_id', $category);
+                    })
+                    ->when(!empty($name), function($q) use ($name) {
+                        $q->where('name', 'like', '%'.$name.'%');
                     })
                     ->when($status != '', function($q) use ($status) {
                         $q->where('status', $status);
