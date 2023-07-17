@@ -87,7 +87,7 @@ class ItemController extends Controller
 
     public function getById($id)
     {
-        return Item::with('department')->find($id);
+        return Item::with('category','unit')->find($id);
     }
 
     public function getInitialFormData()
@@ -112,7 +112,6 @@ class ItemController extends Controller
             $item->unit_id      = $req['unit_id'];
             $item->description  = $req['description'];
             // $item->status       = $req['status'] ? 1 : 0;
-
 
             if ($req->file('img_url')) {
                 $file = $req->file('img_url');
@@ -148,15 +147,29 @@ class ItemController extends Controller
     {
         try {
             $item = Item::find($id);
-            $item->name             = $req['name'];
-            $item->department_id    = $req['department_id'];
-            $item->status           = $req['status'] ? 1 : 0;
+            $item->name         = $req['name'];
+            $item->category_id  = $req['category_id'];
+            $item->cost         = $req['cost'];
+            $item->price        = $req['price'];
+            $item->unit_id      = $req['unit_id'];
+            $item->description  = $req['description'];
+            // $item->status       = $req['status'] ? 1 : 0;
+
+            if ($req->file('img_url')) {
+                $file = $req->file('img_url');
+                $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
+                $destinationPath = 'uploads/products/thumbnails/';
+
+                if ($file->move($destinationPath, $fileName)) {
+                    $item->img_url = $fileName;
+                }
+            }
 
             if($item->save()) {
                 return [
                     'status'    => 1,
                     'message'   => 'Updating successfully!!',
-                    'item'  => $item
+                    'item'      => $item
                 ];
             } else {
                 return [
