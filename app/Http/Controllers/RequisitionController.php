@@ -135,6 +135,7 @@ class RequisitionController extends Controller
                     $detail = new RequisitionDetail();
                     $detail->pr_id      = $requisition->id;
                     $detail->item_id    = $item['item_id'];
+                    $detail->description = $item['description'];
                     $detail->amount     = $item['amount'];
                     $detail->price      = $item['price'];
                     $detail->unit_id    = $item['unit_id'];
