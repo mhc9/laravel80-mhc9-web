@@ -60,7 +60,10 @@ class RequisitionController extends Controller
         $requester  = $req->get('requester');
         $status     = $req->get('status');
 
-        $requisitions = Requisition::with('category','details','details.item')
+        $requisitions = Requisition::with('category','budget','details','details.item','details.item.unit')
+                            ->with('requester','requester.prefix','requester.position','requester.level')
+                            ->with('committees','committees.employee','committees.employee.prefix')
+                            ->with('committees.employee.position','committees.employee.level')
                             ->when(!empty($category), function($q) use ($category) {
                                 $q->where('category_id', $category);
                             })
@@ -79,7 +82,10 @@ class RequisitionController extends Controller
         $requester  = $req->get('requester');
         $status     = $req->get('status');
 
-        $requisitions = Requisition::with('category','details','details.item')
+        $requisitions = Requisition::with('category','budget','details','details.item','details.item.unit')
+                            ->with('requester','requester.prefix','requester.position','requester.level')
+                            ->with('committees','committees.employee','committees.employee.prefix')
+                            ->with('committees.employee.position','committees.employee.level')
                             ->when(!empty($category), function($q) use ($category) {
                                 $q->where('category_id', $category);
                             })
@@ -93,10 +99,11 @@ class RequisitionController extends Controller
 
     public function getById($id)
     {
-        return Requisition::with('category','budget','requester','details','details.item','details.item.unit')
-                            ->with('committees','committees.employee','committees.employee.prefix')
-                            ->with('committees.employee.position','committees.employee.level')
-                            ->find($id);
+        return Requisition::with('category','budget','details','details.item','details.item.unit')
+                    ->with('requester','requester.prefix','requester.position','requester.level')
+                    ->with('committees','committees.employee','committees.employee.prefix')
+                    ->with('committees.employee.position','committees.employee.level')
+                    ->find($id);
     }
 
     public function getInitialFormData()
