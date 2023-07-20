@@ -15,6 +15,7 @@ use App\Models\AssetCategory;
 use App\Models\Department;
 use App\Models\Division;
 use App\Models\Committee;
+use App\Models\Project;
 
 class RequisitionController extends Controller
 {
@@ -108,6 +109,7 @@ class RequisitionController extends Controller
 
     public function getInitialFormData()
     {
+        $year = 2566;
         $types          = AssetType::with('categories')->get();
         $categories     = AssetCategory::with('type')->get();
         $departments    = Department::with('divisions')->get();
@@ -117,6 +119,7 @@ class RequisitionController extends Controller
             'categories'    => $categories,
             'departments'   => $departments,
             'divisions'     => Division::all(),
+            'projects'      => Project::where('year', $year)->get(),
         ];
     }
 
