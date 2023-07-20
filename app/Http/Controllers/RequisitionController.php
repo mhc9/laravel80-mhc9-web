@@ -93,7 +93,10 @@ class RequisitionController extends Controller
 
     public function getById($id)
     {
-        return Requisition::with('category','details','details.item')->find($id);
+        return Requisition::with('category','budget','requester','details','details.item','details.item.unit')
+                            ->with('committees','committees.employee','committees.employee.prefix')
+                            ->with('committees.employee.position','committees.employee.level')
+                            ->find($id);
     }
 
     public function getInitialFormData()

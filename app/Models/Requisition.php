@@ -16,9 +16,14 @@ class Requisition extends Model
         return $this->belongsTo(AssetCategory::class, 'category_id', 'id');
     }
 
-    public function division()
+    public function budget()
     {
-        return $this->belongsTo(Division::class, 'division_id', 'id');
+        return $this->belongsTo(Budget::class, 'budget_id', 'id');
+    }
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class, 'project_id', 'id');
     }
 
     public function requester()
@@ -26,8 +31,18 @@ class Requisition extends Model
         return $this->belongsTo(Employee::class, 'requester_id', 'id');
     }
 
+    public function division()
+    {
+        return $this->belongsTo(Division::class, 'division_id', 'id');
+    }
+
     public function details()
     {
         return $this->hasMany(RequisitionDetail::class, 'pr_id', 'id');
+    }
+
+    public function committees()
+    {
+        return $this->hasMany(Committee::class, 'requisition_id', 'id');
     }
 }

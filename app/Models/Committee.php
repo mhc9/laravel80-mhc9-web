@@ -15,4 +15,9 @@ class Committee extends Model
     {
         return $this->belongsTo(CommitteeType::class, 'committee_type_id', 'id');
     }
+
+    public function employee()
+    {
+        return $this->belongsTo(Employee::class, 'employee_id', 'id');
+    }
 }
