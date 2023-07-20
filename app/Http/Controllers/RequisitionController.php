@@ -60,7 +60,7 @@ class RequisitionController extends Controller
         $requester  = $req->get('requester');
         $status     = $req->get('status');
 
-        $requisitions = Requisition::with('category','details')
+        $requisitions = Requisition::with('category','details','details.item')
                             ->when(!empty($category), function($q) use ($category) {
                                 $q->where('category_id', $category);
                             })
@@ -79,7 +79,7 @@ class RequisitionController extends Controller
         $requester  = $req->get('requester');
         $status     = $req->get('status');
 
-        $requisitions = Requisition::with('category','details')
+        $requisitions = Requisition::with('category','details','details.item')
                             ->when(!empty($category), function($q) use ($category) {
                                 $q->where('category_id', $category);
                             })
@@ -93,7 +93,7 @@ class RequisitionController extends Controller
 
     public function getById($id)
     {
-        return Requisition::with('category','details')->find($id);
+        return Requisition::with('category','details','details.item')->find($id);
     }
 
     public function getInitialFormData()
