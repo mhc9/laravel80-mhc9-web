@@ -71,6 +71,7 @@ class RequisitionController extends Controller
                             ->when($status != '', function($q) use ($status) {
                                 $q->where('status', $status);
                             })
+                            ->orderBy('pr_date', 'DESC')
                             ->paginate(10);
 
         return $requisitions;
