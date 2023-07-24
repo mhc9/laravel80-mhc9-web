@@ -13,6 +13,9 @@ use App\Models\Position;
 use App\Models\Level;
 use App\Models\Department;
 use App\Models\Division;
+use App\Models\Changwat;
+use App\Models\Amphur;
+use App\Models\Tambon;
 
 class EmployeeController extends Controller
 {
@@ -114,11 +117,14 @@ class EmployeeController extends Controller
     public function getInitialFormData()
     {
         return [
-            'prefixes'  => Prefix::all(),
-            'positions' => Position::all(),
-            'levels'    => Level::all(),
-            'department' => Department::all(),
-            'divisions' => Division::all(),
+            'prefixes'      => Prefix::all(),
+            'positions'     => Position::all(),
+            'levels'        => Level::all(),
+            'department'    => Department::all(),
+            'divisions'     => Division::all(),
+            'changewats'    => Changwat::all(),
+            'amphurs'       => Amphur::all(),
+            'tambons'       => Tambon::all(),
         ];
     }
 
@@ -156,7 +162,7 @@ class EmployeeController extends Controller
                 $destinationPath = 'uploads/employees/';
 
                 if ($file->move($destinationPath, $fileName)) {
-                    $item->img_url = $fileName;
+                    $employee->avatar_url = $fileName;
                 }
             }
 
