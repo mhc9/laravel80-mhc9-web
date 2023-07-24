@@ -133,14 +133,32 @@ class EmployeeController extends Controller
             $employee->cid          = $req['cid'];
             $employee->sex          = $req['sex'];
             $employee->birthdate    = $req['birthdate'];
+            $employee->address_no   = $req['address_no'];
+            $employee->moo          = $req['moo'];
+            $employee->road         = $req['road'];
+            $employee->changwat_id  = $req['changwat_id'];
+            $employee->amphur_id    = $req['changwat_id'];
+            $employee->tambon_id    = $req['tambon_id'];
+            $employee->zipcode      = $req['zipcode'];
             $employee->tel          = $req['tel'];
             $employee->email        = $req['email'];
             $employee->line_id      = $req['line_id'];
             $employee->position_id  = $req['position_id'];
             $employee->level_id     = $req['level_id'];
+            $employee->assigned_at  = $req['assigned_at'];
             $employee->started_at   = $req['started_at'];
-            $employee->status       = 1;
             $employee->remark       = $req['remark'];
+            $employee->status       = 1;
+
+            if ($req->file('avatar_url')) {
+                $file = $req->file('avatar_url');
+                $fileName = $req['cid']. '.' .$file->getClientOriginalExtension();
+                $destinationPath = 'uploads/employees/';
+
+                if ($file->move($destinationPath, $fileName)) {
+                    $item->img_url = $fileName;
+                }
+            }
 
             if($employee->save()) {
                 return [
