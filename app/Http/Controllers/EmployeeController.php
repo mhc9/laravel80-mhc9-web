@@ -124,7 +124,7 @@ class EmployeeController extends Controller
             'prefixes'      => Prefix::all(),
             'positions'     => Position::all(),
             'levels'        => Level::all(),
-            'department'    => Department::all(),
+            'departments'   => Department::with('divisions')->get(),
             'divisions'     => Division::all(),
             'changewats'    => Changwat::all(),
             'amphurs'       => Amphur::all(),
