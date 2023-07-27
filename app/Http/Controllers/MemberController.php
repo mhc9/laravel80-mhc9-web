@@ -138,7 +138,7 @@ class MemberController extends Controller
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'member'    => $member
+                    'member'    => Member::with('division')->find($member->id)
                 ];
             } else {
                 return [
