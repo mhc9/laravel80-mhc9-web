@@ -130,8 +130,9 @@ class MemberController extends Controller
     {
         try {
             $member = new Member();
-            $member->division_id = $req['division_id'];
-            $member->employee_id = $req['employee_id'];
+            $member->division_id    = $req['division_id'];
+            $member->employee_id    = $req['employee_id'];
+            $member->duty_id        = $req['duty_id'];
 
             if($member->save()) {
                 return [
@@ -157,8 +158,9 @@ class MemberController extends Controller
     {
         // try {
         //     $member = Member::find($id);
-        //     $member->division_id = $req['division_id'];
-        //     $member->employee_id = $req['employee_id'];
+        //     $member->division_id    = $req['division_id'];
+        //     $member->employee_id    = $req['employee_id'];
+        //     $member->duty_id        = $req['duty_id'];
 
         //     if($member->save()) {
         //         return [
