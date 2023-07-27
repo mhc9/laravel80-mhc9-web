@@ -76,6 +76,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/members', 'App\Http\Controllers\MemberController@getAll');
     // Route::get('/members/search', 'App\Http\Controllers\MemberController@search');
     Route::get('/members/{id}', 'App\Http\Controllers\MemberController@getById');
+    Route::get('/members/employee/{employeeId}', 'App\Http\Controllers\MemberController@getByEmployee');
     // Route::get('/members/init/form', 'App\Http\Controllers\MemberController@getInitialFormData');
     Route::post('/members', 'App\Http\Controllers\MemberController@store');
 
