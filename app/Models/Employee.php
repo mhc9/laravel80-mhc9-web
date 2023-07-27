@@ -16,6 +16,21 @@ class Employee extends Model
         return $this->belongsTo(Prefix::class, 'prefix_id', 'id');
     }
 
+    public function changwat()
+    {
+        return $this->belongsTo(Changwat::class, 'changwat_id', 'id');
+    }
+
+    public function amphur()
+    {
+        return $this->belongsTo(Amphur::class, 'amphur_id', 'id');
+    }
+
+    public function tambon()
+    {
+        return $this->belongsTo(Tambon::class, 'tambon_id', 'id');
+    }
+
     public function position()
     {
         return $this->belongsTo(Position::class, 'position_id', 'id');

@@ -70,20 +70,21 @@ class EmployeeController extends Controller
         $level      = $req->get('level');
         $name       = $req->get('name');
 
-        $employees = Employee::with('prefix','position','level','memberOf','memberOf.division')
-                    ->when(!empty($position), function($q) use ($position) {
-                        $q->where('position_id', $position);
-                    })
-                    ->when(!empty($level), function($q) use ($level) {
-                        $q->where('level_id', $level);
-                    })
-                    ->when(!empty($name), function($q) use ($name) {
-                        $q->where('firstname', 'like', '%'.$name.'%');
-                    })
-                    // ->when($status != '', function($q) use ($status) {
-                    //     $q->where('status', $status);
-                    // })
-                    ->paginate(10);
+        $employees = Employee::with('prefix','changwat','amphur','tambon')
+                        ->with('position','level','memberOf','memberOf.division')
+                        ->when(!empty($position), function($q) use ($position) {
+                            $q->where('position_id', $position);
+                        })
+                        ->when(!empty($level), function($q) use ($level) {
+                            $q->where('level_id', $level);
+                        })
+                        ->when(!empty($name), function($q) use ($name) {
+                            $q->where('firstname', 'like', '%'.$name.'%');
+                        })
+                        // ->when($status != '', function($q) use ($status) {
+                        //     $q->where('status', $status);
+                        // })
+                        ->paginate(10);
 
         return $employees;
     }
@@ -94,24 +95,27 @@ class EmployeeController extends Controller
         $position = $req->get('position');
         $level = $req->get('level');
 
-        $employees = Employee::with('prefix','position','level','memberOf','memberOf.division')
-                    ->when(!empty($position), function($q) use ($position) {
-                        $q->where('position_id', $position);
-                    })
-                    ->when(!empty($level), function($q) use ($level) {
-                        $q->where('level_id', $level);
-                    })
-                    // ->when($status != '', function($q) use ($status) {
-                    //     $q->where('status', $status);
-                    // })
-                    ->get();
+        $employees = Employee::with('prefix','changwat','amphur','tambon')
+                        ->with('position','level','memberOf','memberOf.division')
+                        ->when(!empty($position), function($q) use ($position) {
+                            $q->where('position_id', $position);
+                        })
+                        ->when(!empty($level), function($q) use ($level) {
+                            $q->where('level_id', $level);
+                        })
+                        // ->when($status != '', function($q) use ($status) {
+                        //     $q->where('status', $status);
+                        // })
+                        ->get();
 
         return $employees;
     }
 
     public function getById($id)
     {
-        return Employee::with('prefix','position','level','memberOf','memberOf.division')->find($id);
+        return Employee::with('prefix','changwat','amphur','tambon')
+                    ->with('position','level','memberOf','memberOf.division')
+                    ->find($id);
     }
 
     public function getInitialFormData()
