@@ -112,7 +112,7 @@ class MemberController extends Controller
 
     public function getByEmployee($employeeId)
     {
-        return Member::where('employee_id', $employeeId)->get();
+        return Member::with('division')->where('employee_id', $employeeId)->get();
     }
 
     public function getInitialFormData()
