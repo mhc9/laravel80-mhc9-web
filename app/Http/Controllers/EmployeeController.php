@@ -255,4 +255,39 @@ class EmployeeController extends Controller
             ];
         }
     }
+
+    public function uploadAvatar(Request $req, $id)
+    {
+        try {
+            $employee = Employee::find($id);
+
+            if ($req->file('avatar_url')) {
+                $file = $req->file('avatar_url');
+                $fileName = $req['cid']. '.' .$file->getClientOriginalExtension();
+                $destinationPath = 'uploads/employees/';
+
+                if ($file->move($destinationPath, $fileName)) {
+                    $employee->avatar_url = $fileName;
+                }
+            }
+
+            if($employee->save()) {
+                return [
+                    'status'        => 1,
+                    'message'       => 'Uploading avatar successfully!!',
+                    'avatar_url'    => $employee->avatar_url
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
+        } catch (\Exception $ex) {
+            return [
+                'status'    => 0,
+                'message'   => $ex->getMessage()
+            ];
+        }
+    }
 }

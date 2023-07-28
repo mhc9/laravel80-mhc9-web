@@ -72,6 +72,9 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/employees/{id}', 'App\Http\Controllers\EmployeeController@getById');
     Route::get('/employees/init/form', 'App\Http\Controllers\EmployeeController@getInitialFormData');
     Route::post('/employees', 'App\Http\Controllers\EmployeeController@store');
+    Route::post('/employees/{id}', 'App\Http\Controllers\EmployeeController@update');
+    Route::delete('/employees/{id}', 'App\Http\Controllers\EmployeeController@destroy');
+    Route::post('/employees/{id}/upload', 'App\Http\Controllers\EmployeeController@uploadAvatar');
 
     Route::get('/members', 'App\Http\Controllers\MemberController@getAll');
     // Route::get('/members/search', 'App\Http\Controllers\MemberController@search');
