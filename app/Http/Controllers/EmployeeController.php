@@ -263,7 +263,7 @@ class EmployeeController extends Controller
 
             if ($req->file('avatar_url')) {
                 $file = $req->file('avatar_url');
-                $fileName = $req['cid']. '.' .$file->getClientOriginalExtension();
+                $fileName = $employee->cid. '.' .$file->getClientOriginalExtension();
                 $destinationPath = 'uploads/employees/';
 
                 if ($file->move($destinationPath, $fileName)) {
