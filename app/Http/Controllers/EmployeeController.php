@@ -263,9 +263,15 @@ class EmployeeController extends Controller
 
             if ($req->file('avatar_url')) {
                 $file = $req->file('avatar_url');
-                $fileName = $employee->cid. '.' .$file->getClientOriginalExtension();
+                $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
                 $destinationPath = 'uploads/employees/';
 
+                /** Remove old uploaded file */
+                if (\File::exists($destinationPath . $employee->avatar_url)) {
+                    \File::delete($destinationPath . $employee->avatar_url);
+                }
+
+                /** Upload new file */
                 if ($file->move($destinationPath, $fileName)) {
                     $employee->avatar_url = $fileName;
                 }
