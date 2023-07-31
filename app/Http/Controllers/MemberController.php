@@ -133,9 +133,10 @@ class MemberController extends Controller
     {
         try {
             $member = new Member();
-            $member->division_id    = $req['division_id'];
             $member->employee_id    = $req['employee_id'];
             $member->duty_id        = $req['duty_id'];
+            $member->department_id  = $req['department_id'];
+            $member->division_id    = $req['division_id'];
 
             if($member->save()) {
                 return [
