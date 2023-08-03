@@ -147,7 +147,7 @@ class EmployeeController extends Controller
             $employee->moo          = $req['moo'];
             $employee->road         = $req['road'];
             $employee->changwat_id  = $req['changwat_id'];
-            $employee->amphur_id    = $req['changwat_id'];
+            $employee->amphur_id    = $req['amphur_id'];
             $employee->tambon_id    = $req['tambon_id'];
             $employee->zipcode      = $req['zipcode'];
             $employee->tel          = $req['tel'];
@@ -193,36 +193,42 @@ class EmployeeController extends Controller
     public function update(Request $req, $id)
     {
         try {
-            // $item = Item::find($id);
-            // $item->plan_type_id = $req['plan_type_id'];
-            // $item->category_id  = $req['category_id'];
-            // $item->group_id     = $req['group_id'];
-            // $item->asset_no     = $req['asset_no'];
-            // $item->item_name    = $req['item_name'];
-            // $item->en_name      = $req['en_name'];
-            // $item->price_per_unit = currencyToNumber($req['price_per_unit']);
-            // $item->unit_id      = $req['unit_id'];
-            // $item->in_stock     = $req['in_stock'];
-            // $item->calc_method  = $req['calc_method'];
-            // $item->have_subitem = $req['have_subitem'];
-            // $item->is_fixcost   = $req['is_fixcost'];
-            // $item->is_repairing_item = $req['is_repairing_item'];
-            // $item->is_addon     = $req['is_addon'];
-            // $item->first_year   = $req['first_year'];
-            // $item->remark       = $req['remark'];
+            $employee = Employee::find($id);
+            $employee->employee_no  = $req['employee_no'];
+            $employee->prefix_id    = $req['prefix_id'];
+            $employee->firstname    = $req['firstname'];
+            $employee->lastname     = $req['lastname'];
+            $employee->cid          = $req['cid'];
+            $employee->sex          = $req['sex'];
+            $employee->birthdate    = $req['birthdate'];
+            $employee->address_no   = $req['address_no'];
+            $employee->moo          = $req['moo'];
+            $employee->road         = $req['road'];
+            $employee->changwat_id  = $req['changwat_id'];
+            $employee->amphur_id    = $req['amphur_id'];
+            $employee->tambon_id    = $req['tambon_id'];
+            $employee->zipcode      = $req['zipcode'];
+            $employee->tel          = $req['tel'];
+            $employee->email        = $req['email'];
+            $employee->line_id      = $req['line_id'];
+            $employee->position_id  = $req['position_id'];
+            $employee->level_id     = $req['level_id'];
+            $employee->assigned_at  = $req['assigned_at'];
+            $employee->started_at   = $req['started_at'];
+            $employee->remark       = $req['remark'];
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Updating successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($employee->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Updating successfully!!',
+                    'employee'  => $employee
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
