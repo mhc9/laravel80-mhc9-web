@@ -160,30 +160,31 @@ class MemberController extends Controller
 
     public function update(Request $req, $id)
     {
-        // try {
-        //     $member = Member::find($id);
-        //     $member->division_id    = $req['division_id'];
-        //     $member->employee_id    = $req['employee_id'];
-        //     $member->duty_id        = $req['duty_id'];
+        try {
+            $member = Member::find($id);
+            $member->employee_id    = $req['employee_id'];
+            $member->duty_id        = $req['duty_id'];
+            $member->department_id  = $req['department_id'];
+            $member->division_id    = $req['division_id'];
 
-        //     if($member->save()) {
-        //         return [
-        //             'status'    => 1,
-        //             'message'   => 'Updating successfully!!',
-        //             'member'    => $member
-        //         ];
-        //     } else {
-        //         return [
-        //             'status'    => 0,
-        //             'message'   => 'Something went wrong!!'
-        //         ];
-        //     }
-        // } catch (\Exception $ex) {
-        //     return [
-        //         'status'    => 0,
-        //         'message'   => $ex->getMessage()
-        //     ];
-        // }
+            if($member->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Updating successfully!!',
+                    'member'    => $member
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
+        } catch (\Exception $ex) {
+            return [
+                'status'    => 0,
+                'message'   => $ex->getMessage()
+            ];
+        }
     }
 
     public function destroy(Request $req, $id)
