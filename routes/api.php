@@ -51,6 +51,7 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/assets', 'App\Http\Controllers\AssetController@store');
     Route::put('/assets/{id}', 'App\Http\Controllers\AssetController@update');
     Route::delete('/assets/{id}', 'App\Http\Controllers\AssetController@destroy');
+    Route::post('/assets/{id}/upload', 'App\Http\Controllers\AssetController@uploadImage');
 
     Route::get('/asset-ownerships', 'App\Http\Controllers\AssetOwnershipController@getAll');
     Route::get('/asset-ownerships/{id}', 'App\Http\Controllers\AssetOwnershipController@getById');

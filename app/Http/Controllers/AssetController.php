@@ -258,4 +258,45 @@ class AssetController extends Controller
             ];
         }
     }
+
+    public function uploadImage(Request $req, $id)
+    {
+        try {
+            $asset = Asset::find($id);
+
+            if ($req->file('img_url')) {
+                $file = $req->file('img_url');
+                $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
+                $destinationPath = 'uploads/assets/';
+
+                /** Remove old uploaded file */
+                if (\File::exists($destinationPath . $asset->img_url)) {
+                    \File::delete($destinationPath . $asset->img_url);
+                }
+
+                /** Upload new file */
+                if ($file->move($destinationPath, $fileName)) {
+                    $asset->img_url = $fileName;
+                }
+            }
+
+            if($asset->save()) {
+                return [
+                    'status'        => 1,
+                    'message'       => 'Uploading avatar successfully!!',
+                    'img_url'       => $asset->img_url
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
+        } catch (\Exception $ex) {
+            return [
+                'status'    => 0,
+                'message'   => $ex->getMessage()
+            ];
+        }
+    }
 }
