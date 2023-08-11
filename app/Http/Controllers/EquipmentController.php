@@ -112,7 +112,7 @@ class EquipmentController extends Controller
         return Equipment::with('type','group')->find($id);
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
             'types'  => EquipmentType::all(),

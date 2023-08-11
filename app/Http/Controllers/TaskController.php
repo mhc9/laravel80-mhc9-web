@@ -110,7 +110,7 @@ class TaskController extends Controller
         return Task::with('group','group.type','reporter','assets','assets.asset')->find($id);
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
             'types'         => TaskType::all(),

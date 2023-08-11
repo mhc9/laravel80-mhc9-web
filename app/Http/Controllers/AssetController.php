@@ -138,7 +138,7 @@ class AssetController extends Controller
         return Asset::with('group','group.category','brand','budget', 'obtaining','unit')->find($id);
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
             'types'         => AssetType::all(),
