@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class WebData extends Model
 {
+    protected $connection = "sqlsrv";
     protected $table = 'WebData';
     protected $primaryKey = 'WdId';
     // public $incrementing = false; // false = ไม่ใช้ options auto increment

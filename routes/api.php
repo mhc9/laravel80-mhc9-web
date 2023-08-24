@@ -137,9 +137,9 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/orders', 'App\Http\Controllers\OrderController@store');
     Route::put('/orders/{id}', 'App\Http\Controllers\OrderController@update');
     Route::delete('/orders/{id}', 'App\Http\Controllers\OrderController@destroy');
-
-    Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
 });
+
+Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
 
 Route::get('/db-connection', function () {
     try {
