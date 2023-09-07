@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import DefaultLayout from './DefaultLayout';
 import Home from './pages/Home';
@@ -10,6 +11,7 @@ import Contact from './pages/Contact';
 import Vision from './pages/Vision';
 import Structure from './pages/Structure';
 import Executives from './pages/Executives';
+import { store } from '../features/store';
 
 function App() {
     return (
@@ -31,10 +33,12 @@ export default App;
 
 if (document.getElementById('root')) {
     ReactDOM.render(
-        <HashRouter>
-            <App />
-            <ToastContainer />
-        </HashRouter>,
+        <Provider store={store}>
+            <HashRouter>
+                <App />
+                <ToastContainer />
+            </HashRouter>
+        </Provider>,
         document.getElementById('root')
     );
 }
