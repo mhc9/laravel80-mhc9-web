@@ -11974,6 +11974,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* ================================== Globals ================================== */
 :root {
   /* Theme colors */
   --color0:#47484d;
@@ -12015,22 +12016,22 @@ a {
   text-decoration: none;
 }
 
-.defaullt-layout main {
+main {
   background: white;
   border: 1px solid #D3D3D3;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
   padding: 0;
 }
-.defaullt-layout main section {
+main section {
   min-height: 500px;
   padding: 0;
 }
-.defaullt-layout main section .title {
+main section .title {
   margin: 10px 20px 0;
   font-size: 24px;
 }
-.defaullt-layout main section .title i {
+main section .title i {
   margin-right: 5px;
 }
 
@@ -12045,6 +12046,7 @@ a {
   color: #BCBCBC;
 }
 
+/* ================================== End Globals ================================== */
 /* ================================== Scrollbar ================================== */
 body::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
@@ -12061,7 +12063,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ================================== End Scrollbar ================================== */
-/* ================================== Nav Menu ================================== */
+/* ================================== Navbar ================================== */
+/* Options Menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav.topnav {
   background: #fff;
   /* border-color:#ebebeb; */
@@ -12112,6 +12116,8 @@ nav.topnav .top-menu > .menu-option:hover {
   color: var(--color1);
 }
 
+/* Nav Menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav.topnav .menu > a {
   background: #fff;
   color: #000;
@@ -12182,6 +12188,8 @@ nav.topnav .ui.fluid.dropdown > .text {
   color: #909090;
 }
 
+/* SubMenu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav.topnav .submenu-container .hero h2, nav.topnav .submenu-container .hero .h2 {
   color: #fff;
 }
@@ -12233,7 +12241,8 @@ nav.topnav .menu .child:hover > a {
   background: var(--color1);
 }
 
-/* Mobile menu */
+/* Mobile Menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav.topnav .mobile-menu .sidenav-btn {
   border-color: #ebebeb;
 }
@@ -12303,6 +12312,8 @@ nav.topnav > .container > .wrapper {
   align-items: center;
 }
 
+/* Logo
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav.topnav .logo {
   display: flex;
   align-items: center;
@@ -12357,6 +12368,8 @@ nav.topnav.sticky .logo p {
   font-size: 0;
 }
 
+/* Top Menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav.topnav .top-menu {
   display: flex;
   justify-content: space-between;
@@ -12741,7 +12754,7 @@ nav.topnav .mobile-menu .sidenav-btn {
 }
 
 .hamburger > :nth-child(2) {
-  gin: 0.375rem 0;
+  margin: 0.375rem 0;
 }
 
 .hamburger.active > :nth-child(1) {
@@ -12869,7 +12882,8 @@ nav.topnav .nav-logo .logo-text p {
     height: 4.9375rem;
   }
 }
-/* ================================== End Nav Menu ================================== */
+/* ================================== End Navbar ================================== */
+/* ================================== Footer ================================== */
 footer {
   position: absolute;
   left: 0;
@@ -12930,6 +12944,13 @@ footer .footer-bottom a {
 
 /* ================================== End Footer ================================== */
 /* ================================== Organization structure ================================== */
+.structure .structure-avatar {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+}
+
 .structure hr ~ div {
   margin: 40px 0;
   padding-bottom: 20px;
@@ -13260,7 +13281,9 @@ ol {
 }
 
 /* ================================== End News ================================== */
-/* ================================== Vision Quote ================================== */
+/* ================================== Vision ================================== */
+/* Vision Quote
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .vision .vision-wrapper {
   display: flex;
   flex-direction: column;
@@ -13313,8 +13336,8 @@ ol {
   font-weight: 900;
 }
 
-/* ================================== End Vision Quote ================================== */
-/* ================================== Core Values Quote ================================== */
+/* Core Values Quote
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .core__values-quote {
   padding: 60px 80px 40px;
   position: relative;
@@ -13356,8 +13379,8 @@ ol {
   width: 200px;
 }
 
-/* ================================== End Core Values Quote ================================== */
-/* ================================== Mission bullet ================================== */
+/* Mission bullet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 ol.gradient-list > li::before, ol.gradient-list > li {
   box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
 }
@@ -13433,7 +13456,7 @@ ol.gradient-list > li + li {
     width: 75%;
   }
 }
-/* ================================== End Mission bullet ================================== */
+/* ================================== End Vision page ================================== */
 /* ================================== Cookie Consent ================================== */
 .cookie-consent {
   position: fixed;
@@ -13496,6 +13519,7 @@ ol.gradient-list > li + li {
 }
 
 /* ================================== End Cookie Consent ================================== */
+/* ================================== End Contact page ================================== */
 .contact .contact-wrapper {
   display: flex;
   flex-direction: row;
@@ -13518,15 +13542,9 @@ ol.gradient-list > li + li {
   margin: 5px 0;
 }
 
-.structure .structure-avatar {
-  position: relative;
-  border: 1px solid red;
-  border-radius: 50%;
-  overflow: hidden;
-  background: white;
-}
-
-.not-found > div:first-child {
+/* ================================== End Contact page ================================== */
+/* ================================== Error page ================================== */
+.error-box > div:first-child {
   min-height: 500px;
   text-align: center;
   display: flex;
@@ -13534,11 +13552,11 @@ ol.gradient-list > li + li {
   align-items: center;
   justify-content: center;
 }
-.not-found .error-text {
+.error-box .error-text {
   display: flex;
   flex-direction: row;
 }
-.not-found .error-text h1, .not-found .error-text .h1 {
+.error-box .error-text h1, .error-box .error-text .h1 {
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   margin: 0;
   margin-right: 20px;
@@ -13547,14 +13565,14 @@ ol.gradient-list > li + li {
   font-weight: 500;
   line-height: 49px;
 }
-.not-found .error-text div {
+.error-box .error-text div {
   display: inline-block;
   text-align: left;
   line-height: 49px;
   height: 49px;
   vertical-align: middle;
 }
-.not-found .error-text div h2, .not-found .error-text div .h2, .not-found .error-text div h3, .not-found .error-text div .h3, .not-found .error-text div h4, .not-found .error-text div .h4 {
+.error-box .error-text div h2, .error-box .error-text div .h2, .error-box .error-text div h3, .error-box .error-text div .h3, .error-box .error-text div h4, .error-box .error-text div .h4 {
   font-size: 14px;
   font-weight: normal;
   line-height: 49px;
@@ -13562,7 +13580,9 @@ ol.gradient-list > li + li {
   padding: 0;
 }
 @media (prefers-color-scheme: dark) {
-  .not-found .error-text h1, .not-found .error-text .h1 {
+  .error-box .error-text h1, .error-box .error-text .h1 {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
+
+/* ================================== End Error page ================================== */
