@@ -1,8 +1,9 @@
 import React from 'react'
 import NavLogo from './NavLogo'
 import NavMenu from './NavMenu'
+import NavMobileMenu from '../Navbar/NavMobileMenu'
 
-const Navbar = () => {
+const Navbar = ({ screenWidth }) => {
     return (
         <nav className="topnav">
             <div className="container">
@@ -10,21 +11,17 @@ const Navbar = () => {
                     <div className="menu-container" style={{ width: '100%' }}>
                         <div className="container">
                             <div className="menu-wrapper">
-                                {/* ================================ Nav Logo ================================ */}
+                                {/* ================ Logo ================ */}
                                 <NavLogo />
-                                {/* ================================ End Nav Logo ================================ */}
 
-                                {/* ================================ Menu Options ================================ */}
+                                {/* ================ Options ================ */}
                                 {/* <MenuOptions /> */}
-                                {/* ================================ End menu Options ================================ */}
 
-                                {/* ================================ Nav menus ================================ */}
+                                {/* ================ Menus ================ */}
                                 <NavMenu />
-                                {/* ================================ End nav menus ================================ */}
 
-                                {/* ================================ Nav mobile ================================ */}
-                                <MenuMobile />
-                                {/* ================================ End nav mobile ================================ */}
+                                {/* ================ Mobile ================ */}
+                                <NavMobileMenu />
                             </div>
                         </div>
                     </div>
