@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { CookiesProvider } from 'react-cookie';
 import { ToastContainer } from 'react-toastify';
 import DefaultLayout from './DefaultLayout';
 import Home from './pages/Home';
@@ -46,7 +47,9 @@ if (document.getElementById('root')) {
     ReactDOM.render(
         <Provider store={store}>
             <HashRouter>
-                <App />
+                <CookiesProvider>
+                    <App />
+                </CookiesProvider>
                 <ToastContainer />
             </HashRouter>
         </Provider>,
