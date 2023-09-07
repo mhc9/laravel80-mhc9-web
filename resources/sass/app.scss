@@ -491,12 +491,38 @@ nav.topnav .menu > a {
     position: relative;
     transition: color .3s;
 }
-nav.topnav .menu>a>div{z-index:1}
-nav.topnav .menu>a::before{content:'';position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:none;opacity:0;transition:opacity .3s}
-nav.topnav .menu.active>a::before,nav.topnav .menu:hover>a::before{opacity:1}
-nav.topnav .menu>a::after{content:'';position:absolute;bottom:0;left:0;width:.5rem;height:.5rem;pointer-events:none}
-nav.topnav .menu:last-child>a::after{display:none}
-nav.topnav .menu.icon-menu>a{width:3.75rem;font-size:1rem;border-right:1px solid transparent}
+nav.topnav .menu > a > div { z-index: 1; }
+
+nav.topnav .menu > a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+nav.topnav .menu.active > a::before,
+nav.topnav .menu:hover > a::before { opacity:1; }
+nav.topnav .menu > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: .5rem;
+    height: .5rem;
+    pointer-events: none;
+}
+
+nav.topnav .menu:last-child > a::after { display: none; }
+nav.topnav .menu.icon-menu > a {
+    width: 3.75rem;
+    font-size: 1rem;
+    border-right: 1px solid transparent;
+}
 
 /* Sub menu */
 nav.topnav .submenu-container{
@@ -670,7 +696,7 @@ nav.topnav .submenu .child > a {
     text-decoration: none;
     padding: 1rem 2rem 1rem 2rem;
     margin: 0;
-    font-size: 1.125rem;
+    font-size: 0.75rem;
     font-weight: 400;
     min-height: 3.2rem;
     white-space: pre-line;
