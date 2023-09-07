@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import CookieConsent from './shared/CookieConsent'
 import SocialIcons from './shared/SocialIcons'
 
@@ -13,18 +14,18 @@ const Footer = () => {
                     {/* Row */}
                     <div className="footer-row">
                         {/* Col */}
-                        <div className="footer-col">
+                        <div className="footer-col footer-menu">
                             <h2>รู้จักเรา</h2>
                             <ul>
                                 <li><a href="#">ประวัติความเป็นมา</a></li>
-                                <li><a href="#">วิสัยทัศน์ พันธกิจ</a></li>
-                                <li><a href="#">ผู้บริการหน่วยงาน</a></li>
+                                <li><a href="#">วิสัยทัศน์/พันธกิจ/ค่านิยม</a></li>
+                                <li><a href="#">ผู้บริหารหน่วยงาน</a></li>
                                 <li><a href="#">โครงสร้างองค์กร</a></li>
                                 <li><a href="#">ภารกิจและหน้าที่รับผิดชอบ</a></li>
                             </ul>
                         </div>
                         {/* Col */}
-                        <div className="footer-col">
+                        <div className="footer-col footer-menu">
                             <h2>บริการประชาชน</h2>
                             <ul>
                                 <li><a href="#">คู่มือการให้บริการ</a></li>
@@ -36,7 +37,7 @@ const Footer = () => {
                         </div>
 
                         {/* Col */}
-                        <div className="footer-col">
+                        <div className="footer-col footer-menu">
                             <h2>สำหรับเจ้าหน้าที่</h2>
                             <ul>
                                 <li><a href="#">ระบบ WPM</a></li>
@@ -47,7 +48,7 @@ const Footer = () => {
                         </div>
 
                         {/* Col */}
-                        <div className="footer-col">
+                        <div className="footer-col footer-menu">
                             <h2>ติอต่อเรา</h2>
                             <ul>
                                 <li><a href="/">ศูนย์สุขภาพจิตที่ 9</a></li>
@@ -62,7 +63,24 @@ const Footer = () => {
                     </div>
                     {/* Row */}
                     <div className="footer-row">
-
+                        <div className="footer-col footer-policy">
+                            <div className="standard-wrapper">
+                                <div className="standard-logo">
+                                    <img src="https://anamai.moph.go.th/assets/app/images/icon/ipv6.png" alt="standard-logo" />
+                                </div>
+                                <div className="standard-logo">
+                                    <img src="https://anamai.moph.go.th/assets/app/images/icon/w3c.png" alt="standard-logo" />
+                                </div>
+                            </div>
+                            <div className="policy-wrapper">
+                                <Link to="/">นโยบายเว็บไซต์</Link> |
+                                <Link to="/">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</Link> |
+                                <Link to="/">นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์</Link>
+                            </div>
+                        </div>
+                        <div className="footer-col footer-stat">
+                            {/* <i className="fas fa-users"></i> */}
+                        </div>
                     </div>
                 </div>
             </div>
