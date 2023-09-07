@@ -1509,6 +1509,11 @@ ol {
 /* Vision Quote
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .vision {
+    hr {
+        margin-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-right: calc(var(--bs-gutter-x)  * 0.5);
+    }
+
     .vision-wrapper {
         display: flex;
         flex-direction: column;

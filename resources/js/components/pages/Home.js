@@ -11,6 +11,10 @@ const Home = () => {
             <OptionMenu />
 
             <section className="home container">
+                <h1 className="title">ข่าวประชาสัมพันธ์</h1>
+
+                <hr className="my-2" />
+
                 <div>
                     
                 </div>
