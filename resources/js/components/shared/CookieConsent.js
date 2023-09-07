@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-const CookieConsent = ({ isShow, onHide }) => {
+const CookieConsent = ({ isShow, onHide, onSetCookie }) => {
     const [showSettings, setShowSettings] = useState(false);
 
-    const handleSaveCookie = (e) => {
-        console.log(e);
+    const handleAccept = (e) => {
+        onSetCookie('mhc9_consent', { _id: 'xxx', datestamp: new Date(), choices: '' });
         onHide();
     };
 
@@ -23,7 +23,7 @@ const CookieConsent = ({ isShow, onHide }) => {
                     <span><a href="">อ่านเพิ่มเติม</a></span>
                 </p>
                 <div className="btn-wrapper">
-                    <button type="button" className="btn-accept" onClick={(e) => handleSaveCookie(e)}>
+                    <button type="button" className="btn-accept" onClick={(e) => handleAccept(e)}>
                         ยอมรับ
                     </button>
                     <button type="button" className="" onClick={() => setShowSettings(true)}>
