@@ -3,7 +3,7 @@ import SocialIcons from '../shared/SocialIcons'
 
 const Contact = () => {
     return (
-        <section className="contact">
+        <section className="contact container">
             <h1 className="title">ติดต่อเรา</h1>
 
             <hr className="my-2" />

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Vision = () => {
     return (
-        <section className="vision">
+        <section className="vision container">
             <h1 className="title">
                 <i className="fas fa-map-signs"></i>
                 วิสัยทัศน์/พันธกิจ/ค่านิยม

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Executives = () => {
     return (
-        <section className="executives">
+        <section className="executives container">
             <h1 className="title">ผู้บริหารหน่วยงาน</h1>
 
             <hr className="my-2" />

@@ -3,7 +3,7 @@ import StructureAvatar from '../shared/StructureAvatar'
 
 const Structure = () => {
     return (
-        <section className="structure">
+        <section className="structure container">
             <h1 className="title">โครงสร้างองค์กร</h1>
 
             <hr className="my-2" />
