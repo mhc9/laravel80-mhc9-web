@@ -20,7 +20,7 @@
     --color5:#d7d8d0;
 
     /* Swiper slide colors */
-    --swiper-navigation-color: #E49A38;
+    --swiper-navigation-color: #47484d;
 
     /* Organization Structure colors */
     --level-1: #8dccad;
@@ -54,16 +54,18 @@ a {
 }
 
 
-main {
-    background: white;
-    border: 1px solid #D3D3D3;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
-    padding: 0;
+main {    
+    margin-top: 75px;
 
     section {
         min-height: 500px;
+        background: white;
+        border: 1px solid #D3D3D3;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
         padding: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
 
         .title {
             margin: 10px 20px 0;
@@ -90,6 +92,197 @@ main {
 
 // .defaullt-layout { position: relative; }
 /* ================================== End Globals ================================== */
+
+
+/* ================================== Slide Hero ================================== */
+.slide-hero {
+    min-height: 362px;
+    background: white;
+    overflow: hidden;
+
+    .slide-wrapper {
+        position: relative;
+        height: 475px;
+
+        .slide-text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            opacity: 0.3;
+            padding: 1rem;
+            background: #BFBFBF;
+        }
+    }
+}
+/* ================================== End Slide Hero ================================== */
+
+
+/* ================================== Slide Logo ================================== */
+.slide-logos {
+    padding: 10px 0;
+    height: 150px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+
+    .slide-logo {
+        position: relative;
+        height: 130px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+/* ================================== End Slide Logo ================================== */
+
+
+/* ================================== Option menus ================================== */
+.option-menus {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgb(58 45 45 / 25%) 0 8px 16px;
+    overflow: visible;
+}
+
+.option-menus .ellipsis-1 {
+    display: -webkit-box;
+    height: 25px;
+    line-height: 25px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.option-menus .contents {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.option-menus .contents .content {
+    display: block;
+    width: calc(100% / 8);
+    cursor: pointer;
+}
+
+.option-menus .contents .content:hover { background: #D8D8D8;}
+
+.option-menus .contents .content .wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.option-menus .contents .content h6 {
+    color: #000;
+    margin: .9375rem 0 0 0;
+    font-size: .80rem;
+    font-weight: 300;
+    z-index: 2;
+    transition: color .3s;
+}
+
+.option-menus .contents .content .text-container {
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    padding: 1.0625rem .25rem;
+}
+
+.option-menus .content .text-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transition: bottom .3s;
+}
+
+.option-menus .contents .content:not(:last-child) .text-container::after {
+    content: '';
+    position: absolute;
+    top: .625rem;
+    bottom: .625rem;
+    right: -.5px;
+    width: 1px;
+    background: #e1e2e3;
+    transition: background .3s;
+}
+
+.option-menus .contents .content .banner {
+    position: absolute;
+    top: 100%;
+    bottom: -3.3125rem;
+    left: 0;
+    right: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: top .3s, font-size .3s, padding-top .3s;
+}
+
+.option-menus .contents .content:first-child .banner {
+    border-radius: 0 0 0 1.125rem;
+    background: #96ac40;
+}
+
+.option-menus .contents .content:last-child .banner {
+    border-radius: 0 0 1.125rem 0;
+    background: #0d838d;
+}
+
+.option-menus .contents .content:nth-child(8n+2) .banner {
+    background: #ecd150;
+}
+
+.option-menus .contents .content:nth-child(8n+3) .banner {
+    background: #5b8bb1;
+}
+
+.option-menus .contents .content:nth-child(8n+4) .banner {
+    background: #58c8bc;
+}
+
+.option-menus .contents .content:nth-child(8n+5) .banner {
+    background: #fe9a42;
+}
+
+.option-menus .contents .content:nth-child(8n+6) .banner {
+    background: #d0505d;
+}
+
+.option-menus .contents .content:nth-child(8n+7) .banner {
+    background: #f0c195;
+}
+
+.option-menus .contents .content .order {
+    position: absolute;
+    top: .75rem;
+    left: calc(50% - .41875rem);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #808080;
+    transition: color .3s,top .3s,left .3s,font-size .3s;
+}
+/* ================================== End Option menus ================================== */
+
 
 /* ================================== Scrollbar ================================== */
 body::-webkit-scrollbar {

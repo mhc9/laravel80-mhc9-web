@@ -1,12 +1,23 @@
 import React from 'react'
+import SlideHeros from '../SlideHeros'
+import OptionMenu from '../OptionMenu'
+import SlideLogos from '../SlideLogos'
 
 const Home = () => {
     return (
-        <section className="home">
-            <div>
-                
-            </div>
-        </section>
+        <>
+            <SlideHeros />
+
+            <OptionMenu />
+
+            <section className="home container">
+                <div>
+                    
+                </div>
+            </section>
+
+            <SlideLogos />
+        </>
     )
 }
 

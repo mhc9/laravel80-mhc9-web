@@ -17,7 +17,7 @@ const Sidebar = ({ isShow }) => {
                     <ul>
                         <li><Link to="/" onClick={() => dispatch(toggleSidebar())}>หน้าหลัก</Link></li>
                         <li className="has-sub">
-                            <a href=""><i class="fas fa-home"></i> รู้จักเรา</a>
+                            <a href=""><i className="fas fa-home"></i> รู้จักเรา</a>
                             <ul>
                                 <li><Link to="/about" onClick={() => dispatch(toggleSidebar())}>ประวัติความเป็นมา</Link></li>
                                 <li><Link to="/vision" onClick={() => dispatch(toggleSidebar())}>วิสัยทัศน์ พันธกิจ ค่านิยม</Link></li>
@@ -34,7 +34,7 @@ const Sidebar = ({ isShow }) => {
                             </ul>
                         </li>
                         <li className="has-sub">
-                            <a href=""><i class="fas fa-bullhorn"></i> ข่าวประชาสัมพันธ์</a>
+                            <a href=""><i className="fas fa-bullhorn"></i> ข่าวประชาสัมพันธ์</a>
                             <ul>
                                 <li><a href="">ข่าวกิจกรรม</a></li>
                                 <li className="has-sub">
@@ -52,7 +52,7 @@ const Sidebar = ({ isShow }) => {
                             </ul>
                         </li>
                         <li className="has-sub">
-                            <a href=""><i class="fas fa-stethoscope"></i> บริการประชาชน</a>
+                            <a href=""><i className="fas fa-stethoscope"></i> บริการประชาชน</a>
                             <ul>
                                 <li><a href="">คู่มือการให้บริการ</a></li>
                                 <li><a href="">แจ้งเรื่องร้องเรียน</a></li>
@@ -61,7 +61,7 @@ const Sidebar = ({ isShow }) => {
                             </ul>
                         </li>
                         <li className="has-sub">
-                            <a href=""><i class="far fa-address-book"></i> ติดต่อเรา</a>
+                            <a href=""><i className="far fa-address-book"></i> ติดต่อเรา</a>
                             <ul>
                                 <li><Link to="/contact" onClick={() => dispatch(toggleSidebar())}>ติดต่อเรา</Link></li>
                                 <li><Link to="/links" onClick={() => dispatch(toggleSidebar())}>ลิงค์ที่เกี่ยวข้อง</Link></li>

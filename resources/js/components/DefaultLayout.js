@@ -25,10 +25,10 @@ const DefaultLayout = () => {
     };
 
     return (
-        <div className="defaullt-layout container-fluid">
+        <div className="defaullt-layout">
             <Navbar screenWidth={screen.width} />
 
-            <main className="container" style={{ marginTop: '90px', marginBottom: '15px' }}>
+            <main>
                 <Outlet />
             </main>
 
