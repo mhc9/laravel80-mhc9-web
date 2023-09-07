@@ -173,7 +173,7 @@ const NavMenu = () => {
                                 <a href="#" target="_self">ข่าวหนังสือพิมพ์</a>
                             </div> */}
                             <div className="submenu ">
-                                <Link href="/calendar" target="_self">ปฏิทินกิจกรรม</Link>
+                                <Link to="/calendar" target="_self">ปฏิทินกิจกรรม</Link>
                             </div>
                         </div>
                     </div>

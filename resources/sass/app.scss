@@ -64,18 +64,18 @@ main {
         border-radius: 5px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
         padding: 0;
-        margin-top: 15px;
         margin-bottom: 15px;
 
         .title {
             margin: 10px 20px 0;
             font-size: 24px;
 
-            i {
-                margin-right: 5px;
-            }
+            i { margin-right: 5px; }
         }
     }
+
+    section.home { margin-top: 15px; }
+    section:not(.home) { margin-top: 90px; }
 }
 
 .social-icons {
@@ -1702,6 +1702,18 @@ ol.gradient-list > li + li {
     }
 }
 /* ================================== End Contact page ================================== */
+
+
+/* ================================== End Calendar ================================== */
+.calendar {
+    .calendar-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0 2rem;
+    }
+}
+/* ================================== End Calendar ================================== */
 
 
 /* ================================== Error page ================================== */
