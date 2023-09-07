@@ -877,19 +877,17 @@ nav.topnav {
             top: 0.5rem;
             right: 0.5rem;
             cursor: pointer;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #D3D3D3;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            span {
-                width: 20px;
-                height: 20px;
-                border: 1px solid #D3D3D3;
-                border-radius: 50%;
-                color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            i { color: white; }
 
-                // hover:text-black hover:bg-white
-            }
+            i:hover { color: #D3D3D3; }
         }
     }
 }

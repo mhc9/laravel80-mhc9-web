@@ -10,9 +10,9 @@ const Sidebar = ({ isShow }) => {
     return (
         <div className="sidebar" style={{ visibility: isShow ? 'visible' : 'hidden'}} ref={sidebarRef}>
             <div className="sidebar-wrapper">
-                <a href="#" className="close-btn" onClick={() => dispatch(toggleSidebar())}>
-                    <span><i className="fas fa-times"></i></span>
-                </a>
+                <span className="close-btn" onClick={() => dispatch(toggleSidebar())}>
+                    <i className="fas fa-times"></i>
+                </span>
                 <div className="navigation">
                     <ul>
                         <li><Link to="/" onClick={() => dispatch(toggleSidebar())}>หน้าหลัก</Link></li>
