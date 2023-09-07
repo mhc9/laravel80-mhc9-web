@@ -88,7 +88,7 @@ main {
     }
 }
 
-.defaullt-layout {}
+// .defaullt-layout {}
 /* ================================== End Globals ================================== */
 
 /* ================================== Scrollbar ================================== */
@@ -605,7 +605,7 @@ nav.topnav {
     nav.topnav .logo > .text { max-width: 20rem; }
     nav.topnav .bottom-menu { display: none; }
 
-    /* TODO: Additional */
+    /* Additional */
     nav.topnav .menu-options { display: none; }
     nav.topnav .mobile-menu { display: flex; }
 }
