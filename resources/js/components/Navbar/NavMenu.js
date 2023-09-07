@@ -15,7 +15,7 @@ const NavMenu = () => {
                 <a href="#" target="_self"><div>รู้จักเรา</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
-                        {/* <MenuHero imgSrc="/01.png" /> */}
+                        {/* <MenuHero title="รู้จักเรา" imgSrc="/01.png" /> */}
 
                         <div className="submenus">
                             <div className="submenu ">
@@ -120,7 +120,7 @@ const NavMenu = () => {
                 <a href="#" target="_self"><div>บริการประชาชน</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
-                        {/* <MenuHero imgSrc="/02.png" /> */}
+                        {/* <MenuHero title="บริการประชาชน" imgSrc="/02.png" /> */}
 
                         <div className="submenus">
                             <div className="submenu ">
@@ -202,7 +202,7 @@ const NavMenu = () => {
                 <a href="#" target="_self"><div>ติดต่อเรา</div></a>
                 <div className="submenu-container expand-left">
                     <div className="wrapper">                        
-                        {/* <MenuHero imgSrc="/05.png" /> */}
+                        {/* <MenuHero title="ติดต่อเรา" imgSrc="/05.png" /> */}
 
                         <div className="submenus">
                             <div className="submenu ">

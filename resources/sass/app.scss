@@ -88,7 +88,7 @@ main {
     }
 }
 
-// .defaullt-layout {}
+// .defaullt-layout { position: relative; }
 /* ================================== End Globals ================================== */
 
 /* ================================== Scrollbar ================================== */
@@ -638,6 +638,151 @@ nav.topnav {
     nav.topnav ~ .topnav-spacer { height: 4.9375rem; }
 }
 /* ================================== End Navbar ================================== */
+
+
+/* ================================== Sidebar ================================== */
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background: #333333;
+    width: 13em;
+    z-index: 1000;
+
+    .sidebar-wrapper {
+        .close-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            cursor: pointer;
+
+            span {
+                width: 20px;
+                height: 20px;
+                border: 1px solid #D3D3D3;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // hover:text-black hover:bg-white
+            }
+        }
+    }
+}
+
+.sidebar .navigation {
+    width: 13em;
+    padding-top: 50px;
+    line-height: 1;
+    zoom: 1;
+}
+
+.sidebar .navigation ul,
+.sidebar .navigation ul li,
+.sidebar .navigation ul ul {
+    list-style: none;
+}
+
+.sidebar .navigation ul {
+    position: relative;
+    z-index: 500;
+    float: left;
+    padding: 0;
+}
+
+.sidebar .navigation ul li {
+    float: left;
+    min-height: 0.05em;
+    line-height: 1em;
+    vertical-align: middle;
+    position: relative;
+}
+
+.sidebar .navigation ul li.hover,
+.sidebar .navigation ul li:hover {
+    position: relative;
+    z-index: 510;
+    cursor: default;
+}
+
+.sidebar .navigation ul ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 520;
+    width: 100%;
+    float: none;
+    top: 0;
+    left: 99%;
+    border: 1px solid #34A65F;
+}
+
+.sidebar .navigation ul ul ul {
+    top: 0;
+    right: 0;
+}
+
+.sidebar .navigation ul li:hover > ul { visibility: visible; }
+
+.sidebar .navigation ul li { float: none; }
+.sidebar .navigation ul ul { margin-top: 0.05em; }
+.sidebar .navigation > ul > li a:hover,
+.sidebar .navigation > ul > li:hover a { background: #34A65F; }
+.sidebar .navigation ul ul li { border-bottom: 1px solid #0F8A5F; }
+
+.sidebar .navigation::before {
+    content: '';
+    display: block;
+}
+
+.sidebar .navigation::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.sidebar .navigation a {
+    display: block;
+    padding: 1em 1.3em;
+    color: #ffffff;
+}
+
+.sidebar .navigation > ul { width: 13em; }
+.sidebar .navigation ul ul { width: 13em; }
+
+.sidebar .navigation > ul > li > a {
+    border-right: 0.3em solid #34A65F;
+    color: #ffffff;
+}
+
+.sidebar .navigation > ul > li > a:hover { color: #ffffff; }
+.sidebar .navigation > ul > li:hover a { background: #34A65F; }
+.sidebar .navigation li { position: relative; }
+
+.sidebar .navigation ul ul li:hover > a {
+    background: #4eb1ff;
+    color: #ffffff;
+}
+
+.sidebar .navigation ul li.has-sub > a:after {
+    content: "\f105";
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 700;
+    position: absolute;
+    right: 1em;
+}
+
+.sidebar .navigation ul ul li.first {
+    -webkit-border-radius: 0 3px 0 0;
+    -moz-border-radius: 0 3px 0 0;
+    border-radius: 0 3px 0 0;
+}
+  /* ================================== End Sidebar ================================== */
 
 
 /* ================================== Footer ================================== */
