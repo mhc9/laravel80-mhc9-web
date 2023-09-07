@@ -835,7 +835,7 @@ nav.topnav {
 
 /* ================================== Sidebar ================================== */
 .sidebar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -843,6 +843,7 @@ nav.topnav {
     background: #333333;
     width: 13em;
     z-index: 1000;
+    transition: all ease-in-out 100ms;
 
     .sidebar-wrapper {
         .close-btn {

@@ -8,7 +8,7 @@ const Sidebar = ({ isShow }) => {
     const sidebarRef = useRef(null);
 
     return (
-        <div className="sidebar" style={{ display: isShow ? 'block' : 'none'}} ref={sidebarRef}>
+        <div className="sidebar" style={{ visibility: isShow ? 'visible' : 'hidden'}} ref={sidebarRef}>
             <div className="sidebar-wrapper">
                 <a href="#" className="close-btn" onClick={() => dispatch(toggleSidebar())}>
                     <span><i className="fas fa-times"></i></span>
