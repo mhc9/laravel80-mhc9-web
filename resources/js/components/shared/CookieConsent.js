@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import moment from 'moment'
+import uuid from 'react-uuid'
 
 const CookieConsent = ({ isShow, onHide, onSetCookie }) => {
     const [showSettings, setShowSettings] = useState(false);
 
     const handleAccept = (e) => {
-        onSetCookie('mhc9_consent', { _id: 'xxx', datestamp: new Date(), choices: '' });
+        onSetCookie('mhc9_consent', { _id: uuid(), datestamp: moment().toISOString(), choices: '' });
         onHide();
     };
 
