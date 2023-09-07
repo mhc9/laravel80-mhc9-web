@@ -2,9 +2,8 @@ import React from 'react'
 
 const Vision = () => {
     return (
-        <section className="vision container">
+        <section className="vision container" style={{ padding: '0' }}>
             <h1 className="title">
-                <i className="fas fa-map-signs"></i>
                 วิสัยทัศน์/พันธกิจ/ค่านิยม
             </h1>
 
