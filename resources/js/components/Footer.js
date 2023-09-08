@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
 import CookieConsent from './shared/CookieConsent'
@@ -7,7 +7,11 @@ import SocialIcons from './shared/SocialIcons'
 const Footer = () => {
     const [showCookie, setShowCookie] = useState(true);
     const [cookies, setCookies] = useCookies(['mhc9_consent']);
-    console.log(cookies);
+    
+    useEffect(() => {
+        console.log(cookies);
+        if (cookies.mhc9_consent) setShowCookie(false);
+    }, [cookies]);
 
     return (
         <footer>
