@@ -6,6 +6,7 @@ import Director from '../shared/Director'
 import VideoList from '../Video/List'
 import NewsList from '../News/List'
 import PostList from '../Post/List'
+import InfographicList from '../Infographic/List'
 
 const Home = () => {
     return (
@@ -28,7 +29,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div style={{ background: '#D8D8D8' }}>
+                    <div style={{ background: '#F2F2F2' }}>
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-9">
@@ -65,23 +66,7 @@ const Home = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <div className="info-box">
-                                        <h1 className="title">Infographics</h1>
-
-                                        <hr className="my-2" />
-
-                                        <div className="row" style={{ padding: '0 1rem' }}>
-                                            {[1,2,3,4].map((item, index) => (
-                                                <div className="col-md-3 info-item">
-                                                    <img src="./img/info-01.jpg" alt="info-pic" />
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <div style={{ textAlign: 'center', margin: '1rem 0' }}>
-                                            <a href="#" className="all-news">ทั้งหมด <i class="fas fa-angle-double-right"></i></a>
-                                        </div>
-                                    </div>
+                                    <InfographicList />
                                 </div>
                             </div>
                         </div>

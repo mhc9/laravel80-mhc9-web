@@ -2,7 +2,7 @@ import React from 'react'
 
 const Vision = () => {
     return (
-        <section className="vision container" style={{ padding: '0' }}>
+        <section className="vision container" style={{ padding: '25px 0' }}>
             <h1 className="title">วิสัยทัศน์/พันธกิจ/ค่านิยม</h1>
 
             <hr className="my-2" />
