@@ -99,6 +99,12 @@ main {
     
     a:hover {
         text-decoration: underline;
+
+        &::after {
+            content: " \f101";
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+        }
     }
 }
 
@@ -1524,11 +1530,16 @@ ol {
 /* ================================== News ================================== */
 .post-box {
     .post-list {
+        padding-bottom: 1rem;
+
         .post-headline {
+            position: relative;
+            height: 100%;
+            
             .headline-img {
                 width: 100%;
                 overflow: hidden;
-                border-radius: 0.5rem;
+                border-radius: 0.5rem 0.5rem 0 0;
                 object-fit: cover;
                 object-position: center;
             }
@@ -1537,31 +1548,55 @@ ol {
                 width: 100%;
             }
 
-            h4 {
-                margin-top: 0.5rem;
-            }
+            .headline-text {
+                position: absolute;
+                border-radius: 0 0 0.5rem 0.5rem;
+                background: #F2F2F2;
+                bottom: 0;
+                padding: 0.5rem 1rem 0.25rem;
 
-            p {
-                font-size: 0.8rem;
-                font-weight: 200;
-                line-height: 1.25rem;
+                h4 {
+                    margin-top: 0.5rem;
+                }
+
+                h5 {
+                    margin: 0;
+                    font-size: 0.75rem;
+                    font-weight: 200;
+                    line-height: 1.125rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 0.8rem;
+                    font-weight: 200;
+                    line-height: 1.25rem;
+                }
             }
         }
 
-        ul {
+        ul.post-secondary {
             list-style: none;
             padding: 0;
             margin: 0;
 
             li {
-                height: 140px;
+                height: 130px;
                 margin: 0;
-                padding: 0.5rem 0;
+                padding: 0;
                 display: flex;
                 flex-direction: row;
                 align-items: start;
                 justify-content: start;
                 gap: 0.5rem;
+
+                &:last-child,
+                &:nth-child(2) {
+                    padding: 0.5rem 0;
+                }
 
                 &:first-child,
                 &:nth-child(2) {
@@ -1587,18 +1622,35 @@ ol {
                     width: 60%;
 
                     h4 {
+                        margin: 0;
                         font-size: 1rem;
                         font-weight: 400;
                         line-height: 1.25rem;
                     }
+
+                    h5 {
+                        margin: 0;
+                        font-size: 0.75rem;
+                        font-weight: 200;
+                        line-height: 1.125rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
     
                     p {
+                        margin: 0;
                         font-size: 0.8rem;
                         font-weight: 200;
                         line-height: 1rem;
                     }
                 }
             }
+        }
+
+        .post-btn {
+            margin: 0;
+            text-align: right;
         }
 
         .all-news {
