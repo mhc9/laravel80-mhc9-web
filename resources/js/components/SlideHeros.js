@@ -39,13 +39,7 @@ const SlideHeros = () => {
 const Slide = ({ slide, ...props }) => {
     return (
         <div className="slide-wrapper">
-            <picture>
-                <img
-                    src={slide.imgUrl}
-                    style={{ width: '100%', height: '100%' }}
-                    alt="image"
-                />
-            </picture>
+            <img src={slide.imgUrl} alt="image" />
             <div className="slide-text">
                 <h1>{slide.title}</h1>
             </div>

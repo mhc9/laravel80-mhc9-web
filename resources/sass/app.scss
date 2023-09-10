@@ -125,13 +125,19 @@ main {
 
 /* ================================== Slide Hero ================================== */
 .slide-hero {
-    min-height: 362px;
     background: white;
-    overflow: hidden;
-
+    
     .slide-wrapper {
         position: relative;
-        height: 475px;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+        height: calc(100vh - 150px);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
 
         .slide-text {
             position: absolute;
