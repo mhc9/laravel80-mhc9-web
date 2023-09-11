@@ -7,6 +7,8 @@ import VideoList from '../Video/List'
 import NewsList from '../News/List'
 import PostList from '../Post/List'
 import InfographicList from '../Infographic/List'
+import ArticleList from '../Article/List'
+import EService from '../EService'
 
 const Home = () => {
     return (
@@ -67,6 +69,24 @@ const Home = () => {
                             <div className="row">
                                 <div className="col">
                                     <InfographicList />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col">
+                                    <ArticleList />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{ background: '#F2F2F2' }}>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col">
+                                    <EService />
                                 </div>
                             </div>
                         </div>

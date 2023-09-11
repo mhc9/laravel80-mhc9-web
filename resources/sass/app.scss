@@ -1563,6 +1563,101 @@ footer {
         }
     }
 }
+
+.article-box {
+    padding: 1rem;
+
+    .article-list {
+        .article-item {
+            min-height: 300px;
+            // border: 1px solid var(--bs-secondary);
+            // border-radius: 10px;
+            margin-bottom: 0.5rem;
+
+            .card-body {
+                // border: 1px solid red;
+                h3 {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    line-height: 1.25rem;
+                }
+
+                h5 {
+                    margin: 0.25rem;
+                    font-size: 0.5rem;
+                    font-weight: 200;
+                    line-height: 1.125rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: #D3D3D3;
+                }
+
+                p {
+                    font-size: 0.8rem;
+                    font-weight: 200;
+                    line-height: 1.125rem;
+                }
+            }
+        }
+
+        .post-btn {
+            margin: 0.5rem;
+            text-align: center;
+
+            .all-news {
+                background: #4D4D4D;
+                color: white;
+    
+                &:hover {
+                    border: 1px solid #4D4D4D;
+                    background: transparent;
+                    color: #4D4D4D;
+
+                    &::after {
+                        content: " \f101";
+                        font-family: "Font Awesome\ 5 Free";
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-box {
+    padding: 1rem;
+
+    .service-wrapper {
+        padding: 1rem 0 0;
+
+        .service-list {
+            text-align: center;
+    
+            .col-md-3 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .service-item {
+                width: 120px;
+                height: 120px;
+                // border: 1px solid var(--bs-secondary);
+                border-radius: 10px;
+                margin-bottom: 0.5rem;
+                background: white;
+                padding: 0.5rem;
+                overflow: hidden;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
 /* ================================== End Home Page ================================== */
 
 
