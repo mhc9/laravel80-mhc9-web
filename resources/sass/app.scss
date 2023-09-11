@@ -1516,14 +1516,14 @@ footer {
 
 .info-box {
     padding-top: 1rem;
-    padding-bottom: 1rem;
-
+    padding-bottom: 0.5rem;
+    
     .row {
-        padding: 1rem 1rem 0;
+        padding: 0 1rem;
     }
 
     .swiper {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
 
         .swiper-pagination {
             bottom: 0;
