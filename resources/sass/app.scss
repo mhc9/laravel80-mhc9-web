@@ -1178,17 +1178,20 @@ footer {
 
 /* ================================== Organization structure ================================== */
 .structure {
+    height: 100%;
+
+    .structure-wrapper {
+        margin: 40px 0 0;
+        padding-bottom: 2rem;
+        position: relative;
+    }
+
     .structure-avatar {
         position: relative;
         border-radius: 50%;
         overflow: hidden;
         background: white;
     }
-}
-
-.structure hr ~ div {
-    margin: 40px 0;
-    padding-bottom: 20px;
 }
 
 ol {
@@ -1209,24 +1212,25 @@ ol {
     justify-content: center;
 
     h2 {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 200;
     }
     
     h4 {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 200;
     }
 }
+
 /* LEVEL-1 STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .level-1 {
-    width: 50%;
+    width: 60%;
     margin: 0 auto 40px;
     background: var(--level-1);
     text-align: left;
@@ -1241,6 +1245,7 @@ ol {
     // max-md:flex-col max-md:items-center max-md:text-center max-lg:w-3/5;
 }
 
+/* Lower vertical tree's branch */
 .level-1::before {
     content: "";
     position: absolute;
@@ -1265,7 +1270,7 @@ ol {
     content: "";
     position: absolute;
     top: -20px;
-    left: 25%;
+    left: 27%;
     width: 50%;
     height: 2px;
     background: var(--black);
@@ -1385,6 +1390,7 @@ ol {
     width: 80%;
     margin-left: auto;
     text-align: left;
+    // border: 1px solid red;
 }
 
 /* Vertical tree's branch */
@@ -1392,7 +1398,7 @@ ol {
     content: "";
     position: absolute;
     top: -20px;
-    left: -20px;
+    left: 10px;
     width: 2px;
     height: calc(100% + 20px);
     background: var(--black);
@@ -1403,8 +1409,8 @@ ol {
     content: "";
     position: absolute;
     top: -20px;
-    left: calc(-20px);
-    width: calc(50%);
+    left: -20px;
+    width: 45%;
     height: 2px;
     background: var(--black);
 }
@@ -1416,10 +1422,11 @@ ol {
 .level-4-wrapper li > div {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
     text-align: left;
     padding: 0.5rem;
-    width: 60%;
+    width: 75%;
     border-radius: 0.375rem;
 }
 
@@ -1428,6 +1435,7 @@ ol {
     background: var(--level-4);
 }
 
+/* Horizontal tree's branch */
 .level-4::before {
     content: "";
     position: absolute;
@@ -1441,45 +1449,105 @@ ol {
 
 /* MQ STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 700px) {
-.rectangle {
-    padding: 20px 10px;
+@media screen and (max-width: 768px) {
+    .rectangle {
+        padding: 20px 10px;
+    }
+
+    .level-1,
+    .level-2 {
+        width: 100%;
+    }
+
+    .level-1 {
+        margin-bottom: 20px;
+    }
+
+    .level-1::before,
+    .level-2::before,
+    .level-2-wrapper > li::before {
+        display: none;
+    }
+
+    .level-2-wrapper,
+    // .level-2-wrapper::after,
+    .level-2::after {
+        display: block;
+    }
+
+    .level-2-wrapper {
+        width: 90%;
+        margin-left: 10%;
+    }
+
+    .level-2-wrapper::before {
+        left: calc((100%/2) - (90%/2) + 10px);
+        width: 2px;
+        height: calc(45% - 20px);
+    }
+
+    .level-2-wrapper > li:not(:first-child) {
+        margin-top: 50px;
+    }
+
+    .level-2-wrapper > li > div,
+    .level-4-wrapper > li > div {
+        width: 90%;
+    }
+
+    /* Horizontal tree's branch */
+    .level-4-wrapper > :first-child::before {
+        display: none;
+    }
+
+    /* Vertical tree's branch */
+    .level-4-wrapper::before {
+        top: -40px;
+    }
 }
 
-.level-1,
-.level-2 {
-    width: 100%;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .level-1 {
+        width: 60%;
+    }
+
+    .level-2-wrapper > li > div {
+        width: 90%;
+    }
+
+    .level-2-wrapper::before {
+        left: calc((100%/2) - (90%/2) + (45%/2));
+        width: calc(50% - 15px);
+    }
+
+    .level-4-wrapper li > div {
+        width: 100%;
+    }
 }
 
-.level-1 {
-    margin-bottom: 20px;
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .level-2-wrapper::before {
+        left: calc(((100%/2) - (90%/2)) + ((45%/2) + 5px));
+        width: calc(50% - 15px);
+    }
 }
 
-.level-1::before,
-.level-2-wrapper > li::before {
-    display: none;
+@media screen and (min-width: 1024px) {
+    .level-2-wrapper::before {
+        left: calc(((100%/2) - (90%/2)) + ((45%/2)));
+        width: calc(50% - 15px);
+    }
+
+    .level-2-wrapper > li > div {
+        width: 80%;
+    }
 }
 
-.level-2-wrapper,
-.level-2-wrapper::after,
-.level-2::after {
-    display: block;
-}
-
-.level-2-wrapper {
-    width: 90%;
-    margin-left: 10%;
-}
-
-.level-2-wrapper::before {
-    left: -20px;
-    width: 2px;
-    height: calc(100% + 40px);
-}
-
-.level-2-wrapper > li:not(:first-child) {
-    margin-top: 50px;
-}
+@media screen and (min-width: 1199px) {
+    .level-2-wrapper::before {
+        left: calc(((100%/2) - (90%/2)) + ((45%/2) - 5px));
+        width: calc(50% - 15px);
+    }
 }
 /* ================================== End organization structure ================================== */
 

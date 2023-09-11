@@ -8,12 +8,12 @@ const Structure = () => {
 
             <hr className="my-2" />
 
-            <div className="container">
+            <div className="structure-wrapper">
                 <div className="level-1 rectangle">
                     <StructureAvatar size="80px" />
                     <div className="box-label">
-                        <h2>นายทดสอบ ระบบ</h2>
-                        <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
+                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                        <h3>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h3>
                     </div>
                 </div>
                 <ol className="level-2-wrapper">
@@ -21,8 +21,8 @@ const Structure = () => {
                         <div className="level-2 rectangle">
                             <StructureAvatar size="70px" />
                             <div className="box-label">
-                                <h2>นายทดสอบ ระบบ</h2>
-                                <h4>หัวหน้ากลุ่มงานอำนวยการ</h4>
+                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                <h3>หัวหน้ากลุ่มงานอำนวยการ</h3>
                             </div>
                         </div>
                         {/* <ol className="level-3-wrapper border">
@@ -33,8 +33,8 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar />
                                             <div className="box-label">
-                                                <h2 className="">นายทดสอบ ระบบ</h2>
-                                                <h4 className="text-sm font-light">งานธุรการ</h4>
+                                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                                <h4>งานธุรการ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -42,8 +42,8 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar />
                                             <div className="box-label">
-                                                <h2 className="">นายทดสอบ ระบบ</h2>
-                                                <h4 className="text-sm font-light">งานทรัพยากรบุคคล</h4>
+                                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                                <h4>งานทรัพยากรบุคคล</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -51,8 +51,8 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar />
                                             <div className="box-label">
-                                                <h2 className="">นายทดสอบ ระบบ</h2>
-                                                <h4 className="text-sm font-light">งานการเงินและบัญชี</h4>
+                                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                                <h4>งานการเงินและบัญชี</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -60,8 +60,8 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar />
                                             <div className="box-label">
-                                                <h2 className="">นายทดสอบ ระบบ</h2>
-                                                <h4 className="text-sm font-light">งานพัสดุ</h4>
+                                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                                <h4>งานพัสดุ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -69,8 +69,8 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar />
                                             <div className="box-label">
-                                                <h2 className="">นายทดสอบ ระบบ</h2>
-                                                <h4 className="text-sm font-light">งานเทคโนโลยีสารสนเทศ</h4>
+                                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                                <h4>งานเทคโนโลยีสารสนเทศ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -78,8 +78,8 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar />
                                             <div className="box-label">
-                                                <h2 className="">นายทดสอบ ระบบ</h2>
-                                                <h4 className="text-sm font-light">งานยานพาหนะ</h4>
+                                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                                <h4>งานยานพาหนะ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -91,8 +91,8 @@ const Structure = () => {
                         <div className="level-2 rectangle text-left">
                             <StructureAvatar size="70px" />
                             <div className="box-label">
-                                <h2 className="">นายทดสอบ ระบบ</h2>
-                                <h4 className="text-sm font-light">หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h4>
+                                <h2>น.ส.ทดสอบ ระบบ</h2>
+                                <h3>หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h3>
                             </div>
                         </div>
                         <ol className="level-4-wrapper">
@@ -100,8 +100,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h4 className="text-sm font-light">งานพัฒนาคุณภาพ</h4>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานพัฒนาคุณภาพ</h4>
                                     </div>
                                 </div>
                             </li>
@@ -109,8 +109,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานวิจัยและพัฒนา</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานวิจัยและพัฒนา</h4>
                                     </div>
                                 </div>
                             </li>
@@ -118,8 +118,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานแผนงานและประเมินผล</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานแผนงานและประเมินผล</h4>
                                     </div>
                                 </div>
                             </li>
@@ -127,8 +127,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานพัฒนาเครือข่ายสุขภาพจิต</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานพัฒนาเครือข่ายสุขภาพจิต</h4>
                                     </div>
                                 </div>
                             </li>
@@ -136,8 +136,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานนิเทศและติดตาม</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานนิเทศและติดตาม</h4>
                                     </div>
                                 </div>
                             </li>
@@ -145,8 +145,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานสุขภาพจิตกลุ่มวัย</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานสุขภาพจิตกลุ่มวัย</h4>
                                     </div>
                                 </div>
                             </li>
@@ -154,8 +154,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานสุขภาพจิตในระบบบริการปฐมภูมิ</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานสุขภาพจิตในระบบบริการปฐมภูมิ</h4>
                                     </div>
                                 </div>
                             </li>
@@ -163,8 +163,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานวิกฤตสุขภาพจิต</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานวิกฤตสุขภาพจิต</h4>
                                     </div>
                                 </div>
                             </li>
@@ -172,8 +172,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานเฝ้าระวังและป้องกันการฆ่าตัวตาย</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานเฝ้าระวังและป้องกันการฆ่าตัวตาย</h4>
                                     </div>
                                 </div>
                             </li>
@@ -181,8 +181,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานสื่อสารและประชาสัมพันธ์</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานสื่อสารและประชาสัมพันธ์</h4>
                                     </div>
                                 </div>
                             </li>
@@ -190,8 +190,8 @@ const Structure = () => {
                                 <div className="level-4 rectangle4">
                                     <StructureAvatar size="60px" />
                                     <div className="box-label">
-                                        <h2 className="">นายทดสอบ ระบบ</h2>
-                                        <h3 className="text-sm font-light">งานสุขภาพจิตระหว่างประเทศ</h3>
+                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        <h4>งานสุขภาพจิตระหว่างประเทศ</h4>
                                     </div>
                                 </div>
                             </li>
