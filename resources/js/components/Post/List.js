@@ -12,10 +12,10 @@ const PostList = () => {
                     <div className="col-md-12 col-lg-7">
                         <div className="post-headline">
                             <div className="headline-img">
-                                <img src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg" alt="" />
+                                <img src="./img/post-01.jpg" alt="" />
                             </div>
                             <div className="headline-text">
-                                <h4>สุดปัง! คว้ารางวัลคุณภาพบริหารจัดการภาครัฐดีเด่น</h4>
+                                <h4>ผอ.ศูนย์สุขภาพจิตที่ 9 ได้รับรางวัลข้าราชการพลเรือนดีเด่น (ครุฑทองคำ)</h4>
                                 <h5 className="text-muted">
                                     <span><i class="fas fa-calendar-alt"></i> 2023-09-09 16:00 น.</span>
                                     <span><i class="fas fa-user-alt"></i> Admin</span>
@@ -32,7 +32,7 @@ const PostList = () => {
                             {[1,2,3].map((item, index) => (
                                 <li>
                                     <div className="post__secondary-img">
-                                        <img src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg" alt="" />
+                                        <img src="./img/post-02.jpg" alt="" />
                                     </div>
                                     <div className="post__secondary-text">
                                         <h4>สุดปัง! คว้ารางวัลคุณภาพบริหารจัดการภาครัฐดีเด่น</h4>
