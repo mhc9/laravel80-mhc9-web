@@ -178,7 +178,7 @@ const NavMenu = () => {
             </div>
 
             <div className="menu has-children ">
-                <a href="#" target="_self"><div>บริการประชาชน</div></a>
+                <a href="#" target="_self"><div>บริการ</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
                         {/* <MenuHero title="บริการประชาชน" imgSrc="/02.png" /> */}
@@ -191,7 +191,7 @@ const NavMenu = () => {
                                 <a href="#" target="_self">แจ้งเรื่องร้องเรียน</a>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ระบบสารสนเทศ (E-Services)</a>
+                                <a href="#" target="_self">ระบบสารสนเทศ</a>
                             </div>
                             <div className="submenu ">
                                 <a href="#" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
@@ -207,7 +207,7 @@ const NavMenu = () => {
                                             <a href="#" target="_self">คลังความรู้ MHC9</a>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">คลังความรู้สุขภาพจิต กรมสุขภาพจิต</a>
+                                            <a href="#" target="_self">คลังความรู้ กรมสุขภาพจิต</a>
                                         </div>
                                         <div className="child">
                                             <a href="#" target="_self">ห้องสมุด กรมสุขภาพจิต (DMH e-Library)</a>

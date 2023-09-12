@@ -1444,12 +1444,12 @@ footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
 
-    .news-list {
+    .news-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0.75rem;
+        padding: 0.5rem 0.75rem;
 
         h4 {
             font-size: 1rem;
@@ -1457,48 +1457,61 @@ footer {
             line-height: 1.5rem;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-
-            li {
-                min-height: 30px;
-                font-size: 0.75rem;
-                font-weight: 200;
-                line-height: 1.125rem;
-                margin-bottom: 0.5rem;
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0.5rem;
-
-                &:not(li:last-child) {
-                    border-bottom: 1px dashed var(--bs-secondary);
-                }
-
-                div {
-                    width: 120px;
-                    height: auto;
-                    padding: 0.25rem;
-                    object-fit: cover;
-                    object-position: center;
-                    border-radius: 50%;
-                    background: #ffffff;
-                    overflow: hidden;
-                }
-
-                img { width: 100%; }
-
-                p {
-                    padding: 0;
-                    margin: 0;
-                }
+        &:last-child,
+        &:nth-child(2) {
+            .news-list {
+                border-left: 1px solid var(--bs-secondary);
             }
         }
 
-        &:nth-child(2),
-        &:last-child {
-            border-left: 1px solid var(--bs-secondary);
+        .news-list {
+            padding: 0.25rem;
+            padding-left: 1rem;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    min-height: 30px;
+                    font-size: 0.75rem;
+                    font-weight: 200;
+                    line-height: 1.125rem;
+                    margin-bottom: 0.5rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: start;
+                    gap: 0.5rem;
+                    padding: 0.25rem;
+
+                    &:not(li:last-child) {
+                        border-bottom: 1px dashed var(--bs-secondary);
+                    }
+
+                    div {
+                        width: 160px;
+                        height: auto;
+                        padding: 0.25rem;
+                        display: flex;
+                        justify-content: center;
+                        object-fit: contain;
+                        object-position: center;
+                        border-radius: 50%;
+                        background: #ffffff;
+                        overflow: hidden;
+
+                        img { width: 100%; }
+                    }
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+
+                        .readmore { margin-left: 0; }
+                    }
+                }
+            }
         }
     }
 
@@ -1510,6 +1523,51 @@ footer {
             border: 1px solid white;
             background: transparent;
             color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .news-box {
+        .news-wrapper {
+            padding: 0.75rem 1rem;
+
+            &:nth-child(2)::before,
+            &:last-child::before {
+                content: "";
+                width: 45%;
+                height: 1px;
+                background: var(--bs-secondary);
+            }
+
+            .news-list {
+                padding: 0;
+
+                &:nth-child(2),
+                &:last-child {
+                    border-left: none;
+                }
+
+                ul {
+                    margin: 0;
+
+                    li {
+                        padding: 0.25rem;
+
+                        div {
+                            width: 60px;
+                            padding: 0.125rem;
+
+                            img { width: 100%; }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2),
+            &:last-child {
+                h4 { margin-top: 1rem; }
+            }
         }
     }
 }
