@@ -106,9 +106,6 @@ const NavMenu = () => {
                             <div className="submenu ">
                                 <a href="#" target="_blank" rel="noreferrer">รายงานประจำปี</a>
                             </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">ดาวน์โหลดเอกสารที่เกี่ยวข้อง</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -193,61 +190,43 @@ const NavMenu = () => {
                             <div className="submenu ">
                                 <a href="#" target="_self">แจ้งเรื่องร้องเรียน</a>
                             </div>
-                            {/* <div className="submenu ">
-                                <a href="#" target="_self">แจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</a>
-                            </div> */}
+                            <div className="submenu ">
+                                <a href="#" target="_self">ระบบสารสนเทศ (E-Services)</a>
+                            </div>
                             <div className="submenu ">
                                 <a href="#" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
                             </div>
                             <div className="submenu ">
                                 <a href="#" target="_self">กระดานถาม-ตอบ</a>
                             </div>
-                            {/* <div className="submenu has-children">
-                                <a href="#" target="_self">ความรู้สุขภาพ</a>
+                            <div className="submenu has-children">
+                                <a href="#" target="_self">คลังความรู้</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a href="#" target="_self">อนามัยแม่และเด็ก</a>
+                                            <a href="#" target="_self">คลังความรู้ MHC9</a>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">อนามัยผู้สูงอายุ</a>
+                                            <a href="#" target="_self">คลังความรู้สุขภาพจิต กรมสุขภาพจิต</a>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">อนามัยวัยเรียน วัยรุ่น</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">อนามัยวัยทำงาน</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">อนามัยสิ่งแวดล้อม</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">ทันตสาธารณสุข</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">โภชนาการ</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">ออกกำลังกายเพื่อสุขภาพ</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">Rap porteur</a>
+                                            <a href="#" target="_self">ห้องสมุด กรมสุขภาพจิต (DMH e-Library)</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div> */}
+                            </div>
                             <div className="submenu has-children">
                                 <a href="#" target="_self">สื่อสุขภาพจิต</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a href="#" target="_self">คลิปวีดิโอสุขภาพ</a>
+                                            <a href="#" target="_self">วีดิโอสุขภาพจิต</a>
                                         </div>
                                         <div className="child">
                                             <a href="#" target="_self">อินโฟกราฟฟิก</a>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">วารสารออนไลน์</a>
+                                            <a href="#" target="_self">บทความสุขภาพจิต</a>
                                         </div>
                                         {/* <div className="child">
                                             <a href="#" target="_self">อนามัยบุ๊ค</a>
@@ -255,8 +234,11 @@ const NavMenu = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">ดาวน์โหลดเอกสาร</a>
+                            </div>
                             <div className="submenu">
-                                <a href="#" target="_self">บริการอื่นๆ (E-Services)</a>
+                                <a href="#" target="_self">บริการอื่นๆ</a>
                             </div>
                         </div>
                     </div>

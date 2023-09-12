@@ -10,7 +10,7 @@ const videos = [
 const VideoList = () => {
     return (
         <div className="video-box">
-            <h1 className="title">สื่อสุขภาพจิต</h1>
+            <h1 className="title">วีดิโอสุขภาพจิต</h1>
 
             <hr className="my-2" />
 
@@ -31,7 +31,7 @@ const VideoList = () => {
                 ))}
             </div>
             <div className="video-btn">
-                <a href="#" className="all-news">วิดีโอทั้งหมด <i class="fas fa-angle-double-right"></i></a>
+                <a href="#" className="all-news">วีดิโอทั้งหมด <i class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
     )
