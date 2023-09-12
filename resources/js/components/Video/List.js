@@ -16,7 +16,7 @@ const VideoList = () => {
 
             <div className="row video-list">
                 {videos.map((video, index) => (
-                    <div className="col-md-6" key={video.id}>
+                    <div className="col-md-12 col-lg-6" key={video.id}>
                         <div className="video-item">
                             <iframe
                                 width="100%"

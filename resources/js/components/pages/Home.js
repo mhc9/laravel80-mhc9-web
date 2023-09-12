@@ -34,10 +34,10 @@ const Home = () => {
                     <div style={{ background: '#F2F2F2' }}>
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-9">
+                                <div className="col-md-8 col-lg-9">
                                     <VideoList />
                                 </div>
-                                <div className="col-md-3" style={{ background: '#ffffff' }}>
+                                <div className="col-md-4 col-lg-3" style={{ background: '#ffffff' }}>
                                     <div className="link-box">
                                         <h1 className="title">สำหรับเจ้าหน้าที่</h1>
 
@@ -48,7 +48,7 @@ const Home = () => {
                                             <a href=""><i class="fas fa-envelope-open-text"></i><h4>ระบบงานสารบรรณอิเล็กทรอนิกส์</h4></a>
                                             <a href=""><i class="fas fa-users"></i><h4>ระบบงานบุคลากร</h4></a>
                                             <a href=""><i class="far fa-credit-card"></i><h4>ระบบ E-Pay slip</h4></a>
-                                            <a href=""><i class="fas fa-cogs"></i><h4>ระบบเพิ่มประสิทธิภาพการจัดการงบประมาณและแผนงาน (B&P DMH)</h4></a>
+                                            <a href=""><i class="fas fa-cogs"></i><h4>ระบบ B&P DMH</h4></a>
                                         </div>
                                     </div>
                                 </div>

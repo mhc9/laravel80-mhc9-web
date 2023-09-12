@@ -9,7 +9,7 @@ const ArticleList = () => {
 
             <div className="row article-list">
                 {[1,2,3,4,5,6,7,8].map((article, index) => (
-                    <div className="col-md-3 col-sm-6" key={index}>
+                    <div className="col-sm-6 col-md-4 col-lg-3 " key={index}>
                         <div className="card article-item">
                             <img src="https://www.dga.or.th/wp-content/uploads/2020/10/img_feaae76f469b44c092c58f5ff55202b3.jpg" className="card-img-top" alt="..." />
                             <div className="card-body">
