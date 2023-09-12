@@ -2,10 +2,10 @@ import React from 'react'
 import SlideHeros from '../SlideHeros'
 import OptionMenu from '../OptionMenu'
 import SlideLogos from '../SlideLogos'
+import PostHeadline from '../Post/Headline'
 import Director from '../shared/Director'
 import VideoList from '../Video/List'
 import NewsList from '../News/List'
-import PostList from '../Post/List'
 import InfographicList from '../Infographic/List'
 import ArticleList from '../Article/List'
 import EService from '../EService'
@@ -23,7 +23,7 @@ const Home = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12 col-lg-9">
-                                    <PostList />
+                                    <PostHeadline />
                                 </div>
                                 <div className="col-md-12 col-lg-3">
                                     <Director />

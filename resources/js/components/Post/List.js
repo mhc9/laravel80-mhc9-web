@@ -2,23 +2,23 @@ import React from 'react'
 
 const PostList = () => {
     return (
-        <div className="post-box">
+        <section className="post__list-container container">
             <h1 className="title">ข่าวประชาสัมพันธ์</h1>
 
             <hr className="my-2" />
 
-            <div className="post-list">
+            <div className="post__list-wrapper">
                 <div className="row">
-                    <div className="col-md-12 col-lg-7">
-                        <div className="post-headline">
-                            <div className="headline-img">
-                                <img src="./img/post-01.jpg" alt="" />
+                    {[1,2,3,4,5,6,7,8,9,10].map((item, index) => (
+                        <div className="col-md-12 post__list-item" key={index}>
+                            <div className="post__list-img">
+                                <img src="./img/post-02.jpg" alt="" />
                             </div>
-                            <div className="headline-text">
-                                <h4>ผอ.ศูนย์สุขภาพจิตที่ 9 ได้รับรางวัลข้าราชการพลเรือนดีเด่น (ครุฑทองคำ)</h4>
+                            <div className="post__list-text">
+                                <h4>สุดปัง! คว้ารางวัลคุณภาพบริหารจัดการภาครัฐดีเด่น</h4>
                                 <h5 className="text-muted">
-                                    <span><i class="fas fa-calendar-alt"></i> 2023-09-09 16:00 น.</span>
-                                    <span><i class="fas fa-user-alt"></i> Admin</span>
+                                    <span><i className="fas fa-calendar-alt"></i> 2023-09-09 16:00 น.</span>
+                                    <span><i className="fas fa-user-alt"></i> Admin</span>
                                 </h5>
                                 <p>
                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -26,35 +26,27 @@ const PostList = () => {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-md-12 col-lg-5">
-                        <ul className="post-secondary">
-                            {[1,2,3].map((item, index) => (
-                                <li>
-                                    <div className="post__secondary-img">
-                                        <img src="./img/post-02.jpg" alt="" />
-                                    </div>
-                                    <div className="post__secondary-text">
-                                        <h4>สุดปัง! คว้ารางวัลคุณภาพบริหารจัดการภาครัฐดีเด่น</h4>
-                                        <h5 className="text-muted">
-                                            <span><i class="fas fa-calendar-alt"></i> 2023-09-09 16:00 น.</span>
-                                            <span><i class="fas fa-user-alt"></i> Admin</span>
-                                        </h5>
-                                        <p>
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
-                                        </p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div className="post-btn">
-                        <a href="#" className="all-news">ทั้งหมด <i class="fas fa-angle-double-right"></i></a>
-                    </div>
+                    ))}
                 </div>
+                <nav aria-label="Page navigation">
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </div>
+        </section>
     )
 }
 

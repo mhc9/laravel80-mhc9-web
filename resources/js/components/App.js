@@ -15,12 +15,14 @@ import Executives from './pages/Executives';
 import { store } from '../features/store';
 import Calendar from './pages/Calendar';
 import Links from './pages/Links';
+import PostList from './Post/List';
 
 function App() {
     return (
         <Routes>
             <Route path="/" element={<DefaultLayout />}>
                 <Route path="" element={<Home />} />
+                <Route path="/posts/list" element={<PostList />} />
                 {/* รู้จักเรา */}
                 <Route path="/about" element={<About />} />
                 <Route path="/vision" element={<Vision />} />
