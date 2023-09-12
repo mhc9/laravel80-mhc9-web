@@ -22,10 +22,10 @@ const Home = () => {
                     <div>
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-9">
+                                <div className="col-md-12 col-lg-9">
                                     <PostList />
                                 </div>
-                                <div className="col-md-3">
+                                <div className="col-md-12 col-lg-3">
                                     <Director />
                                 </div>
                             </div>

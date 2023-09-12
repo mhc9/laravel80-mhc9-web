@@ -9,7 +9,7 @@ const PostList = () => {
 
             <div className="post-list">
                 <div className="row">
-                    <div className="col-md-7">
+                    <div className="col-md-12 col-lg-7">
                         <div className="post-headline">
                             <div className="headline-img">
                                 <img src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg" alt="" />
@@ -27,7 +27,7 @@ const PostList = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-5">
+                    <div className="col-md-12 col-lg-5">
                         <ul className="post-secondary">
                             {[1,2,3].map((item, index) => (
                                 <li>
@@ -48,9 +48,9 @@ const PostList = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="post-btn">
-                            <a href="#" className="all-news">ทั้งหมด <i class="fas fa-angle-double-right"></i></a>
-                        </div>
+                    </div>
+                    <div className="post-btn">
+                        <a href="#" className="all-news">ทั้งหมด <i class="fas fa-angle-double-right"></i></a>
                     </div>
                 </div>
             </div>

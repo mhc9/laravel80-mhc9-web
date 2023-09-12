@@ -1189,27 +1189,37 @@ footer {
             }
         }
 
+        .col-lg-7 {
+            padding-right: 0.25rem;
+        }
+        
+        .col-lg-5 {
+            padding-left: 0.25rem;
+        }
+
         .post-headline {
             position: relative;
             height: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            background: #F2F2F2;
             
             .headline-img {
                 width: 100%;
-                overflow: hidden;
-                border-radius: 0.5rem 0.5rem 0 0;
-                object-fit: cover;
+                object-fit: contain;
                 object-position: center;
+                border-radius: 0.5rem;
             }
 
             img {
                 width: 100%;
+                margin-bottom: 0.5rem;
             }
 
             .headline-text {
                 position: absolute;
-                border-radius: 0 0 0.5rem 0.5rem;
-                background: #F2F2F2;
                 bottom: 0;
+                background: #F2F2F2;
                 padding: 0.5rem 1rem 0.25rem;
 
                 h4 {
@@ -1218,7 +1228,7 @@ footer {
 
                 h5 {
                     margin: 0.25rem;
-                    font-size: 0.75rem;
+                    font-size: 0.5rem;
                     font-weight: 200;
                     line-height: 1.125rem;
                     display: flex;
@@ -1242,7 +1252,6 @@ footer {
             margin: 0;
 
             li {
-                height: 130px;
                 margin: 0;
                 padding: 0;
                 display: flex;
@@ -1250,6 +1259,10 @@ footer {
                 align-items: start;
                 justify-content: start;
                 gap: 0.5rem;
+
+                &:first-child {
+                    padding-bottom: 0.5rem;
+                }
 
                 &:last-child,
                 &:nth-child(2) {
@@ -1288,7 +1301,7 @@ footer {
 
                     h5 {
                         margin: 0.25rem;
-                        font-size: 0.75rem;
+                        font-size: 0.5rem;
                         font-weight: 200;
                         line-height: 1.125rem;
                         display: flex;
@@ -1308,8 +1321,8 @@ footer {
         }
 
         .post-btn {
-            margin: 0;
-            text-align: right;
+            margin-top: 0.5rem;
+            text-align: center;
         }
 
         .all-news {
@@ -1320,6 +1333,69 @@ footer {
                 border: 1px solid #4D4D4D;
                 background: transparent;
                 color: #4D4D4D;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .post-box {
+        .post-list {
+            padding: 0.75rem;
+
+            .col-lg-7 {
+                // margin: 0;
+                padding: 0;
+            }
+            
+            .col-lg-5 {
+                // margin: 0;
+                padding: 0;
+            }
+
+            .post-headline {
+                // border: 1px solid red;
+
+                // .headline-img {
+                //     border-radius: 0.5rem;
+                // }
+            }
+
+            ul.post-secondary {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 0.5rem;
+                
+                li {
+                    height: auto;
+                    padding: 0.25rem 0.75rem;
+                    flex-direction: column;
+
+                    &:last-child,
+                    &:nth-child(2) {
+                        padding: 0.25rem 0.75rem;
+                    }
+
+                    &:first-child,
+                    &:nth-child(2) {
+                        border-bottom: none;
+                        border-right: 1px dashed var(--bs-secondary);
+                    }
+
+                    .post__secondary-img {
+                        width: 100%;
+                    }
+
+                    .post__secondary-text {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .post-btn {
+                margin-top: 1rem;
+                text-align: center;
             }
         }
     }
@@ -1362,6 +1438,14 @@ footer {
             font-size: 1rem;
             font-weight: 200;
             line-height: 1.25rem;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .director-box {
+        .director-info {
+            border: none
         }
     }
 }
