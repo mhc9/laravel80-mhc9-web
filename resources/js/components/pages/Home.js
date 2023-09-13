@@ -5,7 +5,7 @@ import SlideLogos from '../SlideLogos'
 import PostHeadline from '../Post/Headline'
 import Director from '../shared/Director'
 import VideoList from '../Video/List'
-import NewsList from '../News/List'
+import NewsFeed from '../News/Feed'
 import InfographicList from '../Infographic/List'
 import ArticleList from '../Article/List'
 import EService from '../EService'
@@ -59,7 +59,7 @@ const Home = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <NewsList />
+                                    <NewsFeed />
                                 </div>
                             </div>
                         </div>

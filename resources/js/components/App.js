@@ -4,18 +4,19 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { CookiesProvider } from 'react-cookie';
 import { ToastContainer } from 'react-toastify';
+import { store } from '../features/store';
 import DefaultLayout from './DefaultLayout';
-import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Vision from './pages/Vision';
 import Structure from './pages/Structure';
 import Executives from './pages/Executives';
-import { store } from '../features/store';
 import Calendar from './pages/Calendar';
 import Links from './pages/Links';
 import PostList from './Post/List';
+import NewsList from './News/List'
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<DefaultLayout />}>
                 <Route path="" element={<Home />} />
                 <Route path="/posts/list" element={<PostList />} />
+                <Route path="/news/list" element={<NewsList />} />
                 {/* รู้จักเรา */}
                 <Route path="/about" element={<About />} />
                 <Route path="/vision" element={<Vision />} />

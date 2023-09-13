@@ -28,7 +28,7 @@ const PostList = () => {
                         </div>
                     ))}
                 </div>
-                <nav aria-label="Page navigation">
+                <nav aria-label="navigation" className="c9__pagination">
                     <ul>
                         <li>
                             <a href="#" aria-label="Previous">
