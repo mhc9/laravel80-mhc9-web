@@ -33,24 +33,6 @@ const NavMenu = () => {
                             <div className="submenu ">
                                 <a href="#" target="_self">ภารกิจและหน้าที่รับผิดชอบ</a>
                             </div>
-                            {/* <div className="submenu ">
-                                <a href="#" target="_self">หน่วยงานในสังกัดกรมอนามัย</a>
-                            </div> */}
-                            {/* <div className="submenu has-children">
-                                <a href="#" target="_self">CIO กรมอนามัย</a>
-                                <div className="child-container">
-                                    <div className="childs">
-                                        <div className="child">
-                                            <a href="#" target="_self">ประวัติ CIO</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">
-                                                แผนปฏิบัติการดิจิทัล
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
                             <div className="submenu has-children">
                                 <a href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
                                 <div className="child-container">
@@ -105,6 +87,85 @@ const NavMenu = () => {
                             </div>
                             <div className="submenu ">
                                 <a href="#" target="_blank" rel="noreferrer">รายงานประจำปี</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="menu has-children ">
+                <a href="#" target="_self"><div>บริการ</div></a>
+                <div className="submenu-container ">
+                    <div className="wrapper">
+                        {/* <MenuHero title="บริการประชาชน" imgSrc="/02.png" /> */}
+
+                        <div className="submenus">
+                            <div className="submenu ">
+                                <a href="#" target="_self">คู่มือการให้บริการ</a>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">ศูนย์ราชการใสสะอาด</a>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">ศูนย์ปฏิบัติการต่อต้านการทุจริต</a>
+                            </div>
+                            <div className="submenu has-children">
+                                <a href="#" target="_self">คลังความรู้</a>
+                                <div className="child-container">
+                                    <div className="childs">
+                                        <div className="child">
+                                            <a href="#" target="_self">คลังความรู้ MHC9</a>
+                                        </div>
+                                        <div className="child">
+                                            <a href="#" target="_self">คลังความรู้ กรมสุขภาพจิต</a>
+                                        </div>
+                                        <div className="child">
+                                            <a href="#" target="_self">ห้องสมุด กรมสุขภาพจิต (DMH e-Library)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="submenu has-children">
+                                <a href="#" target="_self">สื่อสุขภาพจิต</a>
+                                <div className="child-container">
+                                    <div className="childs">
+                                        <div className="child">
+                                            <a href="#" target="_self">วีดิโอสุขภาพจิต</a>
+                                        </div>
+                                        <div className="child">
+                                            <a href="#" target="_self">อินโฟกราฟฟิก</a>
+                                        </div>
+                                        <div className="child">
+                                            <a href="#" target="_self">บทความสุขภาพจิต</a>
+                                        </div>
+                                        {/* <div className="child">
+                                            <a href="#" target="_self">อนามัยบุ๊ค</a>
+                                        </div> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="submenus">
+                            <div className="submenu ">
+                                <a href="#" target="_self">แจ้งเรื่องร้องเรียน</a>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">ระบบสารสนเทศ</a>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">กระดานถาม-ตอบ</a>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">ดาวน์โหลดเอกสาร</a>
+                            </div>
+                            <div className="submenu">
+                                <a href="#" target="_self">บริการอื่นๆ</a>
                             </div>
                         </div>
                     </div>
@@ -171,74 +232,6 @@ const NavMenu = () => {
                             </div> */}
                             <div className="submenu ">
                                 <Link to="/calendar" target="_self">ปฏิทินกิจกรรม</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="menu has-children ">
-                <a href="#" target="_self"><div>บริการ</div></a>
-                <div className="submenu-container ">
-                    <div className="wrapper">
-                        {/* <MenuHero title="บริการประชาชน" imgSrc="/02.png" /> */}
-
-                        <div className="submenus">
-                            <div className="submenu ">
-                                <a href="#" target="_self">คู่มือการให้บริการ</a>
-                            </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">แจ้งเรื่องร้องเรียน</a>
-                            </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">ระบบสารสนเทศ</a>
-                            </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
-                            </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">กระดานถาม-ตอบ</a>
-                            </div>
-                            <div className="submenu has-children">
-                                <a href="#" target="_self">คลังความรู้</a>
-                                <div className="child-container">
-                                    <div className="childs">
-                                        <div className="child">
-                                            <a href="#" target="_self">คลังความรู้ MHC9</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">คลังความรู้ กรมสุขภาพจิต</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">ห้องสมุด กรมสุขภาพจิต (DMH e-Library)</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="submenu has-children">
-                                <a href="#" target="_self">สื่อสุขภาพจิต</a>
-                                <div className="child-container">
-                                    <div className="childs">
-                                        <div className="child">
-                                            <a href="#" target="_self">วีดิโอสุขภาพจิต</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">อินโฟกราฟฟิก</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">บทความสุขภาพจิต</a>
-                                        </div>
-                                        {/* <div className="child">
-                                            <a href="#" target="_self">อนามัยบุ๊ค</a>
-                                        </div> */}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">ดาวน์โหลดเอกสาร</a>
-                            </div>
-                            <div className="submenu">
-                                <a href="#" target="_self">บริการอื่นๆ</a>
                             </div>
                         </div>
                     </div>

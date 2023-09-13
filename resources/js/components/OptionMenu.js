@@ -8,7 +8,7 @@ const OptionMenu = () => {
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
-                                    <h6 className="ellipsis-1">แพลตฟอร์ม</h6>
+                                    <h6 className="ellipsis-1">จัดซื้อจัดจ้าง</h6>
                                 </div>
                                 {/* <div className="banner">
                                     <FaAddressCard />
@@ -19,7 +19,7 @@ const OptionMenu = () => {
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
-                                    <h6 className="ellipsis-1">การเงินและการเบิกจ่าย</h6>
+                                    <h6 className="ellipsis-1">ร่วมงานกับเรา</h6>
                                 </div>
                                 {/* <div className="banner">
                                     <i className="icon fas fa-address-card"></i>
@@ -30,7 +30,7 @@ const OptionMenu = () => {
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
-                                    <h6 className="ellipsis-1">จัดซื้อจัดจ้าง</h6>
+                                    <h6 className="ellipsis-1">คำถามที่ถามบ่อย</h6>
                                 </div>
                                 {/* <div className="banner">
                                     <i className="icon fas fa-address-card"></i>
@@ -41,7 +41,7 @@ const OptionMenu = () => {
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
-                                    <h6 className="ellipsis-1">ป้องกันควบคุม</h6>
+                                    <h6 className="ellipsis-1">แจ้งเรื่องร้องเรียน</h6>
                                 </div>
                                 {/* <div className="banner">
                                     <i className="icon fas fa-address-card"></i>
@@ -63,7 +63,7 @@ const OptionMenu = () => {
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
-                                    <h6 className="ellipsis-1">มีเดีย</h6>
+                                    <h6 className="ellipsis-1">ศูนย์ข้อมูลข่าวสาร</h6>
                                 </div>
                                 {/* <div className="banner">
                                     <i className="icon fas fa-address-card"></i>
@@ -85,7 +85,7 @@ const OptionMenu = () => {
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
-                                    <h6 className="ellipsis-1">คุณธรรม</h6>
+                                    <h6 className="ellipsis-1">ชมรมคุณธรรมฯ</h6>
                                 </div>
                                 {/* <div className="banner">
                                     <FaGavel />
