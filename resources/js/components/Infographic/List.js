@@ -1,9 +1,5 @@
 import React from 'react'
-import SwiperCore  from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination, FreeMode } from 'swiper/modules'
-/** Import Swiper styles */
-import 'swiper/swiper-bundle.css'
+import { Link } from 'react-router-dom';
 
 const slides = [
     { id: 1, imgUrl: './img/info-01.jpg' },
@@ -12,43 +8,55 @@ const slides = [
     { id: 4, imgUrl: './img/info-01.jpg' },
     { id: 5, imgUrl: './img/info-01.jpg' },
     { id: 6, imgUrl: './img/info-01.jpg' },
+    { id: 7, imgUrl: './img/info-01.jpg' },
+    { id: 8, imgUrl: './img/info-01.jpg' },
+    { id: 9, imgUrl: './img/info-01.jpg' },
 ];
 
 const InfographicList = () => {
-    SwiperCore.use([Autoplay]);
-
     return (
-        <div className="info-box">
+        <section className="info__list-container container">
             <h1 className="title">Infographics</h1>
 
             <hr className="my-2" />
 
-            <div className="row">
-                <Swiper
-                    modules={[Pagination]}
-                    slidesPerView={4}
-                    spaceBetween={30}
-                    pagination={{ clickable: true }}
-                    autoplay={{
-                        delay: 5000
-                    }}
-                >
-                    {slides.map(slide => (
-                        <SwiperSlide key={slide.id}>
-                            <div className="col-md-3 info-item">
-                                <div className="item-img">
-                                    <img src={slide.imgUrl} alt="info-pic" />
+            <div className="info__list-wrapper">
+                <div className="row">
+                        {slides.map(slide => (
+                            <div className="col-md-4" key={slide.id}>
+                                <div className="info-item">
+                                    <Link to="/">
+                                        <div className="info-img">
+                                            <img src={slide.imgUrl} alt="info-pic" />
+                                        </div>
+                                        <div className="info-text">
+                                            <a href="#"><i className="fas fa-eye"></i><span>20</span></a>
+                                            <a href="#"><i className="fas fa-heart"></i><span>15</span></a>
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                        ))}
+                </div>
+                <nav aria-label="navigation" className="c9__pagination">
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-
-            <div style={{ textAlign: 'center', margin: '1rem 0' }}>
-                <a href="#" className="all-news">ทั้งหมด <i class="fas fa-angle-double-right"></i></a>
-            </div>
-        </div>
+        </section>
     )
 }
 

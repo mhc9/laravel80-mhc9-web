@@ -9,31 +9,47 @@ const videos = [
 
 const VideoList = () => {
     return (
-        <div className="video-box">
+        <section className="video__list-container container">
             <h1 className="title">วีดิโอสุขภาพจิต</h1>
 
             <hr className="my-2" />
 
-            <div className="row video-list">
-                {videos.map((video, index) => (
-                    <div className="col-md-12 col-lg-6" key={video.id}>
-                        <div className="video-item">
-                            <iframe
-                                width="100%"
-                                height="100%"
-                                src={video.url}
-                                title={video.title}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                            ></iframe>
+            <div className="video__list-wrapper">
+                <div className="row">
+                    {videos.map((video, index) => (
+                        <div className="col-md-12 col-lg-6" key={video.id}>
+                            <div className="video-item">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src={video.url}
+                                    title={video.title}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <nav aria-label="navigation" className="c9__pagination">
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <div className="video-btn">
-                <a href="#" className="all-news">วีดิโอทั้งหมด <i class="fas fa-angle-double-right"></i></a>
-            </div>
-        </div>
+        </section>
     )
 }
 

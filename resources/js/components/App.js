@@ -17,6 +17,9 @@ import Calendar from './pages/Calendar';
 import Links from './pages/Links';
 import PostList from './Post/List';
 import NewsList from './News/List'
+import ArticleList from './Article/List';
+import VideoList from './Video/List';
+import InfographicList from './Infographic/List';
 
 function App() {
     return (
@@ -25,6 +28,9 @@ function App() {
                 <Route path="" element={<Home />} />
                 <Route path="/posts/list" element={<PostList />} />
                 <Route path="/news/list" element={<NewsList />} />
+                <Route path="/articles/list" element={<ArticleList />} />
+                <Route path="/videos/list" element={<VideoList />} />
+                <Route path="/infographics/list" element={<InfographicList />} />
                 {/* รู้จักเรา */}
                 <Route path="/about" element={<About />} />
                 <Route path="/vision" element={<Vision />} />

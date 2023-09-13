@@ -4,10 +4,10 @@ import OptionMenu from '../OptionMenu'
 import SlideLogos from '../SlideLogos'
 import PostHeadline from '../Post/Headline'
 import Director from '../shared/Director'
-import VideoList from '../Video/List'
+import VideoFeed from '../Video/Feed'
 import NewsFeed from '../News/Feed'
-import InfographicList from '../Infographic/List'
-import ArticleList from '../Article/List'
+import InfographicFeed from '../Infographic/Feed'
+import ArticleFeed from '../Article/Feed'
 import EService from '../EService'
 
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-8 col-lg-9">
-                                    <VideoList />
+                                    <VideoFeed />
                                 </div>
                                 <div className="col-md-4 col-lg-3" style={{ background: '#ffffff' }}>
                                     <div className="link-box">
@@ -44,11 +44,11 @@ const Home = () => {
                                         <hr className="my-2" />
 
                                         <div className="link-items">
-                                            <a href=""><i class="fas fa-coins"></i><h4>โปรแกรม WPM</h4></a>
-                                            <a href=""><i class="fas fa-envelope-open-text"></i><h4>ระบบงานสารบรรณอิเล็กทรอนิกส์</h4></a>
-                                            <a href=""><i class="fas fa-users"></i><h4>ระบบงานบุคลากร</h4></a>
-                                            <a href=""><i class="far fa-credit-card"></i><h4>ระบบ E-Pay slip</h4></a>
-                                            <a href=""><i class="fas fa-cogs"></i><h4>ระบบ B&P DMH</h4></a>
+                                            <a href=""><i className="fas fa-coins"></i><h4>โปรแกรม WPM</h4></a>
+                                            <a href=""><i className="fas fa-envelope-open-text"></i><h4>ระบบงานสารบรรณอิเล็กทรอนิกส์</h4></a>
+                                            <a href=""><i className="fas fa-users"></i><h4>ระบบงานบุคลากร</h4></a>
+                                            <a href=""><i className="far fa-credit-card"></i><h4>ระบบ E-Pay slip</h4></a>
+                                            <a href=""><i className="fas fa-cogs"></i><h4>ระบบ B&P DMH</h4></a>
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@ const Home = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <InfographicList />
+                                    <InfographicFeed />
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ const Home = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <ArticleList />
+                                    <ArticleFeed />
                                 </div>
                             </div>
                         </div>

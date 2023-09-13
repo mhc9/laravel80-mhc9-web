@@ -44,7 +44,7 @@ const NewsFeed = () => {
                     <Link to="/news/list" className="all-news">ข่าวทั้งหมด <i class="fas fa-angle-double-right"></i></Link>
                 </div>
                 <div className="col-lg-4 col-md-12 news-wrapper">
-                    <h4>ข่าวประกาศ</h4>
+                    <h4>ประกาศ</h4>
                     <div className="news-list">
                         <ul>
                             {[1,2,3,4,5].map((item, index) => (
@@ -58,7 +58,7 @@ const NewsFeed = () => {
                             ))}
                         </ul>
                     </div>
-                    <Link to="/news/list" className="all-news">ข่าวทั้งหมด <i class="fas fa-angle-double-right"></i></Link>
+                    <Link to="/news/list" className="all-news">ประกาศทั้งหมด <i class="fas fa-angle-double-right"></i></Link>
                 </div>
             </div>
         </div>
