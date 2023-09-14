@@ -51,7 +51,7 @@ const PostHeadline = () => {
                         </ul>
                     </div>
                     <div className="post-btn">
-                        <Link to="/posts/list" className="all-news">ทั้งหมด <i className="fas fa-angle-double-right"></i></Link>
+                        <Link to="/posts/list" className="all-news">ข่าวทั้งหมด</Link>
                     </div>
                 </div>
             </div>

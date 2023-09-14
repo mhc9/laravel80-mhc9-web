@@ -99,17 +99,17 @@ main {
     color: #8A8A8A;
     margin-left: 0.5rem;
 
-    a {
+    > a {
         color: #4D4D4D;
-    }
-    
-    a:hover {
-        text-decoration: underline;
 
-        &::after {
-            content: " \f101";
-            font-family: 'Font Awesome\ 5 Free';
-            font-weight: 900;
+        &:hover {
+            text-decoration: underline;
+    
+            &::after {
+                content: " \f101";
+                font-family: 'Font Awesome\ 5 Free';
+                font-weight: 900;
+            }
         }
     }
 }
@@ -122,6 +122,12 @@ main {
         transform: translateX(2px);
         transition: all 3ms ease-in-out;
         text-decoration: underline;
+
+        &::after {
+            content: " \f101";
+            font-family: "Font Awesome\ 5 Free";
+            font-weight: 700;
+        }
     }
 }
 
@@ -1971,6 +1977,22 @@ footer {
     padding: 1rem;
 
     // .article-list {}
+
+    .post-btn {
+        margin: 0.5rem;
+        text-align: center;
+
+        .all-news {
+            background: #4D4D4D;
+            color: white;
+
+            &:hover {
+                border: 1px solid #4D4D4D;
+                background: transparent;
+                color: #4D4D4D;
+            }
+        }
+    }
 }
 
 .article__list-container {
@@ -2010,28 +2032,6 @@ footer {
             font-size: 0.8rem;
             font-weight: 200;
             line-height: 1.125rem;
-        }
-    }
-}
-
-.post-btn {
-    margin: 0.5rem;
-    text-align: center;
-
-    .all-news {
-        background: #4D4D4D;
-        color: white;
-
-        &:hover {
-            border: 1px solid #4D4D4D;
-            background: transparent;
-            color: #4D4D4D;
-
-            &::after {
-                content: " \f101";
-                font-family: "Font Awesome\ 5 Free";
-                font-weight: 700;
-            }
         }
     }
 }

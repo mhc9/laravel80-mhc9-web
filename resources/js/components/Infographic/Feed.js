@@ -20,7 +20,7 @@ const InfographicFeed = () => {
 
     return (
         <div className="info-box">
-            <h1 className="title">Infographics</h1>
+            <h1 className="title">อินโฟกราฟฟิก</h1>
 
             <hr className="my-2" />
 
@@ -47,7 +47,7 @@ const InfographicFeed = () => {
             </div>
 
             <div style={{ textAlign: 'center', margin: '1rem 0' }}>
-                <Link to="/infographics/list" className="all-news">ทั้งหมด <i class="fas fa-angle-double-right"></i></Link>
+                <Link to="/infographics/list" className="all-news">อินโฟกราฟฟิกทั้งหมด</Link>
             </div>
         </div>
     )

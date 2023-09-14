@@ -16,7 +16,7 @@ const slides = [
 const InfographicList = () => {
     return (
         <section className="info__list-container container">
-            <h1 className="title">Infographics</h1>
+            <h1 className="title">อินโฟกราฟฟิก</h1>
 
             <hr className="my-2" />
 

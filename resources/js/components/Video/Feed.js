@@ -32,7 +32,7 @@ const VideoFeed = () => {
                 ))}
             </div>
             <div className="video-btn">
-                <Link to="/videos/list" className="all-news">วีดิโอทั้งหมด <i className="fas fa-angle-double-right"></i></Link>
+                <Link to="/videos/list" className="all-news">วีดิโอทั้งหมด</Link>
             </div>
         </div>
     )
