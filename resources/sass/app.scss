@@ -2868,20 +2868,14 @@ ol {
 
 /* ================================== End Contact page ================================== */
 .contact {
-    .contact-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1.5rem;
+    padding-bottom: 1rem;
 
-        .contact-map {
-            width: 70%;
-            padding: 10px;
-        }
+    .contact-wrapper {
+        padding: 0.5rem;
+
+        // .contact-map {}
 
         .contact-text {
-            width: 30%;
-
             ul {
                 list-style: none;
                 margin: 0;
@@ -2896,6 +2890,16 @@ ol {
                 a {
                     color: var(--color0);
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contact {
+        .contact-wrapper {
+            .contact-map {
+                margin-bottom: 1rem;
             }
         }
     }
