@@ -17,7 +17,7 @@ const NewsFeed = () => {
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        ประกาศผู้ชนะจัดซื้อจัดจ้างวงเงินต่ำกว่า 5 พันบาท-ไตรมาสที่ 1
                                         <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
@@ -34,7 +34,7 @@ const NewsFeed = () => {
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        ประกาศรายชื่อผู้ผ่านการคัดเลือกรับย้ายและรับโอนข้าราชการพลเรือนตำแหน่งนักวิชาการสาธารณสุข
                                         <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
@@ -51,7 +51,7 @@ const NewsFeed = () => {
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        นโบายการบริหารงานด้วยความซื่อสัตย์สุจริต มีคุณธรรม โปร่งใส
                                         <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>

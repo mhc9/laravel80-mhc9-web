@@ -1667,7 +1667,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         padding: 0.5rem 0.75rem;
 
         h4 {
@@ -1684,8 +1684,10 @@ footer {
         }
 
         .news-list {
+            width: 100%;
             padding: 0.25rem;
             padding-left: 1rem;
+            margin-bottom: 0.5rem;
 
             ul {
                 list-style: none;
@@ -1693,11 +1695,10 @@ footer {
                 margin: 0;
 
                 li {
-                    min-height: 30px;
+                    height: 80px;
                     font-size: 0.75rem;
                     font-weight: 200;
                     line-height: 1.125rem;
-                    margin-bottom: 0.5rem;
                     display: flex;
                     flex-direction: row;
                     align-items: start;
@@ -1708,13 +1709,13 @@ footer {
                         border-bottom: 1px dashed var(--bs-secondary);
                     }
 
-                    div {
-                        width: 160px;
+                    > div {
+                        width: 45px;
                         height: auto;
                         padding: 0.25rem;
                         display: flex;
                         justify-content: center;
-                        object-fit: contain;
+                        object-fit: cover;
                         object-position: center;
                         border-radius: 50%;
                         background: #ffffff;
@@ -1723,7 +1724,8 @@ footer {
                         img { width: 100%; }
                     }
 
-                    p {
+                    > p {
+                        width: 80%;
                         padding: 0;
                         margin: 0;
 
@@ -1834,13 +1836,18 @@ footer {
                     margin: 0;
 
                     li {
+                        height: 40px;
                         padding: 0.25rem;
 
-                        div {
-                            width: 60px;
+                        > div {
+                            width: 25px;
                             padding: 0.125rem;
 
                             img { width: 100%; }
+                        }
+
+                        > p {
+                            width: 100%;
                         }
                     }
                 }
