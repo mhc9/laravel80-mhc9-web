@@ -1917,6 +1917,11 @@ footer {
             height: auto;
             width: auto;
             padding: 1rem;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
 
             > a {
                 position: relative;
@@ -1926,46 +1931,53 @@ footer {
                     transform: translateY(-5px);
                 }
 
-                &:hover > .info-text {
-                    display: flex;
-                }
-
                 .info-img {
                     width: 220px;
                 }
 
-                .info-text {
-                    display: none;
+                > .info-cover {
                     position: absolute;
+                    visibility: hidden;
                     top: 0;
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 2rem;
                     opacity: 0.7;
                     background: var(--color0);
-                    padding: 0.125rem 0.5rem;
-                    border-radius: 10px;
+                }
 
-                    > a {
-                        color: white;
-                        transition: transform 200ms;
+                &:hover > .info-cover {
+                    visibility: visible;
+                }
+            }
 
-                        &:hover {
-                            transform: translateY(-5px);
-                        }
-                        
-                        i { font-size: 2rem; }
+            &:hover > .info-text {
+                display: flex;
+            }
 
-                        span {
-                            margin-left: 0.25rem;
-                            font-size: 2rem;
-                            font-weight: 400;
-                            line-height: 1.75rem;
-                        }
+            .info-text {
+                display: none;
+                position: absolute;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                > a {
+                    color: white;
+                    transition: transform 200ms;
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+
+                    i { font-size: 1.5rem; }
+
+                    span {
+                        margin-left: 0.25rem;
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
                     }
                 }
             }
