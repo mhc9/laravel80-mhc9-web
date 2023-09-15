@@ -16,8 +16,8 @@ const ArticleFeed = () => {
                             <div className="card-body">
                                 <h3 className="card-title">บทความ {index + 1}</h3>
                                 <h5 className="text-muted">
-                                    <span><i class="fas fa-calendar-alt"></i> 2023-09-09 16:00 น.</span>
-                                    <span><i class="fas fa-user-alt"></i> Admin</span>
+                                    <span><i className="fas fa-calendar-alt"></i> 2023-09-09 16:00 น.</span>
+                                    <span><i className="fas fa-user-alt"></i> Admin</span>
                                 </h5>
                                 <p className="card-text">
                                     Some quick example text to build on the card title and make up the bulk of the card's content.

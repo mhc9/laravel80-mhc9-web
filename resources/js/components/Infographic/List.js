@@ -29,11 +29,11 @@ const InfographicList = () => {
                                         <div className="info-img">
                                             <img src={slide.imgUrl} alt="info-pic" />
                                         </div>
-                                        <div className="info-text">
-                                            <a href="#"><i className="fas fa-eye"></i><span>20</span></a>
-                                            <a href="#"><i className="fas fa-heart"></i><span>15</span></a>
-                                        </div>
                                     </Link>
+                                    <div className="info-text">
+                                        <a href="#"><i className="fas fa-eye"></i><span>20</span></a>
+                                        <a href="#"><i className="fas fa-heart"></i><span>15</span></a>
+                                    </div>
                                 </div>
                             </div>
                         ))}

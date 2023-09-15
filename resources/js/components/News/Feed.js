@@ -18,7 +18,7 @@ const NewsFeed = () => {
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        <p><span className="readmore"><a href="">อ่านเพิ่มเติม</a></span></p>
+                                        <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
                             ))}
@@ -35,7 +35,7 @@ const NewsFeed = () => {
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        <p><span className="readmore"><a href="">อ่านเพิ่มเติม</a></span></p>
+                                        <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
                             ))}
@@ -52,7 +52,7 @@ const NewsFeed = () => {
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        <p><span className="readmore"><a href="">อ่านเพิ่มเติม</a></span></p>
+                                        <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
                             ))}
