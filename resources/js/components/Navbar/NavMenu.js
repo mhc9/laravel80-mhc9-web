@@ -31,35 +31,16 @@ const NavMenu = () => {
                                 <Link to="/structure" target="_self">โครงสร้างองค์กร</Link>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ภารกิจและหน้าที่รับผิดชอบ</a>
+                                <a href="#" target="_self">หน้าที่และอำนาจ</a>
                             </div>
-                            <div className="submenu has-children">
-                                <a href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
-                                <div className="child-container">
-                                    <div className="childs">
-                                        <div className="child">
-                                            <a href="#" target="_self">ปีงบประมาณ พ.ศ. 2559</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_blank" rel="noreferrer">ปีงบประมาณ พ.ศ. 2558</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">ปีงบประมาณ พ.ศ. 2557</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="submenu ">
+                                <Link to="laws" target="_self">กฎ ระเบียบ ข้อบังคับ</Link>
                             </div>
                         </div>
                         <div className="submenus">
                             <div className="submenu ">
-                                <a href="#" target="_self">กฎ ระเบียบ ข้อบังคับ</a>
+                                <Link to="policies" target="_self">นโยบายองค์กร</Link>
                             </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">คู่มือ/ระเบียบปฏิบัติ</a>
-                            </div>
-                            {/* <div className="submenu ">
-                                <a href="#" target="_blank" rel="noreferrer">บริหารทรัพยากรบุคคล</a>
-                            </div> */}
                             <div className="submenu has-children">
                                 <a href="#" target="_self">แผนยุทธศาสตร์</a>
                                 <div className="child-container">
@@ -82,11 +63,27 @@ const NavMenu = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="submenu ">
-                                <a href="#" target="_blank" rel="noreferrer">การกำกับติดตามการดำเนินงาน</a>
+                            <div className="submenu has-children">
+                                <a href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
+                                <div className="child-container">
+                                    <div className="childs">
+                                        <div className="child">
+                                            <a href="#" target="_self">ปีงบประมาณ พ.ศ. 2566</a>
+                                        </div>
+                                        <div className="child">
+                                            <a href="#" target="_self">ปีงบประมาณ พ.ศ. 2565</a>
+                                        </div>
+                                        <div className="child">
+                                            <a href="#" target="_self">ปีงบประมาณ พ.ศ. 2564</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_blank" rel="noreferrer">รายงานประจำปี</a>
+                                <a href="#" target="_self">การกำกับติดตามการดำเนินงาน</a>
+                            </div>
+                            <div className="submenu ">
+                                <Link to="annual-reports" target="_self">รายงานประจำปี</Link>
                             </div>
                         </div>
                     </div>
@@ -101,7 +98,7 @@ const NavMenu = () => {
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <a href="#" target="_self">คู่มือการให้บริการ</a>
+                                <Link to="manuals" target="_self">คู่มือการให้บริการ</Link>
                             </div>
                             <div className="submenu ">
                                 <a href="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
@@ -162,7 +159,7 @@ const NavMenu = () => {
                                 <a href="#" target="_self">กระดานถาม-ตอบ</a>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ดาวน์โหลดเอกสาร</a>
+                                <Link to="downloads" target="_self">ดาวน์โหลดเอกสาร</Link>
                             </div>
                             <div className="submenu">
                                 <a href="#" target="_self">บริการอื่นๆ</a>

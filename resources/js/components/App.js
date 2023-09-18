@@ -20,27 +20,38 @@ import NewsList from './News/List'
 import ArticleList from './Article/List';
 import VideoList from './Video/List';
 import InfographicList from './Infographic/List';
+import Downloads from './pages/Downloads'
+import Laws from './pages/Laws'
+import AnnualReports from './pages/AnnualReports'
+import Manuals from './pages/Manuals'
+import Policies from './pages/Policies'
 
 function App() {
     return (
         <Routes>
             <Route path="/" element={<DefaultLayout />}>
                 <Route path="" element={<Home />} />
-                <Route path="/posts/list" element={<PostList />} />
-                <Route path="/news/:type/list" element={<NewsList />} />
-                <Route path="/articles/list" element={<ArticleList />} />
-                <Route path="/videos/list" element={<VideoList />} />
-                <Route path="/infographics/list" element={<InfographicList />} />
+
                 {/* รู้จักเรา */}
                 <Route path="/about" element={<About />} />
                 <Route path="/vision" element={<Vision />} />
                 <Route path="/structure" element={<Structure />} />
                 <Route path="/executives" element={<Executives />} />
-
-                {/* ข่าวประชาสัมพันธ์ */}
-                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/laws" element={<Laws />} />
+                <Route path="/policies" element={<Policies />} />
+                <Route path="/annual-reports" element={<AnnualReports />} />
 
                 {/* บริการประชาชน */}
+                <Route path="/manuals" element={<Manuals />} />
+                <Route path="/downloads" element={<Downloads />} />
+
+                {/* ข่าวประชาสัมพันธ์ */}
+                <Route path="/posts/list" element={<PostList />} />
+                <Route path="/news/:type/list" element={<NewsList />} />
+                <Route path="/articles/list" element={<ArticleList />} />
+                <Route path="/videos/list" element={<VideoList />} />
+                <Route path="/infographics/list" element={<InfographicList />} />
+                <Route path="/calendar" element={<Calendar />} />
 
                 {/* ติดต่อเรา */}
                 <Route path="/contact" element={<Contact />} />
