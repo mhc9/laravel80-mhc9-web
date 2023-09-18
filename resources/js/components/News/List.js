@@ -1,9 +1,22 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+
+const newsTypes = [
+    { id: 1, name: "ข่าวจัดซื้อจัดจ้าง" },
+    { id: 2, name: "ข่าวรับสมัครงาน" },
+    { id: 3, name: "ประกาศ" },
+];
 
 const NewsList = () => {
+    const { type } = useParams();
+
+    const getNewsType = (type) => {
+        return newsTypes.find(nt => nt.id === type);
+    }
+
     return (
         <section className="news__list-container container">
-            <h1 className="title">{'ข่าวจัดซื้อจัดจ้าง'}</h1>
+            <h1 className="title">{getNewsType(parseInt(type, 10))?.name}</h1>
 
             <hr className="my-2" />
 

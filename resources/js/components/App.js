@@ -27,7 +27,7 @@ function App() {
             <Route path="/" element={<DefaultLayout />}>
                 <Route path="" element={<Home />} />
                 <Route path="/posts/list" element={<PostList />} />
-                <Route path="/news/list" element={<NewsList />} />
+                <Route path="/news/:type/list" element={<NewsList />} />
                 <Route path="/articles/list" element={<ArticleList />} />
                 <Route path="/videos/list" element={<VideoList />} />
                 <Route path="/infographics/list" element={<InfographicList />} />
