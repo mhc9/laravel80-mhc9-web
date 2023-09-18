@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { hideSidebar, toggleSidebar } from '../features/navbarSlice'
@@ -6,6 +6,21 @@ import { hideSidebar, toggleSidebar } from '../features/navbarSlice'
 const Sidebar = ({ isShow }) => {
     const dispatch = useDispatch();
     const sidebarRef = useRef(null);
+
+    useEffect(() => {
+        window.document.addEventListener('mousedown', handleClickOutside);
+
+        return () => window.document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const handleClickOutside = (e) => {
+        /** Get mobile menu element from document */
+        const mobileMenu = window.document.querySelector('.mobile-menu');
+
+        if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+            dispatch(hideSidebar());
+        }
+    };
 
     return (
         <div className="sidebar" style={{ visibility: isShow ? 'visible' : 'hidden'}} ref={sidebarRef}>
