@@ -34,7 +34,10 @@ const DefaultLayout = () => {
 
             <Footer />
 
-            <Sidebar isShow={isShowSidebar} />
+            <Sidebar
+                isShow={isShowSidebar}
+                screenWidth={screen.width}
+            />
         </div>
     )
 }

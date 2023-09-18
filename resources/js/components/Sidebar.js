@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { hideSidebar, toggleSidebar } from '../features/navbarSlice'
 
-const Sidebar = ({ isShow }) => {
+const Sidebar = ({ isShow, screenWidth }) => {
     const dispatch = useDispatch();
     const sidebarRef = useRef(null);
 
@@ -12,6 +12,10 @@ const Sidebar = ({ isShow }) => {
 
         return () => window.document.removeEventListener('mousedown', handleClickOutside);
     }, []);
+
+    useEffect(() => {
+        if (screenWidth > 1199) dispatch(hideSidebar());
+    }, [screenWidth]);
 
     const handleClickOutside = (e) => {
         /** Get mobile menu element from document */
