@@ -9,7 +9,6 @@ const Footer = () => {
     const [cookies, setCookies] = useCookies(['mhc9_consent']);
     
     useEffect(() => {
-        console.log(cookies);
         if (cookies.mhc9_consent) setShowCookie(false);
     }, [cookies]);
 
