@@ -65,13 +65,13 @@ const NavMenu = () => {
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
+                                            <a href="#" target="_blank" rel="noreferrer">แผนยุทธศาสตร์</a>
+                                        </div>
+                                        <div className="child">
                                             <a href="#" target="_blank" rel="noreferrer">แผนปฏิบัติราชการ</a>
                                         </div>
                                         <div className="child">
                                             <a href="#" target="_blank" rel="noreferrer">แผนปฏิบัติการ</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_blank" rel="noreferrer">แผนยุทธศาสตร์</a>
                                         </div>
                                         {/* <div className="child">
                                             <a href="#" target="_blank" rel="noreferrer">แผนระดับ 3 ในความรับผิดชอบ</a>
@@ -180,56 +180,48 @@ const NavMenu = () => {
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <a href="#" target="_self">
+                                <Link to="/post/list" target="_self">
                                     ข่าวกิจกรรม
-                                </a>
+                                </Link>
                             </div>
                             {/* <div className="submenu ">
-                                <a href="#" target="_self">
+                                <Link to="#" target="_self">
                                     ข่าวประชาสัมพันธ์ส่วนกลาง
-                                </a>
-                            </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">
-                                    ข่าวประชาสัมพันธ์ส่วนภูมิภาค
-                                </a>
+                                </Link>
                             </div> */}
                             <div className="submenu has-children">
-                                <a href="#" target="_self">
+                                <a to="#" target="_self">
                                     ข่าวจัดซื้อจัดจ้าง
                                 </a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a href="#" target="_self">แผนการจัดซื้อจัดจ้าง</a>
+                                            <Link to="news/1/list" target="_self">แผนการจัดซื้อจัดจ้าง</Link>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">ประกาศราคากลาง</a>
+                                            <Link to="news/1/list" target="_self">ประกาศราคากลาง</Link>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">ประกาศร่าง TOR</a>
+                                            <Link to="news/1/list" target="_self">ประกาศร่าง TOR</Link>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">ประกาศจัดซื้อจัดจ้าง</a>
+                                            <Link to="news/1/list" target="_self">ประกาศจัดซื้อจัดจ้าง</Link>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">ประกาศผู้ชนะการเสนอราคา</a>
+                                            <Link to="news/1/list" target="_self">ประกาศผู้ชนะการเสนอราคา</Link>
                                         </div>
                                         {/* <div className="child">
-                                            <a href="#" target="_self">สรุปผลการจัดซื้อจัดจ้าง</a>
+                                            <Link to="news/1/list" target="_self">สรุปผลการจัดซื้อจัดจ้าง</Link>
                                         </div> */}
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="submenu ">
-                                <a href="#" target="_blank">ทุนพัฒนาข้าราชการ</a>
-                            </div> */}
                             <div className="submenu ">
-                                <a href="#" target="_self">ข่าวรับสมัครงาน</a>
+                                <Link to="/news/2/list" target="_self">ข่าวรับสมัครงาน</Link>
                             </div>
-                            {/* <div className="submenu ">
-                                <a href="#" target="_self">ข่าวหนังสือพิมพ์</a>
-                            </div> */}
+                            <div className="submenu ">
+                                <Link to="/news/3/list" target="_self">ข่าวประกาศ</Link>
+                            </div>
                             <div className="submenu ">
                                 <Link to="/calendar" target="_self">ปฏิทินกิจกรรม</Link>
                             </div>
