@@ -237,4 +237,26 @@ class RequisitionController extends Controller
             ];
         }
     }
+
+    public function printPR(Request $req, $id)
+    {
+        $requisition = Requisition::with('category','budget','details','project','details.item','details.item.unit')
+                        ->with('requester','requester.prefix','requester.position','requester.level')
+                        ->with('committees','committees.employee','committees.employee.prefix')
+                        ->with('committees.employee.position','committees.employee.level')
+                        ->find($id);
+
+        $data = [
+            "requisition" => $requisition,
+        ];
+
+        /** Invoke helper function to return view of pdf instead of laravel's view to client */
+        $paper = [
+            'size'          => 'a4',
+            'orientation'   => 'portrait'
+        ];
+
+        return renderPdf('forms.pr-form', $data, $paper);
+        // return view('forms.pr-form', $data);
+    }
 }
