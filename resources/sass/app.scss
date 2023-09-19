@@ -3029,6 +3029,44 @@ ol {
                 font-size: 18px;
             }
         }
+
+        .website-policy {
+            counter-reset: wp_bullet;
+
+            h2 {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 2rem;
+                text-align: center;
+            }
+
+            ol {
+                margin: 0;
+                padding: 0;
+                text-align: justify;
+                
+                li {
+                    padding: 1rem;
+
+                    h4 {
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+
+                        &::before {
+                            counter-increment: wp_bullet;
+                            content: counter(wp_bullet) ". ";
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 300;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
     }
 }
 /* ================================== End policies ================================== */
