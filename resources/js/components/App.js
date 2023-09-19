@@ -26,6 +26,7 @@ import AnnualReports from './pages/AnnualReports'
 import Manuals from './pages/Manuals'
 import Policies from './pages/Policies'
 import WebsitePolicy from './pages/WebsitePolicy';
+import Authority from './pages/Authority';
 
 function App() {
     return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/vision" element={<Vision />} />
                 <Route path="/structure" element={<Structure />} />
                 <Route path="/executives" element={<Executives />} />
+                <Route path="/authority" element={<Authority />} />
                 <Route path="/laws" element={<Laws />} />
                 <Route path="/policies" element={<Policies />} />
                 <Route path="/annual-reports" element={<AnnualReports />} />

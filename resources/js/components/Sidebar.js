@@ -42,7 +42,7 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                 <li><Link to="/vision" onClick={() => dispatch(toggleSidebar())}>วิสัยทัศน์ พันธกิจ ค่านิยม</Link></li>
                                 <li><Link to="/executives" onClick={() => dispatch(toggleSidebar())}>ผู้บริหารหน่วยงาน</Link></li>
                                 <li><Link to="/structure" onClick={() => dispatch(toggleSidebar())}>โครงสร้างองค์กร</Link></li>
-                                <li><Link to="/mission" onClick={() => dispatch(toggleSidebar())}>ภารกิจและหน้าที่รับผิดชอบ</Link></li>
+                                <li><Link to="/authority" onClick={() => dispatch(toggleSidebar())}>หน้าที่และอำนาจ</Link></li>
                                 <li className="has-sub text-sm">
                                     <a href="#">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
                                     <ul>
