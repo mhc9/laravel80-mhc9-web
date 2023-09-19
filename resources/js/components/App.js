@@ -25,6 +25,7 @@ import Laws from './pages/Laws'
 import AnnualReports from './pages/AnnualReports'
 import Manuals from './pages/Manuals'
 import Policies from './pages/Policies'
+import WebsitePolicy from './pages/WebsitePolicy';
 
 function App() {
     return (
@@ -56,6 +57,9 @@ function App() {
                 {/* ติดต่อเรา */}
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/links" element={<Links />} />
+
+                {/* นโยบาย */}
+                <Route path="/website-policy" element={<WebsitePolicy />} />
             </Route>
             <Route path="*" element={<NotFound />} />
         </Routes>

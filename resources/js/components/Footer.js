@@ -80,7 +80,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="policy-wrapper">
-                                <Link to="/">นโยบายเว็บไซต์</Link> |
+                                <Link to="/website-policy">นโยบายเว็บไซต์</Link> |
                                 <Link to="/">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</Link> |
                                 <Link to="/">นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์</Link>
                             </div>

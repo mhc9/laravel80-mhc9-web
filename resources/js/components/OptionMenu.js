@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const OptionMenu = () => {
     return (
         <div className="option-menus">
             <div className="container">
                 <div className="contents">
-                        <a className="content">
+                        <Link to="/news/1/list" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">จัดซื้อจัดจ้าง</h6>
@@ -15,8 +16,8 @@ const OptionMenu = () => {
                                 </div> */}
                                 <div className="order">01</div>
                             </div>
-                        </a>
-                        <a className="content">
+                        </Link>
+                        <Link to="news/2/list" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">ร่วมงานกับเรา</h6>
@@ -26,8 +27,8 @@ const OptionMenu = () => {
                                 </div> */}
                                 <div className="order">02</div>
                             </div>
-                        </a>
-                        <a className="content">
+                        </Link>
+                        <Link to="/faq" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">คำถามที่ถามบ่อย</h6>
@@ -37,7 +38,7 @@ const OptionMenu = () => {
                                 </div> */}
                                 <div className="order">03</div>
                             </div>
-                        </a>
+                        </Link>
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
@@ -49,7 +50,7 @@ const OptionMenu = () => {
                                 <div className="order">04</div>
                             </div>
                         </a>
-                        <a className="content">
+                        <Link to="/downloads" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">ดาวน์โหลด</h6>
@@ -59,7 +60,7 @@ const OptionMenu = () => {
                                 </div> */}
                                 <div className="order">05</div>
                             </div>
-                        </a>
+                        </Link>
                         <a className="content">
                             <div className="wrapper">
                                 <div className="text-container">
@@ -71,7 +72,7 @@ const OptionMenu = () => {
                                 <div className="order">06</div>
                             </div>
                         </a>
-                        <a className="content">
+                        <Link to="/ita" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">ควบคุมภายใน</h6>
@@ -81,8 +82,8 @@ const OptionMenu = () => {
                                 </div> */}
                                 <div className="order">07</div>
                             </div>
-                        </a>
-                        <a className="content">
+                        </Link>
+                        <Link to="/moral-club" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">ชมรมคุณธรรมฯ</h6>
@@ -92,7 +93,7 @@ const OptionMenu = () => {
                                 </div> */}
                                 <div className="order">08</div>
                             </div>
-                        </a>
+                        </Link>
                 </div>
             </div>
         </div>
