@@ -23,22 +23,22 @@ const Footer = () => {
                         <div className="footer-col footer-menu">
                             <h2>รู้จักเรา</h2>
                             <ul>
-                                <li><a href="#">ประวัติความเป็นมา</a></li>
-                                <li><a href="#">วิสัยทัศน์/พันธกิจ/ค่านิยม</a></li>
-                                <li><a href="#">ผู้บริหารหน่วยงาน</a></li>
-                                <li><a href="#">โครงสร้างองค์กร</a></li>
-                                <li><a href="#">ภารกิจและหน้าที่รับผิดชอบ</a></li>
+                                <li><Link to="/about">ประวัติความเป็นมา</Link></li>
+                                <li><Link to="/vision">วิสัยทัศน์/พันธกิจ/ค่านิยม</Link></li>
+                                <li><Link to="/executives">ผู้บริหารหน่วยงาน</Link></li>
+                                <li><Link to="/structure">โครงสร้างองค์กร</Link></li>
+                                <li><Link to="/">หน้าที่และอำนาจ</Link></li>
                             </ul>
                         </div>
                         {/* Col */}
                         <div className="footer-col footer-menu">
                             <h2>บริการประชาชน</h2>
                             <ul>
-                                <li><a href="#">คู่มือการให้บริการ</a></li>
-                                <li><a href="#">แจ้งเรื่องร้องเรียน</a></li>
-                                <li><a href="#">คำถามที่ถามบ่อย (FAQ)</a></li>
-                                <li><a href="#">สื่อสุขภาพจิต</a></li>
-                                <li><a href="#">บริการ E-Services</a></li>
+                                <li><Link to="/manuals">คู่มือการให้บริการ</Link></li>
+                                <li><Link to="#">แจ้งเรื่องร้องเรียน</Link></li>
+                                <li><Link to="/faq">คำถามที่ถามบ่อย (FAQ)</Link></li>
+                                <li><Link to="#">สื่อสุขภาพจิต</Link></li>
+                                <li><Link to="/downloads">ดาวน์โหลดเอกสาร</Link></li>
                             </ul>
                         </div>
 
@@ -46,19 +46,19 @@ const Footer = () => {
                         <div className="footer-col footer-menu">
                             <h2>สำหรับเจ้าหน้าที่</h2>
                             <ul>
-                                <li><a href="#">ระบบ WPM</a></li>
-                                <li><a href="#">ระบบงานสารบรรณอิเล็กทรอนิกส์</a></li>
-                                <li><a href="#">ระบบงานบุคลากร</a></li>
-                                <li><a href="#">ระบบ E-Pay slip</a></li>
-                                <li><a href="#">ระบบเพิ่มประสิทธิภาพการจัดการงบประมาณและแผนงาน (B&P DMH)</a></li>
+                                <li><a href="https://www.mhc9dmh.com/loginmhc.aspx" target="_blank">ระบบ WPM</a></li>
+                                <li><a href="https://edc.dmh.go.th" target="_blank">ระบบงานสารบรรณอิเล็กทรอนิกส์</a></li>
+                                <li><a href="http://dpis.dmh.go.th" target="_blank">ระบบสารสนเทศทรัพยากรบุคคล (DPIS)</a></li>
+                                <li><a href="https://finance.dmh.go.th/intranet" target="_blank">ระบบ E-Pay slip</a></li>
+                                <li><a href="https://bp.dmh.go.th/DMH_PROJECT" target="_blank">ระบบเพิ่มประสิทธิภาพการจัดการงบประมาณและแผนงาน (B&P DMH)</a></li>
                             </ul>
                         </div>
 
                         {/* Col */}
                         <div className="footer-col footer-menu">
                             <h2>ติอต่อเรา</h2>
-                            <ul>
-                                <li><a href="/">ศูนย์สุขภาพจิตที่ 9</a></li>
+                            <ul className="footer-address">
+                                <li>ศูนย์สุขภาพจิตที่ 9</li>
                                 <li>เลขที่ 86 ถ.ช้างเผือก อ.เมือง จ.นครราชสีมา 30000</li>
                                 <li>โทรศัพท์ 0-4425-6729</li>
                                 <li>โทรสาร 0-4425-6730</li>

@@ -19,10 +19,10 @@ const NavMenu = () => {
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <Link to="about" target="_self">ประวัติความเป็นมา</Link>
+                                <Link to="/about" target="_self">ประวัติความเป็นมา</Link>
                             </div>
                             <div className="submenu ">
-                                <Link to="vision" target="_self">วิสัยทัศน์ พันธกิจ ค่านิยม</Link>
+                                <Link to="/vision" target="_self">วิสัยทัศน์ พันธกิจ ค่านิยม</Link>
                             </div>
                             <div className="submenu ">
                                 <Link to="/executives" target="_self">ผู้บริหารหน่วยงาน</Link>
@@ -34,7 +34,7 @@ const NavMenu = () => {
                                 <a href="#" target="_self">หน้าที่และอำนาจ</a>
                             </div>
                             <div className="submenu ">
-                                <Link to="laws" target="_self">กฎ ระเบียบ ข้อบังคับ</Link>
+                                <Link to="/laws" target="_self">กฎ ระเบียบ ข้อบังคับ</Link>
                             </div>
                         </div>
                         <div className="submenus">
@@ -98,7 +98,7 @@ const NavMenu = () => {
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <Link to="manuals" target="_self">คู่มือการให้บริการ</Link>
+                                <Link to="/manuals" target="_self">คู่มือการให้บริการ</Link>
                             </div>
                             <div className="submenu ">
                                 <a href="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
@@ -153,13 +153,13 @@ const NavMenu = () => {
                                 <a href="#" target="_self">ระบบสารสนเทศ</a>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
+                                <Link to="/faq" target="_self">คำถามที่ถามบ่อย (FAQ)</Link>
                             </div>
                             <div className="submenu ">
                                 <a href="#" target="_self">กระดานถาม-ตอบ</a>
                             </div>
                             <div className="submenu ">
-                                <Link to="downloads" target="_self">ดาวน์โหลดเอกสาร</Link>
+                                <Link to="/downloads" target="_self">ดาวน์โหลดเอกสาร</Link>
                             </div>
                             <div className="submenu">
                                 <a href="#" target="_self">บริการอื่นๆ</a>
