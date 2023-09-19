@@ -24,6 +24,9 @@
         "sass-loader": "^11.0.1"
     },
     "dependencies": {
+        "@fullcalendar/core": "^6.1.8",
+        "@fullcalendar/daygrid": "^6.1.8",
+        "@fullcalendar/react": "^6.1.8",
         "@reduxjs/toolkit": "^1.9.5",
         "moment": "^2.29.4",
         "react-cookie": "^6.1.1",
