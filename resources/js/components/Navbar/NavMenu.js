@@ -246,8 +246,13 @@ const NavMenu = () => {
             </div>
 
             <div className="menu icon-menu ">
-                <a className="global-search-toggle" href="#">
+                <a href="#" className="global-search-toggle">
                     <div><i className="fas fa-search"></i></div>
+                </a>
+            </div>
+            <div className="menu icon-menu ">
+                <a href="#" className="global-search-toggle">
+                    <div><i className="fas fa-sitemap"></i></div>
                 </a>
             </div>
             {/* /.menu */}
