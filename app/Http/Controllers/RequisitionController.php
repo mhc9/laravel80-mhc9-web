@@ -240,7 +240,8 @@ class RequisitionController extends Controller
 
     public function printPR(Request $req, $id)
     {
-        $requisition = Requisition::with('category','budget','details','project','details.item','details.item.unit')
+        $requisition = Requisition::with('category','budget','details','project','division','division.department')
+                        ->with('details.item','details.item.unit')
                         ->with('requester','requester.prefix','requester.position','requester.level')
                         ->with('committees','committees.employee','committees.employee.prefix')
                         ->with('committees.employee.position','committees.employee.level')
@@ -257,6 +258,5 @@ class RequisitionController extends Controller
         ];
 
         return renderPdf('forms.pr-form', $data, $paper);
-        // return view('forms.pr-form', $data);
     }
 }

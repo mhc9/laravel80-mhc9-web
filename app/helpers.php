@@ -181,6 +181,9 @@ function renderPdf($view, $data, $paper = null, $renderType = 'preview')
 {
     $pdf = PDF::loadView($view, $data);
 
+    /** Set font directory */
+    // $pdf->setOption('fontDir', public_path('/fonts'));
+
     if ($paper) {
         $pdf->setPaper($paper['size'], $paper['orientation']);
     }
@@ -195,9 +198,11 @@ function renderPdf($view, $data, $paper = null, $renderType = 'preview')
 }
 
 function thainumDigit($num){
-    return str_replace(array( '0' , '1' , '2' , '3' , '4' , '5' , '6' ,'7' , '8' , '9' ),
-    array( "o" , "๑" , "๒" , "๓" , "๔" , "๕" , "๖" , "๗" , "๘" , "๙" ),
-    $num);
+    return str_replace(
+        array( '0' , '1' , '2' , '3' , '4' , '5' , '6' ,'7' , '8' , '9' ),
+        array( "o" , "๑" , "๒" , "๓" , "๔" , "๕" , "๖" , "๗" , "๘" , "๙" ),
+        $num
+    );
 }
 
 function currencyToNumber($currency) {
