@@ -101,8 +101,8 @@ class RequisitionController extends Controller
 
     public function getById($id)
     {
-        return Requisition::with('category','budget','project','division','division.department')
-                    ->with('details','details.item','details.item.unit')
+        return Requisition::with('category','budget','budget.project','budget.project.plan','project')
+                    ->with('division','division.department','details','details.item','details.item.unit')
                     ->with('requester','requester.prefix','requester.position','requester.level')
                     ->with('committees','committees.employee','committees.employee.prefix')
                     ->with('committees.employee.position','committees.employee.level')
