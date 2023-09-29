@@ -161,7 +161,7 @@ class RequisitionController extends Controller
                 /** Insert committees */
                 foreach($req['committees'] as $employee) {
                     $committee = new Committee();
-                    $committee->employee_id         = $employee['id'];
+                    $committee->employee_id         = $employee['employee_id'];
                     $committee->requisition_id      = $requisition->id;
                     $committee->committee_type_id   = 2;
                     $committee->save();
