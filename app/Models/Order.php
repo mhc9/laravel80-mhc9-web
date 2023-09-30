@@ -26,6 +26,11 @@ class Order extends Model
         return $this->belongsTo(Supplier::class, 'supplier_id', 'id');
     }
 
+    public function requisition()
+    {
+        return $this->belongsTo(Requisition::class, 'pr_id', 'id');
+    }
+
     public function details()
     {
         return $this->hasMany(OrderDetail::class, 'po_id', 'id');

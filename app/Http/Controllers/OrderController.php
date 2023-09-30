@@ -52,26 +52,20 @@ class OrderController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        // $department  = $req->get('department');
-        // $name        = $req->get('name');
-        // $status      = $req->get('status');
+        $department = $req->get('department');
+        $status     = $req->get('status');
 
-        // $departments = Division::with('department')
-        //             ->when(!empty($department), function($q) use ($department) {
-        //                 $q->where('plan_department_id', $department);
-        //             })
-        //             ->when($status != '', function($q) use ($status) {
-        //                 $q->where('status', $status);
-        //             })
-        //             ->when(!empty($name), function($q) use ($name) {
-        //                 $q->where(function($query) use ($name) {
-        //                     $query->where('name', 'like', '%'.$name.'%');
-        //                     $query->orWhere('name', 'like', '%'.$name.'%');
-        //                 });
-        //             })
-        //             ->paginate(10);
+        $orders = Order::with('details','details.item','details.unit','requisition')
+                        ->with('purchaser','division','division.department','supplier')
+                        // ->when(!empty($department), function($q) use ($department) {
+                        //     $q->where('department_id', $department);
+                        // })
+                        // ->when($status != '', function($q) use ($status) {
+                        //     $q->where('status', $status);
+                        // })
+                        ->paginate(10);
 
-        // return $departments;
+        return $orders;
     }
 
     public function getAll(Request $req)
@@ -80,21 +74,32 @@ class OrderController extends Controller
         $department = $req->get('department');
         $status     = $req->get('status');
 
-        $departments = Division::with('department')
-                    ->when(!empty($department), function($q) use ($department) {
-                        $q->where('department_id', $department);
-                    })
-                    ->when($status != '', function($q) use ($status) {
-                        $q->where('status', $status);
-                    })
-                    ->paginate(10);
+        $orders = Order::with('details','details.item','details.unit','requisition')
+                        ->with('purchaser','division','division.department','supplier')
+                        // ->when(!empty($department), function($q) use ($department) {
+                        //     $q->where('department_id', $department);
+                        // })
+                        // ->when($status != '', function($q) use ($status) {
+                        //     $q->where('status', $status);
+                        // })
+                        ->paginate(10);
 
-        return $departments;
+        return $orders;
     }
 
     public function getById($id)
     {
-        return Division::with('department')->find($id);
+        $order = Order::with('details','details.item','details.unit','requisition')
+                        ->with('purchaser','division','division.department','supplier')
+                        // ->when(!empty($department), function($q) use ($department) {
+                        //     $q->where('department_id', $department);
+                        // })
+                        // ->when($status != '', function($q) use ($status) {
+                        //     $q->where('status', $status);
+                        // })
+                        ->find($id);
+
+        return $order;
     }
 
     public function getFormInitialData()
