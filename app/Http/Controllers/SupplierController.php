@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Supplier;
+use App\Models\Changwat;
+use App\Models\Amphur;
+use App\Models\Tambon;
 
 class SupplierController extends Controller
 {
@@ -110,39 +113,48 @@ class SupplierController extends Controller
         return Supplier::with('type','group')->find($id);
     }
 
+    public function getInitialFormData()
+    {
+        return [
+            'changwats' => Changwat::all(),
+            'amphurs'   => Amphur::all(),
+            'tambons'   => Tambon::all()
+        ];
+    }
+
     public function store(Request $req)
     {
         try {
-            // $item = new Item();
-            // $item->plan_type_id = $req['plan_type_id'];
-            // $item->category_id  = $req['category_id'];
-            // $item->group_id     = $req['group_id'];
-            // $item->asset_no     = $req['asset_no'];
-            // $item->item_name    = $req['item_name'];
-            // $item->en_name      = $req['en_name'];
-            // $item->price_per_unit = currencyToNumber($req['price_per_unit']);
-            // $item->unit_id      = $req['unit_id'];
-            // $item->in_stock     = $req['in_stock'];
-            // $item->have_subitem = $req['have_subitem'];
-            // $item->calc_method  = $req['calc_method'];
-            // $item->is_fixcost   = $req['is_fixcost'];
-            // $item->is_repairing_item = $req['is_repairing_item'];
-            // $item->is_addon     = $req['is_addon'];
-            // $item->first_year   = $req['first_year'];
-            // $item->remark       = $req['remark'];
+            $supplier = new Supplier();
+            $supplier->tax_no           = $req['tax_no'];
+            $supplier->name             = $req['name'];
+            $supplier->changwat_id      = $req['changwat_id'];
+            $supplier->amphur_id        = $req['amphur_id'];
+            $supplier->tambon_id        = $req['tambon_id'];
+            $supplier->zipcode          = $req['zipcode'];
+            $supplier->tel              = $req['tel'];
+            $supplier->fax              = $req['fax'];
+            $supplier->email            = $req['email'];
+            $supplier->manager_name     = $req['manager_name'];
+            $supplier->bank_acc_no      = $req['bank_acc_no'];
+            $supplier->bank_acc_name    = $req['bank_acc_name '];
+            $supplier->bank_acc_branch  = $req['bank_acc_branch'];
+            $supplier->tax_type_id      = $req['tax_type_id'];
+            $supplier->remark           = $req['remark'];
+            $supplier->status           = $req['status'];
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Insertion successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($supplier->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    'supplier'  => $supplier
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
