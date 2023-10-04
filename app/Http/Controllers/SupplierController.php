@@ -11,6 +11,7 @@ use App\Models\Supplier;
 use App\Models\Changwat;
 use App\Models\Amphur;
 use App\Models\Tambon;
+use App\Models\Bank;
 
 class SupplierController extends Controller
 {
@@ -118,7 +119,8 @@ class SupplierController extends Controller
         return [
             'changwats' => Changwat::all(),
             'amphurs'   => Amphur::all(),
-            'tambons'   => Tambon::all()
+            'tambons'   => Tambon::all(),
+            'banks'     => Bank::all()
         ];
     }
 
@@ -135,7 +137,9 @@ class SupplierController extends Controller
             $supplier->tel              = $req['tel'];
             $supplier->fax              = $req['fax'];
             $supplier->email            = $req['email'];
+            $supplier->owner_name       = $req['owner_name'];
             $supplier->manager_name     = $req['manager_name'];
+            $supplier->bank_id          = $req['bank_id'];
             $supplier->bank_acc_no      = $req['bank_acc_no'];
             $supplier->bank_acc_name    = $req['bank_acc_name '];
             $supplier->bank_acc_branch  = $req['bank_acc_branch'];
