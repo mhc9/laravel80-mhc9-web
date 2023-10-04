@@ -65,6 +65,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/asset-categories', 'App\Http\Controllers\AssetCategoryController@getAll');
 
     Route::get('/suppliers', 'App\Http\Controllers\SupplierController@getAll');
+    Route::get('/suppliers/search', 'App\Http\Controllers\SupplierController@search');
     Route::get('/suppliers/{id}', 'App\Http\Controllers\SupplierController@getById');
     Route::get('/suppliers/init/form', 'App\Http\Controllers\SupplierController@getInitialFormData');
     Route::post('/suppliers', 'App\Http\Controllers\SupplierController@store');
