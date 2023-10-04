@@ -62,49 +62,42 @@ class SupplierController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        // $type = $req->get('type');
-        // $group = $req->get('group');
-        // $name = $req->get('name');
-        // $status = $req->get('status');
+        $changwat = $req->get('changwat');
+        $name  = $req->get('name');
+        $status = $req->get('status');
 
-        // $suppliers = Supplier::with('type','group')
-        //             ->when(!empty($type), function($q) use ($type) {
-        //                 $q->where('plan_type_id', $type);
-        //             })
-        //             ->when(!empty($group), function($q) use ($group) {
-        //                 $q->where('group_id', $group);
-        //             })
-        //             ->when($status != '', function($q) use ($status) {
-        //                 $q->where('status', $status);
-        //             })
-        //             ->when(!empty($name), function($q) use ($name) {
-        //                 $q->where(function($query) use ($name) {
-        //                     $query->where('item_name', 'like', '%'.$name.'%');
-        //                     $query->orWhere('en_name', 'like', '%'.$name.'%');
-        //                 });
-        //             })
-        //             ->paginate(10);
+        $suppliers = Supplier::with('changwat','amphur','tambon','bank')
+                        ->when(!empty($name), function($q) use ($name) {
+                            $q->where('name', 'like', '%'.$name.'%');
+                        })
+                        ->when(!empty($changwat), function($q) use ($changwat) {
+                            $q->where('changwat_id', $changwat);
+                        })
+                        // ->when($status != '', function($q) use ($status) {
+                        //     $q->where('status', $status);
+                        // })
+                        ->paginate(10);
 
-        // return $suppliers;
+        return $suppliers;
     }
 
     public function getAll(Request $req)
     {
         /** Get params from query string */
-        $type = $req->get('type');
-        $group = $req->get('group');
+        $changwat = $req->get('changwat');
+        $name  = $req->get('name');
 
-        $suppliers = Supplier::with('type','group')
-                    ->when(!empty($type), function($q) use ($type) {
-                        $q->where('supplier_type_id', $type);
-                    })
-                    ->when(!empty($group), function($q) use ($group) {
-                        $q->where('supplier_group_id', $group);
-                    })
-                    // ->when($status != '', function($q) use ($status) {
-                    //     $q->where('status', $status);
-                    // })
-                    ->paginate(10);
+        $suppliers = Supplier::with('changwat','amphur','tambon','bank')
+                        ->when(!empty($name), function($q) use ($name) {
+                            $q->where('name', 'like', '%'.$name.'%');
+                        })
+                        ->when(!empty($changwat), function($q) use ($changwat) {
+                            $q->where('changwat_id', $changwat);
+                        })
+                        // ->when($status != '', function($q) use ($status) {
+                        //     $q->where('status', $status);
+                        // })
+                        ->paginate(10);
 
         return $suppliers;
     }
@@ -130,6 +123,9 @@ class SupplierController extends Controller
             $supplier = new Supplier();
             $supplier->tax_no           = $req['tax_no'];
             $supplier->name             = $req['name'];
+            $supplier->address          = $req['address'];
+            $supplier->moo              = $req['moo'];
+            $supplier->raod             = $req['raod'];
             $supplier->changwat_id      = $req['changwat_id'];
             $supplier->amphur_id        = $req['amphur_id'];
             $supplier->tambon_id        = $req['tambon_id'];
@@ -141,11 +137,11 @@ class SupplierController extends Controller
             $supplier->manager_name     = $req['manager_name'];
             $supplier->bank_id          = $req['bank_id'];
             $supplier->bank_acc_no      = $req['bank_acc_no'];
-            $supplier->bank_acc_name    = $req['bank_acc_name '];
+            $supplier->bank_acc_name    = $req['bank_acc_name'];
             $supplier->bank_acc_branch  = $req['bank_acc_branch'];
             $supplier->tax_type_id      = $req['tax_type_id'];
             $supplier->remark           = $req['remark'];
-            $supplier->status           = $req['status'];
+            $supplier->status           = 1;
 
             if($supplier->save()) {
                 return [
