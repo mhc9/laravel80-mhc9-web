@@ -9,6 +9,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Order;
 use App\Models\OrderDetail;
+use App\Models\Requisition;
 use App\Models\Division;
 use App\Models\Department;
 
@@ -118,24 +119,28 @@ class OrderController extends Controller
             $order->requisition_id = $req['requisition_id'];
             $order->supplier_id = $req['supplier_id'];
             $order->item_count  = $req['item_count'];
-            $order->total       = $req['total'];
-            $order->vat_rate    = $req['vat_rate'];
-            $order->vat         = $req['vat'];
-            $order->net_total   = $req['net_total'];
-            // $order->status      = $req['status'] ? 1 : 0;
+            $order->total       = currencyToNumber($req['total']);
+            $order->vat_rate    = currencyToNumber($req['vat_rate']);
+            $order->vat         = currencyToNumber($req['vat']);
+            $order->net_total   = currencyToNumber($req['net_total']);
+            $order->status      = 1;
 
             if($order->save()) {
                 foreach ($req['items'] as $item) {
-                    $item = new OrderItem();
-                    $item->order_id     = $order->id;
-                    $item->pr_detail_id = $item['id'];
-                    $item->item_id      = $item['item_id'];
-                    $item->price        = $item['price'];
-                    $item->price        = $item['price'];
-                    $item->amount       = $item['amount'];
-                    $item->unit_id      = $item['unit_id'];
-                    $item->total        = $item['total'];
-                    $item->save();
+                    $detail  = new OrderDetail();
+                    $detail->order_id     = $order->id;
+                    $detail->pr_detail_id = $item['id'];
+                    $detail->item_id      = $item['item_id'];
+                    $detail->price        = $item['price'];
+                    $detail->price        = $item['price'];
+                    $detail->amount       = $item['amount'];
+                    $detail->unit_id      = $item['unit_id'];
+                    $detail->total        = $item['total'];
+                    $detail->status       = 0;
+                    $detail->save();
+
+                    /** อัพเดตสถานะของคำขอเป็น 1=ดำนเนิการแล้ว */
+                    Requisition::where('id', $order->requisition_id)->update(['status' => 1]);
                 }
 
                 return [
