@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Order;
-use App\Models\OrderItem;
+use App\Models\OrderDetail;
 use App\Models\Division;
 use App\Models\Department;
 
@@ -112,16 +112,36 @@ class OrderController extends Controller
     public function store(Request $req)
     {
         try {
-            $division = new Division();
-            $division->name             = $req['name'];
-            $division->department_id    = $req['department_id'];
-            $division->status           = $req['status'] ? 1 : 0;
+            $order = new Order();
+            $order->po_no       = $req['po_no'];
+            $order->po_date     = $req['po_date'];
+            $order->requisition_id = $req['requisition_id'];
+            $order->supplier_id = $req['supplier_id'];
+            $order->item_count  = $req['item_count'];
+            $order->total       = $req['total'];
+            $order->vat_rate    = $req['vat_rate'];
+            $order->vat         = $req['vat'];
+            $order->net_total   = $req['net_total'];
+            // $order->status      = $req['status'] ? 1 : 0;
 
-            if($division->save()) {
+            if($order->save()) {
+                foreach ($req['items'] as $item) {
+                    $item = new OrderItem();
+                    $item->order_id     = $order->id;
+                    $item->pr_detail_id = $item['id'];
+                    $item->item_id      = $item['item_id'];
+                    $item->price        = $item['price'];
+                    $item->price        = $item['price'];
+                    $item->amount       = $item['amount'];
+                    $item->unit_id      = $item['unit_id'];
+                    $item->total        = $item['total'];
+                    $item->save();
+                }
+
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'division'  => $division
+                    'order'     => $order
                 ];
             } else {
                 return [
