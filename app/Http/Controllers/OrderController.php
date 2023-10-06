@@ -56,7 +56,9 @@ class OrderController extends Controller
         $department = $req->get('department');
         $status     = $req->get('status');
 
-        $orders = Order::with('details','details.item','details.unit','requisition','supplier')
+        $orders = Order::with('details','details.item','details.unit','supplier')
+                        ->with('requisition','requisition.requester','requisition.requester.prefix')
+                        ->with('requisition.requester.position','requisition.requester.level')
                         // ->when(!empty($department), function($q) use ($department) {
                         //     $q->where('department_id', $department);
                         // })
@@ -74,7 +76,9 @@ class OrderController extends Controller
         $department = $req->get('department');
         $status     = $req->get('status');
 
-        $orders = Order::with('details','details.item','details.unit','requisition','supplier')
+        $orders = Order::with('details','details.item','details.unit','supplier')
+                        ->with('requisition','requisition.requester','requisition.requester.prefix')
+                        ->with('requisition.requester.position','requisition.requester.level')
                         // ->when(!empty($department), function($q) use ($department) {
                         //     $q->where('department_id', $department);
                         // })
