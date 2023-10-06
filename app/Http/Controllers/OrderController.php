@@ -56,8 +56,7 @@ class OrderController extends Controller
         $department = $req->get('department');
         $status     = $req->get('status');
 
-        $orders = Order::with('details','details.item','details.unit','requisition')
-                        ->with('purchaser','division','division.department','supplier')
+        $orders = Order::with('details','details.item','details.unit','requisition','supplier')
                         // ->when(!empty($department), function($q) use ($department) {
                         //     $q->where('department_id', $department);
                         // })
@@ -75,8 +74,7 @@ class OrderController extends Controller
         $department = $req->get('department');
         $status     = $req->get('status');
 
-        $orders = Order::with('details','details.item','details.unit','requisition')
-                        ->with('purchaser','division','division.department','supplier')
+        $orders = Order::with('details','details.item','details.unit','requisition','supplier')
                         // ->when(!empty($department), function($q) use ($department) {
                         //     $q->where('department_id', $department);
                         // })
@@ -90,8 +88,7 @@ class OrderController extends Controller
 
     public function getById($id)
     {
-        $order = Order::with('details','details.item','details.unit','requisition')
-                        ->with('purchaser','division','division.department','supplier')
+        $order = Order::with('details','details.item','details.unit','requisition','supplier')
                         // ->when(!empty($department), function($q) use ($department) {
                         //     $q->where('department_id', $department);
                         // })

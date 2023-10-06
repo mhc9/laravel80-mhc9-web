@@ -11,16 +11,6 @@ class Order extends Model
     // public $incrementing = false; // false = ไม่ใช้ options auto increment
     // public $timestamps = false; // false = ไม่ใช้ field updated_at และ created_at
 
-    public function purchaser()
-    {
-        return $this->belongsTo(Employee::class, 'purchaser_id', 'id');
-    }
-
-    public function division()
-    {
-        return $this->belongsTo(Division::class, 'division_id', 'id');
-    }
-
     public function supplier()
     {
         return $this->belongsTo(Supplier::class, 'supplier_id', 'id');

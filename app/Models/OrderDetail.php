@@ -21,6 +21,11 @@ class OrderDetail extends Model
         return $this->belongsTo(RequisitionDetail::class, 'pr_detail_id', 'id');
     }
 
+    public function item()
+    {
+        return $this->belongsTo(Item::class, 'item_id', 'id');
+    }
+
     public function unit()
     {
         return $this->belongsTo(Unit::class, 'unit_id', 'id');
