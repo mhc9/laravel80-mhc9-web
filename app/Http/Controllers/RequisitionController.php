@@ -57,8 +57,10 @@ class RequisitionController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
+        $pr_no      = $req->get('pr_no');
+        $pr_date    = $req->get('pr_date');
+        $division   = $req->get('division');
         $category   = $req->get('category');
-        $requester  = $req->get('requester');
         $status     = $req->get('status');
 
         $requisitions = Requisition::with('category','budget','budget.project','budget.project.plan','project')
@@ -66,6 +68,15 @@ class RequisitionController extends Controller
                             ->with('requester','requester.prefix','requester.position','requester.level')
                             ->with('committees','committees.employee','committees.employee.prefix')
                             ->with('committees.employee.position','committees.employee.level')
+                            ->when(!empty($pr_no), function($q) use ($pr_no) {
+                                $q->where('pr_no', 'like', '%'.$pr_no.'%');
+                            })
+                            ->when(!empty($pr_date), function($q) use ($pr_date) {
+                                $q->where('pr_date', $pr_date);
+                            })
+                            ->when(!empty($division), function($q) use ($division) {
+                                $q->where('division_id', $division);
+                            })
                             ->when(!empty($category), function($q) use ($category) {
                                 $q->where('category_id', $category);
                             })
