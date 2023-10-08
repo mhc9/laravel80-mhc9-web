@@ -92,13 +92,15 @@ class OrderController extends Controller
 
     public function getById($id)
     {
-        $order = Order::with('details','details.item','details.unit','requisition','supplier')
-                        // ->when(!empty($department), function($q) use ($department) {
-                        //     $q->where('department_id', $department);
-                        // })
-                        // ->when($status != '', function($q) use ($status) {
-                        //     $q->where('status', $status);
-                        // })
+        $order = Order::with('details','details.item','details.unit','supplier')
+                        ->with('supplier.tambon','supplier.amphur','supplier.changwat','supplier.bank')
+                        ->with('requisition','requisition.requester','requisition.requester.prefix')
+                        ->with('requisition.category','requisition.budget','requisition.budget.project')
+                        ->with('requisition.budget.project.plan','requisition.project')
+                        ->with('requisition.requester.position','requisition.requester.level')
+                        ->with('requisition.division','requisition.division.department')
+                        ->with('requisition.committees','requisition.committees.employee','requisition.committees.employee.prefix')
+                        ->with('requisition.committees.employee.position','requisition.committees.employee.level')
                         ->find($id);
 
         return $order;
