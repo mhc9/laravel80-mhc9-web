@@ -62,6 +62,7 @@ class RequisitionController extends Controller
         $division   = $req->get('division');
         $category   = $req->get('category');
         $status     = $req->get('status');
+        $limit      = $req->get('limit') ? $req->get('limit') : 10;
 
         $requisitions = Requisition::with('category','budget','budget.project','budget.project.plan','project')
                             ->with('division','division.department','details','details.item','details.item.unit')
@@ -84,7 +85,7 @@ class RequisitionController extends Controller
                                 $q->where('status', $status);
                             })
                             ->orderBy('pr_date', 'DESC')
-                            ->paginate(10);
+                            ->paginate($limit);
 
         return $requisitions;
     }
