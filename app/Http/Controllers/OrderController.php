@@ -65,6 +65,7 @@ class OrderController extends Controller
                         // ->when($status != '', function($q) use ($status) {
                         //     $q->where('status', $status);
                         // })
+                        ->orderBy('po_date','DESC')
                         ->paginate(10);
 
         return $orders;
@@ -85,7 +86,7 @@ class OrderController extends Controller
                         // ->when($status != '', function($q) use ($status) {
                         //     $q->where('status', $status);
                         // })
-                        ->paginate(10);
+                        ->get();
 
         return $orders;
     }
