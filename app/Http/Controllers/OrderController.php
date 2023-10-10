@@ -117,16 +117,19 @@ class OrderController extends Controller
     {
         try {
             $order = new Order();
-            $order->po_no       = $req['po_no'];
-            $order->po_date     = $req['po_date'];
-            $order->requisition_id = $req['requisition_id'];
-            $order->supplier_id = $req['supplier_id'];
-            $order->item_count  = $req['item_count'];
-            $order->total       = currencyToNumber($req['total']);
-            $order->vat_rate    = currencyToNumber($req['vat_rate']);
-            $order->vat         = currencyToNumber($req['vat']);
-            $order->net_total   = currencyToNumber($req['net_total']);
-            $order->status      = 1;
+            $order->po_no           = $req['po_no'];
+            $order->po_date         = $req['po_date'];
+            $order->requisition_id  = $req['requisition_id'];
+            $order->supplier_id     = $req['supplier_id'];
+            $order->item_count      = $req['item_count'];
+            $order->total           = currencyToNumber($req['total']);
+            $order->vat_rate        = currencyToNumber($req['vat_rate']);
+            $order->vat             = currencyToNumber($req['vat']);
+            $order->net_total       = currencyToNumber($req['net_total']);
+            $order->deliver_days    = $req['deliver_days'];
+            $order->deliver_date    = convThDateToDbDate($req['deliver_date']);
+            $order->year            = $req['year'];
+            $order->status          = 1;
 
             if($order->save()) {
                 foreach ($req['items'] as $item) {
