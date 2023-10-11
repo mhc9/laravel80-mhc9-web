@@ -9,6 +9,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Order;
 use App\Models\OrderDetail;
+use App\Models\Supplier;
 use App\Models\Requisition;
 use App\Models\Division;
 use App\Models\Department;
@@ -53,18 +54,26 @@ class OrderController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        $department = $req->get('department');
+        $po_no      = $req->get('po_no');
+        $po_date    = $req->get('po_date');
+        $supplier   = $req->get('supplier');
         $status     = $req->get('status');
 
         $orders = Order::with('details','details.item','details.unit','supplier')
                         ->with('requisition','requisition.requester','requisition.requester.prefix')
                         ->with('requisition.requester.position','requisition.requester.level')
-                        // ->when(!empty($department), function($q) use ($department) {
-                        //     $q->where('department_id', $department);
-                        // })
-                        // ->when($status != '', function($q) use ($status) {
-                        //     $q->where('status', $status);
-                        // })
+                        ->when(!empty($po_no), function($q) use ($po_no) {
+                            $q->where('po_no', 'like', '%'.$po_no.'%');
+                        })
+                        ->when(!empty($po_date), function($q) use ($po_date) {
+                            $q->where('po_date', $po_date);
+                        })
+                        ->when(!empty($supplier), function($q) use ($supplier) {
+                            $q->where('supplier_id', $supplier);
+                        })
+                        ->when($status != '', function($q) use ($status) {
+                            $q->where('status', $status);
+                        })
                         ->orderBy('po_date','DESC')
                         ->paginate(10);
 
@@ -107,10 +116,11 @@ class OrderController extends Controller
         return $order;
     }
 
-    public function getFormInitialData()
+    public function getInitialFormData()
     {
         return [
-            'departments' => Department::all(),
+            'departments'   => Department::all(),
+            'suppliers'     => Supplier::where('status', 1)->get(),
         ];
     }
 

@@ -137,6 +137,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/orders', 'App\Http\Controllers\OrderController@getAll');
     Route::get('/orders/search', 'App\Http\Controllers\OrderController@search');
     Route::get('/orders/{id}', 'App\Http\Controllers\OrderController@getById');
+    Route::get('/orders/init/form', 'App\Http\Controllers\OrderController@getInitialFormData');
     Route::post('/orders', 'App\Http\Controllers\OrderController@store');
     Route::put('/orders/{id}', 'App\Http\Controllers\OrderController@update');
     Route::delete('/orders/{id}', 'App\Http\Controllers\OrderController@destroy');
