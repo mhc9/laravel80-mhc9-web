@@ -27,8 +27,8 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function() {
 });
 
 Route::middleware('auth:api')->group(function() {
-    Route::get('/tasks/search', 'App\Http\Controllers\TaskController@search');
     Route::get('/tasks', 'App\Http\Controllers\TaskController@getAll');
+    Route::get('/tasks/search', 'App\Http\Controllers\TaskController@search');
     Route::get('/tasks/{id}', 'App\Http\Controllers\TaskController@getById');
     Route::get('/tasks/init/form', 'App\Http\Controllers\TaskController@getInitialFormData');
     Route::post('/tasks', 'App\Http\Controllers\TaskController@store');
@@ -135,6 +135,7 @@ Route::middleware('auth:api')->group(function() {
     Route::delete('/requisitions/{id}', 'App\Http\Controllers\RequisitionController@destroy');
 
     Route::get('/orders', 'App\Http\Controllers\OrderController@getAll');
+    Route::get('/orders/search', 'App\Http\Controllers\OrderController@search');
     Route::get('/orders/{id}', 'App\Http\Controllers\OrderController@getById');
     Route::post('/orders', 'App\Http\Controllers\OrderController@store');
     Route::put('/orders/{id}', 'App\Http\Controllers\OrderController@update');
