@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
+use App\Models\Inspection;
+use App\Models\InspectionDetail;
 use App\Models\Order;
-use App\Models\OrderDetail;
 use App\Models\Supplier;
-use App\Models\Requisition;
 use App\Models\Division;
 use App\Models\Department;
 
-class OrderController extends Controller
+class InspectionController extends Controller
 {
     public function formValidate (Request $request)
     {

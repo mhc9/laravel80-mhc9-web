@@ -111,6 +111,7 @@ Route::middleware('auth:api')->group(function() {
     Route::put('/units/{id}', 'App\Http\Controllers\UnitController@update');
     Route::delete('/units/{id}', 'App\Http\Controllers\UnitController@destroy');
 
+    /** budgets */
     Route::get('/budgets', 'App\Http\Controllers\BudgetController@getAll');
     Route::get('/budgets/search', 'App\Http\Controllers\BudgetController@search');
     Route::get('/budgets/{id}', 'App\Http\Controllers\BudgetController@getById');
@@ -118,6 +119,7 @@ Route::middleware('auth:api')->group(function() {
     Route::put('/budgets/{id}', 'App\Http\Controllers\BudgetController@update');
     Route::delete('/budgets/{id}', 'App\Http\Controllers\BudgetController@destroy');
 
+    /** Items */
     Route::get('/items', 'App\Http\Controllers\ItemController@getAll');
     Route::get('/items/search', 'App\Http\Controllers\ItemController@search');
     Route::get('/items/{id}', 'App\Http\Controllers\ItemController@getById');
@@ -126,6 +128,7 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/items/{id}', 'App\Http\Controllers\ItemController@update');
     Route::delete('/items/{id}', 'App\Http\Controllers\ItemController@destroy');
 
+    /** Requisitions */
     Route::get('/requisitions', 'App\Http\Controllers\RequisitionController@getAll');
     Route::get('/requisitions/search', 'App\Http\Controllers\RequisitionController@search');
     Route::get('/requisitions/{id}', 'App\Http\Controllers\RequisitionController@getById');
@@ -134,6 +137,7 @@ Route::middleware('auth:api')->group(function() {
     Route::put('/requisitions/{id}', 'App\Http\Controllers\RequisitionController@update');
     Route::delete('/requisitions/{id}', 'App\Http\Controllers\RequisitionController@destroy');
 
+    /** Orders */
     Route::get('/orders', 'App\Http\Controllers\OrderController@getAll');
     Route::get('/orders/search', 'App\Http\Controllers\OrderController@search');
     Route::get('/orders/{id}', 'App\Http\Controllers\OrderController@getById');
@@ -141,6 +145,15 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/orders', 'App\Http\Controllers\OrderController@store');
     Route::put('/orders/{id}', 'App\Http\Controllers\OrderController@update');
     Route::delete('/orders/{id}', 'App\Http\Controllers\OrderController@destroy');
+
+    /** Inspections */
+    Route::get('/inspections', 'App\Http\Controllers\InspectionController@getAll');
+    Route::get('/inspections/search', 'App\Http\Controllers\InspectionController@search');
+    Route::get('/inspections/{id}', 'App\Http\Controllers\InspectionController@getById');
+    Route::get('/inspections/init/form', 'App\Http\Controllers\InspectionController@getInitialFormData');
+    Route::post('/inspections', 'App\Http\Controllers\InspectionController@store');
+    Route::put('/inspections/{id}', 'App\Http\Controllers\InspectionController@update');
+    Route::delete('/inspections/{id}', 'App\Http\Controllers\InspectionController@destroy');
 });
 
 Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
