@@ -110,15 +110,17 @@ class InspectionController extends Controller
 
     public function getById($id)
     {
-        $inspection = Inspection::with('details','details.item','details.unit','supplier')
-                        ->with('supplier.tambon','supplier.amphur','supplier.changwat','supplier.bank')
-                        ->with('requisition','requisition.requester','requisition.requester.prefix')
-                        ->with('requisition.category','requisition.budget','requisition.budget.project')
-                        ->with('requisition.budget.project.plan','requisition.project')
-                        ->with('requisition.requester.position','requisition.requester.level')
-                        ->with('requisition.division','requisition.division.department')
-                        ->with('requisition.committees','requisition.committees.employee','requisition.committees.employee.prefix')
-                        ->with('requisition.committees.employee.position','requisition.committees.employee.level')
+        $inspection = Inspection::with('details','details.item','details.unit')
+                        ->with('supplier','supplier.tambon','supplier.amphur','supplier.changwat','supplier.bank')
+                        ->with('order','order.requisition','order.requisition.category')
+                        ->with('order.requisition.requester','order.requisition.requester.prefix')
+                        ->with('order.requisition.requester.position','order.requisition.requester.level')
+                        // ->with('requisition.budget','requisition.budget.project')
+                        // ->with('requisition.budget.project.plan','requisition.project')
+                        // ->with('requisition.requester.position','requisition.requester.level')
+                        // ->with('requisition.division','requisition.division.department')
+                        // ->with('requisition.committees','requisition.committees.employee','requisition.committees.employee.prefix')
+                        // ->with('requisition.committees.employee.position','requisition.committees.employee.level')
                         ->find($id);
 
         return $inspection;
