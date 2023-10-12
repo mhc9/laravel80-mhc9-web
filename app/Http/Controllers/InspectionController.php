@@ -59,7 +59,7 @@ class InspectionController extends Controller
         $supplier   = $req->get('supplier');
         $status     = $req->get('status');
 
-        $orders = Order::with('details','details.item','details.unit','supplier')
+        $inspections = Inspection::with('details','details.item','details.unit','supplier')
                         ->with('supplier.tambon','supplier.amphur','supplier.changwat','supplier.bank')
                         ->with('requisition','requisition.requester','requisition.requester.prefix')
                         ->with('requisition.requester.position','requisition.requester.level')
@@ -84,7 +84,7 @@ class InspectionController extends Controller
                         ->orderBy('po_date','DESC')
                         ->paginate(10);
 
-        return $orders;
+        return $inspections;
     }
 
     public function getAll(Request $req)
@@ -93,7 +93,7 @@ class InspectionController extends Controller
         $department = $req->get('department');
         $status     = $req->get('status');
 
-        $orders = Order::with('details','details.item','details.unit','supplier')
+        $inspections = Inspection::with('details','details.item','details.unit','supplier')
                         ->with('requisition','requisition.requester','requisition.requester.prefix')
                         ->with('requisition.requester.position','requisition.requester.level')
                         // ->when(!empty($department), function($q) use ($department) {
@@ -104,12 +104,12 @@ class InspectionController extends Controller
                         // })
                         ->get();
 
-        return $orders;
+        return $inspections;
     }
 
     public function getById($id)
     {
-        $order = Order::with('details','details.item','details.unit','supplier')
+        $inspection = Inspection::with('details','details.item','details.unit','supplier')
                         ->with('supplier.tambon','supplier.amphur','supplier.changwat','supplier.bank')
                         ->with('requisition','requisition.requester','requisition.requester.prefix')
                         ->with('requisition.category','requisition.budget','requisition.budget.project')
@@ -120,7 +120,7 @@ class InspectionController extends Controller
                         ->with('requisition.committees.employee.position','requisition.committees.employee.level')
                         ->find($id);
 
-        return $order;
+        return $inspection;
     }
 
     public function getInitialFormData()
@@ -134,43 +134,43 @@ class InspectionController extends Controller
     public function store(Request $req)
     {
         try {
-            $order = new Order();
-            $order->po_no           = $req['po_no'];
-            $order->po_date         = $req['po_date'];
-            $order->requisition_id  = $req['requisition_id'];
-            $order->supplier_id     = $req['supplier_id'];
-            $order->item_count      = $req['item_count'];
-            $order->total           = currencyToNumber($req['total']);
-            $order->vat_rate        = currencyToNumber($req['vat_rate']);
-            $order->vat             = currencyToNumber($req['vat']);
-            $order->net_total       = currencyToNumber($req['net_total']);
-            $order->deliver_days    = $req['deliver_days'];
-            $order->deliver_date    = convThDateToDbDate($req['deliver_date']);
-            $order->year            = $req['year'];
-            $order->status          = 1;
+            $inspection = new Inspection();
+            $inspection->inspection_date    = $req['inspection_date'];
+            $inspection->deliver_no         = $req['deliver_no'];
+            $inspection->deliver_date       = convThDateToDbDate($req['deliver_date']);
+            $inspection->report_no          = $req['report_no'];
+            $inspection->report_date        = $req['report_date'];
+            $inspection->order_id           = $req['order_id'];
+            $inspection->supplier_id        = $req['supplier_id'];
+            $inspection->item_count         = $req['item_count'];
+            $inspection->total              = currencyToNumber($req['total']);
+            $inspection->vat_rate           = currencyToNumber($req['vat_rate']);
+            $inspection->vat                = currencyToNumber($req['vat']);
+            $inspection->net_total          = currencyToNumber($req['net_total']);
+            $inspection->year               = $req['year'];
+            $inspection->status             = 1;
 
-            if($order->save()) {
+            if($inspection->save()) {
                 foreach ($req['items'] as $item) {
-                    $detail  = new OrderDetail();
-                    $detail->order_id     = $order->id;
-                    $detail->pr_detail_id = $item['id'];
-                    $detail->item_id      = $item['item_id'];
-                    $detail->price        = $item['price'];
-                    $detail->price        = $item['price'];
-                    $detail->amount       = $item['amount'];
-                    $detail->unit_id      = $item['unit_id'];
-                    $detail->total        = $item['total'];
-                    $detail->status       = 0;
+                    $detail  = new InspectionDetail();
+                    $detail->inspection_id  = $inspection->id;
+                    $detail->order_detail_id = $item['id'];
+                    $detail->item_id        = $item['item_id'];
+                    $detail->price          = $item['price'];
+                    $detail->amount         = $item['amount'];
+                    $detail->unit_id        = $item['unit_id'];
+                    $detail->total          = $item['total'];
+                    $detail->is_received    = $item['is_received'];
                     $detail->save();
 
-                    /** อัพเดตสถานะของคำขอเป็น 1=ดำนเนิการแล้ว */
-                    Requisition::where('id', $order->requisition_id)->update(['status' => 1]);
+                    /** อัพเดตสถานะของคำขอเป็น 2=ตรวจรับแล้ว */
+                    Order::where('id', $inspection->order_id)->update(['status' => 2]);
                 }
 
                 return [
-                    'status'    => 1,
-                    'message'   => 'Insertion successfully!!',
-                    'order'     => $order
+                    'status'        => 1,
+                    'message'       => 'Insertion successfully!!',
+                    'inspection'    => $inspection
                 ];
             } else {
                 return [

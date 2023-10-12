@@ -156,7 +156,6 @@ class OrderController extends Controller
                     $detail->pr_detail_id = $item['id'];
                     $detail->item_id      = $item['item_id'];
                     $detail->price        = $item['price'];
-                    $detail->price        = $item['price'];
                     $detail->amount       = $item['amount'];
                     $detail->unit_id      = $item['unit_id'];
                     $detail->total        = $item['total'];
