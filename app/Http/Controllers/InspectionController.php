@@ -141,8 +141,8 @@ class InspectionController extends Controller
             $inspection->report_no          = $req['report_no'];
             $inspection->report_date        = $req['report_date'];
             $inspection->order_id           = $req['order_id'];
-            $inspection->supplier_id        = $req['supplier_id'];
             $inspection->item_count         = $req['item_count'];
+            $inspection->item_received      = $req['item_received'];
             $inspection->total              = currencyToNumber($req['total']);
             $inspection->vat_rate           = currencyToNumber($req['vat_rate']);
             $inspection->vat                = currencyToNumber($req['vat']);
