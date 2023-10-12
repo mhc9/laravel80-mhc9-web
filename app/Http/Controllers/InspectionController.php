@@ -54,26 +54,27 @@ class InspectionController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
-        $po_no      = $req->get('po_no');
-        $po_date    = $req->get('po_date');
-        $supplier   = $req->get('supplier');
-        $status     = $req->get('status');
+        $po_no          = $req->get('po_no');
+        $inspect_date   = $req->get('inspect_date');
+        $supplier       = $req->get('supplier');
+        $status         = $req->get('status');
 
-        $inspections = Inspection::with('details','details.item','details.unit','supplier')
-                        ->with('supplier.tambon','supplier.amphur','supplier.changwat','supplier.bank')
-                        ->with('requisition','requisition.requester','requisition.requester.prefix')
-                        ->with('requisition.requester.position','requisition.requester.level')
-                        ->with('requisition.category','requisition.budget','requisition.budget.project')
-                        ->with('requisition.budget.project.plan','requisition.project')
-                        ->with('requisition.requester.position','requisition.requester.level')
-                        ->with('requisition.division','requisition.division.department')
-                        ->with('requisition.committees','requisition.committees.employee','requisition.committees.employee.prefix')
-                        ->with('requisition.committees.employee.position','requisition.committees.employee.level')
+        $inspections = Inspection::with('details','details.item','details.unit')
+                        ->with('supplier','supplier.tambon','supplier.amphur','supplier.changwat','supplier.bank')
+                        ->with('order','order.requisition','order.requisition.category')
+                        ->with('order.requisition.requester','order.requisition.requester.prefix')
+                        ->with('order.requisition.requester.position','order.requisition.requester.level')
+                        // ->with('requisition.budget','requisition.budget.project')
+                        // ->with('requisition.budget.project.plan','requisition.project')
+                        // ->with('requisition.requester.position','requisition.requester.level')
+                        // ->with('requisition.division','requisition.division.department')
+                        // ->with('requisition.committees','requisition.committees.employee','requisition.committees.employee.prefix')
+                        // ->with('requisition.committees.employee.position','requisition.committees.employee.level')
                         ->when(!empty($po_no), function($q) use ($po_no) {
                             $q->where('po_no', 'like', '%'.$po_no.'%');
                         })
-                        ->when(!empty($po_date), function($q) use ($po_date) {
-                            $q->where('po_date', $po_date);
+                        ->when(!empty($inspect_date), function($q) use ($inspect_date) {
+                            $q->where('inspect_date', $inspect_date);
                         })
                         ->when(!empty($supplier), function($q) use ($supplier) {
                             $q->where('supplier_id', $supplier);
@@ -81,7 +82,7 @@ class InspectionController extends Controller
                         ->when($status != '', function($q) use ($status) {
                             $q->where('status', $status);
                         })
-                        ->orderBy('po_date','DESC')
+                        ->orderBy('inspect_date','DESC')
                         ->paginate(10);
 
         return $inspections;
@@ -135,20 +136,20 @@ class InspectionController extends Controller
     {
         try {
             $inspection = new Inspection();
-            $inspection->inspection_date    = $req['inspection_date'];
-            $inspection->deliver_no         = $req['deliver_no'];
-            $inspection->deliver_date       = convThDateToDbDate($req['deliver_date']);
-            $inspection->report_no          = $req['report_no'];
-            $inspection->report_date        = $req['report_date'];
-            $inspection->order_id           = $req['order_id'];
-            $inspection->item_count         = $req['item_count'];
-            $inspection->item_received      = $req['item_received'];
-            $inspection->total              = currencyToNumber($req['total']);
-            $inspection->vat_rate           = currencyToNumber($req['vat_rate']);
-            $inspection->vat                = currencyToNumber($req['vat']);
-            $inspection->net_total          = currencyToNumber($req['net_total']);
-            $inspection->year               = $req['year'];
-            $inspection->status             = 1;
+            $inspection->inspect_date   = $req['inspect_date'];
+            $inspection->deliver_no     = $req['deliver_no'];
+            $inspection->deliver_date   = $req['deliver_date'];
+            $inspection->report_no      = $req['report_no'];
+            $inspection->report_date    = $req['report_date'];
+            $inspection->order_id       = $req['order_id'];
+            $inspection->item_count     = $req['item_count'];
+            $inspection->item_received  = $req['item_received'];
+            $inspection->total          = currencyToNumber($req['total']);
+            $inspection->vat_rate       = currencyToNumber($req['vat_rate']);
+            $inspection->vat            = currencyToNumber($req['vat']);
+            $inspection->net_total      = currencyToNumber($req['net_total']);
+            $inspection->year           = $req['year'];
+            $inspection->status         = 1;
 
             if($inspection->save()) {
                 foreach ($req['items'] as $item) {
