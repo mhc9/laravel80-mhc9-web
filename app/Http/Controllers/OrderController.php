@@ -152,14 +152,15 @@ class OrderController extends Controller
             if($order->save()) {
                 foreach ($req['items'] as $item) {
                     $detail  = new OrderDetail();
-                    $detail->order_id     = $order->id;
-                    $detail->pr_detail_id = $item['id'];
-                    $detail->item_id      = $item['item_id'];
-                    $detail->price        = $item['price'];
-                    $detail->amount       = $item['amount'];
-                    $detail->unit_id      = $item['unit_id'];
-                    $detail->total        = $item['total'];
-                    $detail->status       = 0;
+                    $detail->order_id       = $order->id;
+                    $detail->pr_detail_id   = $item['id'];
+                    $detail->item_id        = $item['item_id'];
+                    $detail->description    = $item['description'];
+                    $detail->price          = $item['price'];
+                    $detail->amount         = $item['amount'];
+                    $detail->unit_id        = $item['unit_id'];
+                    $detail->total          = $item['total'];
+                    $detail->status         = 0;
                     $detail->save();
 
                     /** อัพเดตสถานะของคำขอเป็น 1=ดำนเนิการแล้ว */
