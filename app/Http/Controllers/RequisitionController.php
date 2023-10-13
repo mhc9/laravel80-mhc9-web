@@ -156,7 +156,7 @@ class RequisitionController extends Controller
             $requisition->reason        = $req['reason'];
             $requisition->item_count    = $req['item_count'];
             $requisition->net_total     = currencyToNumber($req['net_total']);
-            $requisition->status        = 0;
+            $requisition->status        = 1;
 
             if($requisition->save()) {
                 /** Insert items to RequisitionDetail */
