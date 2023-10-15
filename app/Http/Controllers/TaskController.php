@@ -59,26 +59,51 @@ class TaskController extends Controller
         }
     }
 
+    private function getEmployeeList($fname, $lname)
+    {
+        return Employee::where('firstname', 'like', '%'.$fname.'%')
+                    ->when(!empty($lname), function($q) use ($lname) {
+                        $q->where('lastname', 'like', '%'.$lname.'%');
+                    })
+                    ->pluck('id');
+    }
+
+    private function getGroupListOfType($type)
+    {
+        return TaskGroup::where('task_type_id', $type)->pluck('id');
+    }
+
     public function search(Request $req)
     {
         /** Get params from query string */
-        $group      = $req->get('group');
+        $date       = $req->get('date');
         $type       = $req->get('type');
+        // $group      = $req->get('group');
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $tasks = Task::with('group','group.type','assets','assets.asset')
-                    ->with('reporter','reporter.prefix','reporter.position','reporter.level')
-                    ->when(!empty($type), function($q) use ($type) {
-                        $q->where('task_type_id', $type);
+        $reporterList = $this->getEmployeeList($reporter, '');
+        $groupList = $this->getGroupListOfType($type);
+
+        $tasks = Task::with('group','group.type','assets','assets.asset','reporter')
+                    ->with('reporter.prefix','reporter.position','reporter.level')
+                    ->when(!empty($date), function($q) use ($date) {
+                        $q->where('task_date', $date);
                     })
-                    ->when(!empty($group), function($q) use ($group) {
-                        $q->where('task_group_id', $group);
+                    ->when(!empty($reporter), function($q) use ($reporterList) {
+                        $q->whereIn('reporter_id', $reporterList);
                     })
-                    // ->when($status != '', function($q) use ($status) {
-                    //     $q->where('status', $status);
+                    ->when(!empty($type), function($q) use ($groupList) {
+                        $q->whereIn('task_group_id', $groupList);
+                    })
+                    // ->when(!empty($group), function($q) use ($group) {
+                    //     $q->where('task_group_id', $group);
                     // })
+                    ->when(!empty($status), function($q) use ($status) {
+                        $q->where('status', $status);
+                    })
                     ->orderBy('task_date', 'desc')
+                    ->orderBy('task_time', 'desc')
                     ->paginate(10);
 
         return $tasks;
