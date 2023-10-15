@@ -156,8 +156,8 @@ class TaskController extends Controller
             $task->priority_id      = $req['priority_id'];
             $task->description      = $req['description'];
             $task->reporter_id      = $req['reporter_id'];
-            $task->status           = $req['status'];
             $task->remark           = $req['remark'];
+            $task->status           = 1;
 
             if($task->save()) {
                 if (count($req['assets']) > 0) {
