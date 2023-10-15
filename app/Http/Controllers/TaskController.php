@@ -67,7 +67,8 @@ class TaskController extends Controller
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $tasks = Task::with('group','group.type','reporter','assets','assets.asset')
+        $tasks = Task::with('group','group.type','assets','assets.asset')
+                    ->with('reporter','reporter.prefix','reporter.position','reporter.level')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('task_type_id', $type);
                     })
@@ -77,6 +78,7 @@ class TaskController extends Controller
                     // ->when($status != '', function($q) use ($status) {
                     //     $q->where('status', $status);
                     // })
+                    ->orderBy('task_date', 'desc')
                     ->paginate(10);
 
         return $tasks;
