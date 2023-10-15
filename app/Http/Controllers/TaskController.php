@@ -137,7 +137,7 @@ class TaskController extends Controller
                     foreach($req['assets'] as $asset) {
                         $taskAsset = new TaskAsset();
                         $taskAsset->task_id     = $task->id;
-                        $taskAsset->asset_id    = $asset;
+                        $taskAsset->asset_id    = $asset['id'];
                         $taskAsset->save();
                     }
                 }
