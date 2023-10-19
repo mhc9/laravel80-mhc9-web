@@ -134,7 +134,9 @@ class TaskController extends Controller
 
     public function getById($id)
     {
-        return Task::with('group','group.type','reporter','assets','assets.asset')->find($id);
+        return Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
+                    ->with('reporter','reporter.prefix','reporter.position','reporter.level')
+                    ->find($id);
     }
 
     public function getInitialFormData()
