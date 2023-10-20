@@ -85,8 +85,9 @@ class TaskController extends Controller
         $reporterList = $this->getEmployeeList($reporter, '');
         $groupList = $this->getGroupListOfType($type);
 
-        $tasks = Task::with('group','group.type','assets','assets.asset','reporter')
-                    ->with('reporter.prefix','reporter.position','reporter.level')
+        $tasks = Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
+                    ->with('reporter','reporter.prefix','reporter.position','reporter.level')
+                    ->with('handlings','handlings.handler','handlings.handler.prefix')
                     ->when(!empty($date), function($q) use ($date) {
                         $q->where('task_date', $date);
                     })
@@ -136,6 +137,7 @@ class TaskController extends Controller
     {
         return Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
                     ->with('reporter','reporter.prefix','reporter.position','reporter.level')
+                    ->with('handlings','handlings.handler')
                     ->find($id);
     }
 

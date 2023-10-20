@@ -25,4 +25,9 @@ class Task extends Model
     {
         return $this->hasMany(TaskAsset::class, 'task_id', 'id');
     }
+
+    public function handlings()
+    {
+        return $this->hasMany(TaskHandling::class, 'task_id', 'id');
+    }
 }

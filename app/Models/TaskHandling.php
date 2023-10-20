@@ -16,15 +16,15 @@ class TaskHandling extends Model
         return $this->belongsTo(Task::class, 'task_id', 'id');
     }
 
-    public function cause()
-    {
-        return $this->belongsTo(TaskGroup::class, 'cause_id', 'id');
-    }
+    // public function cause()
+    // {
+    //     return $this->belongsTo(Cause::class, 'cause_id', 'id');
+    // }
 
-    public function type()
-    {
-        return $this->belongsTo(Employee::class, 'handle_type_id', 'id');
-    }
+    // public function type()
+    // {
+    //     return $this->belongsTo(HandleType::class, 'handle_type_id', 'id');
+    // }
 
     public function handler()
     {
