@@ -160,7 +160,7 @@ class TaskController extends Controller
             $task->priority_id      = $req['priority_id'];
             $task->use_date         = $req['use_date'];
             $task->use_time         = $req['use_time'];
-            $task->description      = $req['description'];
+            $task->problem          = $req['problem'];
             $task->reporter_id      = $req['reporter_id'];
             $task->remark           = $req['remark'];
             $task->status           = 1;
