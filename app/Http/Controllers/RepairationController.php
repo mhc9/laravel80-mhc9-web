@@ -10,6 +10,7 @@ use Illuminate\Support\MessageBag;
 use App\Models\Repairation;
 use App\Models\Task;
 use App\Models\Employee;
+use App\Models\Supplier;
 
 class RepairationController extends Controller
 {
@@ -136,21 +137,21 @@ class RepairationController extends Controller
     {
         $types = [
             ['id' => 1, 'name'  => 'ซ่อมเอง'],
-            ['id' => 2, 'name'  => 'ส่งภายนอก'],
+            ['id' => 2, 'name'  => 'ส่งภายนอก (มีประกันฯ)'],
+            ['id' => 3, 'name'  => 'ส่งภายนอก (ไม่มีประกันฯ)'],
         ];
 
         $statuses = [
-            ['id' => '1', 'name'  => 'รอดำเนินการ'],
-            ['id' => '2', 'name'  => 'กำลังดำเนินการ'],
             ['id' => '3', 'name'  => 'สั่งซื้ออะไหล่'],
             ['id' => '4', 'name'  => 'ส่งซ่อมภายนอก'],
             ['id' => '5', 'name'  => 'เสร็จแล้ว'],
-            ['id' => '9', 'name'  => 'ยกเลิก'],
         ];
 
         return [
             'types'     => $types,
-            'statuses'  => $statuses
+            'statuses'  => $statuses,
+            'employees' => Employee::with('prefix')->whereIn('status', [1,2])->get(),
+            'suppliers' => Supplier::where('status', 1)->get(),
         ];
     }
 
