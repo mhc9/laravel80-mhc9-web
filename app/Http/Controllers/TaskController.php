@@ -11,6 +11,7 @@ use App\Models\Task;
 use App\Models\TaskType;
 use App\Models\TaskGroup;
 use App\Models\TaskAsset;
+use App\Models\TaskCause;
 use App\Models\Employee;
 
 class TaskController extends Controller
@@ -86,7 +87,7 @@ class TaskController extends Controller
         $groupList = $this->getGroupListOfType($type);
 
         $tasks = Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
-                    ->with('reporter','reporter.prefix','reporter.position','reporter.level')
+                    ->with('reporter','reporter.prefix','reporter.position','reporter.level','cause')
                     ->with('handler','handler.prefix','handler.position','handler.level')
                     ->when(!empty($date), function($q) use ($date) {
                         $q->where('task_date', $date);
@@ -136,47 +137,34 @@ class TaskController extends Controller
     public function getById($id)
     {
         return Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
-                    ->with('reporter','reporter.prefix','reporter.position','reporter.level')
+                    ->with('reporter','reporter.prefix','reporter.position','reporter.level','cause')
                     ->with('handler','handler.prefix','handler.position','handler.level')
                     ->find($id);
     }
 
     public function getInitialFormData()
     {
-        $causes = [
-            ['id' => '1', 'name' => 'เกิดจากบุคคล'],
-            ['id' => '2', 'name' => 'เกิดจากเครื่อง/อุปกรณ์'],
-            ['id' => '3', 'name' => 'เกิดจากโปรแกรม/ข้อมูล'],
-            ['id' => '4', 'name' => 'เกิดจากสัตว์'],
-            ['id' => '5', 'name' => 'เกิดจากการตั้งค่า'],
-            ['id' => '6', 'name' => 'เกิดจากเงื่อนไข/บุคคล'],
-            ['id' => '7', 'name' => 'เกิดจากสาเหตุภายนอก'],
-            ['id' => '8', 'name' => 'ต้องการเพิ่มเติม'],
-            ['id' => '99', 'name' => 'อื่นๆ'],
-        ];
-
         $handleTypes = [
-            ['id' => '1', 'name'  => 'ซ่อม'],
-            ['id' => '2', 'name'  => 'บำรุงรักษา'],
-            ['id' => '3', 'name'  => 'สร้าง'],
-            ['id' => '4', 'name'  => 'แก้ไข'],
+            ['id' => 1, 'name'  => 'ซ่อม'],
+            ['id' => 2, 'name'  => 'บำรุงรักษา'],
+            ['id' => 3, 'name'  => 'สร้าง'],
+            ['id' => 4, 'name'  => 'แก้ไข'],
         ];
 
         $statuses = [
-            ['id' => '1', 'name'  => 'รอดำเนินการ'],
-            ['id' => '2', 'name'  => 'กำลังดำเนินการ'],
-            ['id' => '3', 'name'  => 'สั่งซื้ออะไหล่'],
-            ['id' => '4', 'name'  => 'ส่งซ่อมภายนอก'],
-            ['id' => '5', 'name'  => 'เสร็จแล้ว'],
-            ['id' => '9', 'name'  => 'ยกเลิก'],
+            ['id' => 1, 'name'  => 'รอดำเนินการ'],
+            ['id' => 2, 'name'  => 'เสร็จแล้ว'],
+            ['id' => 3, 'name'  => 'สั่งซื้ออะไหล่'],
+            ['id' => 4, 'name'  => 'ส่งซ่อมภายนอก'],
+            ['id' => 9, 'name'  => 'ยกเลิก'],
         ];
 
         return [
             'types'     => TaskType::all(),
             'groups'    => TaskGroup::all(),
-            'causes'    => $causes,
+            'causes'    => TaskCause::all(),
             'handleTypes' => $handleTypes,
-            'statuses'  => $statuses
+            'statuses'  => $statuses,
             'employees' => Employee::whereIn('status', [1,2])->get(),
         ];
     }
