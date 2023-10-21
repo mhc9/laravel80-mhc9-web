@@ -143,10 +143,41 @@ class TaskController extends Controller
 
     public function getInitialFormData()
     {
+        $causes = [
+            ['id' => '1', 'name' => 'เกิดจากบุคคล'],
+            ['id' => '2', 'name' => 'เกิดจากเครื่อง/อุปกรณ์'],
+            ['id' => '3', 'name' => 'เกิดจากโปรแกรม/ข้อมูล'],
+            ['id' => '4', 'name' => 'เกิดจากสัตว์'],
+            ['id' => '5', 'name' => 'เกิดจากการตั้งค่า'],
+            ['id' => '6', 'name' => 'เกิดจากเงื่อนไข/บุคคล'],
+            ['id' => '7', 'name' => 'เกิดจากสาเหตุภายนอก'],
+            ['id' => '8', 'name' => 'ต้องการเพิ่มเติม'],
+            ['id' => '99', 'name' => 'อื่นๆ'],
+        ];
+
+        $handleTypes = [
+            ['id' => '1', 'name'  => 'ซ่อม'],
+            ['id' => '2', 'name'  => 'บำรุงรักษา'],
+            ['id' => '3', 'name'  => 'สร้าง'],
+            ['id' => '4', 'name'  => 'แก้ไข'],
+        ];
+
+        $statuses = [
+            ['id' => '1', 'name'  => 'รอดำเนินการ'],
+            ['id' => '2', 'name'  => 'กำลังดำเนินการ'],
+            ['id' => '3', 'name'  => 'สั่งซื้ออะไหล่'],
+            ['id' => '4', 'name'  => 'ส่งซ่อมภายนอก'],
+            ['id' => '5', 'name'  => 'เสร็จแล้ว'],
+            ['id' => '9', 'name'  => 'ยกเลิก'],
+        ];
+
         return [
-            'types'         => TaskType::all(),
-            'groups'        => TaskGroup::all(),
-            'employees'     => Employee::whereIn('status', [1,2])->get(),
+            'types'     => TaskType::all(),
+            'groups'    => TaskGroup::all(),
+            'causes'    => $causes,
+            'handleTypes' => $handleTypes,
+            'statuses'  => $statuses
+            'employees' => Employee::whereIn('status', [1,2])->get(),
         ];
     }
 
