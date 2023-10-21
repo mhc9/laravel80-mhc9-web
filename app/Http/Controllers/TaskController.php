@@ -194,7 +194,7 @@ class TaskController extends Controller
         }
     }
 
-    public function solve(Request $req, $id)
+    public function handle(Request $req, $id)
     {
         try {
             $task = Task::find($id);

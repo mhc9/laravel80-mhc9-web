@@ -35,7 +35,7 @@ Route::middleware('auth:api')->group(function() {
     Route::post('/tasks', 'App\Http\Controllers\TaskController@store');
     Route::put('/tasks/{id}', 'App\Http\Controllers\TaskController@update');
     Route::delete('/tasks/{id}', 'App\Http\Controllers\TaskController@destroy');
-    Route::put('/tasks/{id}/solve', 'App\Http\Controllers\TaskController@solve');
+    Route::put('/tasks/{id}/handle', 'App\Http\Controllers\TaskController@handle');
     
     /** Task Handlings */
     Route::get('/task-handlings', 'App\Http\Controllers\TaskHandlingController@getAll');
