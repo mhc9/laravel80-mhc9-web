@@ -230,7 +230,10 @@ class TaskController extends Controller
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'task'      => $task
+                    'task'      => Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
+                                        ->with('reporter','reporter.prefix','reporter.position','reporter.level','cause')
+                                        ->with('handler','handler.prefix','handler.position','handler.level')
+                                        ->find($task->id);
                 ];
             } else {
                 return [
