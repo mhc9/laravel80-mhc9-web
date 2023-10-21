@@ -21,6 +21,11 @@ class Task extends Model
         return $this->belongsTo(Employee::class, 'reporter_id', 'id');
     }
 
+    public function handler()
+    {
+        return $this->belongsTo(Employee::class, 'handler_id', 'id');
+    }
+
     public function assets()
     {
         return $this->hasMany(TaskAsset::class, 'task_id', 'id');

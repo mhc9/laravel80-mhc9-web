@@ -87,7 +87,7 @@ class TaskController extends Controller
 
         $tasks = Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
                     ->with('reporter','reporter.prefix','reporter.position','reporter.level')
-                    ->with('handlings','handlings.handler','handlings.handler.prefix')
+                    ->with('handler','handler.prefix','handler.position','handler.level')
                     ->when(!empty($date), function($q) use ($date) {
                         $q->where('task_date', $date);
                     })
@@ -137,7 +137,7 @@ class TaskController extends Controller
     {
         return Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
                     ->with('reporter','reporter.prefix','reporter.position','reporter.level')
-                    ->with('handlings','handlings.handler')
+                    ->with('handler','handler.prefix','handler.position','handler.level')
                     ->find($id);
     }
 
