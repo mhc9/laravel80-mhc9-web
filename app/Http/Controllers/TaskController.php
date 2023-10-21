@@ -194,6 +194,40 @@ class TaskController extends Controller
         }
     }
 
+    public function solve(Request $req, $id)
+    {
+        try {
+            $task = Task::find($id);
+            $task->handle_date    = $req['handle_date'];
+            $task->handle_time    = $req['handle_time'];
+            $task->task_id        = $req['task_id'];
+            $task->handler_id     = $req['handler_id'];
+            $task->description    = $req['description'];
+            $task->cause_id       = $req['cause_id'];
+            $task->handle_type_id = $req['handle_type_id'];
+            $task->cause_text     = $req['cause_text'];
+            $task->status         = $req['status'];
+
+            if($task->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    'task'      => $task
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
+        } catch (\Exception $ex) {
+            return [
+                'status'    => 0,
+                'message'   => $ex->getMessage()
+            ];
+        }
+    }
+
     public function update(Request $req, $id)
     {
         try {
