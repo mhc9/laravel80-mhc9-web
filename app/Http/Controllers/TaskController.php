@@ -217,15 +217,14 @@ class TaskController extends Controller
     {
         try {
             $task = Task::find($id);
-            $task->handle_date    = $req['handle_date'];
-            $task->handle_time    = $req['handle_time'];
-            $task->task_id        = $req['task_id'];
-            $task->handler_id     = $req['handler_id'];
-            $task->description    = $req['description'];
-            $task->cause_id       = $req['cause_id'];
-            $task->handle_type_id = $req['handle_type_id'];
-            $task->cause_text     = $req['cause_text'];
-            $task->status         = $req['status'];
+            $task->handle_date      = $req['handle_date'];
+            $task->handle_time      = $req['handle_time'];
+            $task->handler_id       = $req['handler_id'];
+            $task->handling         = $req['handling'];
+            $task->cause_id         = $req['cause_id'];
+            $task->cause_text       = $req['cause_text'];
+            $task->handle_type_id   = $req['handle_type_id'];
+            $task->status           = $req['status'];
 
             if($task->save()) {
                 return [
