@@ -233,7 +233,7 @@ class TaskController extends Controller
                     'task'      => Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
                                         ->with('reporter','reporter.prefix','reporter.position','reporter.level','cause')
                                         ->with('handler','handler.prefix','handler.position','handler.level')
-                                        ->find($task->id);
+                                        ->find($task->id)
                 ];
             } else {
                 return [

@@ -7,14 +7,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
-use App\Models\TaskHandling;
+use App\Models\Repairation;
 use App\Models\Task;
-use App\Models\TaskType;
-use App\Models\TaskGroup;
-use App\Models\TaskAsset;
 use App\Models\Employee;
 
-class TaskHandlingController extends Controller
+class RepairationController extends Controller
 {
     public function formValidate (Request $request)
     {
@@ -69,11 +66,6 @@ class TaskHandlingController extends Controller
                     ->pluck('id');
     }
 
-    private function getGroupListOfType($type)
-    {
-        return TaskGroup::where('task_type_id', $type)->pluck('id');
-    }
-
     public function search(Request $req)
     {
         /** Get params from query string */
@@ -86,25 +78,25 @@ class TaskHandlingController extends Controller
         $reporterList = $this->getEmployeeList($reporter, '');
         $groupList = $this->getGroupListOfType($type);
 
-        $tasks = TaskHandling::with('group','group.type','assets','assets.asset','reporter')
-                    ->with('reporter.prefix','reporter.position','reporter.level')
-                    ->when(!empty($date), function($q) use ($date) {
-                        $q->where('task_date', $date);
-                    })
-                    ->when(!empty($reporter), function($q) use ($reporterList) {
-                        $q->whereIn('reporter_id', $reporterList);
-                    })
-                    ->when(!empty($type), function($q) use ($groupList) {
-                        $q->whereIn('task_group_id', $groupList);
-                    })
+        $tasks = Repairation::with('task','asset','staff')
+                    ->with('staff.prefix','staff.position','staff.level')
+                    // ->when(!empty($date), function($q) use ($date) {
+                    //     $q->where('task_date', $date);
+                    // })
+                    // ->when(!empty($reporter), function($q) use ($reporterList) {
+                    //     $q->whereIn('reporter_id', $reporterList);
+                    // })
+                    // ->when(!empty($type), function($q) use ($groupList) {
+                    //     $q->whereIn('task_group_id', $groupList);
+                    // })
                     // ->when(!empty($group), function($q) use ($group) {
                     //     $q->where('task_group_id', $group);
                     // })
                     ->when(!empty($status), function($q) use ($status) {
                         $q->where('status', $status);
                     })
-                    ->orderBy('task_date', 'desc')
-                    ->orderBy('task_time', 'desc')
+                    ->orderBy('repair_date', 'desc')
+                    ->orderBy('repair_time', 'desc')
                     ->paginate(10);
 
         return $tasks;
@@ -118,7 +110,7 @@ class TaskHandlingController extends Controller
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $tasks = Task::with('group','group.type','reporter','assets','assets.asset')
+        $tasks = Repairation::with('group','group.type','reporter','assets','assets.asset')
                     ->when(!empty($type), function($q) use ($type) {
                         $q->where('task_type_id', $type);
                     })
@@ -135,30 +127,16 @@ class TaskHandlingController extends Controller
 
     public function getById($id)
     {
-        return Task::with('group','group.type','assets','assets.asset','assets.asset.category','assets.asset.brand')
-                    ->with('reporter','reporter.prefix','reporter.position','reporter.level')
+        return Repairation::with('task','asset','staff')
+                    ->with('staff.prefix','staff.position','staff.level')
                     ->find($id);
     }
 
     public function getInitialFormData()
     {
-        $causes = [
-            ['id' => '1', 'name' => 'เกิดจากบุคคล'],
-            ['id' => '2', 'name' => 'เกิดจากเครื่อง/อุปกรณ์'],
-            ['id' => '3', 'name' => 'เกิดจากโปรแกรม/ข้อมูล'],
-            ['id' => '4', 'name' => 'เกิดจากสัตว์'],
-            ['id' => '5', 'name' => 'เกิดจากการตั้งค่า'],
-            ['id' => '6', 'name' => 'เกิดจากเงื่อนไข/บุคคล'],
-            ['id' => '7', 'name' => 'เกิดจากสาเหตุภายนอก'],
-            ['id' => '8', 'name' => 'ต้องการเพิ่มเติม'],
-            ['id' => '99', 'name' => 'อื่นๆ'],
-        ];
-
         $types = [
-            ['id' => '1', 'name'  => 'ซ่อม'],
-            ['id' => '2', 'name'  => 'บำรุงรักษา'],
-            ['id' => '3', 'name'  => 'สร้าง'],
-            ['id' => '4', 'name'  => 'แก้ไข'],
+            ['id' => 1, 'name'  => 'ซ่อมเอง'],
+            ['id' => 2, 'name'  => 'ส่งภายนอก'],
         ];
 
         $statuses = [
@@ -171,7 +149,6 @@ class TaskHandlingController extends Controller
         ];
 
         return [
-            'causes'    => $causes,
             'types'     => $types,
             'statuses'  => $statuses
         ];
@@ -180,24 +157,21 @@ class TaskHandlingController extends Controller
     public function store(Request $req)
     {
         try {
-            $handle = new TaskHandling();
-            $handle->handle_date    = $req['handle_date'];
-            $handle->handle_time    = $req['handle_time'];
-            $handle->task_id        = $req['task_id'];
-            $handle->handler_id     = $req['handler_id'];
-            $handle->description    = $req['description'];
-            $handle->cause_id       = $req['cause_id'];
-            $handle->handle_type_id = $req['handle_type_id'];
-            $handle->cause_text     = $req['cause_text'];
+            $repair = new Repairation();
+            $repair->repair_date    = $req['repair_date'];
+            $repair->repair_time    = $req['repair_time'];
+            $repair->task_id        = $req['task_id'];
+            $repair->asset_id       = $req['asset_id'];
+            $repair->description    = $req['description'];
+            $repair->repair_type_id = $req['repair_type_id'];
+            $repair->total_cost     = $req['total_cost'];
+            $repair->staff_id       = $req['cause_id'];
 
-            if($handle->save()) {
-                /** Update task's status */
-                Task::where('id', $req['task_id'])->update(['status' => $req['status']]);
-
+            if($repair->save()) {
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'handle'    => $handle
+                    'repa$repair'    => $repair
                 ];
             } else {
                 return [

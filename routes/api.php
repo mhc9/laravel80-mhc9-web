@@ -36,15 +36,15 @@ Route::middleware('auth:api')->group(function() {
     Route::put('/tasks/{id}', 'App\Http\Controllers\TaskController@update');
     Route::delete('/tasks/{id}', 'App\Http\Controllers\TaskController@destroy');
     Route::put('/tasks/{id}/handle', 'App\Http\Controllers\TaskController@handle');
-    
-    /** Task Handlings */
-    Route::get('/task-handlings', 'App\Http\Controllers\TaskHandlingController@getAll');
-    Route::get('/task-handlings/search', 'App\Http\Controllers\TaskHandlingController@search');
-    Route::get('/task-handlings/{id}', 'App\Http\Controllers\TaskHandlingController@getById');
-    Route::get('/task-handlings/init/form', 'App\Http\Controllers\TaskHandlingController@getInitialFormData');
-    Route::post('/task-handlings', 'App\Http\Controllers\TaskHandlingController@store');
-    Route::put('/task-handlings/{id}', 'App\Http\Controllers\TaskHandlingController@update');
-    Route::delete('/task-handlings/{id}', 'App\Http\Controllers\TaskHandlingController@destroy');
+
+    /** Repairations */
+    Route::get('/repairations', 'App\Http\Controllers\RepairationController@getAll');
+    Route::get('/repairations/search', 'App\Http\Controllers\RepairationController@search');
+    Route::get('/repairations/{id}', 'App\Http\Controllers\RepairationController@getById');
+    Route::get('/repairations/init/form', 'App\Http\Controllers\RepairationController@getInitialFormData');
+    Route::post('/repairations', 'App\Http\Controllers\RepairationController@store');
+    Route::put('/repairations/{id}', 'App\Http\Controllers\RepairationController@update');
+    Route::delete('/repairations/{id}', 'App\Http\Controllers\RepairationController@destroy');
 
     /** Equipments */
     Route::get('/equipments', 'App\Http\Controllers\EquipmentController@getAll');
@@ -65,7 +65,7 @@ Route::middleware('auth:api')->group(function() {
     Route::put('/assets/{id}', 'App\Http\Controllers\AssetController@update');
     Route::delete('/assets/{id}', 'App\Http\Controllers\AssetController@destroy');
     Route::post('/assets/{id}/upload', 'App\Http\Controllers\AssetController@uploadImage');
-    
+
     /** Asset Ownerships */
     Route::get('/asset-ownerships', 'App\Http\Controllers\AssetOwnershipController@getAll');
     Route::get('/asset-ownerships/{id}', 'App\Http\Controllers\AssetOwnershipController@getById');
