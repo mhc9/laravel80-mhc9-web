@@ -25,4 +25,9 @@ class Repairation extends Model
     {
         return $this->belongsTo(Employee::class, 'staff_id', 'id');
     }
+
+    public function expenses()
+    {
+        return $this->hasMany(RepairationExpense::class, 'repair_id', 'id');
+    }
 }

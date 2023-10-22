@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\Repairation;
+use App\Models\RepairationExpense;
 use App\Models\Task;
 use App\Models\Employee;
 use App\Models\Supplier;
@@ -135,10 +136,19 @@ class RepairationController extends Controller
 
     public function getInitialFormData()
     {
+        $methods = [
+            ['id' => '1', 'name'  => 'ติดตั้งเพิ่ม'],
+            ['id' => '2', 'name'  => 'ถอนการติดตั้ง'],
+            ['id' => '3', 'name'  => 'เปลี่ยนอะไหล่/เบิกวัสดุ'],
+            ['id' => '4', 'name'  => 'ซ่อมแผงวงจร'],
+            ['id' => '5', 'name'  => 'ตั้งค่าใหม่ (Config)'],
+            ['id' => '6', 'name'  => 'อัพเดตเฟิร์มแวร์ (Firmware)'],
+        ];
+
         $types = [
-            ['id' => 1, 'name'  => 'ซ่อมเอง'],
-            ['id' => 2, 'name'  => 'ส่งภายนอก (มีประกันฯ)'],
-            ['id' => 3, 'name'  => 'ส่งภายนอก (ไม่มีประกันฯ)'],
+            ['id' => '1', 'name'  => 'ซ่อมเอง'],
+            ['id' => '2', 'name'  => 'ส่งภายนอก (มีประกันฯ)'],
+            ['id' => '3', 'name'  => 'ส่งภายนอก (ไม่มีประกันฯ)'],
         ];
 
         $statuses = [
@@ -149,6 +159,7 @@ class RepairationController extends Controller
 
         return [
             'types'     => $types,
+            'methods'   => $methods,
             'statuses'  => $statuses,
             'employees' => Employee::with('prefix')->whereIn('status', [1,2])->get(),
             'suppliers' => Supplier::where('status', 1)->get(),
@@ -164,15 +175,30 @@ class RepairationController extends Controller
             $repair->task_id        = $req['task_id'];
             $repair->asset_id       = $req['asset_id'];
             $repair->description    = $req['description'];
+            $repair->repair_method_id = $req['repair_method_id'];
             $repair->repair_type_id = $req['repair_type_id'];
             $repair->total_cost     = $req['total_cost'];
-            $repair->staff_id       = $req['cause_id'];
+            $repair->supplier_id    = $req['supplier_id'];
+            $repair->staff_id       = $req['staff_id'];
 
             if($repair->save()) {
+                Task::where('id', $repair->task_id)->update(['status' => $req['status']]);
+
+                if(count($req['expenses']) > 0) {
+                    foreach($req['expenses'] as $expense) {
+                        $newExpense = new RepairationExpense();
+                        $newExpense->repair_id      = $repair->id;
+                        $newExpense->expense_id     = $expense['expense_id'];
+                        $newExpense->description    = $expense['description'];
+                        $newExpense->total          = $expense['total'];
+                        $newExpense->save();
+                    }
+                }
+
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'repa$repair'    => $repair
+                    '$repair'   => $repair
                 ];
             } else {
                 return [
