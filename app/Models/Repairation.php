@@ -21,6 +21,11 @@ class Repairation extends Model
         return $this->belongsTo(Asset::class, 'asset_id', 'id');
     }
 
+    public function requester()
+    {
+        return $this->belongsTo(Employee::class, 'requester_id', 'id');
+    }
+
     public function staff()
     {
         return $this->belongsTo(Employee::class, 'staff_id', 'id');

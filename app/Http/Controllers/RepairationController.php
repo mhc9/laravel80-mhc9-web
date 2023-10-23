@@ -77,10 +77,7 @@ class RepairationController extends Controller
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $reporterList = $this->getEmployeeList($reporter, '');
-        $groupList = $this->getGroupListOfType($type);
-
-        $tasks = Repairation::with('task','assets','expenses')
+        $tasks = Repairation::with('task','asset','expenses')
                     ->with('requester','requester.prefix','requester.position','requester.level')
                     ->with('staff','staff.prefix','staff.position','staff.level')
                     // ->when(!empty($date), function($q) use ($date) {
