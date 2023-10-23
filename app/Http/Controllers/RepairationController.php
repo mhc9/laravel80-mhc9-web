@@ -80,8 +80,9 @@ class RepairationController extends Controller
         $reporterList = $this->getEmployeeList($reporter, '');
         $groupList = $this->getGroupListOfType($type);
 
-        $tasks = Repairation::with('task','asset','staff')
-                    ->with('staff.prefix','staff.position','staff.level')
+        $tasks = Repairation::with('task','assets','expenses')
+                    ->with('requester','requester.prefix','requester.position','requester.level')
+                    ->with('staff','staff.prefix','staff.position','staff.level')
                     // ->when(!empty($date), function($q) use ($date) {
                     //     $q->where('task_date', $date);
                     // })
@@ -97,8 +98,8 @@ class RepairationController extends Controller
                     ->when(!empty($status), function($q) use ($status) {
                         $q->where('status', $status);
                     })
-                    ->orderBy('repair_date', 'desc')
-                    ->orderBy('repair_time', 'desc')
+                    ->orderBy('request_date', 'desc')
+                    ->orderBy('request_time', 'desc')
                     ->paginate(10);
 
         return $tasks;
@@ -152,9 +153,11 @@ class RepairationController extends Controller
         ];
 
         $statuses = [
-            ['id' => '3', 'name'  => 'สั่งซื้ออะไหล่'],
-            ['id' => '4', 'name'  => 'ส่งซ่อมภายนอก'],
-            ['id' => '5', 'name'  => 'เสร็จแล้ว'],
+            ['id' => '1', 'name'  => 'รอซ่อม'],
+            ['id' => '2', 'name'  => 'สั่งซื้ออะไหล่'],
+            ['id' => '3', 'name'  => 'ส่งภายนอก'],
+            ['id' => '4', 'name'  => 'ส่งมอบแล้ว'],
+            ['id' => '9', 'name'  => 'ยกเลิก'],
         ];
 
         return [
@@ -170,6 +173,38 @@ class RepairationController extends Controller
     {
         try {
             $repair = new Repairation();
+            $repair->request_date   = $req['request_date'];
+            $repair->request_time   = $req['request_time'];
+            $repair->deliver_date   = $req['deliver_date'];
+            $repair->requester_id   = $req['requester_id'];
+            $repair->task_id        = $req['task_id'];
+            $repair->asset_id       = $req['asset_id'];
+            $repair->remark         = $req['remark'];
+
+            if($repair->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    '$repair'   => $repair
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
+        } catch (\Exception $ex) {
+            return [
+                'status'    => 0,
+                'message'   => $ex->getMessage()
+            ];
+        }
+    }
+
+    public function repair(Request $req, $id)
+    {
+        try {
+            $repair = Repairation::find($id);
             $repair->repair_date    = $req['repair_date'];
             $repair->repair_time    = $req['repair_time'];
             $repair->task_id        = $req['task_id'];
