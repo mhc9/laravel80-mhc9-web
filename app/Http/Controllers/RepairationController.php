@@ -215,16 +215,15 @@ class RepairationController extends Controller
             $repair->total_cost     = $req['total_cost'];
             $repair->supplier_id    = $req['supplier_id'];
             $repair->staff_id       = $req['staff_id'];
+            $repair->status         = 4;
 
             if($repair->save()) {
-                Task::where('id', $repair->task_id)->update(['status' => $req['status']]);
-
                 if(count($req['expenses']) > 0) {
                     foreach($req['expenses'] as $expense) {
                         $newExpense = new RepairationExpense();
                         $newExpense->repair_id      = $repair->id;
-                        $newExpense->expense_id     = $expense['expense_id'];
-                        $newExpense->description    = $expense['description'];
+                        $newExpense->expense_id     = $expense['id'];
+                        // $newExpense->description    = $expense['description'];
                         $newExpense->total          = $expense['total'];
                         $newExpense->save();
                     }
