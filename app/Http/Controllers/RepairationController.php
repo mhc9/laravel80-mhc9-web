@@ -185,9 +185,9 @@ class RepairationController extends Controller
                 Task::where('id', $repair->task_id)->update(['status' => 3]);
 
                 return [
-                    'status'    => 1,
-                    'message'   => 'Insertion successfully!!',
-                    '$repair'   => $repair
+                    'status'        => 1,
+                    'message'       => 'Insertion successfully!!',
+                    'repairation'   => $repair
                 ];
             } else {
                 return [
@@ -231,9 +231,13 @@ class RepairationController extends Controller
                 }
 
                 return [
-                    'status'    => 1,
-                    'message'   => 'Insertion successfully!!',
-                    '$repair'   => $repair
+                    'status'        => 1,
+                    'message'       => 'Insertion successfully!!',
+                    'repairation'   => Repairation::with('task','task.group','task.group.type','asset','asset.brand','expenses')
+                                            ->with('task.reporter','task.reporter.prefix','task.reporter.position','task.reporter.level')
+                                            ->with('requester','requester.prefix','requester.position','requester.level')
+                                            ->with('staff','staff.prefix','staff.position','staff.level')
+                                            ->find($id)
                 ];
             } else {
                 return [
