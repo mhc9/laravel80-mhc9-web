@@ -41,6 +41,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/repairations', 'App\Http\Controllers\RepairationController@getAll');
     Route::get('/repairations/search', 'App\Http\Controllers\RepairationController@search');
     Route::get('/repairations/{id}', 'App\Http\Controllers\RepairationController@getById');
+    Route::get('/repairations/asset/{assetId}', 'App\Http\Controllers\RepairationController@getByAsset');
     Route::get('/repairations/init/form', 'App\Http\Controllers\RepairationController@getInitialFormData');
     Route::post('/repairations', 'App\Http\Controllers\RepairationController@store');
     Route::put('/repairations/{id}', 'App\Http\Controllers\RepairationController@update');

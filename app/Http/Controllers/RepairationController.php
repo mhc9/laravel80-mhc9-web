@@ -134,6 +134,16 @@ class RepairationController extends Controller
                     ->find($id);
     }
 
+    public function getByAsset($assetId)
+    {
+        return Repairation::with('task','task.group','task.group.type','asset','asset.brand','expenses')
+                    ->with('task.reporter','task.reporter.prefix','task.reporter.position','task.reporter.level')
+                    ->with('requester','requester.prefix','requester.position','requester.level')
+                    ->with('staff','staff.prefix','staff.position','staff.level')
+                    ->where('asset_id', $assetId)
+                    ->get();
+    }
+
     public function getInitialFormData()
     {
         $methods = [
