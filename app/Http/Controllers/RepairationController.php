@@ -77,7 +77,7 @@ class RepairationController extends Controller
         $reporter   = $req->get('reporter');
         $status     = $req->get('status');
 
-        $tasks = Repairation::with('task','asset','expenses')
+        $tasks = Repairation::with('task','asset','asset.brand','expenses')
                     ->with('requester','requester.prefix','requester.position','requester.level')
                     ->with('staff','staff.prefix','staff.position','staff.level')
                     // ->when(!empty($date), function($q) use ($date) {
@@ -127,8 +127,10 @@ class RepairationController extends Controller
 
     public function getById($id)
     {
-        return Repairation::with('task','asset','staff')
-                    ->with('staff.prefix','staff.position','staff.level')
+        return Repairation::with('task','task.group','task.group.type','asset','asset.brand','expenses')
+                    ->with('task.reporter','task.reporter.prefix','task.reporter.position','task.reporter.level')
+                    ->with('requester','requester.prefix','requester.position','requester.level')
+                    ->with('staff','staff.prefix','staff.position','staff.level')
                     ->find($id);
     }
 
@@ -177,8 +179,11 @@ class RepairationController extends Controller
             $repair->task_id        = $req['task_id'];
             $repair->asset_id       = $req['asset_id'];
             $repair->remark         = $req['remark'];
+            $repair->status         = 1;
 
             if($repair->save()) {
+                Task::where('id', $repair->task_id)->update(['status' => 3]);
+
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
