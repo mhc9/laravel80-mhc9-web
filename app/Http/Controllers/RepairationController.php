@@ -209,8 +209,6 @@ class RepairationController extends Controller
             $repair = Repairation::find($id);
             $repair->repair_date    = $req['repair_date'];
             $repair->repair_time    = $req['repair_time'];
-            $repair->task_id        = $req['task_id'];
-            $repair->asset_id       = $req['asset_id'];
             $repair->description    = $req['description'];
             $repair->repair_method_id = $req['repair_method_id'];
             $repair->repair_type_id = $req['repair_type_id'];

@@ -44,6 +44,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/repairations/init/form', 'App\Http\Controllers\RepairationController@getInitialFormData');
     Route::post('/repairations', 'App\Http\Controllers\RepairationController@store');
     Route::put('/repairations/{id}', 'App\Http\Controllers\RepairationController@update');
+    Route::put('/repairations/{id}/repair', 'App\Http\Controllers\RepairationController@repair');
     Route::delete('/repairations/{id}', 'App\Http\Controllers\RepairationController@destroy');
 
     /** Equipments */
