@@ -141,7 +141,8 @@ class RepairationController extends Controller
                     ->with('requester','requester.prefix','requester.position','requester.level')
                     ->with('staff','staff.prefix','staff.position','staff.level')
                     ->where('asset_id', $assetId)
-                    ->get();
+                    ->where('status', 4)
+                    ->paginate(10);
     }
 
     public function getInitialFormData()
