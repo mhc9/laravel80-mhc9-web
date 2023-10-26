@@ -19,6 +19,19 @@ use App\Models\Employee;
 
 class AssetController extends Controller
 {
+    $statuses = [
+        ['id' => 1, 'name' => 'ครอบครองอยู่'],
+        ['id' => 2, 'name' => 'คืนความเป็นเจ้าของแล้ว'],
+        ['id' => 3, 'name' => 'เสียหายระหว่างการดูแล'],
+        ['id' => 4, 'name' => 'สูญหายระหว่างการดูแล'],
+    ];
+
+    $conditions = [
+        ['id' => 1, 'name' => 'สมบูรณ์'],
+        ['id' => 2, 'name' => 'เสียหายบางส่วน'],
+        ['id' => 3, 'name' => 'เสียหายใช้งานไม่ได้'],
+    ];
+
     public function formValidate (Request $request)
     {
         $rules = [
