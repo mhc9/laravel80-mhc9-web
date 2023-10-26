@@ -173,6 +173,16 @@ class AssetController extends Controller
             $asset->status              = $req['status'];
             $asset->remark              = $req['remark'];
 
+            if ($req->file('img_url')) {
+                $file = $req->file('img_url');
+                $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
+                $destinationPath = 'uploads/assets/';
+
+                if ($file->move($destinationPath, $fileName)) {
+                    $asset->img_url = $fileName;
+                }
+            }
+
             if($asset->save()) {
                 return [
                     'status'    => 1,
