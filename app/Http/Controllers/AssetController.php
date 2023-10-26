@@ -143,6 +143,13 @@ class AssetController extends Controller
 
     public function getInitialFormData()
     {
+        $statuses = [
+            ['id' => 1, 'name'  => 'ใช้งานอยู่'],
+            ['id' => 2, 'name'  => 'ถูกยืม'],
+            ['id' => 9, 'name'  => 'รอจำหน่าย'],
+            ['id' => 99, 'name'  => 'จำหน่าย	'],
+        ];
+
         return [
             'types'         => AssetType::all(),
             'categories'    => AssetCategory::all(),
@@ -152,6 +159,7 @@ class AssetController extends Controller
             'budgets'       => Budget::all(),
             'obtainingTypes' => ObtainingType::all(),
             'employees'     => Employee::whereIn('status', [1,2])->get(),
+            'statuses'      => $statuses
         ];
     }
 
