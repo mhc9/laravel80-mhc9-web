@@ -92,9 +92,9 @@ class AssetController extends Controller
                             $sq->where('owner_id', $owner);
                         });
                     })
-                    // ->when($status != '', function($q) use ($status) {
-                    //     $q->where('status', $status);
-                    // })
+                    ->when(!empty($status), function($q) use ($status) {
+                        $q->where('status', $status);
+                    })
                     ->paginate(10);
 
         return $assets;
@@ -128,9 +128,9 @@ class AssetController extends Controller
                             $sq->where('owner_id', $owner);
                         });
                     })
-                    // ->when($status != '', function($q) use ($status) {
-                    //     $q->where('status', $status);
-                    // })
+                    ->when(!empty($status), function($q) use ($status) {
+                        $q->where('status', $status);
+                    })
                     ->get();
 
         return $assets;
