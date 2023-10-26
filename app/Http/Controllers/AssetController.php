@@ -106,6 +106,9 @@ class AssetController extends Controller
         $type       = $req->get('type');
         $category   = $req->get('category');
         $group      = $req->get('group');
+        $name       = $req->get('name');
+        $owner      = $req->get('owner');
+        $status     = $req->get('status');
 
         $assets = Asset::with('group','group.category','brand','budget', 'obtaining','unit','currentOwner')
                     // ->when(!empty($type), function($q) use ($type) {
@@ -170,8 +173,8 @@ class AssetController extends Controller
             $asset->first_year          = $req['first_year'];
             $asset->obtain_type_id      = $req['obtain_type_id'];
             $asset->budget_id           = $req['budget_id'];
-            $asset->status              = $req['status'];
             $asset->remark              = $req['remark'];
+            $asset->status              = 1;
 
             if ($req->file('img_url')) {
                 $file = $req->file('img_url');
