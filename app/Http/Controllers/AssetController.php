@@ -302,9 +302,9 @@ class AssetController extends Controller
 
             if($asset->save()) {
                 return [
-                    'status'        => 1,
-                    'message'       => 'Uploading avatar successfully!!',
-                    'img_url'       => $asset->img_url
+                    'status'    => 1,
+                    'message'   => 'Uploading avatar successfully!!',
+                    'img_url'   => $asset->img_url
                 ];
             } else {
                 return [
