@@ -175,7 +175,7 @@ class AssetController extends Controller
             $asset->description         = $req['description'];
             $asset->asset_category_id   = $req['asset_category_id'];
             $asset->asset_group_id      = $req['asset_group_id'];
-            $asset->price_per_unit      = $req['price_per_unit'];
+            $asset->price               = $req['price'];
             $asset->unit_id             = $req['unit_id'];
             $asset->brand_id            = $req['brand_id'];
             $asset->model               = $req['model'];
@@ -228,7 +228,7 @@ class AssetController extends Controller
             $asset->description         = $req['description'];
             $asset->asset_category_id   = $req['asset_category_id'];
             $asset->asset_group_id      = $req['asset_group_id'];
-            $asset->price_per_unit      = $req['price_per_unit'];
+            $asset->price               = $req['price'];
             $asset->unit_id             = $req['unit_id'];
             $asset->brand_id            = $req['brand_id'];
             $asset->model               = $req['model'];
