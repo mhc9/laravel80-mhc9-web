@@ -145,7 +145,8 @@ class AssetController extends Controller
     {
         $statuses = [
             ['id' => 1, 'name'  => 'ใช้งานอยู่'],
-            ['id' => 2, 'name'  => 'ถูกยืม'],
+            ['id' => 2, 'name'  => 'สำรอง'],
+            ['id' => 3, 'name'  => 'ถูกยืม'],
             ['id' => 9, 'name'  => 'รอจำหน่าย'],
             ['id' => 99, 'name'  => 'จำหน่าย	'],
         ];
