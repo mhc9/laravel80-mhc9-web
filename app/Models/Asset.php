@@ -41,6 +41,11 @@ class Asset extends Model
         return $this->belongsTo(ObtainingType::class, 'obtain_type_id', 'id');
     }
 
+    public function room()
+    {
+        return $this->belongsTo(Room::class, 'room_id', 'id');
+    }
+
     public function currentOwner()
     {
         return $this->hasMany(AssetOwnership::class, 'asset_id', 'id')->where('status', 1);

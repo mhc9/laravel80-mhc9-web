@@ -16,6 +16,7 @@ use App\Models\Brand;
 use App\Models\Budget;
 use App\Models\ObtainingType;
 use App\Models\Employee;
+use App\Models\Room;
 
 class AssetController extends Controller
 {
@@ -160,6 +161,7 @@ class AssetController extends Controller
             'budgets'       => Budget::all(),
             'obtainingTypes' => ObtainingType::all(),
             'employees'     => Employee::whereIn('status', [1,2])->get(),
+            'rooms'         => Room::where('status', 1)->get(),
             'statuses'      => $statuses
         ];
     }
