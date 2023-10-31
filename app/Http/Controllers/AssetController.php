@@ -74,7 +74,7 @@ class AssetController extends Controller
         $owner      = $req->get('owner');
         $status     = $req->get('status');
 
-        $assets = Asset::with('group','group.category','brand','budget', 'obtaining','unit')
+        $assets = Asset::with('group','group.category','brand','budget','obtaining','unit','room')
                     ->with('currentOwner','currentOwner.owner','currentOwner.owner.prefix')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('asset_type_id', $type);
@@ -111,7 +111,8 @@ class AssetController extends Controller
         $owner      = $req->get('owner');
         $status     = $req->get('status');
 
-        $assets = Asset::with('group','group.category','brand','budget', 'obtaining','unit','currentOwner')
+        $assets = Asset::with('group','group.category','brand','budget','obtaining','unit','room')
+                    ->with('currentOwner','currentOwner.owner','currentOwner.owner.prefix')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('asset_type_id', $type);
                     // })
@@ -139,7 +140,7 @@ class AssetController extends Controller
 
     public function getById($id)
     {
-        return Asset::with('group','group.category','brand','budget', 'obtaining','unit')->find($id);
+        return Asset::with('group','group.category','brand','budget', 'obtaining','unit','room')->find($id);
     }
 
     public function getInitialFormData()
