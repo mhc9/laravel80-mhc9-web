@@ -184,6 +184,8 @@ class AssetController extends Controller
             $asset->first_year          = $req['first_year'];
             $asset->obtain_type_id      = $req['obtain_type_id'];
             $asset->budget_id           = $req['budget_id'];
+            $asset->location            = $req['location'];
+            $asset->room_id             = $req['room_id'];
             $asset->remark              = $req['remark'];
             $asset->status              = 1;
 
@@ -235,6 +237,8 @@ class AssetController extends Controller
             $asset->first_year          = $req['first_year'];
             $asset->obtain_type_id      = $req['obtain_type_id'];
             $asset->budget_id           = $req['budget_id'];
+            $asset->location            = $req['location'];
+            $asset->room_id             = $req['room_id'];
             $asset->remark              = $req['remark'];
 
             if($asset->save()) {
