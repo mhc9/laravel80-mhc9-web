@@ -142,6 +142,11 @@ class TaskController extends Controller
                     ->find($id);
     }
 
+    public function getCountByStatus()
+    {
+        return Task::select('status', \DB::raw('COUNT(*) as count'))->groupBy('status')->get();
+    }
+
     public function getInitialFormData()
     {
         $handleTypes = [

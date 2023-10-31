@@ -31,6 +31,7 @@ Route::middleware('auth:api')->group(function() {
     Route::get('/tasks', 'App\Http\Controllers\TaskController@getAll');
     Route::get('/tasks/search', 'App\Http\Controllers\TaskController@search');
     Route::get('/tasks/{id}', 'App\Http\Controllers\TaskController@getById');
+    Route::get('/tasks/count/status', 'App\Http\Controllers\TaskController@getCountByStatus');
     Route::get('/tasks/init/form', 'App\Http\Controllers\TaskController@getInitialFormData');
     Route::post('/tasks', 'App\Http\Controllers\TaskController@store');
     Route::put('/tasks/{id}', 'App\Http\Controllers\TaskController@update');
