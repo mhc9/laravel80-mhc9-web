@@ -27,6 +27,10 @@ import Manuals from './pages/Manuals'
 import Policies from './pages/Policies'
 import WebsitePolicy from './pages/WebsitePolicy';
 import Authority from './pages/Authority';
+import AdminLayout from './admin/AdminLayout';
+import Dashboard from './admin/Dashboard';
+import AdminContentList from './admin/Contents/List';
+import AdminAddContent from './admin/Contents/Add';
 
 function App() {
     return (
@@ -62,6 +66,11 @@ function App() {
 
                 {/* นโยบาย */}
                 <Route path="/website-policy" element={<WebsitePolicy />} />
+            </Route>
+            <Route path="/admin" element={<AdminLayout />}>
+                <Route path="" element={<Dashboard />} />
+                <Route path="contents" element={<AdminContentList />} />
+                <Route path="contents/new" element={<AdminAddContent />} />
             </Route>
             <Route path="*" element={<NotFound />} />
         </Routes>

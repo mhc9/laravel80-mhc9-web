@@ -180,7 +180,8 @@ Route::middleware('auth:api')->group(function() {
     Route::delete('/inspections/{id}', 'App\Http\Controllers\InspectionController@destroy');
 });
 
-Route::get('/contents', 'App\Http\Controllers\WebDataController@getAll');
+Route::get('/contents', 'App\Http\Controllers\WebContentController@getAll');
+Route::get('/contents/search', 'App\Http\Controllers\WebContentController@search');
 
 Route::get('/db-connection', function () {
     try {
