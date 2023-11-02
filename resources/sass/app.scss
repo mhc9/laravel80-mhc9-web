@@ -1431,6 +1431,7 @@ footer {
                     height: auto;
                     padding: 0.25rem 0.75rem;
                     flex-direction: column;
+                    @apply w-4/12;
 
                     &:last-child,
                     &:nth-child(2) {
@@ -1445,6 +1446,7 @@ footer {
 
                     .post__secondary-img {
                         width: 100%;
+                        max-height: 120px;
                     }
 
                     .post__secondary-text {
@@ -3199,3 +3201,19 @@ ol {
     }
 }
 /* ================================== End Error page ================================== */
+
+
+.ql-container {
+    min-height: 50rem;
+    // height: 100%;
+    // flex: 1;
+    // display: flex;
+    // flex-direction: column;
+}
+
+.ql-editor {
+    height: 100%;
+    // flex: 1;
+    // overflow-y: auto;
+    // width: 100%;
+}

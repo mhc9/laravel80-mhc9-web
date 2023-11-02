@@ -17,7 +17,7 @@ const SlideHeros = () => {
                 navigation
                 pagination={{ clickable: true }}
                 autoplay={{
-                    delay: 2000
+                    delay: 3000
                 }}
             >
                 {slides.map((slide, index) => (
