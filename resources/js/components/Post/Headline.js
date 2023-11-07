@@ -11,7 +11,7 @@ const posts = [
         publish_up: '2023-11-01T13:00:00'
     },
     {
-        id: 1,
+        id: 2,
         title: '“วันนวมินทรมหาราช” วันที่ 13 ตุลาคม พ.ศ.2566',
         full_text: 'ศูนย์สุขภาจิตที่ 9 ร่วมน้อมสำนึกพระมหากรุณาธิคุณในพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราชบรมนาถบพิตรที่ทรงมีต่อปวงชนชาวไทย',
         author: { name: 'Admin' },
@@ -19,7 +19,7 @@ const posts = [
         publish_up: '2023-10-23T16:00:00'
     },
     {
-        id: 1,
+        id: 3,
         title: '“วันปิยะมหาราช”วันที่ 23ตุลาคม พ.ศ.2566',
         full_text: 'ศูนย์สุขภาจิตที่ 9 ร่วมถวายราชสักการะน้อมรำลึกในพระมหากรุณาธิคุณของพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว ที่ทรงมีต่อปวงชนชาวไทยเป็นล้นพ้นอย่างหาที่สุดมิได้ ณ บริเวณหน้าศาลากลางจังหวัดนครราชสีมา',
         author: { name: 'Admin' },
@@ -27,7 +27,7 @@ const posts = [
         publish_up: '2023-11-01T13:00:00'
     },
     {
-        id: 1,
+        id: 4,
         title: 'ขอแสดงความยินดีอธิบดีกรมสุขภาพจิต',
         full_text: 'ขอแสดงความยินดีกับ นายแพทย์พงศ์เกษม ไข่มุกด์ เนื่องในโอากาสได้รับแต่งตั้งให้ดำรงตำแหน่งอธิบดีกรมสุขภาพจิต',
         author: { name: 'Admin' },
@@ -38,13 +38,14 @@ const posts = [
 
 const PostHeadline = () => {
     const [headline, setHeadline] = useState(null);
+    const [subposts, setSubposts] = useState([]);
 
     useEffect(() => {
         /** Get 1st element from array */
         setHeadline(posts.find(e => true));
 
         /** Remove 1st element from array */
-        posts.shift();
+        setSubposts(posts.filter((post, index) => index > 0));
     }, []);
 
     return (
@@ -75,7 +76,7 @@ const PostHeadline = () => {
                     </div>
                     <div className="col-md-12 col-lg-5">
                         <ul className="post-secondary">
-                            {posts.map((post, index) => (
+                            {subposts.map((post, index) => (
                                 <li key={index}>
                                     <div className="post__secondary-img">
                                         <img src={post.images} alt="" />
@@ -95,7 +96,7 @@ const PostHeadline = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className="post-btn">
+                    <div className="post-btn mt-2">
                         <Link to="/posts/list" className="all-news">ข่าวทั้งหมด</Link>
                     </div>
                 </div>
