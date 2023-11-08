@@ -182,6 +182,7 @@ Route::middleware('auth:api')->group(function() {
 
 Route::get('/contents', 'App\Http\Controllers\WebContentController@getAll');
 Route::get('/contents/search', 'App\Http\Controllers\WebContentController@search');
+Route::get('/contents/init/form', 'App\Http\Controllers\WebContentController@getInitialFormData');
 
 Route::get('/db-connection', function () {
     try {

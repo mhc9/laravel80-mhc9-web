@@ -9,6 +9,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Models\WebContent;
 use App\Models\WebCategory;
+use App\Models\User;
 
 class WebContentController extends Controller
 {
@@ -85,9 +86,7 @@ class WebContentController extends Controller
                     // ->orderBy('category_id', 'ASC')
                     ->paginate($limit);
 
-        return [
-            'contents' => $contents,
-        ];
+        return $contents;
     }
 
     public function getAll(Request $req)
@@ -122,6 +121,14 @@ class WebContentController extends Controller
     {
         return [
             'content' =>  WebContent::with('category')->find($id),
+        ];
+    }
+
+    public function getInitialFormData()
+    {
+        return [
+            'categories'    => WebCategory::all(),
+            'authors'       => User::all(),
         ];
     }
 
