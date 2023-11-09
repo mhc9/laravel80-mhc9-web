@@ -76,9 +76,10 @@ const PostHeadline = () => {
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                    <div className="post-btn mt-2">
-                        <Link to="/posts/list" className="all-news">ข่าวทั้งหมด</Link>
+
+                        <div className="post-btn mt-2">
+                            <Link to="/posts/list" className="all-news">ข่าวทั้งหมด</Link>
+                        </div>
                     </div>
                 </div>
             </div>
