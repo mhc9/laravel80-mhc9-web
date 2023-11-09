@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
-use App\Models\WebContent;
-use App\Models\WebCategory;
+use App\Models\WebPost;
+use App\Models\WebPostCategory;
 use App\Models\User;
 
-class WebContentController extends Controller
+class WebPostController extends Controller
 {
     public function formValidate (Request $request)
     {
@@ -66,7 +66,7 @@ class WebContentController extends Controller
         // $name = $req->get('name');
         $limit = $req->get('limit') ? $req->get('limit') : 10;
 
-        $contents = WebContent::with('category')
+        $posts = WebPost::with('category')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('plan_type_id', $type);
                     // })
@@ -86,7 +86,7 @@ class WebContentController extends Controller
                     // ->orderBy('category_id', 'ASC')
                     ->paginate($limit);
 
-        return $contents;
+        return $posts;
     }
 
     public function getAll(Request $req)
@@ -94,7 +94,7 @@ class WebContentController extends Controller
         /** Get params from query string */
         // $type = $req->get('type');
 
-        $contents = WebContent::with('category')
+        $posts = WebPost::with('category')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('type_id', $type);
                     // })
@@ -114,20 +114,20 @@ class WebContentController extends Controller
                     // ->orderBy('WdDate', 'DESC')
                     ->get();
 
-        return $contents;
+        return $posts;
     }
 
     public function getById($id)
     {
-        return [
-            'content' =>  WebContent::with('category')->find($id),
-        ];
+        $post =  WebPost::with('category')->find($id);
+
+        return $post;
     }
 
     public function getInitialFormData()
     {
         return [
-            'categories'    => WebCategory::all(),
+            'categories'    => WebPostCategory::all(),
             'authors'       => User::all(),
         ];
     }
@@ -135,29 +135,41 @@ class WebContentController extends Controller
     public function store(Request $req)
     {
         try {
-            $content = new WebContent();
-            $content->title         = $req['title'];
-            $content->category_id   = $req['category_id'];
-            $content->alias         = $req['alias'];
-            $content->intro_text    = $req['intro_text'];
-            $content->full_text     = $req['full_text'];
-            $content->publish_up    = $req['publish_up'];
-            $content->publish_down  = $req['publish_down'];
-            $content->urls          = $req['urls'];
-            $content->hits          = $req['hits'];
-            $content->featured      = $req['featured'];
-            $content->ordering      = $req['ordering'];
-            $content->created_by    = $req['created_by'];
-            $content->updated_by    = $req['updated_by'];
+            $post = new WebPost();
+            $post->title            = $req['title'];
+            $post->alias            = $req['alias'];
+            $post->intro_text       = $req['intro_text'];
+            $post->full_text        = $req['full_text'];
+            $post->content_type_id  = $req['content_type_id'];
+            $post->category_id      = $req['category_id'];
+            $post->author_id        = $req['author_id'];
+            $post->publish_up       = $req['publish_up'];
+            $post->publish_down     = $req['publish_down'];
+            $post->urls             = $req['urls'];
+            $post->hits             = $req['hits'];
+            $post->tags             = $req['tags'];
+            $post->status           = 1;
+            $post->ordering         = $req['ordering'];
+            $post->created_by       = $req['created_by'];
+            $post->updated_by       = $req['updated_by'];
 
-            /** Upload image */
-            // $content->images        = $req['images'];
+            /** Upload image */            
+            if ($req->file('featured')) {
+                $file = $req->file('featured');
+                $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
+                $destinationPath = 'uploads/'.date('Y').'/'.date('mm').'/';
 
-            if($content->save()) {
+                if ($filePath = $file->move($destinationPath, $fileName)) {
+                    $post->featured = $fileName;
+                    $post->guid	    = $filePath;
+                }
+            }
+
+            if($post->save()) {
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
-                    'content'   => $content
+                    'post'      => $post
                 ];
             } else {
                 return [
@@ -176,36 +188,32 @@ class WebContentController extends Controller
     public function update(Request $req, $id)
     {
         try {
-            $content = WebContent::find($id);
-            // $item->plan_type_id = $req['plan_type_id'];
-            // $item->category_id  = $req['category_id'];
-            // $item->group_id     = $req['group_id'];
-            // $item->asset_no     = $req['asset_no'];
-            // $item->item_name    = $req['item_name'];
-            // $item->en_name      = $req['en_name'];
-            // $item->price_per_unit = currencyToNumber($req['price_per_unit']);
-            // $item->unit_id      = $req['unit_id'];
-            // $item->in_stock     = $req['in_stock'];
-            // $item->calc_method  = $req['calc_method'];
-            // $item->have_subitem = $req['have_subitem'];
-            // $item->is_fixcost   = $req['is_fixcost'];
-            // $item->is_repairing_item = $req['is_repairing_item'];
-            // $item->is_addon     = $req['is_addon'];
-            // $item->first_year   = $req['first_year'];
-            // $item->remark       = $req['remark'];
+            $post = WebPost::find($id);
+            $post->title         = $req['title'];
+            $post->category_id   = $req['category_id'];
+            $post->alias         = $req['alias'];
+            $post->intro_text    = $req['intro_text'];
+            $post->full_text     = $req['full_text'];
+            $post->publish_up    = $req['publish_up'];
+            $post->publish_down  = $req['publish_down'];
+            $post->urls          = $req['urls'];
+            $post->hits          = $req['hits'];
+            $post->featured      = $req['featured'];
+            $post->ordering      = $req['ordering'];
+            $post->updated_by    = $req['updated_by'];
 
-            // if($item->save()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Updating successfully!!',
-            //         'item'      => $item
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($post->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Updating successfully!!',
+                    'post'      => $post
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
@@ -217,13 +225,13 @@ class WebContentController extends Controller
     public function destroy(Request $req, $id)
     {
         try {
-            // $item = Item::find($id);
+            // $post = WebPost::find($id);
 
-            // if($item->delete()) {
+            // if($post->delete()) {
             //     return [
             //         'status'    => 1,
             //         'message'   => 'Deleting successfully!!',
-            //         'item'      => $item
+            //         'post'      => $post
             //     ];
             // } else {
             //     return [
