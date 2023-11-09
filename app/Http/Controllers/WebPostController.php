@@ -64,9 +64,9 @@ class WebPostController extends Controller
         // $cate = $req->get('cate');
         // $group = $req->get('group');
         // $name = $req->get('name');
-        $limit = $req->get('limit') ? $req->get('limit') : 10;
+        $limit = !empty($req->get('limit')) ? $req->get('limit') : 10;
 
-        $posts = WebPost::with('category')
+        $posts = WebPost::with('category','author')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('plan_type_id', $type);
                     // })
@@ -82,8 +82,7 @@ class WebPostController extends Controller
                     //         $query->orWhere('en_name', 'like', '%'.$name.'%');
                     //     });
                     // })
-                    // ->orderBy('created_at', 'ASC')
-                    // ->orderBy('category_id', 'ASC')
+                    ->orderBy('publish_up', 'DESC')
                     ->paginate($limit);
 
         return $posts;
@@ -94,7 +93,7 @@ class WebPostController extends Controller
         /** Get params from query string */
         // $type = $req->get('type');
 
-        $posts = WebPost::with('category')
+        $posts = WebPost::with('category','author')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('type_id', $type);
                     // })
@@ -111,7 +110,7 @@ class WebPostController extends Controller
                     // ->when($inStock != '', function($q) use ($inStock) {
                     //     $q->where('in_stock', $inStock);
                     // })
-                    // ->orderBy('WdDate', 'DESC')
+                    // ->orderBy('publish_up', 'DESC')
                     ->get();
 
         return $posts;
@@ -119,7 +118,7 @@ class WebPostController extends Controller
 
     public function getById($id)
     {
-        $post =  WebPost::with('category')->find($id);
+        $post =  WebPost::with('category','author')->find($id);
 
         return $post;
     }
@@ -157,7 +156,7 @@ class WebPostController extends Controller
             if ($req->file('featured')) {
                 $file = $req->file('featured');
                 $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
-                $destinationPath = 'uploads/'.date('Y').'/'.date('mm').'/';
+                $destinationPath = 'uploads/'.date('Y').'/'.date('m').'/';
 
                 if ($filePath = $file->move($destinationPath, $fileName)) {
                     $post->featured = $fileName;

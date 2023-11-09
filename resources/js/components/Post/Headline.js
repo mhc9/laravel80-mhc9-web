@@ -1,52 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
-const posts = [
-    {
-        id: 1,
-        title: 'สัปดาห์สุขภาพจิตแห่งชาติ 2566 “Mentalhealth anywhere, Helpers care everyone” เพื่อนแท้มีทุกที่ เพื่อนดีดูแลใจ',
-        full_text: 'ศูนย์สุขภาพจิตที่9 ร่วมกับ โรงพยาบาลจิตเวชนครราชสีมาราชนครินทร์ จัดงานกิจกรรมสัปดาห์สุขภาพจิตแห่งชาติ ประจำปี 2566 “Mentalhealth anywhere, Helpers care everyone” เพื่อนแท้มีทุกที่เพื่อนดีดูแลใจ วันที่ 1 - 2 พฤศจิกายน 2566 ณ วาไรตี้ฮอลล์ชั้น 3 เดอะมอลล์โคราช',
-        author: { name: 'Admin' },
-        images: 'https://www.mhc9dmh.com/data/photo/1136_S__148029462_0.jpg',
-        publish_up: '2023-11-01T13:00:00'
-    },
-    {
-        id: 2,
-        title: '“วันนวมินทรมหาราช” วันที่ 13 ตุลาคม พ.ศ.2566',
-        full_text: 'ศูนย์สุขภาจิตที่ 9 ร่วมน้อมสำนึกพระมหากรุณาธิคุณในพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราชบรมนาถบพิตรที่ทรงมีต่อปวงชนชาวไทย',
-        author: { name: 'Admin' },
-        images: 'https://www.mhc9dmh.com/data/photo/1134_IMG_5040.JPG',
-        publish_up: '2023-10-23T16:00:00'
-    },
-    {
-        id: 3,
-        title: '“วันปิยะมหาราช”วันที่ 23ตุลาคม พ.ศ.2566',
-        full_text: 'ศูนย์สุขภาจิตที่ 9 ร่วมถวายราชสักการะน้อมรำลึกในพระมหากรุณาธิคุณของพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว ที่ทรงมีต่อปวงชนชาวไทยเป็นล้นพ้นอย่างหาที่สุดมิได้ ณ บริเวณหน้าศาลากลางจังหวัดนครราชสีมา',
-        author: { name: 'Admin' },
-        images: 'https://www.mhc9dmh.com/data/photo/1135_DSC03862.JPG',
-        publish_up: '2023-11-01T13:00:00'
-    },
-    {
-        id: 4,
-        title: 'ขอแสดงความยินดีอธิบดีกรมสุขภาพจิต',
-        full_text: 'ขอแสดงความยินดีกับ นายแพทย์พงศ์เกษม ไข่มุกด์ เนื่องในโอากาสได้รับแต่งตั้งให้ดำรงตำแหน่งอธิบดีกรมสุขภาพจิต',
-        author: { name: 'Admin' },
-        images: 'https://www.mhc9dmh.com/data/photo/%E0%B8%82%E0%B8%AD%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A2%E0%B8%B4%E0%B8%99%E0%B8%94%E0%B8%B5%20(8%20x%205%20%E0%B8%8B%E0%B8%A1.)%20(1).jpg',
-        publish_up: '2023-10-12T08:00:00'
-    }
-];
+import api from '../../api'
 
 const PostHeadline = () => {
     const [headline, setHeadline] = useState(null);
     const [subposts, setSubposts] = useState([]);
 
     useEffect(() => {
+        getPosts();
+    }, []);
+
+    const getPosts = async () => {
+        const res = await api.get('/api/posts?page=&limit=4');
+        const { data, ...pager } = res.data;
+
         /** Get 1st element from array */
-        setHeadline(posts.find(e => true));
+        setHeadline(data.find(e => true));
 
         /** Remove 1st element from array */
-        setSubposts(posts.filter((post, index) => index > 0));
-    }, []);
+        setSubposts(data.filter((post, index) => index > 0));
+    };
 
     return (
         <div className="post-box">
@@ -59,7 +32,7 @@ const PostHeadline = () => {
                     <div className="col-md-12 col-lg-7">
                         <div className="post-headline">
                             <div className="headline-img">
-                                <img src={headline?.images} alt="" />
+                                <img src={`./${headline?.guid}`} alt="headline-pic" />
                             </div>
                             <div className="headline-text">
                                 <h4>{headline?.title}</h4>
@@ -68,9 +41,17 @@ const PostHeadline = () => {
                                     <span><i className="fas fa-user-alt"></i> {headline?.author?.name}</span>
                                 </h5>
                                 <p>
-                                    {headline?.full_text}
+                                    <span>{headline?.intro_text}</span>
+                                    {/* <span dangerouslySetInnerHTML={{ __html: headline?.full_text }}></span> */}
                                     <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
                                 </p>
+                                {headline?.tags && (
+                                    <div className="mb-2">
+                                        {headline?.tags.split(',').map((tag, index) => (
+                                            <div className="badge rounded-pill bg-secondary me-1" key={index}>{tag}</div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -79,7 +60,7 @@ const PostHeadline = () => {
                             {subposts.map((post, index) => (
                                 <li key={index}>
                                     <div className="post__secondary-img">
-                                        <img src={post.images} alt="" />
+                                        <img src={`./${post?.guid}`} className="lg:h-[100px] max-lg:h-[120px]" alt="post-pic" />
                                     </div>
                                     <div className="post__secondary-text">
                                         <h4><Link to="/">{post.title}</Link></h4>
@@ -88,7 +69,7 @@ const PostHeadline = () => {
                                             <span><i className="fas fa-user-alt"></i> {post.author?.name}</span>
                                         </h5>
                                         <p>
-                                            {post.full_text}
+                                            {post.intro_text}
                                             <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
                                         </p>
                                     </div>

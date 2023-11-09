@@ -15,4 +15,9 @@ class WebPost extends Model
     {
         return $this->belongsTo(WebPostCategory::class, 'category_id', 'id');
     }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id', 'id');
+    }
 }
