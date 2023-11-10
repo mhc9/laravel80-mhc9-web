@@ -11,7 +11,7 @@ const PostHeadline = () => {
     }, []);
 
     const getPosts = async () => {
-        const res = await api.get('/api/posts?page=&limit=4');
+        const res = await api.get('/api/posts?page=&cate=2&limit=4');
         const { data, ...pager } = res.data;
 
         /** Get 1st element from array */

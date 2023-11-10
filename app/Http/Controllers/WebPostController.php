@@ -60,8 +60,8 @@ class WebPostController extends Controller
     public function search(Request $req)
     {
         /** Get params from query string */
+        $cate = $req->get('cate');
         // $type = $req->get('type');
-        // $cate = $req->get('cate');
         // $group = $req->get('group');
         // $name = $req->get('name');
         $limit = !empty($req->get('limit')) ? $req->get('limit') : 10;
@@ -70,9 +70,9 @@ class WebPostController extends Controller
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('plan_type_id', $type);
                     // })
-                    // ->when(!empty($cate), function($q) use ($cate) {
-                    //     $q->where('category_id', $cate);
-                    // })
+                    ->when(!empty($cate), function($q) use ($cate) {
+                        $q->where('category_id', $cate);
+                    })
                     // ->when(!empty($group), function($q) use ($group) {
                     //     $q->where('group_id', $group);
                     // })
@@ -97,9 +97,9 @@ class WebPostController extends Controller
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('type_id', $type);
                     // })
-                    // ->when(!empty($cate), function($q) use ($cate) {
-                    //     $q->where('category_id', $cate);
-                    // })
+                    ->when(!empty($cate), function($q) use ($cate) {
+                        $q->where('category_id', $cate);
+                    })
                     // ->when(!empty($group), function($q) use ($group) {
                     //     $q->where('group_id', $group);
                     // })
