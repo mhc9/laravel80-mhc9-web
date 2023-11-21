@@ -3,13 +3,13 @@ import SlideHeros from '../SlideHeros'
 import OptionMenu from '../OptionMenu'
 import SlideLogos from '../SlideLogos'
 import PostHeadline from '../Post/Headline'
-import Director from '../shared/Director'
+import Director from '../Director'
 import VideoFeed from '../Video/Feed'
 import NewsFeed from '../News/Feed'
-import InfographicFeed from '../Infographic/Feed'
 import ArticleFeed from '../Article/Feed'
 import EService from '../EService'
 import OfficerService from '../OfficerService'
+import OnepageFeed from '../Onepage/Feed'
 
 const Home = () => {
     return (
@@ -57,7 +57,7 @@ const Home = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <InfographicFeed />
+                                    <OnepageFeed />
                                 </div>
                             </div>
                         </div>

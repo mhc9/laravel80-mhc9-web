@@ -13,10 +13,10 @@ const slides = [
     { id: 9, imgUrl: './img/info-01.jpg' },
 ];
 
-const InfographicList = () => {
+const OnepageList = () => {
     return (
         <section className="info__list-container container">
-            <h1 className="title">อินโฟกราฟฟิก</h1>
+            <h1 className="title">Press News</h1>
 
             <hr className="my-2" />
 
@@ -61,4 +61,4 @@ const InfographicList = () => {
     )
 }
 
-export default InfographicList
+export default OnepageList

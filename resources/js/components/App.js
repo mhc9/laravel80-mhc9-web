@@ -19,7 +19,7 @@ import PostList from './Post/List';
 import NewsList from './News/List'
 import ArticleList from './Article/List';
 import VideoList from './Video/List';
-import InfographicList from './Infographic/List';
+import OnepageList from './Onepage/List';
 import Downloads from './pages/Downloads'
 import Laws from './pages/Laws'
 import AnnualReports from './pages/AnnualReports'
@@ -53,7 +53,7 @@ function App() {
                 <Route path="/news/:type/list" element={<NewsList />} />
                 <Route path="/articles/list" element={<ArticleList />} />
                 <Route path="/videos/list" element={<VideoList />} />
-                <Route path="/infographics/list" element={<InfographicList />} />
+                <Route path="/onepages/list" element={<OnepageList />} />
                 <Route path="/calendar" element={<Calendar />} />
 
                 {/* ติดต่อเรา */}

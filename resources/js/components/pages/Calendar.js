@@ -1,5 +1,5 @@
 import React from 'react'
-import C9Calendar from '../C9Calendar'
+import C9Calendar from '../Calendars/C9Calendar'
 import events from '../../data/events.json'
 
 const Calendar = () => {
