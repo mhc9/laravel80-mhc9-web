@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export const Pagination = ({ pager, onPageClick }) => {
+const Pagination = ({ pager, onPageClick }) => {
     const [pageNum, setPageNum] = useState([]);
 
     useEffect(() => {
@@ -37,3 +37,5 @@ export const Pagination = ({ pager, onPageClick }) => {
         </nav>
     )
 }
+
+export default Pagination;
