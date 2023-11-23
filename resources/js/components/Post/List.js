@@ -1,6 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import api from '../../api'
+import { Pagination } from '../Pagination';
 
 const PostList = () => {
+    const [posts, setPosts] = useState([]);
+    const [pager, setPager] = useState(null);
+    const [endpoint, setEndpoint] = useState('');
+
+    useEffect(() => {
+        if (endpoint === '') {
+            getPosts('/api/posts?page=&cate=2&limit=5');
+        } else {
+            getPosts(`${endpoint}&cate=2&limit=5`);
+        }
+    }, [endpoint]);
+
+    const getPosts = async (url) => {
+        const res = await api.get(url);
+        const { data, ..._pager } = res.data;
+
+        setPosts(data);
+        setPager(_pager);
+    };
+
     return (
         <section className="post__list-container container">
             <h1 className="title">ข่าวประชาสัมพันธ์</h1>
@@ -9,42 +32,32 @@ const PostList = () => {
 
             <div className="post__list-wrapper">
                 <div className="row">
-                    {[1,2,3,4,5,6,7,8,9,10].map((item, index) => (
-                        <div className="col-md-12 post__list-item" key={index}>
+                    {posts && posts.map((post, index) => (
+                        <div className="col-md-12 post__list-item" key={post.id}>
                             <div className="post__list-img">
-                                <img src="./img/post-02.jpg" alt="" />
+                                <img src={`./${post?.guid}`} alt="post-pic" />
                             </div>
                             <div className="post__list-text">
-                                <h4>สุดปัง! คว้ารางวัลคุณภาพบริหารจัดการภาครัฐดีเด่น</h4>
+                                <h4><Link to="/">{post.title}</Link></h4>
                                 <h5 className="text-muted">
-                                    <span><i className="fas fa-calendar-alt"></i> 2023-09-09 16:00 น.</span>
-                                    <span><i className="fas fa-user-alt"></i> Admin</span>
+                                    <span><i className="fas fa-calendar-alt"></i> {post.publish_up} น.</span>
+                                    <span><i className="fas fa-user-alt"></i> {post.author?.name}</span>
                                 </h5>
                                 <p>
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    {post.intro_text}
                                     <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
                                 </p>
                             </div>
                         </div>
                     ))}
                 </div>
-                <nav aria-label="navigation" className="c9__pagination">
-                    <ul>
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                
+                {pager && (
+                    <Pagination
+                        pager={pager}
+                        onPageClick={(url) => setEndpoint(url)}
+                    />
+                )}
             </div>
         </section>
     )

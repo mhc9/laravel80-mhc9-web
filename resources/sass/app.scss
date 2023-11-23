@@ -169,6 +169,17 @@ nav.c9__pagination {
                 transform: translateY(-5px);
             }
         }
+
+        > li.active {
+            color: #fff;
+            background: var(--color0);
+
+            &:hover {
+                color: var(--color0);
+                background: #fff;
+                transform: translateY(-5px);
+            }
+        }
     }
 }
 // .defaullt-layout { position: relative; }
