@@ -11,10 +11,10 @@ const ArticleFeed = () => {
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        getPosts();
+        getArticles();
     }, []);
 
-    const getPosts = async () => {
+    const getArticles = async () => {
         const res = await api.get('/api/posts?page=&cate=6&limit=8');
         const { data, ...pager } = res.data;
 

@@ -1,8 +1,30 @@
-import React from 'react'
-import articles from '../../data/articles.json'
+import React, { useEffect, useState } from 'react'
+import api from '../../api'
 import ArticleCard from './ArticleCard'
+import Pagination from '../Pagination'
 
 const ArticleList = () => {
+    const [articles, setArticles] = useState([]);
+    const [pager, setPager] = useState(null);
+    const [endpoint, setEndpoint] = useState('');
+
+    useEffect(() => {
+        if (endpoint === '') {
+            getArticles('/api/posts?page=&cate=6&limit=5');
+        } else {
+            getArticles(`${endpoint}&cate=6&limit=5`);
+        }
+    }, [endpoint]);
+
+    const getArticles = async (url) => {
+        const res = await api.get(url);
+        const { data, ..._pager } = res.data;
+
+        setArticles(data);
+        setPager(_pager);
+    };
+
+
     return (
         <section className="article__list-container container">
             <h1 className="title">บทความสุขภาพจิต</h1>
@@ -15,23 +37,13 @@ const ArticleList = () => {
                         <ArticleCard article={article} key={article?.id} />
                     ))}
                 </div>
-                <nav aria-label="navigation" className="c9__pagination">
-                    <ul>
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+
+                {pager && (
+                    <Pagination
+                        pager={pager}
+                        onPageClick={(url) => setEndpoint(url)}
+                    />
+                )}
             </div>
         </section>
     )
