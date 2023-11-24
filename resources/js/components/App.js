@@ -19,6 +19,7 @@ import PostList from './Post/List';
 import PostDetail from './Post/Detail';
 import NewsList from './News/List'
 import ArticleList from './Article/List';
+import ArticleDetail from './Article/Detail';
 import VideoList from './Video/List';
 import OnepageList from './Onepage/List';
 import Downloads from './pages/Downloads'
@@ -54,6 +55,7 @@ function App() {
                 <Route path="/posts/:id" element={<PostDetail />} />
                 <Route path="/news/:type/list" element={<NewsList />} />
                 <Route path="/articles/list" element={<ArticleList />} />
+                <Route path="/articles/:id" element={<ArticleDetail />} />
                 <Route path="/videos/list" element={<VideoList />} />
                 <Route path="/onepages/list" element={<OnepageList />} />
                 <Route path="/calendar" element={<Calendar />} />

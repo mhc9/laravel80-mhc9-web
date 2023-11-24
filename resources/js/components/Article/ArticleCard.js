@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ArticleCard = ({ article }) => {
     return (
@@ -16,7 +17,9 @@ const ArticleCard = ({ article }) => {
                     <p className="card-text">
                         <span>{article?.intro_text}</span>
                         {/* <span dangerouslySetInnerHTML={{ __html: article?.full_text }}></span> */}
-                        <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
+                        <span className="readmore">
+                            <Link to={`/articles/${article?.id}`}>อ่านเพิ่มเติม</Link>
+                        </span>
                     </p>
                 </div>
             </div>
