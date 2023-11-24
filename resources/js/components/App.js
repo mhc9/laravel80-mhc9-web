@@ -16,6 +16,7 @@ import Executives from './pages/Executives';
 import Calendar from './pages/Calendar';
 import Links from './pages/Links';
 import PostList from './Post/List';
+import PostDetail from './Post/Detail';
 import NewsList from './News/List'
 import ArticleList from './Article/List';
 import VideoList from './Video/List';
@@ -50,6 +51,7 @@ function App() {
 
                 {/* ข่าวประชาสัมพันธ์ */}
                 <Route path="/posts/list" element={<PostList />} />
+                <Route path="/posts/:id" element={<PostDetail />} />
                 <Route path="/news/:type/list" element={<NewsList />} />
                 <Route path="/articles/list" element={<ArticleList />} />
                 <Route path="/videos/list" element={<VideoList />} />

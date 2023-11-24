@@ -43,7 +43,9 @@ const PostHeadline = () => {
                                 <p>
                                     <span>{headline?.intro_text}</span>
                                     {/* <span dangerouslySetInnerHTML={{ __html: headline?.full_text }}></span> */}
-                                    <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
+                                    <span className="readmore">
+                                        <Link to={`/posts/${headline?.id}`}>อ่านเพิ่มเติม</Link>
+                                    </span>
                                 </p>
                                 {headline?.tags && (
                                     <div className="mb-2">
@@ -70,7 +72,9 @@ const PostHeadline = () => {
                                         </h5>
                                         <p>
                                             {post.intro_text}
-                                            <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
+                                            <span className="readmore">
+                                                <Link to={`/posts/${post?.id}`}>อ่านเพิ่มเติม</Link>
+                                            </span>
                                         </p>
                                     </div>
                                 </li>
