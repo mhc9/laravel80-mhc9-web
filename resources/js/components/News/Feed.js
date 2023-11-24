@@ -1,7 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import api from '../../api'
 
 const NewsFeed = () => {
+    const [procurements, setProcurements] = useState([]); // 3 ข่าวจัดซื้อจัดจ้าง
+    const [recruitments, setRecruitments] = useState([]); // 4 ข่าวรับสมัครงาน
+    const [notices, setNotices] = useState([]); // 5 ประกาศ
+
+    useEffect(() => {
+            getNews('/api/posts?page=', 3);
+            getNews('/api/posts?page=', 4);
+            getNews('/api/posts?page=', 5);
+    }, []);
+
+    const getNews = async (url, category) => {
+        const res = await api.get(`${url}&cate=${category}&limit=5`);
+        const { data, ..._pager } = res.data;
+
+        if (category === 3) {
+            setProcurements(data);
+        } else if (category === 4) {
+            setRecruitments(data);
+        } else {
+            setNotices(data);
+        }
+    };
+
     return (
         <div className="news-box">
             <h1 className="title">ข่าวศูนย์สุขภาพจิตที่ 9</h1>
@@ -13,52 +37,52 @@ const NewsFeed = () => {
                     <h4>ข่าวจัดซื้อจัดจ้าง</h4>
                     <div className="news-list">
                         <ul>
-                            {[1,2,3,4,5].map((item, index) => (
+                            {procurements.map((item, index) => (
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        ประกาศผู้ชนะจัดซื้อจัดจ้างวงเงินต่ำกว่า 5 พันบาท-ไตรมาสที่ 1
+                                        {item.title}
                                         <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <Link to={`/news/${'1'}/list`} className="all-news">ข่าวทั้งหมด</Link>
+                    {procurements.length > 10 && <Link to={`/news/${'1'}/list`} className="all-news">ข่าวทั้งหมด</Link>}
                 </div>
                 <div className="col-lg-4 col-md-12 news-wrapper">
                     <h4>ข่าวรับสมัครงาน</h4>
                     <div className="news-list">
                         <ul>
-                            {[1,2,3,4,5].map((item, index) => (
+                            {recruitments.map((item, index) => (
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        ประกาศรายชื่อผู้ผ่านการคัดเลือกรับย้ายและรับโอนข้าราชการพลเรือนตำแหน่งนักวิชาการสาธารณสุข
+                                        {item.title}
                                         <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <Link to={`/news/${'2'}/list`} className="all-news">ข่าวทั้งหมด</Link>
+                    {recruitments.length > 10 && <Link to={`/news/${'2'}/list`} className="all-news">ข่าวทั้งหมด</Link>}
                 </div>
                 <div className="col-lg-4 col-md-12 news-wrapper">
                     <h4>ประกาศ</h4>
                     <div className="news-list">
                         <ul>
-                            {[1,2,3,4,5].map((item, index) => (
+                            {notices.map((item, index) => (
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        นโบายการบริหารงานด้วยความซื่อสัตย์สุจริต มีคุณธรรม โปร่งใส
+                                        {item.title}
                                         <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
                                     </p>
                                 </li>
                             ))}
                         </ul>
                     </div>
-                    <Link to={`/news/${'3'}/list`} className="all-news">ประกาศทั้งหมด</Link>
+                    {notices.length > 10 && <Link to={`/news/${'3'}/list`} className="all-news">ประกาศทั้งหมด</Link>}
                 </div>
             </div>
         </div>

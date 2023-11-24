@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import api from '../../api'
 
 const newsTypes = [
     { id: 1, name: "ข่าวจัดซื้อจัดจ้าง" },
@@ -9,6 +10,38 @@ const newsTypes = [
 
 const NewsList = () => {
     const { type } = useParams();
+    const [procurements, setProcurements] = useState([]); // 3 ข่าวจัดซื้อจัดจ้าง
+    const [recruitments, setRecruitments] = useState([]); // 4 ข่าวรับสมัครงาน
+    const [notices, setNotices] = useState([]); // 5 ประกาศ
+    const [pager, setPager] = useState(null);
+    const [endpoint, setEndpoint] = useState('');
+
+    useEffect(() => {
+        if (endpoint === '') {
+            getNews('/api/posts?page=', 3);
+            getNews('/api/posts?page=', 4);
+            getNews('/api/posts?page=', 5);
+        } else {
+            getNews(`${endpoint}`, 3);
+            getNews(`${endpoint}`, 4);
+            getNews(`${endpoint}`, 5);
+        }
+    }, [endpoint]);
+
+    const getNews = async (url, category) => {
+        const res = await api.get(`${url}&cate=${category}&limit=5`);
+        const { data, ..._pager } = res.data;
+
+        if (category === 3) {
+            setProcurements(data);
+        } else if (category === 4) {
+            setRecruitments(data);
+        } else {
+            setNotices(data);
+        }
+
+        setPager(_pager);
+    };
 
     const getNewsType = (type) => {
         return newsTypes.find(nt => nt.id === type);
