@@ -42,7 +42,9 @@ const NewsFeed = () => {
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
                                         {item.title}
-                                        <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
+                                        <span className="readmore ms-1">
+                                            <Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link>
+                                        </span>
                                     </p>
                                 </li>
                             ))}
@@ -59,7 +61,9 @@ const NewsFeed = () => {
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
                                         {item.title}
-                                        <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
+                                        <span className="readmore ms-1">
+                                            <Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link>
+                                        </span>
                                     </p>
                                 </li>
                             ))}
@@ -76,7 +80,9 @@ const NewsFeed = () => {
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
                                         {item.title}
-                                        <span className="readmore ms-1"><a href="">อ่านเพิ่มเติม</a></span>
+                                        <span className="readmore ms-1">
+                                            <Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link>
+                                        </span>
                                     </p>
                                 </li>
                             ))}
