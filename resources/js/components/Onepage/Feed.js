@@ -19,7 +19,7 @@ const OnepageFeed = () => {
     }, []);
 
     const getOnepages = async () => {
-        const res = await api.get('/api/posts?page=&cate=8&limit=4');
+        const res = await api.get('/api/posts?page=&cate=8&limit=6');
         const { data, ...pager } = res.data;
 
         setOnepages(data);
