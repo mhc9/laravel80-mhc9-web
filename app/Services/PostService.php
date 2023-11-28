@@ -17,7 +17,7 @@ class PostService
         //
     }
 
-    public function uploadFile(Request $req, WebPost $post)
+    public function uploadFile(Request $req)
     {
         if ($req->hasFile('featured')) {
             $file = $req->file('featured');
