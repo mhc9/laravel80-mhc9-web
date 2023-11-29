@@ -89,17 +89,17 @@ Route::middleware('auth:api')->group(function() {
     Route::delete('/units/{id}', 'App\Http\Controllers\UnitController@destroy');
 
     /** Posts */
-    Route::get('/posts', 'App\Http\Controllers\WebPostController@getAll');
-    Route::get('/posts/search', 'App\Http\Controllers\WebPostController@search');
-    Route::get('/posts/{id}', 'App\Http\Controllers\WebPostController@getById');
-    Route::get('/posts/init/form', 'App\Http\Controllers\WebPostController@getInitialFormData');
-    Route::post('/posts', 'App\Http\Controllers\WebPostController@store');
-    Route::put('/posts/{id}', 'App\Http\Controllers\WebPostController@update');
-    Route::delete('/posts/{id}', 'App\Http\Controllers\WebPostController@destroy');
+    Route::get('/posts', 'App\Http\Controllers\PostController@getAll');
+    Route::get('/posts/search', 'App\Http\Controllers\PostController@search');
+    Route::get('/posts/{id}', 'App\Http\Controllers\PostController@getById');
+    Route::get('/posts/init/form', 'App\Http\Controllers\PostController@getInitialFormData');
+    Route::post('/posts', 'App\Http\Controllers\PostController@store');
+    Route::put('/posts/{id}', 'App\Http\Controllers\PostController@update');
+    Route::delete('/posts/{id}', 'App\Http\Controllers\PostController@destroy');
 });
 
-Route::get('/posts', 'App\Http\Controllers\WebPostController@search');
-Route::get('/posts/{id}', 'App\Http\Controllers\WebPostController@getById');
+Route::get('/posts', 'App\Http\Controllers\PostController@search');
+Route::get('/posts/{id}', 'App\Http\Controllers\PostController@getById');
 
 Route::get('/db-connection', function () {
     try {

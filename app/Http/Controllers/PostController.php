@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\MessageBag;
 use App\Services\PostService;
-use App\Models\WebPost;
-use App\Models\WebPostCategory;
+use App\Models\Post;
+use App\Models\PostCategory;
 use App\Models\User;
 
-class WebPostController extends Controller
+class PostController extends Controller
 {
     protected $postService;
 
@@ -35,7 +35,7 @@ class WebPostController extends Controller
         // $name = $req->get('name');
         $limit = !empty($req->get('limit')) ? $req->get('limit') : 10;
 
-        $posts = WebPost::with('category','author')
+        $posts = Post::with('category','author')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('plan_type_id', $type);
                     // })
@@ -62,7 +62,7 @@ class WebPostController extends Controller
         /** Get params from query string */
         // $type = $req->get('type');
 
-        $posts = WebPost::with('category','author')
+        $posts = Post::with('category','author')
                     // ->when(!empty($type), function($q) use ($type) {
                     //     $q->where('type_id', $type);
                     // })
@@ -103,30 +103,12 @@ class WebPostController extends Controller
     public function store(Request $req)
     {
         try {
-            $post = new WebPost();
-            $post->title            = $req['title'];
-            $post->alias            = $req['alias'];
-            $post->intro_text       = $req['intro_text'];
-            $post->full_text        = $req['full_text'];
-            $post->content_type_id  = $req['content_type_id'];
-            $post->category_id      = $req['category_id'];
-            $post->author_id        = $req['author_id'];
-            $post->publish_up       = $req['publish_up'];
-            $post->publish_down     = $req['publish_down'];
-            $post->urls             = $req['urls'];
-            $post->hits             = $req['hits'];
-            $post->tags             = $req['tags'];
-            $post->status           = 1;
-            $post->ordering         = $req['ordering'];
-            $post->created_by       = $req['created_by'];
-            $post->updated_by       = $req['updated_by'];
-
             /** Upload image */            
             $uploaded = $this->postService->uploadFile($req);
             // $post->featured = $uploaded['fileName'];
             // $post->guid	    = $uploaded['filePath'];
 
-            if($post->save()) {
+            if($this->postService->createPost($req)) {
                 return [
                     'status'    => 1,
                     'message'   => 'Insertion successfully!!',
@@ -149,7 +131,7 @@ class WebPostController extends Controller
     public function update(Request $req, $id)
     {
         try {
-            $post = WebPost::find($id);
+            $post = Post::find($id);
             $post->title         = $req['title'];
             $post->category_id   = $req['category_id'];
             $post->alias         = $req['alias'];
@@ -186,7 +168,7 @@ class WebPostController extends Controller
     public function destroy(Request $req, $id)
     {
         try {
-            // $post = WebPost::find($id);
+            // $post = Post::find($id);
 
             // if($post->delete()) {
             //     return [
