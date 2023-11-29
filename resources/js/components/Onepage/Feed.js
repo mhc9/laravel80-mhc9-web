@@ -45,7 +45,7 @@ const OnepageFeed = () => {
                         <SwiperSlide key={slide.id}>
                             <div className="col-md-3 info-item">
                                 <div className="info-img">
-                                    <img src={`./${slide?.guid}`} alt="info-pic" />
+                                    <img src={`./${slide?.featured}`} alt="info-pic" />
                                 </div>
                             </div>
                         </SwiperSlide>

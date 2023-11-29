@@ -32,7 +32,7 @@ const PostHeadline = () => {
                     <div className="col-md-12 col-lg-7">
                         <div className="post-headline">
                             <div className="headline-img">
-                                <img src={`./${headline?.guid}`} alt="headline-pic" />
+                                <img src={`./${headline?.featured}`} alt="headline-pic" />
                             </div>
                             <div className="headline-text">
                                 <h4>{headline?.title}</h4>
@@ -62,7 +62,7 @@ const PostHeadline = () => {
                             {subposts.map((post, index) => (
                                 <li key={index}>
                                     <div className="post__secondary-img">
-                                        <img src={`./${post?.guid}`} className="lg:h-[100px] max-lg:h-[120px]" alt="post-pic" />
+                                        <img src={`./${post?.featured}`} className="lg:h-[100px] max-lg:h-[120px]" alt="post-pic" />
                                     </div>
                                     <div className="post__secondary-text">
                                         <h4><Link to="/">{post.title}</Link></h4>

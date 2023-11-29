@@ -32,7 +32,7 @@ const PostDetail = () => {
 
                 <div className="p-2 mt-4 flex justify-center">
                     <div className="w-1/2 rounded-md overflow-hidden">
-                        <img src={`./${post?.guid}`} alt="headline-pic" />
+                        <img src={`./${post?.featured}`} alt="headline-pic" />
                     </div>
                 </div>
 

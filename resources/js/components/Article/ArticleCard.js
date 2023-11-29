@@ -6,7 +6,7 @@ const ArticleCard = ({ article }) => {
         <div className="col-sm-6 col-md-4 col-lg-3 ">
             <div className="card article-item">
                 <div className="card-img-top">
-                    <img src={`./${article?.guid}`} alt="..." />
+                    <img src={`./${article?.featured}`} alt="..." />
                 </div>
                 <div className="card-body">
                     <h3 className="card-title">{article?.title}</h3>

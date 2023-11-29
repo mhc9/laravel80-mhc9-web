@@ -32,7 +32,7 @@ const ArticleDetail = () => {
 
                 <div className="p-2 mt-4 flex justify-center">
                     <div className="w-3/5 rounded-md overflow-hidden">
-                        <img src={`./${article?.guid}`} alt="headline-pic" />
+                        <img src={`./${article?.featured}`} alt="headline-pic" />
                     </div>
                 </div>
 

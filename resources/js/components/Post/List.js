@@ -35,7 +35,7 @@ const PostList = () => {
                     {posts && posts.map((post, index) => (
                         <div className="col-md-12 post__list-item" key={post.id}>
                             <div className="post__list-img">
-                                <img src={`./${post?.guid}`} alt="post-pic" />
+                                <img src={`./${post?.featured}`} alt="post-pic" />
                             </div>
                             <div className="post__list-text">
                                 <h4><Link to="/">{post.title}</Link></h4>

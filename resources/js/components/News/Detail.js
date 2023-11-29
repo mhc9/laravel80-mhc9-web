@@ -32,7 +32,7 @@ const NewsDetail = () => {
 
                 {/* <div className="p-2 mt-4 flex justify-center">
                     <div className="w-3/5 rounded-md overflow-hidden">
-                        <img src={`./${article?.guid}`} alt="headline-pic" />
+                        <img src={`./${article?.featured}`} alt="headline-pic" />
                     </div>
                 </div> */}
 
@@ -42,15 +42,15 @@ const NewsDetail = () => {
                 {/* </div> */}
 
                 {/* Render pdf file */}
-                {news?.guid && (
+                {news?.urls && (
                     <div className="px-2 pt-2 pb-4 flex justify-center">
                         <object
-                            data={`./${news?.guid}`}
+                            data={news?.urls}
                             type="application/pdf"
                             width="100%"
                             height="720px"
                         >
-                            <p>Unable to display PDF file.<a href={`./${news?.guid}`} target="_blank" className="ml-2 underline">Download</a> instead.</p>
+                            <p>Unable to display PDF file.<a href={news?.urls} target="_blank" className="ml-2 underline">Download</a> instead.</p>
                         </object>
                     </div>
                 )}

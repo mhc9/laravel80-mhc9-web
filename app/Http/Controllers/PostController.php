@@ -87,7 +87,7 @@ class PostController extends Controller
 
     public function getById($id)
     {
-        $post =  WebPost::with('category','author')->find($id);
+        $post =  Post::with('category','author')->find($id);
 
         return $post;
     }
