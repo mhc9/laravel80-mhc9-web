@@ -95,7 +95,7 @@ class PostController extends Controller
     public function getInitialFormData()
     {
         return [
-            'categories'    => WebPostCategory::all(),
+            'categories'    => PostCategory::all(),
             'authors'       => User::all(),
         ];
     }
@@ -103,28 +103,23 @@ class PostController extends Controller
     public function store(Request $req)
     {
         try {
-            /** Upload image */            
-            $uploaded = $this->postService->uploadFile($req);
-            // $post->featured = $uploaded['fileName'];
-            // $post->guid	    = $uploaded['filePath'];
-
-            if($this->postService->createPost($req)) {
-                return [
-                    'status'    => 1,
-                    'message'   => 'Insertion successfully!!',
-                    'post'      => $post
-                ];
+            if($post = $this->postService->createPost($req)) {
+                // return [
+                //     'status'    => 1,
+                //     'message'   => 'Insertion successfully!!',
+                //     'post'      => $post
+                // ];
             } else {
-                return [
-                    'status'    => 0,
-                    'message'   => 'Something went wrong!!'
-                ];
+                // return [
+                //     'status'    => 0,
+                //     'message'   => 'Something went wrong!!'
+                // ];
             }
         } catch (\Exception $ex) {
-            return [
-                'status'    => 0,
-                'message'   => $ex->getMessage()
-            ];
+            // return [
+            //     'status'    => 0,
+            //     'message'   => $ex->getMessage()
+            // ];
         }
     }
 

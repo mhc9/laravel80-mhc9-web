@@ -17,10 +17,10 @@ class PostService
         //
     }
 
-    public function uploadFile(Request $req)
+    public function uploadFile(Request $req, $fieldName)
     {
-        if ($req->hasFile('featured')) {
-            $file = $req->file('featured');
+        if ($req->hasFile('fieldName')) {
+            $file = $req->file('fieldName');
             $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
             $destinationPath = 'uploads/'.date('Y').'/'.date('m').'/';
 
@@ -50,10 +50,18 @@ class PostService
         $post->urls             = $req['urls'];
         $post->hits             = $req['hits'];
         $post->tags             = $req['tags'];
-        $post->status           = 1;
         $post->ordering         = $req['ordering'];
+        $post->status           = 1;
         $post->created_by       = $req['created_by'];
         $post->updated_by       = $req['updated_by'];
+
+        $featured = $this->uploadFile($req, 'featured');
+        $post->featured = $featured['filePath'];
+
+        $pdf = $this->uploadFile($req, 'pdf');
+        $post->urls = env('APP_URL') .'/'. $featured['filePath'];
+
+        var_dump($post);
 
         return $post->save();
     }
