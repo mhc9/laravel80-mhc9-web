@@ -103,48 +103,38 @@ class PostController extends Controller
     public function store(Request $req)
     {
         try {
-            if($post = $this->postService->createPost($req)) {
-                // return [
-                //     'status'    => 1,
-                //     'message'   => 'Insertion successfully!!',
-                //     'post'      => $post
-                // ];
+            $post = $this->postService->createPost($req);
+
+            if($post->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Insertion successfully!!',
+                    'post'      => $post->load(['category','author'])
+                ];
             } else {
-                // return [
-                //     'status'    => 0,
-                //     'message'   => 'Something went wrong!!'
-                // ];
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
             }
         } catch (\Exception $ex) {
-            // return [
-            //     'status'    => 0,
-            //     'message'   => $ex->getMessage()
-            // ];
+            return [
+                'status'    => 0,
+                'message'   => $ex->getMessage()
+            ];
         }
     }
 
     public function update(Request $req, $id)
     {
         try {
-            $post = Post::find($id);
-            $post->title         = $req['title'];
-            $post->category_id   = $req['category_id'];
-            $post->alias         = $req['alias'];
-            $post->intro_text    = $req['intro_text'];
-            $post->full_text     = $req['full_text'];
-            $post->publish_up    = $req['publish_up'];
-            $post->publish_down  = $req['publish_down'];
-            $post->urls          = $req['urls'];
-            $post->hits          = $req['hits'];
-            $post->featured      = $req['featured'];
-            $post->ordering      = $req['ordering'];
-            $post->updated_by    = $req['updated_by'];
+            $post = $this->postService->updatePost($req, $id);
 
             if($post->save()) {
                 return [
                     'status'    => 1,
                     'message'   => 'Updating successfully!!',
-                    'post'      => $post
+                    'post'      => $post->load(['category','author'])
                 ];
             } else {
                 return [
@@ -163,20 +153,18 @@ class PostController extends Controller
     public function destroy(Request $req, $id)
     {
         try {
-            // $post = Post::find($id);
-
-            // if($post->delete()) {
-            //     return [
-            //         'status'    => 1,
-            //         'message'   => 'Deleting successfully!!',
-            //         'post'      => $post
-            //     ];
-            // } else {
-            //     return [
-            //         'status'    => 0,
-            //         'message'   => 'Something went wrong!!'
-            //     ];
-            // }
+            if($this->postService->deletePost($id)) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Deleting successfully!!',
+                    'id'        => $id
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
         } catch (\Exception $ex) {
             return [
                 'status'    => 0,
