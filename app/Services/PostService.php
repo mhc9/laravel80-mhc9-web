@@ -17,10 +17,10 @@ class PostService
         //
     }
 
-    public function uploadFile(Request $req, $fieldName)
+    public function uploadFile(Request $req, $inputName)
     {
-        if ($req->hasFile($fieldName)) {
-            $file = $req->file($fieldName);
+        if ($req->hasFile($inputName)) {
+            $file = $req->file($inputName);
             $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
             $destinationPath = 'uploads/'.date('Y').'/'.date('m').'/';
 
