@@ -153,7 +153,23 @@ class PostController extends Controller
     public function destroy(Request $req, $id)
     {
         try {
+            /** Get data from deleting post */
+            $post = $this->postService->getPost($id);
+
             if($this->postService->deletePost($id)) {
+                // Remove files of featured image
+                if (!empty($post->featured)) {
+                    $this->postService->removeFile($post->featured);
+                }
+
+                // Remove pdf file of urls
+                if ($post->content_type_id == 2 && !empty($post->urls)) {
+                    /** Get path of file */
+                    $filePath = substr($post->urls, strpos($post->urls, '/uploads/'));
+
+                    $this->postService->removeFile($filePath);
+                }
+
                 return [
                     'status'    => 1,
                     'message'   => 'Deleting successfully!!',

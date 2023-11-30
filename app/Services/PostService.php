@@ -17,22 +17,9 @@ class PostService
         //
     }
 
-    public function uploadFile(Request $req, $inputName)
+    public function getPost($id)
     {
-        if ($req->hasFile($inputName)) {
-            $file = $req->file($inputName);
-            $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
-            $destinationPath = 'uploads/'.date('Y').'/'.date('m').'/';
-
-            if ($filePath = $file->move($destinationPath, $fileName)) {
-                return [
-                    'fileName' => $fileName,
-                    'filePath' => $filePath,
-                ];
-            }
-
-            return NULL;
-        }
+        return Post::find($id);
     }
 
     public function createPost(Request $req)
@@ -66,7 +53,7 @@ class PostService
 
     public function updatePost(Request $req, $id)
     {
-        $post = Post::find($id);
+        $post = $this->getPost($id);
         $post->title         = $req['title'];
         $post->category_id   = $req['category_id'];
         $post->alias         = $req['alias'];
@@ -84,8 +71,36 @@ class PostService
     }
 
     public function deletePost($id) {
-        $post = Post::find($id);
+        $post = $this->getPost($id);
 
         return $post->delete();
+    }
+
+    public function uploadFile(Request $req, $inputName)
+    {
+        if ($req->hasFile($inputName)) {
+            $file = $req->file($inputName);
+            $fileName = date('mdYHis') . uniqid(). '.' .$file->getClientOriginalExtension();
+            $destinationPath = 'uploads/'.date('Y').'/'.date('m').'/';
+
+            if ($filePath = $file->move($destinationPath, $fileName)) {
+                return [
+                    'fileName' => $fileName,
+                    'filePath' => $filePath,
+                ];
+            }
+
+            return NULL;
+        }
+    }
+
+    /** Remove uploaded file */
+    public function removeFile($filePath)
+    {
+        if (\File::exists($filePath)) {
+            return \File::delete($filePath);
+        }
+
+        return false;
     }
 }
