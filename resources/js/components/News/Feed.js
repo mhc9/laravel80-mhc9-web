@@ -51,7 +51,7 @@ const NewsFeed = () => {
                         </ul>
                     </div>
 
-                    <Link to={`/news/${'1'}/list`} className="all-news">ข่าวทั้งหมด</Link>
+                    <Link to={`/news/3/list`} className="all-news">ข่าวทั้งหมด</Link>
                 </div>
                 <div className="col-lg-4 col-md-12 news-wrapper">
                     <h4>ข่าวรับสมัครงาน</h4>
@@ -71,7 +71,7 @@ const NewsFeed = () => {
                         </ul>
                     </div>
 
-                    <Link to={`/news/${'2'}/list`} className="all-news">ข่าวทั้งหมด</Link>
+                    <Link to={`/news/4/list`} className="all-news">ข่าวทั้งหมด</Link>
                 </div>
                 <div className="col-lg-4 col-md-12 news-wrapper">
                     <h4>ประกาศ</h4>
@@ -91,7 +91,7 @@ const NewsFeed = () => {
                         </ul>
                     </div>
 
-                    <Link to={`/news/${'3'}/list`} className="all-news">ประกาศทั้งหมด</Link>
+                    <Link to={`/news/5/list`} className="all-news">ประกาศทั้งหมด</Link>
                 </div>
             </div>
         </div>

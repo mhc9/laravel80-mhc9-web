@@ -54,7 +54,7 @@ function App() {
                 {/* ข่าวประชาสัมพันธ์ */}
                 <Route path="/posts/list" element={<PostList />} />
                 <Route path="/posts/:id" element={<PostDetail />} />
-                <Route path="/news/:type/list" element={<NewsList />} />
+                <Route path="/news/:category/list" element={<NewsList />} />
                 <Route path="/news/:id" element={<NewsDetail />} />
                 <Route path="/articles/list" element={<ArticleList />} />
                 <Route path="/articles/:id" element={<ArticleDetail />} />
