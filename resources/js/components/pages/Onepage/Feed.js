@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import SwiperCore  from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, FreeMode } from 'swiper/modules'
-import api from '../../api'
+import api from '../../../api'
 /** Import Swiper styles */
 import 'swiper/swiper-bundle.css'
 

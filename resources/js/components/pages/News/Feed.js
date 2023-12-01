@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import api from '../../api'
+import api from '../../../api'
 
 const NewsFeed = () => {
     const [procurements, setProcurements] = useState([]); // 3 ข่าวจัดซื้อจัดจ้าง

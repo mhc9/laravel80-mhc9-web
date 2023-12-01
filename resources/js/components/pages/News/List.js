@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import api from '../../api'
-import Pagination from '../../components/Pagination'
+import api from '../../../api'
+import Pagination from '../../Pagination'
 
 const newsCategories = [
     { id: 3, name: "ข่าวจัดซื้อจัดจ้าง" },

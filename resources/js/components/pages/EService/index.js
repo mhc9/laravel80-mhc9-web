@@ -1,5 +1,5 @@
 import React from 'react'
-import services from '../../data/services.json'
+import services from '../../../data/services.json'
 
 const EService = () => {
     return (

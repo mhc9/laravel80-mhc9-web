@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import api from '../../api'
-import Pagination from '../Pagination'
+import api from '../../../api'
+import Pagination from '../../Pagination'
 
 const VideoList = () => {
     const [videos, setVideos] = useState([]);

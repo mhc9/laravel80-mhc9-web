@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 // import { useDispatch, useSelector } from 'react-redux'
 import ArticleCard from './ArticleCard'
 // import articles from '../../data/articles.json'
-import api from '../../api'
+import api from '../../../api'
 
 const ArticleFeed = () => {
     // const dispatch = useDispatch();
