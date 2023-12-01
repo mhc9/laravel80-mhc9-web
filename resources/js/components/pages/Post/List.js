@@ -1,28 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import api from '../../../api'
+import { useDispatch, useSelector } from 'react-redux';
+import { getPosts } from '../../../features/postSlice';
 import Pagination from '../../Pagination';
+import Spinner from '../../Loading/Spinner';
 
 const PostList = () => {
-    const [posts, setPosts] = useState([]);
-    const [pager, setPager] = useState(null);
+    const dispatch = useDispatch();
+    const { posts, pager, isLoading } = useSelector(state => state.post);
     const [endpoint, setEndpoint] = useState('');
 
     useEffect(() => {
         if (endpoint === '') {
-            getPosts('/api/posts?page=&cate=2&limit=5');
+            dispatch(getPosts({ url: '/api/posts?page=&cate=2&limit=5' }));
         } else {
-            getPosts(`${endpoint}&cate=2&limit=5`);
+            dispatch(getPosts({ url: `${endpoint}&cate=2&limit=5` }));
         }
     }, [endpoint]);
-
-    const getPosts = async (url) => {
-        const res = await api.get(url);
-        const { data, ..._pager } = res.data;
-
-        setPosts(data);
-        setPager(_pager);
-    };
 
     return (
         <section className="post__list-container container">
@@ -32,7 +26,8 @@ const PostList = () => {
 
             <div className="post__list-wrapper">
                 <div className="row">
-                    {posts && posts.map((post, index) => (
+                    {isLoading && <Spinner />}
+                    {!isLoading && posts?.map((post, index) => (
                         <div className="col-md-12 post__list-item" key={post.id}>
                             <div className="post__list-img">
                                 <img src={`./${post?.featured}`} alt="post-pic" />
