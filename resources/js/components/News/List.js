@@ -9,7 +9,7 @@ const newsCategories = [
     { id: 5, name: "ประกาศ" },
 ];
 
-const NewsList = ({  }) => {
+const NewsList = () => {
     const { category } = useParams();
     const [news, setNews] = useState([]);
     const [pager, setPager] = useState(null);
@@ -21,7 +21,7 @@ const NewsList = ({  }) => {
         } else {
             getNews(`${endpoint}`);
         }
-    }, [endpoint]);
+    }, [category, endpoint]);
 
     const getNews = async (url) => {
         const res = await api.get(`${url}&cate=${category}&limit=5`);

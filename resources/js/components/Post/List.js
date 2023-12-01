@@ -26,7 +26,7 @@ const PostList = () => {
 
     return (
         <section className="post__list-container container">
-            <h1 className="title">ข่าวประชาสัมพันธ์</h1>
+            <h1 className="title">ข่าวกิจกรรม</h1>
 
             <hr className="my-2" />
 

@@ -177,9 +177,7 @@ const NavMenu = () => {
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <Link to="/post/list" target="_self">
-                                    ข่าวกิจกรรม
-                                </Link>
+                                <Link to="/posts/list" target="_self">ข่าวกิจกรรม</Link>
                             </div>
                             {/* <div className="submenu ">
                                 <Link to="#" target="_self">
@@ -187,9 +185,7 @@ const NavMenu = () => {
                                 </Link>
                             </div> */}
                             <div className="submenu has-children">
-                                <a to="#" target="_self">
-                                    ข่าวจัดซื้อจัดจ้าง
-                                </a>
+                                <Link to="/news/3/list" target="_self">ข่าวจัดซื้อจัดจ้าง</Link>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
@@ -214,10 +210,10 @@ const NavMenu = () => {
                                 </div>
                             </div>
                             <div className="submenu ">
-                                <Link to="/news/2/list" target="_self">ข่าวรับสมัครงาน</Link>
+                                <Link to="/news/4/list" target="_self">ข่าวรับสมัครงาน</Link>
                             </div>
                             <div className="submenu ">
-                                <Link to="/news/3/list" target="_self">ข่าวประกาศ</Link>
+                                <Link to="/news/5/list" target="_self">ข่าวประกาศ</Link>
                             </div>
                             <div className="submenu ">
                                 <Link to="/calendar" target="_self">ปฏิทินกิจกรรม</Link>
