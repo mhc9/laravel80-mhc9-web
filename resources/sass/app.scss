@@ -1676,9 +1676,13 @@ footer {
                 background: #D8D8D8;
             }
 
-            i { font-size: 1rem; }
+            i {
+                margin: 0;
+                font-size: 1rem;
+            }
 
             h4 {
+                margin: 0;
                 font-size: 1rem;
                 font-weight: 400;
                 line-height: 1.25rem;

@@ -19,14 +19,26 @@
     },
     {
         "id": 4,
+        "name": "ระบบ กพ.7 ออนไลน์",
+        "icon": "fas fa-user-tie",
+        "link": "https://app4seis.ocsc.go.th/admin/index.html"
+    },
+    {
+        "id": 5,
         "name": "ระบบ E-Pay slip",
         "icon": "far fa-credit-card",
         "link": "https://fin.dmh.go.th/intranet/"
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "ระบบ B&P DMH",
         "icon": "fas fa-cogs",
         "link": "https://bp.dmh.go.th/DMH_PROJECT"
+    },
+    {
+        "id": 7,
+        "name": "ระบบ Satsurvey",
+        "icon": "fas fa-poll",
+        "link": "https://psdg.datacyber.net/"
     }
 ]
