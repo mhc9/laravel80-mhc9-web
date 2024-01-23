@@ -4,7 +4,7 @@ import services from '../../../data/services.json'
 const EService = () => {
     return (
         <div className="service-box">
-            <h1 className="title">ระบบสารสนเทศ</h1>
+            <h1 className="title">ระบบสารสนเทศ (E-Service)</h1>
 
             <hr className="my-2" />
 

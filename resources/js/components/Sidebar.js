@@ -95,7 +95,7 @@ const Sidebar = ({ isShow, screenWidth }) => {
                             </ul>
                         </li>
                         <li className="has-sub">
-                            <a href=""><i className="fas fa-stethoscope"></i> บริการประชาชน</a>
+                            <a href=""><i className="fas fa-stethoscope"></i> บริการ</a>
                             <ul>
                                 <li>
                                     <Link to="/manuals" onClick={() => dispatch(toggleSidebar())}>คู่มือการให้บริการ</Link>
@@ -153,7 +153,7 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                     <a href="" onClick={() => dispatch(toggleSidebar())}>คำถามที่ถามบ่อย (FAQ)</a>
                                 </li>
                                 <li>
-                                    <Link to="e-services" onClick={() => dispatch(toggleSidebar())}>ระบบสารสนเทศ</Link>
+                                    <Link to="e-services" onClick={() => dispatch(toggleSidebar())}>ระบบสารสนเทศ (E-Service)</Link>
                                 </li>
                                 <li>
                                     <Link to="/downloads" target="_self" onClick={() => dispatch(toggleSidebar())}>ดาวน์โหลดเอกสาร</Link>

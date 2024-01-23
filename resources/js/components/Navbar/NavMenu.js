@@ -156,7 +156,7 @@ const NavMenu = () => {
                                 <Link to="/faq" target="_self">คำถามที่ถามบ่อย (FAQ)</Link>
                             </div>
                             <div className="submenu ">
-                                <Link to="e-services" target="_self">ระบบสารสนเทศ</Link>
+                                <Link to="e-services" target="_self">ระบบสารสนเทศ (E-Service)</Link>
                             </div>
                             <div className="submenu ">
                                 <Link to="/downloads" target="_self">ดาวน์โหลดเอกสาร</Link>
