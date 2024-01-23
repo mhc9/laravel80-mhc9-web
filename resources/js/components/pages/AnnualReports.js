@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function AnnualReports() {
     return (
@@ -8,18 +9,18 @@ function AnnualReports() {
             <hr className="my-2" />
 
             <div className="policies-wrapper">
-                <a href="#">
+                <Link to="/news/44">
                     <div className="policy">
                         <h3>รายงานประจำปี 2566</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/news/45">
                     <div className="policy">
                         <h3>รายงานประจำปี 2565</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
+                </Link>
             </div>
         </section>
     )

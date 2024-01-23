@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Appeal() {
     return (
@@ -8,18 +9,18 @@ function Appeal() {
             <hr className="my-2" />
 
             <div className="policies-wrapper">
-                <a href="#">
+                <Link to="/news/43">
                     <div className="policy">
                         <h3>แนวทางจัดการข้อร้องเรียน</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/news/43">
                     <div className="policy">
                         <h3>ช่องทางการร้องเรียน</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
+                </Link>
                 <a href="#">
                     <div className="policy">
                         <h3>สรุปรายการเรื่องร้องเรียน</h3>
