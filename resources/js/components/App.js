@@ -30,6 +30,8 @@ import Manuals from './pages/Manuals'
 import Policies from './pages/Policies'
 import WebsitePolicy from './pages/WebsitePolicy';
 import Authority from './pages/Authority';
+import Appeal from './pages/Appeal';
+import NoCorruption from './pages/NoCorruption';
 
 function App() {
     return (
@@ -50,6 +52,8 @@ function App() {
                 {/* บริการประชาชน */}
                 <Route path="/manuals" element={<Manuals />} />
                 <Route path="/downloads" element={<Downloads />} />
+                <Route path="/appeal" element={<Appeal />} />
+                <Route path="/no-corruption" element={<NoCorruption />} />
 
                 {/* ข่าวประชาสัมพันธ์ */}
                 <Route path="/posts/list" element={<PostList />} />
