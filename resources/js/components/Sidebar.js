@@ -153,7 +153,7 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                     <a href="" onClick={() => dispatch(toggleSidebar())}>คำถามที่ถามบ่อย (FAQ)</a>
                                 </li>
                                 <li>
-                                    <a href="" onClick={() => dispatch(toggleSidebar())}>ระบบสารสนเทศ</a>
+                                    <Link to="e-services" onClick={() => dispatch(toggleSidebar())}>ระบบสารสนเทศ</Link>
                                 </li>
                                 <li>
                                     <Link to="/downloads" target="_self" onClick={() => dispatch(toggleSidebar())}>ดาวน์โหลดเอกสาร</Link>
