@@ -23,6 +23,7 @@ import ArticleList from './pages/Article/List';
 import ArticleDetail from './pages/Article/Detail';
 import VideoList from './pages/Video/List';
 import OnepageList from './pages/Onepage/List';
+import OnepageDetail from './pages/Onepage/Detail';
 import Downloads from './pages/Downloads'
 import Laws from './pages/Laws'
 import AnnualReports from './pages/AnnualReports'
@@ -66,6 +67,7 @@ function App() {
                 <Route path="/articles/:id" element={<ArticleDetail />} />
                 <Route path="/videos/list" element={<VideoList />} />
                 <Route path="/onepages/list" element={<OnepageList />} />
+                <Route path="/onepages/:id" element={<OnepageDetail />} />
                 <Route path="/calendar" element={<Calendar />} />
 
                 {/* ติดต่อเรา */}

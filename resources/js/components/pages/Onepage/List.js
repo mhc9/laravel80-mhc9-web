@@ -1,19 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-
-const slides = [
-    { id: 1, imgUrl: './img/info-01.jpg' },
-    { id: 2, imgUrl: './img/info-01.jpg' },
-    { id: 3, imgUrl: './img/info-01.jpg' },
-    { id: 4, imgUrl: './img/info-01.jpg' },
-    { id: 5, imgUrl: './img/info-01.jpg' },
-    { id: 6, imgUrl: './img/info-01.jpg' },
-    { id: 7, imgUrl: './img/info-01.jpg' },
-    { id: 8, imgUrl: './img/info-01.jpg' },
-    { id: 9, imgUrl: './img/info-01.jpg' },
-];
+import api from '../../../api'
+import Pagination from '../../Pagination'
 
 const OnepageList = () => {
+    const [onepages, setOnepages] = useState([]);
+    const [pager, setPager] = useState(null);
+    const [endpoint, setEndpoint] = useState('');
+
+    useEffect(() => {
+        
+
+        if (endpoint === '') {
+            getOnepages();
+        } else {
+            getOnepages(`${endpoint}`);
+        }
+
+        return () => getOnepages();
+    }, [endpoint]);
+
+    const getOnepages = async () => {
+        const res = await api.get('/api/posts?page=&cate=8&limit=9');
+        const { data, ..._pager } = res.data;
+
+        setOnepages(data);
+        setPager(_pager);
+    };
+
     return (
         <section className="info__list-container container">
             <h1 className="title">
@@ -24,12 +38,12 @@ const OnepageList = () => {
 
             <div className="info__list-wrapper">
                 <div className="row">
-                        {slides.map(slide => (
+                        {onepages.map(slide => (
                             <div className="col-md-4" key={slide.id}>
                                 <div className="info-item">
-                                    <Link to="/">
+                                    <Link to={`/onepages/${slide.id}`}>
                                         <div className="info-img">
-                                            <img src={slide.imgUrl} alt="info-pic" />
+                                            <img src={`./${slide?.featured}`} alt="info-pic" />
                                         </div>
                                         <div className="info-cover"></div>
                                     </Link>
@@ -41,23 +55,13 @@ const OnepageList = () => {
                             </div>
                         ))}
                 </div>
-                <nav aria-label="navigation" className="c9__pagination">
-                    <ul>
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                
+                {pager && (
+                    <Pagination
+                        pager={pager}
+                        onPageClick={(url) => setEndpoint(url)}
+                    />
+                )}
             </div>
         </section>
     )
