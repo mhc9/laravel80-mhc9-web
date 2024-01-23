@@ -27,8 +27,9 @@ const Structure = () => {
                                 imageUrl="https://www.mhc9dmh.com/data/photo/19Img.jpg"
                             />
                             <div className="box-label">
-                                <h2>นางณัฏฐา ศิริผล</h2>
-                                <h3>หัวหน้ากลุ่มงานอำนวยการ</h3>
+                                <h2 className="my-[2px]">นางณัฏฐา ศิริผล</h2>
+                                <h3 className="my-[2px]">นักจัดการงานทั่วไปชำนาญการ</h3>
+                                <h4 className="my-[2px]">หัวหน้ากลุ่มงานอำนวยการ</h4>
                             </div>
                         </div>
                         {/* <ol className="level-3-wrapper border">
@@ -109,139 +110,140 @@ const Structure = () => {
                                 imageUrl="https://www.mhc9dmh.com/data/photo/9Img.jpg"
                             />
                             <div className="box-label">
-                                <h2>นางสาววรวรรณ หนึ่งด่านจาก</h2>
-                                <h3>หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h3>
+                                <h2 className="my-[2px]">นางสาววรวรรณ หนึ่งด่านจาก</h2>
+                                <h3 className="my-[2px]">นักวิชาการสาธารณสุขชำนาญการ</h3>
+                                <h4 className="my-[2px]">หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h4>
                             </div>
                         </div>
                         <ol className="level-4-wrapper">
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานพัฒนาคุณภาพ</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานวิจัยและพัฒนา</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานแผนงานและประเมินผล</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานพัฒนาเครือข่ายสุขภาพจิต</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานนิเทศและติดตาม</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานสุขภาพจิตกลุ่มวัย</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานสุขภาพจิตในระบบบริการปฐมภูมิ</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานวิกฤตสุขภาพจิต</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานเฝ้าระวังและป้องกันการฆ่าตัวตาย</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานสื่อสารและประชาสัมพันธ์</h4>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div className="level-4 rectangle4">
-                                    <StructureAvatar
+                                    {/* <StructureAvatar
                                         size="60px"
                                         imageUrl=""
-                                    />
+                                    /> */}
                                     <div className="box-label">
-                                        <h2>น.ส.ทดสอบ ระบบ</h2>
+                                        {/* <h2>น.ส.ทดสอบ ระบบ</h2> */}
                                         <h4>งานสุขภาพจิตระหว่างประเทศ</h4>
                                     </div>
                                 </div>

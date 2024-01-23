@@ -182,7 +182,15 @@ nav.c9__pagination {
         }
     }
 }
+
 // .defaullt-layout { position: relative; }
+
+.structure-avatar {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+}
 /* ================================== End Globals ================================== */
 
 
@@ -2418,13 +2426,6 @@ ol.gradient-list > li + li {
         margin: 40px 0 0;
         padding-bottom: 2rem;
         position: relative;
-    }
-
-    .structure-avatar {
-        position: relative;
-        border-radius: 50%;
-        overflow: hidden;
-        background: white;
     }
 }
 

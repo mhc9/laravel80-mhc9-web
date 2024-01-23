@@ -1,4 +1,5 @@
 import React from 'react'
+import StructureAvatar from '../shared/StructureAvatar'
 
 const Executives = () => {
     return (
@@ -10,8 +11,11 @@ const Executives = () => {
             <div>
                 <div className="executives-wrapper">
                     <div className="director-wrapper">
-                        <img src="./img/executive-01.png" alt="executive-pic" />
-                        <div>
+                        <StructureAvatar
+                            size="120px"
+                            imageUrl="https://www.mhc9dmh.com/data/photo/boss67.jpg"
+                        />
+                        <div className="mt-2">
                             <h3>นายนิตย์ ทองเพชรศรี</h3>
                             <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
                         </div>
@@ -19,8 +23,11 @@ const Executives = () => {
                     <div className="row vice-wrapper">
                         <div className="col-md-6">
                             <div className="flex flex-col justify-center items-center">
-                                <img src="./img/executive-02.png" alt="executive-pic" />
-                                <div>
+                                <StructureAvatar
+                                    size="120px"
+                                    imageUrl="https://www.mhc9dmh.com/data/photo/19Img.jpg"
+                                />
+                                <div className="mt-2">
                                     <h3>นางณัฏฐา ศิริผล</h3>
                                     <h4>หัวหน้ากลุ่มงานอำนวยการ</h4>
                                 </div>
@@ -28,8 +35,11 @@ const Executives = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="flex flex-col justify-center items-center">
-                                <img src="./img/executive-03.png" alt="executive-pic" />
-                                <div>
+                                <StructureAvatar
+                                    size="120px"
+                                    imageUrl="https://www.mhc9dmh.com/data/photo/9Img.jpg"
+                                />
+                                <div className="mt-2">
                                     <h3>นางสาววรวรรณ หนึ่งด่านจาก</h3>
                                     <h4>หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h4>
                                 </div>
