@@ -20,7 +20,7 @@ const VideoFeed = () => {
 
     return (
         <div className="video-box">
-            <h1 className="title">วีดิโอสุขภาพจิต</h1>
+            <h1 className="title">สื่อสุขภาพจิต <i className="fas fa-angle-right"></i>วีดิโอสุขภาพจิต</h1>
 
             <hr className="my-2" />
 

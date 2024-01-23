@@ -27,7 +27,7 @@ const ArticleList = () => {
 
     return (
         <section className="article__list-container container">
-            <h1 className="title">บทความสุขภาพจิต</h1>
+            <h1 className="title">สื่อสุขภาพจิต <i className="fas fa-angle-right"></i>บทความสุขภาพจิต</h1>
 
             <hr className="my-2" />
 
