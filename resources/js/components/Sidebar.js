@@ -194,6 +194,9 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                     <Link to="/news/5/list" onClick={() => dispatch(toggleSidebar())}>ข่าวประกาศ</Link>
                                 </li>
                                 <li>
+                                    <Link to="/onepages/list" onClick={() => dispatch(toggleSidebar())}>MHC9 News</Link>
+                                </li>
+                                <li>
                                     <Link to="/calendar" onClick={() => dispatch(toggleSidebar())}>ปฏิทินกิจกรรม</Link>
                                 </li>
                             </ul>

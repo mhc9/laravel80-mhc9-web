@@ -216,6 +216,9 @@ const NavMenu = () => {
                                 <Link to="/news/5/list" target="_self">ข่าวประกาศ</Link>
                             </div>
                             <div className="submenu ">
+                                <Link to="/onepages/list" target="_self">MHC9 News</Link>
+                            </div>
+                            <div className="submenu ">
                                 <Link to="/calendar" target="_self">ปฏิทินกิจกรรม</Link>
                             </div>
                         </div>
