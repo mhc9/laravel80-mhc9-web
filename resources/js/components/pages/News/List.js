@@ -37,7 +37,9 @@ const NewsList = () => {
 
     return (
         <section className="news__list-container container">
-            <h1 className="title">{getNewsCategory(parseInt(category, 10))?.name}</h1>
+            <h1 className="title">
+                ข่าวประชาสัมพันธ์ <i className="fas fa-angle-right"></i>{getNewsCategory(parseInt(category, 10))?.name}
+            </h1>
 
             <hr className="my-2" />
 

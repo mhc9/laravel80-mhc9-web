@@ -28,7 +28,9 @@ const NewsFeed = () => {
 
     return (
         <div className="news-box">
-            <h1 className="title">ข่าวศูนย์สุขภาพจิตที่ 9</h1>
+            <h1 className="title">
+                ข่าวประชาสัมพันธ์ <i className="fas fa-angle-right"></i>อื่นๆ
+            </h1>
 
             <hr className="my-2" />
 

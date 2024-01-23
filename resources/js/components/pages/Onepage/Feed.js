@@ -27,7 +27,9 @@ const OnepageFeed = () => {
 
     return (
         <div className="info-box">
-            <h1 className="title">Press News</h1>
+            <h1 className="title">
+                ข่าวประชาสัมพันธ์ <i className="fas fa-angle-right"></i>MHC9 News
+            </h1>
 
             <hr className="my-2" />
 
