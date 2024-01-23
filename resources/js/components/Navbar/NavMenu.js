@@ -101,13 +101,13 @@ const NavMenu = () => {
                                 <Link to="/manuals" target="_self">คู่มือการให้บริการ</Link>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
+                                <a to="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ศูนย์ราชการใสสะอาด</a>
+                                <Link to="/appeal" target="_self">ศูนย์ราชการใสสะอาด</Link>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ศูนย์ปฏิบัติการต่อต้านการทุจริต</a>
+                                <Link to="/no-corruption" target="_self">ศูนย์ปฏิบัติการต่อต้านการทุจริต</Link>
                             </div>
                             <div className="submenu has-children">
                                 <a href="#" target="_self">คลังความรู้</a>

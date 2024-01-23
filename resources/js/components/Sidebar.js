@@ -104,10 +104,10 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                     <a href="" onClick={() => dispatch(toggleSidebar())}>ศูนย์ข้อมูลข่าวสาร</a>
                                 </li>
                                 <li>
-                                    <a href="" onClick={() => dispatch(toggleSidebar())}>ศูนย์ราชการใสสะอาด</a>
+                                    <Link to="/appeal" onClick={() => dispatch(toggleSidebar())}>ศูนย์ราชการใสสะอาด</Link>
                                 </li>
                                 <li>
-                                    <a href="" onClick={() => dispatch(toggleSidebar())}>ศูนย์ปฏิบัติการต่อต้านการทุจริต</a>
+                                    <Link to="/no-corruption" onClick={() => dispatch(toggleSidebar())}>ศูนย์ปฏิบัติการต่อต้านการทุจริต</Link>
                                 </li>
                                 <li>
                                     <a href="#">คลังความรู้</a>
