@@ -6,7 +6,7 @@ const OptionMenu = () => {
         <div className="option-menus">
             <div className="container">
                 <div className="contents">
-                        <Link to="/news/1/list" className="content">
+                        <Link to="/news/3/list" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">จัดซื้อจัดจ้าง</h6>
@@ -17,7 +17,7 @@ const OptionMenu = () => {
                                 <div className="order">01</div>
                             </div>
                         </Link>
-                        <Link to="news/2/list" className="content">
+                        <Link to="news/4/list" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">ร่วมงานกับเรา</h6>
@@ -39,7 +39,7 @@ const OptionMenu = () => {
                                 <div className="order">03</div>
                             </div>
                         </Link>
-                        <a className="content">
+                        <a href="https://secret.dmh.go.th/main" target="_blank" className="content">
                             <div className="wrapper">
                                 <div className="text-container">
                                     <h6 className="ellipsis-1">แจ้งเรื่องร้องเรียน</h6>

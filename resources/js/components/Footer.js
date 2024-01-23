@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
 import CookieConsent from './shared/CookieConsent'
 import SocialIcons from './shared/SocialIcons'
+import services from '../data/officer-services.json'
 
 const Footer = () => {
     const [showCookie, setShowCookie] = useState(true);
@@ -27,7 +28,10 @@ const Footer = () => {
                                 <li><Link to="/vision">วิสัยทัศน์/พันธกิจ/ค่านิยม</Link></li>
                                 <li><Link to="/executives">ผู้บริหารหน่วยงาน</Link></li>
                                 <li><Link to="/structure">โครงสร้างองค์กร</Link></li>
-                                <li><Link to="/">หน้าที่และอำนาจ</Link></li>
+                                <li><Link to="/authority">หน้าที่และอำนาจ</Link></li>
+                                <li><Link to="/laws">กฎ ระเบียบ ข้อบังคับ</Link></li>
+                                <li><Link to="/policies">นโยบายองค์กร</Link></li>
+                                <li><Link to="/annual-reports">รายงานประจำปี</Link></li>
                             </ul>
                         </div>
                         {/* Col */}
@@ -35,7 +39,7 @@ const Footer = () => {
                             <h2>บริการประชาชน</h2>
                             <ul>
                                 <li><Link to="/manuals">คู่มือการให้บริการ</Link></li>
-                                <li><Link to="#">แจ้งเรื่องร้องเรียน</Link></li>
+                                <li><a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a></li>
                                 <li><Link to="/faq">คำถามที่ถามบ่อย (FAQ)</Link></li>
                                 <li><Link to="#">สื่อสุขภาพจิต</Link></li>
                                 <li><Link to="/downloads">ดาวน์โหลดเอกสาร</Link></li>
@@ -46,11 +50,11 @@ const Footer = () => {
                         <div className="footer-col footer-menu">
                             <h2>สำหรับเจ้าหน้าที่</h2>
                             <ul>
-                                <li><a href="https://www.mhc9dmh.com/loginmhc.aspx" target="_blank">ระบบ WPM</a></li>
-                                <li><a href="https://edc.dmh.go.th" target="_blank">ระบบงานสารบรรณอิเล็กทรอนิกส์</a></li>
-                                <li><a href="http://dpis.dmh.go.th" target="_blank">ระบบสารสนเทศทรัพยากรบุคคล (DPIS)</a></li>
-                                <li><a href="https://finance.dmh.go.th/intranet" target="_blank">ระบบ E-Pay slip</a></li>
-                                <li><a href="https://bp.dmh.go.th/DMH_PROJECT" target="_blank">ระบบเพิ่มประสิทธิภาพการจัดการงบประมาณและแผนงาน (B&P DMH)</a></li>
+                                {services.map(service => (
+                                    <li key={service.id}>
+                                        <a href={service.link} target='_blank'>{service.name}</a>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 

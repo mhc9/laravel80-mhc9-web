@@ -114,13 +114,13 @@ const NavMenu = () => {
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a href="#" target="_self">คลังความรู้ MHC9</a>
+                                            <a href="https://mhc9dmh.com/show.aspx?x=KM" target="_blank">คลังความรู้ MHC9</a>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">คลังความรู้ กรมสุขภาพจิต</a>
+                                            <a href="https://www.dmh-elibrary.org/" target="_blank">คลังความรู้ กรมสุขภาพจิต</a>
                                         </div>
                                         <div className="child">
-                                            <a href="#" target="_self">ห้องสมุด กรมสุขภาพจิต (DMH e-Library)</a>
+                                            <a href="https://www.thaidmh-elibrary.org/" target="_blank">ห้องสมุด กรมสุขภาพจิต (DMH e-Library)</a>
                                         </div>
                                     </div>
                                 </div>
@@ -130,13 +130,13 @@ const NavMenu = () => {
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a href="#" target="_self">วีดิโอสุขภาพจิต</a>
+                                            <Link to="/articles/list" target="_self">บทความสุขภาพจิต</Link>
+                                        </div>
+                                        <div className="child">
+                                            <Link to="/videos/list" target="_self">วีดิโอสุขภาพจิต</Link>
                                         </div>
                                         <div className="child">
                                             <a href="#" target="_self">อินโฟกราฟฟิก</a>
-                                        </div>
-                                        <div className="child">
-                                            <a href="#" target="_self">บทความสุขภาพจิต</a>
                                         </div>
                                         {/* <div className="child">
                                             <a href="#" target="_self">อนามัยบุ๊ค</a>
@@ -147,16 +147,16 @@ const NavMenu = () => {
                         </div>
                         <div className="submenus">
                             <div className="submenu ">
-                                <a href="#" target="_self">แจ้งเรื่องร้องเรียน</a>
+                                <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ระบบสารสนเทศ</a>
+                                <a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
                             </div>
                             <div className="submenu ">
                                 <Link to="/faq" target="_self">คำถามที่ถามบ่อย (FAQ)</Link>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">กระดานถาม-ตอบ</a>
+                                <a href="#" target="_self">ระบบสารสนเทศ</a>
                             </div>
                             <div className="submenu ">
                                 <Link to="/downloads" target="_self">ดาวน์โหลดเอกสาร</Link>
