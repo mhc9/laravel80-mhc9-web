@@ -7,13 +7,13 @@ const ModalDownload = ({ isShow, onHide }) => {
             show={isShow}
             onHide={onHide}
         >
-            <Modal.Header>ประเมินความพึงพอใจการให้บริการ</Modal.Header>
+            <Modal.Header>เงื่อนไขการดาวน์โหลด</Modal.Header>
             <Modal.Body>
                 <div className="h-[240px] w-full flex flex-col justify-center items-center p-4">
-                    <h2 className="text-xl text-center mb-5">
+                    <h3 className="text-lg text-center mb-5">
                         <i className="fas fa-edit"></i>
-                        เพื่อการปรับปรุงระบบการให้บริการให้ดียิ่งขึ้น กรุณาประเมินความพึงพอใจการให้บริการ
-                    </h2>
+                        เพื่อการปรับปรุงการให้บริการให้ดียิ่งขึ้น<br />กรุณาประเมินความพึงพอใจการต่อผลิตภัณฑ์<br />สุขภาพจิตของเราก่อน
+                    </h3>
                     <div className="flex flex-row gap-2">
                         <a
                             href="https://satsurvey.dmh.go.th/survey/1d09f80697e18d1cf046b82278756eff"

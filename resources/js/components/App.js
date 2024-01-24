@@ -26,7 +26,7 @@ import OnepageList from './pages/Onepage/List';
 import OnepageDetail from './pages/Onepage/Detail';
 import Downloads from './pages/Downloads'
 import Laws from './pages/Laws'
-import AnnualReports from './pages/AnnualReports'
+import AnnualReports from './pages/AnnualReport'
 import Manuals from './pages/Manuals'
 import Policies from './pages/Policies'
 import WebsitePolicy from './pages/WebsitePolicy';
