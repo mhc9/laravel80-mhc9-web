@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import ModalDownload from '../Modals/Download'
 
 const Downloads = () => {
+    const [showModalDownload, setShowModalDownload] = useState(false);
+
     return (
         <section className="downloads container">
             <h1 className="title">ดาวน์โหลดเอกสาร</h1>
@@ -8,6 +11,11 @@ const Downloads = () => {
             <hr className="my-2" />
 
             <div className="downloads-wrapper">
+                <ModalDownload
+                    isShow={showModalDownload}
+                    onHide={() => setShowModalDownload(false)}
+                />
+
                 <div className="border rounded-md mt-4 mb-2 mx-2 p-2">
                     <div className="flex flex-row gap-2">
                         <input type="text" className="form-control" placeholder="กรอกคำค้น..." />
@@ -33,9 +41,9 @@ const Downloads = () => {
                                     <span><i className="fas fa-user-alt"></i> {'Administrator'}</span>
                                 </div>
                             </div>
-                            <a href="" target="_blank" className="btn btn-light">
+                            <button type="button" className="btn btn-light" onClick={() => setShowModalDownload(true)}>
                                 <i className="fas fa-download"></i> ดาวน์โหลด
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
