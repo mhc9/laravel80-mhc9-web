@@ -34,6 +34,7 @@ import Authority from './pages/Authority';
 import Appeal from './pages/Appeal';
 import NoCorruption from './pages/NoCorruption';
 import EServiceList from './pages/EService/List';
+import Procedures from './pages/procedures';
 
 function App() {
     return (
@@ -48,6 +49,7 @@ function App() {
                 <Route path="/executives" element={<Executives />} />
                 <Route path="/authority" element={<Authority />} />
                 <Route path="/laws" element={<Laws />} />
+                <Route path="/procedures" element={<Procedures />} />
                 <Route path="/policies" element={<Policies />} />
                 <Route path="/annual-reports" element={<AnnualReports />} />
 

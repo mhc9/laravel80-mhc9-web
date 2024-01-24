@@ -59,6 +59,9 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                     <Link to="/laws" onClick={() => dispatch(toggleSidebar())}>กฎ ระเบียบ ข้อบังคับ</Link>
                                 </li>
                                 <li>
+                                    <Link to="/procedures" onClick={() => dispatch(toggleSidebar())}>มาตรฐานการปฏิบัติงาน</Link>
+                                </li>
+                                <li>
                                     <Link to="/policies" onClick={() => dispatch(toggleSidebar())}>นโยบายองค์กร</Link>
                                 </li>
                                 <li className="has-sub text-sm">

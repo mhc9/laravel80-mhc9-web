@@ -36,6 +36,9 @@ const NavMenu = () => {
                             <div className="submenu ">
                                 <Link to="/laws" target="_self">กฎ ระเบียบ ข้อบังคับ</Link>
                             </div>
+                            <div className="submenu ">
+                                <Link to="/procedures" target="_self">มาตรฐานการปฏิบัติงาน</Link>
+                            </div>
                         </div>
                         <div className="submenus">
                             <div className="submenu ">
