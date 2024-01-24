@@ -52,6 +52,7 @@ class PostController extends Controller
                     //     });
                     // })
                     ->orderBy('publish_up', 'DESC')
+                    ->orderBy('id', 'DESC')
                     ->paginate($limit);
 
         return $posts;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import api from '../../../api'
 import Pagination from '../../Pagination'
@@ -53,7 +54,7 @@ const NewsList = () => {
                             <div className="news__list-text">
                                 <p>
                                 {item?.title}
-                                    <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
+                                    <span className="readmore"><Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link></span>
                                 </p>
                                 <h5 className="text-muted">
                                     <span><i className="fas fa-calendar-alt"></i> {item?.publish_up}</span>

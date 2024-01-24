@@ -42,7 +42,7 @@ const PostList = () => {
                                 </h5>
                                 <p>
                                     {post.intro_text}
-                                    <span className="readmore"><a href="">อ่านเพิ่มเติม</a></span>
+                                    <span className="readmore"><Link to={`/posts/${post?.id}`}>อ่านเพิ่มเติม</Link></span>
                                 </p>
                             </div>
                         </div>
