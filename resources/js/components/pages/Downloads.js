@@ -33,8 +33,8 @@ const Downloads = () => {
                                     <span><i className="fas fa-user-alt"></i> {'Administrator'}</span>
                                 </div>
                             </div>
-                            <a href="" target="_blank" className="rounded-full border w-[35px] h-[35px] flex justify-center items-center">
-                                <i className="fas fa-angle-down"></i>
+                            <a href="" target="_blank" className="btn btn-light">
+                                <i className="fas fa-download"></i> ดาวน์โหลด
                             </a>
                         </div>
                     </div>
