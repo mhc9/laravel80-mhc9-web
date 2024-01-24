@@ -41,7 +41,7 @@ const OnepageList = () => {
                         {onepages.map(slide => (
                             <div className="col-md-4" key={slide.id}>
                                 <div className="info-item">
-                                    <Link to={`/onepages/${slide.id}`}>
+                                    <Link to={`/news/${slide.id}`}>
                                         <div className="info-img">
                                             <img src={`./${slide?.featured}`} alt="info-pic" />
                                         </div>
