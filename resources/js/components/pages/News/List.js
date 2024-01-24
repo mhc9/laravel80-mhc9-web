@@ -25,7 +25,7 @@ const NewsList = () => {
     }, [category, endpoint]);
 
     const getNews = async (url) => {
-        const res = await api.get(`${url}&cate=${category}&limit=5`);
+        const res = await api.get(`${url}&cate=${category}&limit=10`);
         const { data, ..._pager } = res.data;
 
         setNews(data);
@@ -51,9 +51,9 @@ const NewsList = () => {
                             <div className="news__list-img">
                                 <img src="./img/logo_dmh.png" alt="logo-pic" />
                             </div>
-                            <div className="news__list-text">
+                            <div className="news__list-text w-full">
                                 <p>
-                                {item?.title}
+                                    {item?.title}
                                     <span className="readmore"><Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link></span>
                                 </p>
                                 <h5 className="text-muted">

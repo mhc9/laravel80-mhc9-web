@@ -23,7 +23,7 @@ const ModalDownload = ({ isShow, onHide }) => {
                             <i className="fas fa-tasks"></i> ประเมินความพึงพอใจ
                         </a>
                         <a
-                            href="http://localhost:32772/laravel80-mhc9web/public/uploads/2024/01/0124202401543065b06dd6a7611.pdf"
+                            href="https://mhc9dmh.com/newweb/public/uploads/2024/01/0124202401543065b06dd6a7611.pdf"
                             target="_blank"
                             className="btn btn-success"
                             onClick={onHide}

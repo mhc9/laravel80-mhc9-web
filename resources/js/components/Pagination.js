@@ -5,7 +5,7 @@ const Pagination = ({ pager, onPageClick }) => {
 
     useEffect(() => {
         if (pager) setPageNum(window._.range(pager.last_page));
-    }, []);
+    }, [pager]);
 
     const handlePageClick = (url) => {
         onPageClick(url);
