@@ -1278,16 +1278,17 @@ footer {
 
         .post-headline {
             position: relative;
-            height: 100%;
-            overflow: hidden;
             border-radius: 0.5rem;
             background: #F2F2F2;
-
+            overflow: hidden;
+            
             .headline-img {
                 width: 100%;
-                object-fit: contain;
+                overflow: hidden;
+                object-fit: cover;
                 object-position: center;
-                border-radius: 0.5rem;
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
             }
 
             img {
@@ -1296,11 +1297,9 @@ footer {
             }
 
             .headline-text {
-                position: absolute;
-                bottom: 0;
+                width: 100%;
                 background: #F2F2F2;
                 padding: 0.5rem 1rem 0.25rem;
-                width: 100%;
 
                 h4 {
                     margin-top: 0.5rem;
