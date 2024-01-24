@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import api from '../../../api'
+import { useDispatch, useSelector } from 'react-redux'
+import { getPosts } from '../../../features/postSlice'
 import Pagination from '../../Pagination'
+import Spinner from '../../Loading/Spinner'
 
 const newsCategories = [
     { id: 3, name: "ข่าวจัดซื้อจัดจ้าง" },
@@ -12,25 +14,17 @@ const newsCategories = [
 
 const NewsList = () => {
     const { category } = useParams();
-    const [news, setNews] = useState([]);
-    const [pager, setPager] = useState(null);
+    const dispatch = useDispatch();
+    const { posts, pager, isLoading } = useSelector(state => state.post);
     const [endpoint, setEndpoint] = useState('');
 
     useEffect(() => {
         if (endpoint === '') {
-            getNews('/api/posts?page=');
+            dispatch(getPosts({ url: `/api/posts?page=&cate=${category}&limit=8` }));
         } else {
-            getNews(`${endpoint}`);
+            dispatch(getPosts({ url: `${endpoint}&cate=${category}&limit=8` }));
         }
     }, [category, endpoint]);
-
-    const getNews = async (url) => {
-        const res = await api.get(`${url}&cate=${category}&limit=10`);
-        const { data, ..._pager } = res.data;
-
-        setNews(data);
-        setPager(_pager);
-    };
 
     const getNewsCategory = (category) => {
         return newsCategories.find(cate => cate.id === category);
@@ -46,7 +40,8 @@ const NewsList = () => {
 
             <div className="news__list-wrapper">
                 <div className="row">
-                    {news.map((item, index) => (
+                    {isLoading && <Spinner />}
+                    {!isLoading && posts.map((item, index) => (
                         <div className="col-md-12 news__list-item" key={index}>
                             <div className="news__list-img">
                                 <img src="./img/logo_dmh.png" alt="logo-pic" />
@@ -65,10 +60,12 @@ const NewsList = () => {
                     ))}
                 </div>
 
-                <Pagination
-                    pager={pager}
-                    onPageClick={(url) => setEndpoint(url)}
-                />
+                {pager && (
+                    <Pagination
+                        pager={pager}
+                        onPageClick={(url) => setEndpoint(url)}
+                    />
+                )}
             </div>
         </section>
     )
