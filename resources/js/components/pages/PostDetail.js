@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
 import api from '../../api'
+import Spinner from '../Loading/Spinner'
+import PageHeader from '../PageHeader';
 
 const PostDetail = () => {
     const { id } = useParams();
+    const dispath = useDispatch()
     const [news, setNews] = useState(null);
 
     useEffect(() => {
@@ -25,10 +29,7 @@ const PostDetail = () => {
             <hr className="my-2" />
 
             <div className="px-2 pb-4">
-                <div className="text-muted text-xs font-thin flex justify-between items-center mb-2 px-2">
-                    <span><i className="fas fa-calendar-alt"></i> {news?.publish_up} น.</span>
-                    <span><i className="fas fa-user-alt"></i> {news?.author?.name}</span>
-                </div>
+                <PageHeader post={news} />
 
                 {/* Render content */}
                 {(news?.content_type_id === 1 && news?.intro_text) && (
@@ -55,27 +56,6 @@ const PostDetail = () => {
                                         ))}
                                     </div>
                                 )}
-                            </div>
-                            <div className="flex flex-row gap-3 text-lg">
-                                {/* <i className="far fa-comment"></i>
-                                <i className="far fa-thumbs-up"></i>
-                                <i className="fas fa-heart"></i> */}
-                                <a
-                                    class="facebook"
-                                    href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${news?.id}`}
-                                    onclick="window.open(this.href, 'facebook-share','width=500,height=300');return false;"
-                                    target="_blank"
-                                >
-                                    facebook
-                                </a>
-                                <a
-                                    class="twitter"
-                                    href={`http://twitter.com/share?text=${news?.title}&url=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${news?.id}&via=sanyath007`}
-                                    onclick="window.open(this.href, 'twitter-share', 'width=500,height=300');return false;"
-                                    target="_blank"
-                                >
-                                    twitter
-                                </a>
                             </div>
                         </div>
                     </>
