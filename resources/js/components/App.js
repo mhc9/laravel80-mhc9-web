@@ -17,7 +17,7 @@ import Calendar from './pages/Calendar';
 import Links from './pages/Links';
 import PostList from './pages/Post/List';
 import NewsList from './pages/News/List'
-import NewsDetail from './pages/News/Detail';
+import PostDetail from './pages/PostDetail';
 import ArticleList from './pages/Article/List';
 import VideoList from './pages/Video/List';
 import OnepageList from './pages/Onepage/List';
@@ -59,8 +59,8 @@ function App() {
 
                 {/* ข่าวประชาสัมพันธ์ */}
                 <Route path="/posts/list" element={<PostList />} />
+                <Route path="/posts/:id" element={<PostDetail />} />
                 <Route path="/news/:category/list" element={<NewsList />} />
-                <Route path="/news/:id" element={<NewsDetail />} />
                 <Route path="/articles/list" element={<ArticleList />} />
                 <Route path="/videos/list" element={<VideoList />} />
                 <Route path="/onepages/list" element={<OnepageList />} />

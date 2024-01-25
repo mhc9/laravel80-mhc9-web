@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import api from '../../../api'
+import api from '../../api'
 
-const NewsDetail = () => {
+const PostDetail = () => {
     const { id } = useParams();
     const [news, setNews] = useState(null);
 
@@ -57,12 +57,12 @@ const NewsDetail = () => {
                                 )}
                             </div>
                             <div className="flex flex-row gap-3 text-lg">
-                                <i className="far fa-comment"></i>
+                                {/* <i className="far fa-comment"></i>
                                 <i className="far fa-thumbs-up"></i>
-                                <i className="fas fa-heart"></i>
+                                <i className="fas fa-heart"></i> */}
                                 <a
                                     class="facebook"
-                                    href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${post?.id}`}
+                                    href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${news?.id}`}
                                     onclick="window.open(this.href, 'facebook-share','width=500,height=300');return false;"
                                     target="_blank"
                                 >
@@ -70,7 +70,7 @@ const NewsDetail = () => {
                                 </a>
                                 <a
                                     class="twitter"
-                                    href={`http://twitter.com/share?text=${post?.title}&url=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${post?.id}&via=sanyath007`}
+                                    href={`http://twitter.com/share?text=${news?.title}&url=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${news?.id}&via=sanyath007`}
                                     onclick="window.open(this.href, 'twitter-share', 'width=500,height=300');return false;"
                                     target="_blank"
                                 >
@@ -109,4 +109,4 @@ const NewsDetail = () => {
     )
 }
 
-export default NewsDetail
+export default PostDetail

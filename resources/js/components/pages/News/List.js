@@ -49,7 +49,7 @@ const NewsList = () => {
                             <div className="news__list-text w-full">
                                 <p>
                                     {item?.title}
-                                    <span className="readmore"><Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link></span>
+                                    <span className="readmore"><Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link></span>
                                 </p>
                                 <h5 className="text-muted">
                                     <span><i className="fas fa-calendar-alt"></i> {item?.publish_up}</span>

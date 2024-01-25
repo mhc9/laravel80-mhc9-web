@@ -18,7 +18,7 @@ const ArticleCard = ({ article }) => {
                         <span>{article?.intro_text}</span>
                         {/* <span dangerouslySetInnerHTML={{ __html: article?.full_text }}></span> */}
                         <span className="readmore">
-                            <Link to={`/articles/${article?.id}`}>อ่านเพิ่มเติม</Link>
+                            <Link to={`/posts/${article?.id}`}>อ่านเพิ่มเติม</Link>
                         </span>
                     </p>
                 </div>

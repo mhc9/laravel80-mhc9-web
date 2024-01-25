@@ -45,7 +45,7 @@ const NewsFeed = () => {
                                     <p>
                                         {item.title}
                                         <span className="readmore ms-1">
-                                            <Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link>
+                                            <Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link>
                                         </span>
                                     </p>
                                 </li>
@@ -65,7 +65,7 @@ const NewsFeed = () => {
                                     <p>
                                         {item.title}
                                         <span className="readmore ms-1">
-                                            <Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link>
+                                            <Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link>
                                         </span>
                                     </p>
                                 </li>
@@ -85,7 +85,7 @@ const NewsFeed = () => {
                                     <p>
                                         {item.title}
                                         <span className="readmore ms-1">
-                                            <Link to={`/news/${item.id}`}>อ่านเพิ่มเติม</Link>
+                                            <Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link>
                                         </span>
                                     </p>
                                 </li>
