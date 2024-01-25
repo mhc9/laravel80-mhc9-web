@@ -43,10 +43,7 @@ const NewsFeed = () => {
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        {item.title}
-                                        <span className="readmore ms-1">
-                                            <Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link>
-                                        </span>
+                                        <Link to={`/posts/${item.id}`}>{item.title}</Link>
                                     </p>
                                 </li>
                             ))}
@@ -63,10 +60,7 @@ const NewsFeed = () => {
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        {item.title}
-                                        <span className="readmore ms-1">
-                                            <Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link>
-                                        </span>
+                                        <Link to={`/posts/${item.id}`}>{item.title}</Link>
                                     </p>
                                 </li>
                             ))}
@@ -83,10 +77,7 @@ const NewsFeed = () => {
                                 <li key={index}>
                                     <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
                                     <p>
-                                        {item.title}
-                                        <span className="readmore ms-1">
-                                            <Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link>
-                                        </span>
+                                        <Link to={`/posts/${item.id}`}>{item.title}</Link>
                                     </p>
                                 </li>
                             ))}

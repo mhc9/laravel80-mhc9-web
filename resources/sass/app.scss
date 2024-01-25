@@ -1692,7 +1692,7 @@ footer {
                 margin: 0;
                 font-size: 1rem;
                 font-weight: 400;
-                line-height: 1.25rem;
+                line-height: 1.75rem;
             }
         }
     }
@@ -1710,9 +1710,9 @@ footer {
         padding: 0.5rem 0.75rem;
 
         h4 {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.75rem;
         }
 
         &:last-child,
@@ -1736,9 +1736,6 @@ footer {
 
                 li {
                     height: 80px;
-                    font-size: 0.75rem;
-                    font-weight: 200;
-                    line-height: 1.125rem;
                     display: flex;
                     flex-direction: row;
                     align-items: start;
