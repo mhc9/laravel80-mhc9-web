@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getPosts } from '../../../features/postSlice'
 import Pagination from '../../Pagination'
 import Spinner from '../../Loading/Spinner'
+import PostSubtitle from '../../PostSubtitle'
 
 const newsCategories = [
     { id: 3, name: "ข่าวจัดซื้อจัดจ้าง" },
@@ -38,8 +39,8 @@ const NewsList = () => {
 
             <hr className="my-2" />
 
-            <div className="news__list-wrapper">
-                <div className="row">
+            <div className="news__list-wrapper px-4">
+                <div className="row pr-2">
                     {isLoading && <Spinner />}
                     {!isLoading && posts.map((item, index) => (
                         <div className="col-md-12 news__list-item" key={index}>
@@ -48,13 +49,11 @@ const NewsList = () => {
                             </div>
                             <div className="news__list-text w-full">
                                 <p>
-                                    {item?.title}
-                                    <span className="readmore"><Link to={`/posts/${item.id}`}>อ่านเพิ่มเติม</Link></span>
+                                    <Link to={`/posts/${item.id}`}>
+                                        {item?.title}
+                                    </Link>
                                 </p>
-                                <h5 className="text-muted">
-                                    <span><i className="fas fa-calendar-alt"></i> {item?.publish_up}</span>
-                                    <span><i className="fas fa-user-alt"></i> {item?.author?.name}</span>
-                                </h5>
+                                <PostSubtitle post={item} />
                             </div>
                         </div>
                     ))}
