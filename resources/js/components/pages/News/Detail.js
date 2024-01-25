@@ -54,7 +54,22 @@ const NewsDetail = () => {
                                 <i className="far fa-comment"></i>
                                 <i className="far fa-thumbs-up"></i>
                                 <i className="fas fa-heart"></i>
-                                <i className="fas fa-share-square"></i>
+                                <a
+                                    class="facebook"
+                                    href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${post?.id}`}
+                                    onclick="window.open(this.href, 'facebook-share','width=500,height=300');return false;"
+                                    target="_blank"
+                                >
+                                    facebook
+                                </a>
+                                <a
+                                    class="twitter"
+                                    href={`http://twitter.com/share?text=${post?.title}&url=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2F%23%2Fposts%2F${post?.id}&via=sanyath007`}
+                                    onclick="window.open(this.href, 'twitter-share', 'width=500,height=300');return false;"
+                                    target="_blank"
+                                >
+                                    twitter
+                                </a>
                             </div>
                         </div>
                     </>

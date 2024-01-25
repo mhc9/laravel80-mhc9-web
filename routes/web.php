@@ -22,5 +22,3 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::view('/{path?}', 'app');
-
-Route::get('/requisitions/{id}/print-pr', 'App\Http\Controllers\RequisitionController@printPR');

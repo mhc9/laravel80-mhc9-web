@@ -16,15 +16,18 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
         <!-- styles  -->
-        <!-- <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet"> -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
 
     <body>
         <div id="root"></div>
-        <!-- <script src="{{ asset('js/tinymce.min.js') }}"></script>
-        <script src="{{ asset('js/main.js') }}"></script> -->
+
+        <!-- Facebook SDK -->
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="3W0TiTA5"></script>
+        <!-- Facebook SDK -->
+        
+        <!-- JS -->
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
