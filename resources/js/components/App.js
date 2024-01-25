@@ -16,11 +16,9 @@ import Executives from './pages/Executives';
 import Calendar from './pages/Calendar';
 import Links from './pages/Links';
 import PostList from './pages/Post/List';
-import PostDetail from './pages/Post/Detail';
 import NewsList from './pages/News/List'
 import NewsDetail from './pages/News/Detail';
 import ArticleList from './pages/Article/List';
-import ArticleDetail from './pages/Article/Detail';
 import VideoList from './pages/Video/List';
 import OnepageList from './pages/Onepage/List';
 import Downloads from './pages/Downloads'
@@ -61,11 +59,9 @@ function App() {
 
                 {/* ข่าวประชาสัมพันธ์ */}
                 <Route path="/posts/list" element={<PostList />} />
-                <Route path="/posts/:id" element={<PostDetail />} />
                 <Route path="/news/:category/list" element={<NewsList />} />
                 <Route path="/news/:id" element={<NewsDetail />} />
                 <Route path="/articles/list" element={<ArticleList />} />
-                <Route path="/articles/:id" element={<ArticleDetail />} />
                 <Route path="/videos/list" element={<VideoList />} />
                 <Route path="/onepages/list" element={<OnepageList />} />
                 <Route path="/calendar" element={<Calendar />} />

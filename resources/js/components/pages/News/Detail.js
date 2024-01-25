@@ -33,6 +33,12 @@ const NewsDetail = () => {
                 {/* Render content */}
                 {(news?.content_type_id === 1 && news?.intro_text) && (
                     <>
+                        <div className="p-2 mt-4 flex justify-center">
+                            <div className="w-3/5 rounded-md overflow-hidden">
+                                <img src={`./${news?.featured}`} alt="headline-pic" />
+                            </div>
+                        </div>
+
                         <div className="p-2 text-lg">
                             <span>{news?.intro_text}</span>
                             {/* <span dangerouslySetInnerHTML={{ __html: news?.full_text }}></span> */}
