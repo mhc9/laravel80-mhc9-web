@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../../../api'
+import PostSubtitle from '../../PostSubtitle'
 
 const PostHeadline = () => {
     const [headline, setHeadline] = useState(null);
@@ -38,10 +39,7 @@ const PostHeadline = () => {
                             </div>
                             <div className="headline-text">
                                 <h4>{headline?.title}</h4>
-                                <h5 className="text-muted">
-                                    <span><i className="fas fa-calendar-alt"></i> {headline?.publish_up} น.</span>
-                                    <span><i className="fas fa-user-alt"></i> {headline?.author?.name}</span>
-                                </h5>
+                                <PostSubtitle post={headline} />
                                 <p>
                                     <span>{headline?.intro_text}</span>
                                     {/* <span dangerouslySetInnerHTML={{ __html: headline?.full_text }}></span> */}
@@ -67,16 +65,10 @@ const PostHeadline = () => {
                                         <img src={`./${post?.featured}`} className="lg:h-[100px] max-lg:h-[120px]" alt="post-pic" />
                                     </div>
                                     <div className="post__secondary-text">
-                                        <h4><Link to="/">{post.title}</Link></h4>
-                                        <h5 className="text-muted">
-                                            <span><i className="fas fa-calendar-alt"></i> {post.publish_up} น.</span>
-                                            <span><i className="fas fa-user-alt"></i> {post.author?.name}</span>
-                                        </h5>
+                                        <Link to={`/posts/${post?.id}`}><h4>{post.title}</h4></Link>
+                                        <PostSubtitle post={post} />
                                         <p>
                                             {post.intro_text}
-                                            <span className="readmore">
-                                                <Link to={`/posts/${post?.id}`}>อ่านเพิ่มเติม</Link>
-                                            </span>
                                         </p>
                                     </div>
                                 </li>

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPosts } from '../../../features/postSlice';
 import Pagination from '../../Pagination';
 import Spinner from '../../Loading/Spinner';
+import PostSubtitle from '../../PostSubtitle';
 
 const PostList = () => {
     const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const PostList = () => {
 
             <hr className="my-2" />
 
-            <div className="post__list-wrapper">
+            <div className="post__list-wrapper px-4">
                 <div className="row">
                     {isLoading && <Spinner />}
                     {!isLoading && posts?.map((post, index) => (
@@ -34,15 +35,11 @@ const PostList = () => {
                             <div className="post__list-img">
                                 <img src={`./${post?.featured}`} alt="post-pic" />
                             </div>
-                            <div className="post__list-text">
-                                <h4><Link to="/">{post.title}</Link></h4>
-                                <h5 className="text-muted">
-                                    <span><i className="fas fa-calendar-alt"></i> {post.publish_up} น.</span>
-                                    <span><i className="fas fa-user-alt"></i> {post.author?.name}</span>
-                                </h5>
+                            <div className="post__list-text flex flex-col gap-1">
+                                <Link to={`/posts/${post?.id}`}><h4>{post.title}</h4></Link>
+                                <PostSubtitle post={post} />
                                 <p>
                                     {post.intro_text}
-                                    <span className="readmore"><Link to={`/posts/${post?.id}`}>อ่านเพิ่มเติม</Link></span>
                                 </p>
                             </div>
                         </div>

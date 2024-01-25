@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PostSubtitle from '../../PostSubtitle'
 
 const ArticleCard = ({ article }) => {
     return (
@@ -9,17 +10,11 @@ const ArticleCard = ({ article }) => {
                     <img src={`./${article?.featured}`} alt="..." />
                 </div>
                 <div className="card-body">
-                    <h3 className="card-title">{article?.title}</h3>
-                    <h5 className="text-muted">
-                        <span><i className="fas fa-calendar-alt"></i> {article?.publish_up} น.</span>
-                        <span><i className="fas fa-user-alt"></i> {article?.author?.name}</span>
-                    </h5>
+                    <Link to={`/posts/${article?.id}`}><h3 className="card-title">{article?.title}</h3></Link>
+                    <PostSubtitle post={article} />
                     <p className="card-text">
                         <span>{article?.intro_text}</span>
                         {/* <span dangerouslySetInnerHTML={{ __html: article?.full_text }}></span> */}
-                        <span className="readmore">
-                            <Link to={`/posts/${article?.id}`}>อ่านเพิ่มเติม</Link>
-                        </span>
                     </p>
                 </div>
             </div>
