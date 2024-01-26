@@ -26,6 +26,10 @@
         <div id="fb-root"></div>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="3W0TiTA5"></script>
         <!-- Facebook SDK -->
+
+        <!-- LINE Plugins -->
+        <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+        <!-- LINE Plugins -->
         
         <!-- JS -->
         <script src="{{ asset('js/app.js') }}"></script>
