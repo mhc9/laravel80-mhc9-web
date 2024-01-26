@@ -73,10 +73,10 @@ const PostDetail = () => {
                         )}
 
                         {/* Render image */}
-                        {(post?.content_type_id === 3 && post?.featured) && (
+                        {(post?.content_type_id === 3 && post?.urls) && (
                             <div className="p-2 mt-4 flex justify-center">
                                 <div className="w-3/5 rounded-md overflow-hidden">
-                                    <img src={`./${post?.featured}`} alt="headline-pic" />
+                                    <img src={post?.urls} alt="headline-pic" />
                                 </div>
                             </div>
                         )}
