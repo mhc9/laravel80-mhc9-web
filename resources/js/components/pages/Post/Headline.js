@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../../../api'
-import PostSubtitle from '../../PostSubtitle'
+import PageSubtitle from '../../PageSubtitle'
 
 const PostHeadline = () => {
     const [headline, setHeadline] = useState(null);
@@ -39,7 +39,9 @@ const PostHeadline = () => {
                             </div>
                             <div className="headline-text">
                                 <h4>{headline?.title}</h4>
-                                <PostSubtitle post={headline} />
+
+                                <PageSubtitle post={headline} />
+
                                 <p>
                                     <span>{headline?.intro_text}</span>
                                     {/* <span dangerouslySetInnerHTML={{ __html: headline?.full_text }}></span> */}
@@ -66,10 +68,10 @@ const PostHeadline = () => {
                                     </div>
                                     <div className="post__secondary-text">
                                         <Link to={`/posts/${post?.id}`}><h4>{post.title}</h4></Link>
-                                        <PostSubtitle post={post} />
-                                        <p>
-                                            {post.intro_text}
-                                        </p>
+
+                                        <PageSubtitle post={post} />
+
+                                        <p>{post.intro_text}</p>
                                     </div>
                                 </li>
                             ))}

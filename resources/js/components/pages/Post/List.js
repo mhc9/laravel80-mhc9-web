@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPosts } from '../../../features/postSlice';
 import Pagination from '../../Pagination';
 import Spinner from '../../Loading/Spinner';
-import PostSubtitle from '../../PostSubtitle';
+import PageSubtitle from '../../PageSubtitle';
 
 const PostList = () => {
     const dispatch = useDispatch();
@@ -37,7 +37,7 @@ const PostList = () => {
                             </div>
                             <div className="post__list-text flex flex-col gap-1">
                                 <Link to={`/posts/${post?.id}`}><h4>{post.title}</h4></Link>
-                                <PostSubtitle post={post} />
+                                <PageSubtitle post={post} />
                                 <p>
                                     {post.intro_text}
                                 </p>

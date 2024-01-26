@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getPosts } from '../../../features/postSlice'
 import Pagination from '../../Pagination'
 import Spinner from '../../Loading/Spinner'
-import PostSubtitle from '../../PostSubtitle'
+import PageSubtitle from '../../PageSubtitle'
 
 const newsCategories = [
     { id: 3, name: "ข่าวจัดซื้อจัดจ้าง" },
@@ -53,7 +53,7 @@ const NewsList = () => {
                                         {item?.title}
                                     </Link>
                                 </p>
-                                <PostSubtitle post={item} />
+                                <PageSubtitle post={item} />
                             </div>
                         </div>
                     ))}

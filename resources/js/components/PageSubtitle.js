@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PostSubtitle = ({ post, textSize="xs" }) => {
+const PageSubtitle = ({ post, textSize="xs" }) => {
     return (
         <div className={`flex gap-2 text-muted`}>
             <span className={`text-${textSize} text-gray-400 font-thin`}>
@@ -13,4 +13,4 @@ const PostSubtitle = ({ post, textSize="xs" }) => {
     )
 }
 
-export default PostSubtitle
+export default PageSubtitle

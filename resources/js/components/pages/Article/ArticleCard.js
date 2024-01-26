@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PostSubtitle from '../../PostSubtitle'
+import PageSubtitle from '../../PageSubtitle'
 
 const ArticleCard = ({ article }) => {
     return (
@@ -11,7 +11,9 @@ const ArticleCard = ({ article }) => {
                 </div>
                 <div className="card-body">
                     <Link to={`/posts/${article?.id}`}><h3 className="card-title">{article?.title}</h3></Link>
-                    <PostSubtitle post={article} />
+
+                    <PageSubtitle post={article} />
+
                     <p className="card-text">
                         <span>{article?.intro_text}</span>
                         {/* <span dangerouslySetInnerHTML={{ __html: article?.full_text }}></span> */}
