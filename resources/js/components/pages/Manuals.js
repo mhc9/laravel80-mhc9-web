@@ -3,7 +3,7 @@ import React from 'react'
 const Manuals = () => {
     return (
         <section className="manuals container">
-            <h1 className="title">คู่มือการให้บริการ</h1>
+            <h1 className="title">มาตรฐานการให้บริการ</h1>
 
             <hr className="my-2" />
 

@@ -29,7 +29,6 @@ import Policies from './pages/Policies'
 import WebsitePolicy from './pages/WebsitePolicy';
 import Authority from './pages/Authority';
 import Appeal from './pages/Appeal';
-import NoCorruption from './pages/NoCorruption';
 import EServiceList from './pages/EService/List';
 import Procedures from './pages/procedures';
 
@@ -54,7 +53,6 @@ function App() {
                 <Route path="/manuals" element={<Manuals />} />
                 <Route path="/downloads" element={<Downloads />} />
                 <Route path="/appeal" element={<Appeal />} />
-                <Route path="/no-corruption" element={<NoCorruption />} />
                 <Route path="/e-services" element={<EServiceList />} />
 
                 {/* ข่าวประชาสัมพันธ์ */}
