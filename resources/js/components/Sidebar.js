@@ -56,15 +56,21 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                     <Link to="/authority" onClick={() => dispatch(toggleSidebar())}>หน้าที่และอำนาจ</Link>
                                 </li>
                                 <li>
-                                    <Link to="/laws" onClick={() => dispatch(toggleSidebar())}>กฎ ระเบียบ ข้อบังคับ</Link>
+                                    <Link to="/procedures" onClick={() => dispatch(toggleSidebar())}>มาตรฐานการปฏิบัติงาน</Link>
                                 </li>
                                 <li>
-                                    <Link to="/procedures" onClick={() => dispatch(toggleSidebar())}>มาตรฐานการปฏิบัติงาน</Link>
+                                    <Link to="/manuals" onClick={() => dispatch(toggleSidebar())}>มาตรฐานการให้บริการ</Link>
+                                </li>
+                                <li>
+                                    <Link to="/laws" onClick={() => dispatch(toggleSidebar())}>กฎ ระเบียบ ข้อบังคับ</Link>
                                 </li>
                                 <li>
                                     <Link to="/policies" onClick={() => dispatch(toggleSidebar())}>นโยบายองค์กร</Link>
                                 </li>
-                                <li className="has-sub text-sm">
+                                <li>
+                                    <Link to="/policies" onClick={() => dispatch(toggleSidebar())}>แผนยุทธศาสตร์</Link>
+                                </li>
+                                {/* <li className="has-sub text-sm">
                                     <a href="#">แผนยุทธศาสตร์</a>
                                     <ul>
                                         <li>
@@ -77,8 +83,8 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                             <Link to="/" onClick={() => dispatch(toggleSidebar())}>แผนปฏิบัติการ</Link>
                                         </li>
                                     </ul>
-                                </li>
-                                <li className="has-sub text-sm">
+                                </li> */}
+                                {/* <li className="has-sub text-sm">
                                     <a href="#">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
                                     <ul>
                                         <li>
@@ -88,10 +94,10 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                             <Link to="/" onClick={() => dispatch(toggleSidebar())}>ปีงบประมาณ พ.ศ. 2565</Link>
                                         </li>
                                     </ul>
-                                </li>
-                                <li>
+                                </li> */}
+                                {/* <li>
                                     <Link to="/" onClick={() => dispatch(toggleSidebar())}>การกำกับติดตามการดำเนินงาน</Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link to="/annual-reports" onClick={() => dispatch(toggleSidebar())}>รายงานประจำปี</Link>
                                 </li>
@@ -101,17 +107,35 @@ const Sidebar = ({ isShow, screenWidth }) => {
                             <a href=""><i className="fas fa-stethoscope"></i> บริการ</a>
                             <ul>
                                 <li>
-                                    <Link to="/manuals" onClick={() => dispatch(toggleSidebar())}>คู่มือการให้บริการ</Link>
-                                </li>
-                                <li>
                                     <a href="" onClick={() => dispatch(toggleSidebar())}>ศูนย์ข้อมูลข่าวสาร</a>
                                 </li>
                                 <li>
                                     <Link to="/appeal" onClick={() => dispatch(toggleSidebar())}>ศูนย์ราชการใสสะอาด</Link>
                                 </li>
+                                {/* <li>
+                                    <a href="https://secret.dmh.go.th/main" target="_blank" onClick={() => dispatch(toggleSidebar())}>แจ้งเรื่องร้องเรียน</a>
+                                </li> */}
                                 <li>
-                                    <Link to="/no-corruption" onClick={() => dispatch(toggleSidebar())}>ศูนย์ปฏิบัติการต่อต้านการทุจริต</Link>
+                                    <a href="#">แจ้งเรื่องร้องเรียน</a>
+                                    <ul>
+                                        <li>
+                                            <a href="https://mhc9dmh.com/Comment.aspx" target="_blank" onClick={() => dispatch(toggleSidebar())}>
+                                                แจ้งเรื่องร้องเรียน MHC9
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://secret.dmh.go.th/main/" target="_blank" onClick={() => dispatch(toggleSidebar())}>
+                                                แจ้งเรื่องร้องเรียน กรมสุขภาพจิต
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
+                                <li>
+                                    <a href="https://mhc9dmh.com/Query.aspx" target="_blank" onClick={() => dispatch(toggleSidebar())}>กระดานถาม-ตอบ</a>
+                                </li>
+                                {/* <li>
+                                    <a href="" onClick={() => dispatch(toggleSidebar())}>คำถามที่ถามบ่อย (FAQ)</a>
+                                </li> */}
                                 <li>
                                     <a href="#">คลังความรู้</a>
                                     <ul>
@@ -147,23 +171,14 @@ const Sidebar = ({ isShow, screenWidth }) => {
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="https://secret.dmh.go.th/main" target="_blank" onClick={() => dispatch(toggleSidebar())}>แจ้งเรื่องร้องเรียน</a>
-                                </li>
-                                <li>
-                                    <a href="https://mhc9dmh.com/Query.aspx" target="_blank" onClick={() => dispatch(toggleSidebar())}>กระดานถาม-ตอบ</a>
-                                </li>
-                                <li>
-                                    <a href="" onClick={() => dispatch(toggleSidebar())}>คำถามที่ถามบ่อย (FAQ)</a>
-                                </li>
-                                <li>
                                     <Link to="/e-services" onClick={() => dispatch(toggleSidebar())}>ระบบสารสนเทศ (E-Service)</Link>
                                 </li>
                                 <li>
                                     <Link to="/downloads" target="_self" onClick={() => dispatch(toggleSidebar())}>ดาวน์โหลดเอกสาร</Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="" onClick={() => dispatch(toggleSidebar())}>บริการอื่นๆ</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </li>
                         <li className="has-sub">

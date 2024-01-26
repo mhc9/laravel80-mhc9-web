@@ -29,6 +29,8 @@ const Footer = () => {
                                 <li><Link to="/executives">ผู้บริหารหน่วยงาน</Link></li>
                                 <li><Link to="/structure">โครงสร้างองค์กร</Link></li>
                                 <li><Link to="/authority">หน้าที่และอำนาจ</Link></li>
+                                <li><Link to="/procedures">มาตรฐานการปฏิบัติงาน</Link></li>
+                                <li><Link to="/manuals">มาตรฐานการให้บริการ</Link></li>
                                 <li><Link to="/laws">กฎ ระเบียบ ข้อบังคับ</Link></li>
                                 <li><Link to="/policies">นโยบายองค์กร</Link></li>
                                 <li><Link to="/annual-reports">รายงานประจำปี</Link></li>
@@ -38,13 +40,11 @@ const Footer = () => {
                         <div className="footer-col footer-menu">
                             <h2>บริการ</h2>
                             <ul>
-                                <li><Link to="/manuals">คู่มือการให้บริการ</Link></li>
                                 <li><Link to="/">ศูนย์ข้อมูลข่าวสาร</Link></li>
                                 <li><Link to="/appeal">ศูนย์ราชการใสสะอาด</Link></li>
-                                <li><Link to="/no-corruption">ศูนย์ปฏิบัติการต่อต้านการทุจริต</Link></li>
                                 <li><a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a></li>
                                 <li><a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a></li>
-                                <li><Link to="/faq">คำถามที่ถามบ่อย (FAQ)</Link></li>
+                                {/* <li><Link to="/faq">คำถามที่ถามบ่อย (FAQ)</Link></li> */}
                                 <li><Link to="/e-services">ระบบสารสนเทศ (E-Service)</Link></li>
                                 <li><Link to="/downloads">ดาวน์โหลดเอกสาร</Link></li>
                             </ul>

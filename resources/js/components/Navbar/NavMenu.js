@@ -18,33 +18,39 @@ const NavMenu = () => {
                         {/* <MenuHero title="รู้จักเรา" imgSrc="/01.png" /> */}
 
                         <div className="submenus">
-                            <div className="submenu ">
+                            <div className="submenu">
                                 <Link to="/about" target="_self">ประวัติความเป็นมา</Link>
                             </div>
-                            <div className="submenu ">
+                            <div className="submenu">
                                 <Link to="/vision" target="_self">วิสัยทัศน์ พันธกิจ ค่านิยม</Link>
                             </div>
-                            <div className="submenu ">
+                            <div className="submenu">
                                 <Link to="/executives" target="_self">ผู้บริหารหน่วยงาน</Link>
                             </div>
-                            <div className="submenu ">
+                            <div className="submenu">
                                 <Link to="/structure" target="_self">โครงสร้างองค์กร</Link>
                             </div>
-                            <div className="submenu ">
+                            <div className="submenu">
                                 <Link to="/authority" target="_self">หน้าที่และอำนาจ</Link>
-                            </div>
-                            <div className="submenu ">
-                                <Link to="/laws" target="_self">กฎ ระเบียบ ข้อบังคับ</Link>
                             </div>
                             <div className="submenu ">
                                 <Link to="/procedures" target="_self">มาตรฐานการปฏิบัติงาน</Link>
                             </div>
+                            <div className="submenu">
+                                <Link to="/manuals" target="_self">มาตรฐานการให้บริการ</Link>
+                            </div>
                         </div>
                         <div className="submenus">
-                            <div className="submenu ">
+                            <div className="submenu">
                                 <Link to="policies" target="_self">นโยบายองค์กร</Link>
                             </div>
-                            <div className="submenu has-children">
+                            <div className="submenu">
+                                <Link to="/laws" target="_self">กฎ ระเบียบ ข้อบังคับ</Link>
+                            </div>
+                            <div className="submenu">
+                                <Link to="/laws" target="_self">แผนยุทธศาสตร์</Link>
+                            </div>
+                            {/* <div className="submenu has-children">
                                 <a href="#" target="_self">แผนยุทธศาสตร์</a>
                                 <div className="child-container">
                                     <div className="childs">
@@ -57,16 +63,16 @@ const NavMenu = () => {
                                         <div className="child">
                                             <a href="#" target="_blank" rel="noreferrer">แผนปฏิบัติการ</a>
                                         </div>
-                                        {/* <div className="child">
+                                        <div className="child">
                                             <a href="#" target="_blank" rel="noreferrer">แผนระดับ 3 ในความรับผิดชอบ</a>
                                         </div>
                                         <div className="child">
                                             <a href="#" target="_self">แผนยุทธศาสตร์บูรณาการ</a>
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="submenu has-children">
+                            </div> */}
+                            {/* <div className="submenu has-children">
                                 <a href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
                                 <div className="child-container">
                                     <div className="childs">
@@ -81,11 +87,11 @@ const NavMenu = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="submenu ">
+                            </div> */}
+                            {/* <div className="submenu">
                                 <a href="#" target="_self">การกำกับติดตามการดำเนินงาน</a>
-                            </div>
-                            <div className="submenu ">
+                            </div> */}
+                            <div className="submenu">
                                 <Link to="annual-reports" target="_self">รายงานประจำปี</Link>
                             </div>
                         </div>
@@ -101,16 +107,32 @@ const NavMenu = () => {
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <Link to="/manuals" target="_self">คู่มือการให้บริการ</Link>
-                            </div>
-                            <div className="submenu ">
                                 <a to="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
                             </div>
                             <div className="submenu ">
                                 <Link to="/appeal" target="_self">ศูนย์ราชการใสสะอาด</Link>
                             </div>
+                            {/* <div className="submenu ">
+                                <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
+                            </div> */}
+                            <div className="submenu has-children">
+                                <a href="#" target="_self">แจ้งเรื่องร้องเรียน</a>
+                                <div className="child-container">
+                                    <div className="childs">
+                                        <div className="child">
+                                            <a href="https://mhc9dmh.com/Comment.aspx" target="_blank">แจ้งเรื่องร้องเรียน MHC9</a>
+                                        </div>
+                                        <div className="child">
+                                            <a href="https://secret.dmh.go.th/main/" target="_blank">แจ้งเรื่องร้องเรียน กรมสุขภาพจิต</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* <div className="submenu ">
+                                <a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
+                            </div> */}
                             <div className="submenu ">
-                                <Link to="/no-corruption" target="_self">ศูนย์ปฏิบัติการต่อต้านการทุจริต</Link>
+                                <Link to="/faq" target="_self">คำถามที่ถามบ่อย (FAQ)</Link>
                             </div>
                             <div className="submenu has-children">
                                 <a href="#" target="_self">คลังความรู้</a>
@@ -150,23 +172,14 @@ const NavMenu = () => {
                         </div>
                         <div className="submenus">
                             <div className="submenu ">
-                                <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
-                            </div>
-                            <div className="submenu ">
-                                <a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
-                            </div>
-                            <div className="submenu ">
-                                <Link to="/faq" target="_self">คำถามที่ถามบ่อย (FAQ)</Link>
-                            </div>
-                            <div className="submenu ">
                                 <Link to="e-services" target="_self">ระบบสารสนเทศ (E-Service)</Link>
                             </div>
                             <div className="submenu ">
                                 <Link to="/downloads" target="_self">ดาวน์โหลดเอกสาร</Link>
                             </div>
-                            <div className="submenu">
+                            {/* <div className="submenu">
                                 <a href="#" target="_self">บริการอื่นๆ</a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
