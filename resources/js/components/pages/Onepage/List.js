@@ -1,32 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import api from '../../../api'
-import Pagination from '../../Pagination'
+import { useDispatch, useSelector } from 'react-redux';
+import { getPosts } from '../../../features/postSlice';
+import Pagination from '../../Pagination';
+import Spinner from '../../Loading/Spinner';
 
 const OnepageList = () => {
-    const [onepages, setOnepages] = useState([]);
-    const [pager, setPager] = useState(null);
+    const dispatch = useDispatch();
+    const { posts, pager, isLoading } = useSelector(state => state.post);
     const [endpoint, setEndpoint] = useState('');
 
     useEffect(() => {
-        
-
         if (endpoint === '') {
-            getOnepages();
+            dispatch(getPosts({ url: '/api/posts?page=&cate=8&limit=9' }));
         } else {
-            getOnepages(`${endpoint}`);
+            dispatch(getPosts({ url: `${endpoint}&cate=8&limit=9` }));
         }
-
-        return () => getOnepages();
     }, [endpoint]);
-
-    const getOnepages = async () => {
-        const res = await api.get('/api/posts?page=&cate=8&limit=9');
-        const { data, ..._pager } = res.data;
-
-        setOnepages(data);
-        setPager(_pager);
-    };
 
     return (
         <section className="info__list-container container">
@@ -38,7 +28,8 @@ const OnepageList = () => {
 
             <div className="info__list-wrapper">
                 <div className="row">
-                        {onepages.map(slide => (
+                        {isLoading && <Spinner />}
+                        {(!isLoading && posts) && posts.map(slide => (
                             <div className="col-md-4" key={slide.id}>
                                 <div className="info-item">
                                     <Link to={`/posts/${slide.id}`}>
