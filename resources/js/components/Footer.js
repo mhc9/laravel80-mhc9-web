@@ -4,9 +4,11 @@ import { useCookies } from 'react-cookie'
 import CookieConsent from './shared/CookieConsent'
 import SocialIcons from './shared/SocialIcons'
 import services from '../data/officer-services.json'
+import CookieSettings from './CookieSettings'
 
 const Footer = () => {
     const [showCookie, setShowCookie] = useState(true);
+    const [showSettings, setShowSettings] = useState(false);
     const [cookies, setCookies] = useCookies(['mhc9_consent']);
     
     useEffect(() => {
@@ -112,6 +114,16 @@ const Footer = () => {
                 isShow={showCookie}
                 onHide={() => setShowCookie(false)}
                 onSetCookie={setCookies}
+                onSetting={(show) => {
+                    console.log(show);
+                    // setShowSettings(show);
+                    // setShowCookie(!show);
+                }}
+            />
+
+            <CookieSettings
+                isShow={showSettings}
+                onHide={() => setShowSettings(false)}
             />
         </footer>
     )

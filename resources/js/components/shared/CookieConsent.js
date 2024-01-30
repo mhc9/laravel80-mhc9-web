@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import moment from 'moment'
 import uuid from 'react-uuid'
 
-const CookieConsent = ({ isShow, onHide, onSetCookie }) => {
-    const [showSettings, setShowSettings] = useState(false);
+const CookieConsent = ({ isShow, onHide, onSetCookie, onSetting }) => {
 
     const handleAccept = (e) => {
         onSetCookie('mhc9_consent', { _id: uuid(), datestamp: moment().toISOString(), choices: '' });
@@ -28,7 +27,9 @@ const CookieConsent = ({ isShow, onHide, onSetCookie }) => {
                     <button type="button" className="btn-accept" onClick={(e) => handleAccept(e)}>
                         ยอมรับ
                     </button>
-                    <button type="button" className="" onClick={() => setShowSettings(true)}>
+                    <button type="button" onClick={(e) => {
+                        console.log(e);
+                        onSetting(true)}}>
                         ตั้งค่าคุกกี้
                     </button>
                 </div>
