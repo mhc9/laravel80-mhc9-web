@@ -2178,12 +2178,8 @@ footer {
         padding-bottom: 2rem;
 
         .paragraph {
-            display: flex;
-            flex-direction: row;
-            align-items: start;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1rem 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
 
             .paragraph-img {
                 width: 300px;
@@ -2202,7 +2198,6 @@ footer {
             }
 
             p {
-                width: 70%;
                 font-size: 1rem;
                 font-weight: 300;
                 line-height: 1.75rem;
