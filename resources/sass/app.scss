@@ -1735,7 +1735,7 @@ footer {
                 margin: 0;
 
                 li {
-                    height: 80px;
+                    min-height: 80px;
                     display: flex;
                     flex-direction: row;
                     align-items: start;

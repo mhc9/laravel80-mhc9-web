@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../../../api'
+import NewsItems from './NewsItems';
 
 const NewsFeed = () => {
     const [procurements, setProcurements] = useState([]); // 3 ข่าวจัดซื้อจัดจ้าง
@@ -37,52 +38,22 @@ const NewsFeed = () => {
             <div className="row">
                 <div className="col-lg-4 col-md-12 news-wrapper">
                     <h4>ข่าวจัดซื้อจัดจ้าง</h4>
-                    <div className="news-list">
-                        <ul>
-                            {procurements.map((item, index) => (
-                                <li key={index}>
-                                    <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
-                                    <p>
-                                        <Link to={`/posts/${item.id}`}>{item.title}</Link>
-                                    </p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+
+                    <NewsItems items={procurements} />
 
                     <Link to={`/news/3/list`} className="all-news">ข่าวทั้งหมด</Link>
                 </div>
                 <div className="col-lg-4 col-md-12 news-wrapper">
                     <h4>ข่าวรับสมัครงาน</h4>
-                    <div className="news-list">
-                        <ul>
-                            {recruitments.map((item, index) => (
-                                <li key={index}>
-                                    <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
-                                    <p>
-                                        <Link to={`/posts/${item.id}`}>{item.title}</Link>
-                                    </p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+
+                    <NewsItems items={recruitments} />
 
                     <Link to={`/news/4/list`} className="all-news">ข่าวทั้งหมด</Link>
                 </div>
                 <div className="col-lg-4 col-md-12 news-wrapper">
                     <h4>ประกาศ</h4>
-                    <div className="news-list">
-                        <ul>
-                            {notices.map((item, index) => (
-                                <li key={index}>
-                                    <div><img src="./img/logo_dmh.png" alt="logo-pic" /></div>
-                                    <p>
-                                        <Link to={`/posts/${item.id}`}>{item.title}</Link>
-                                    </p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+
+                    <NewsItems items={notices} />
 
                     <Link to={`/news/5/list`} className="all-news">ประกาศทั้งหมด</Link>
                 </div>
