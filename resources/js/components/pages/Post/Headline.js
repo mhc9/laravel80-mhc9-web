@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../../../api'
-import PageSubtitle from '../../PageSubtitle'
+import PageSubtitle from '../../common/PageSubtitle'
 
 const PostHeadline = () => {
     const [headline, setHeadline] = useState(null);

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, FreeMode } from 'swiper/modules'
 /** Import Swiper styles */
 import 'swiper/swiper-bundle.css'
-import logos from '../data/logos.json'
+import logos from '../../data/logos.json'
 
 const SlideLogos = () => {
     SwiperCore.use([Autoplay]);

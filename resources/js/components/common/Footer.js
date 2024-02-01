@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
-import CookieConsent from './shared/CookieConsent'
-import SocialIcons from './shared/SocialIcons'
-import services from '../data/officer-services.json'
+import CookieConsent from '../shared/CookieConsent'
+import SocialIcons from '../shared/SocialIcons'
+import services from '../../data/officer-services.json'
 import CookieSettings from './CookieSettings'
 
 const Footer = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
-import { hideSidebar, toggleSidebar } from '../features/navbarSlice'
+import { hideSidebar, toggleSidebar } from '../../features/navbarSlice'
 
 const Sidebar = ({ isShow, screenWidth }) => {
     const dispatch = useDispatch();

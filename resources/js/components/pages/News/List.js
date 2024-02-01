@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPosts } from '../../../features/postSlice'
-import Pagination from '../../Pagination'
 import Spinner from '../../Loading/Spinner'
-import PageSubtitle from '../../PageSubtitle'
+import Pagination from '../../shared/Pagination'
+import PageSubtitle from '../../common/PageSubtitle'
 
 const newsCategories = [
     { id: 3, name: "ข่าวจัดซื้อจัดจ้าง" },

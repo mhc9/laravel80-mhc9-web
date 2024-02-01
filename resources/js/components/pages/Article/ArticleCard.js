@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PageSubtitle from '../../PageSubtitle'
+import PageSubtitle from '../../common/PageSubtitle'
 
 const ArticleCard = ({ article }) => {
     return (

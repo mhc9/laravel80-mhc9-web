@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../../api'
 import ArticleCard from './ArticleCard'
-import Pagination from '../../Pagination'
+import Pagination from '../../shared/Pagination'
 
 const ArticleList = () => {
     const [articles, setArticles] = useState([]);

@@ -1,6 +1,6 @@
 import React from 'react'
-import StructureAvatar from './shared/StructureAvatar'
-import ShareButtons from './ShareButtons'
+import ShareButtons from '../shared/ShareButtons'
+import StructureAvatar from '../shared/StructureAvatar'
 
 const PageHeader = ({ post }) => {
     return (

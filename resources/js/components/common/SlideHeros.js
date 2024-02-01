@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 /** Import Swiper styles */
 import 'swiper/swiper-bundle.css'
-import slides from '../data/hero-slides.json' 
+import slides from '../../data/hero-slides.json' 
 
 const SlideHeros = () => {
     SwiperCore.use([Autoplay]);

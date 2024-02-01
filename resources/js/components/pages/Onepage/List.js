@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPosts } from '../../../features/postSlice';
-import Pagination from '../../Pagination';
+import Pagination from '../../shared/Pagination';
 import Spinner from '../../Loading/Spinner';
 
 const OnepageList = () => {

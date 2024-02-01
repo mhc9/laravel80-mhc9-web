@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { CookiesProvider } from 'react-cookie';
 import { ToastContainer } from 'react-toastify';
 import { store } from '../features/store';
-import DefaultLayout from './DefaultLayout';
+import DefaultLayout from './common/DefaultLayout';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import About from './pages/About';

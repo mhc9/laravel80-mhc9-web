@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPost } from '../../features/postSlice';
 import Spinner from '../Loading/Spinner';
-import PageHeader from '../PageHeader';
+import PageHeader from '../common/PageHeader';
 
 const PostDetail = () => {
     const { id } = useParams();
