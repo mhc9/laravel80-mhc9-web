@@ -14,12 +14,11 @@ const CookieSettings = ({ isShow, onHide }) => {
             onHide={onHide}
             size="lg"
         >
-            <Modal.Header className="py-2">
-                <h4 className="mb-0">ตั้งค่าความเป็นส่วนตัว</h4>
+            <Modal.Header className="py-3">
+                <h3 className="mb-0">ตั้งค่าความเป็นส่วนตัว</h3>
             </Modal.Header>
             <Modal.Body>
-                <div>
-                    <h4>จัดการความเป็นส่วนตัว</h4>
+                <div className="px-2">
                     <div>
                         <div className="flex flex-row justify-between items-center">
                             <h4 className="text-sm font-bold mb-0">คุกกี้ที่มีความจำเป็น (Strictly Necessary Cookies)</h4>
@@ -64,7 +63,7 @@ const CookieSettings = ({ isShow, onHide }) => {
                                 label=""
                             />
                         </div>
-                        <p className="text-xs font-thin">
+                        <p className="text-xs font-thin mb-0">
                             คุกกี้ประเภทนี้เป็นคุกกี้ที่เกิดจากการเชื่อมโยงเว็บไซต์ของบุคคลที่สาม ซึ่งเก็บข้อมูลการเข้าใช้งานและเว็บไซต์ที่ท่านได้เข้าเยี่ยมชม เพื่อนำเสนอสินค้าหรือบริการบนเว็บไซต์อื่นที่ไม่ใช่เว็บไซต์ของศูนย์สุขภาพจิตที่ 9 ทั้งนี้ หากท่านปิดการใช้งานคุกกี้ประเภทนี้จะไม่ส่งผลต่อการใช้งานเว็บไซต์ของศูนย์สุขภาพจิตที่ 9 แต่จะส่งผลให้การนำเสนอสินค้าหรือบริการบนเว็บไซต์อื่น ๆ ไม่สอดคล้องกับความสนใจของท่าน
                         </p>
                     </div>
@@ -75,8 +74,8 @@ const CookieSettings = ({ isShow, onHide }) => {
                     <button type="button" className="btn btn-primary" onClick={(e) => handleAccept(e)}>
                         ยอมรับทั้งหมด
                     </button>
-                    <button type="button" className="btn btn-success">
-                        บันทึกการตั้งค่าของคุณ
+                    <button type="button" className="btn btn-success" onClick={(e) => handleAccept(e)}>
+                        ยืนยันตัวเลือกของฉัน
                     </button>
                 </div>
             </Modal.Footer>

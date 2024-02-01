@@ -27,9 +27,7 @@ const CookieConsent = ({ isShow, onHide, onSetCookie, onSetting }) => {
                     <button type="button" className="btn-accept" onClick={(e) => handleAccept(e)}>
                         ยอมรับ
                     </button>
-                    <button type="button" onClick={(e) => {
-                        console.log(e);
-                        onSetting(true)}}>
+                    <button type="button" onClick={() => onSetting(true)}>
                         ตั้งค่าคุกกี้
                     </button>
                 </div>

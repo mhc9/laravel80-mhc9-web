@@ -115,9 +115,8 @@ const Footer = () => {
                 onHide={() => setShowCookie(false)}
                 onSetCookie={setCookies}
                 onSetting={(show) => {
-                    console.log(show);
-                    // setShowSettings(show);
-                    // setShowCookie(!show);
+                    setShowSettings(show);
+                    setShowCookie(!show);
                 }}
             />
 
