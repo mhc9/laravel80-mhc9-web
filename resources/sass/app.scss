@@ -80,6 +80,16 @@ main {
     section:not(.home) { padding-top: 25px; }
 }
 
+@media (max-width: 640px) {
+    main {
+        section {
+            .title {
+                font-size: 0.875rem/* 14px */;
+            }
+        }
+    }
+}
+
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -3226,4 +3236,11 @@ ol {
 .form-switch .form-check-input {
     width: 3em;
     height: 1.5em;
+}
+
+.post-detail {
+    p {
+        margin: 0;
+        padding: 0;
+    }
 }
