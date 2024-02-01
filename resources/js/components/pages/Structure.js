@@ -40,8 +40,9 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar imageUrl="https://www.mhc9dmh.com/data/photo/7Img.jpg" />
                                             <div className="box-label">
-                                                <h2>นางณิชาดา ศรีทองเพ็ชร</h2>
-                                                <h4>งานธุรการ</h4>
+                                                <h2 className="my-[2px]">นางณิชาดา ศรีทองเพ็ชร</h2>
+                                                <h3 className="my-[2px]">นักจัดการงานทั่วไป</h3>
+                                                <h4 className="my-[2px]">งานธุรการ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -49,8 +50,9 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar imageUrl="https://www.mhc9dmh.com/data/photo/13Img.jpg" />
                                             <div className="box-label">
-                                                <h2>น.ส.ศรัณยาพร สุริยะกุลพงษ์</h2>
-                                                <h4>งานทรัพยากรบุคคล</h4>
+                                                <h2 className="my-[2px]">น.ส.ศรัณยาพร สุริยะกุลพงษ์</h2>
+                                                <h3 className="my-[2px]">นักจัดการงานทั่วไป</h3>
+                                                <h4 className="my-[2px]">งานทรัพยากรบุคคล</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -58,8 +60,9 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar imageUrl="https://www.mhc9dmh.com/data/photo/2152Img.jpg" />
                                             <div className="box-label">
-                                                <h2>น.ส.เมลดา จาติกานนท์</h2>
-                                                <h4>งานการเงินและบัญชี</h4>
+                                                <h2 className="my-[2px]">น.ส.เมลดา จาติกานนท์</h2>
+                                                <h3 className="my-[2px]">เจ้าพนักงานการเงินและบัญชีปฏิบัติงาน</h3>
+                                                <h4 className="my-[2px]">งานการเงินและบัญชี</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -67,8 +70,9 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar imageUrl="https://www.mhc9dmh.com/data/photo/1624Img.jpg" />
                                             <div className="box-label">
-                                                <h2>น.ส.สิรินดา วิถีธรรม</h2>
-                                                <h4>งานการเงินและบัญชี</h4>
+                                                <h2 className="my-[2px]">น.ส.สิรินดา วิถีธรรม</h2>
+                                                <h3 className="my-[2px]">นักวิชาการเงินและบัญชี</h3>
+                                                <h4 className="my-[2px]">งานการเงินโครงการ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -76,8 +80,9 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar imageUrl="https://www.mhc9dmh.com/data/photo/2118Img.jpg" />
                                             <div className="box-label">
-                                                <h2>น.ส.ทิพปภา สีมาธรรมการย์</h2>
-                                                <h4>งานพัสดุ</h4>
+                                                <h2 className="my-[2px]">น.ส.ทิพปภา สีมาธรรมการย์</h2>
+                                                <h3 className="my-[2px]">นักวิชาการพัสดุ</h3>
+                                                <h4 className="my-[2px]">งานพัสดุ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -85,8 +90,9 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar imageUrl="https://www.mhc9dmh.com/data/photo/2258Img.jpg" />
                                             <div className="box-label">
-                                                <h2>นายสัญญา ธรรมวงษ์</h2>
-                                                <h4>งานเทคโนโลยีสารสนเทศ</h4>
+                                                <h2 className="my-[2px]">นายสัญญา ธรรมวงษ์</h2>
+                                                <h3 className="my-[2px]">นักวิชาการคอมพิวเตอร์ปฏิบัติการ</h3>
+                                                <h4 className="my-[2px]">งานเทคโนโลยีสารสนเทศ</h4>
                                             </div>
                                         </div>
                                     </li>
@@ -94,8 +100,9 @@ const Structure = () => {
                                         <div className="level-4 rectangle">
                                             <StructureAvatar imageUrl="https://www.mhc9dmh.com/data/photo/5Img.jpg" />
                                             <div className="box-label">
-                                                <h2>นายสมเกียรติ พวกกลาง</h2>
-                                                <h4>งานยานพาหนะ</h4>
+                                                <h2 className="my-[2px]">นายสมเกียรติ พวกกลาง</h2>
+                                                <h3 className="my-[2px]">พนักงานบริการ</h3>
+                                                <h4 className="my-[2px]">งานยานพาหนะ</h4>
                                             </div>
                                         </div>
                                     </li>
