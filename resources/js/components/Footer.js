@@ -123,6 +123,7 @@ const Footer = () => {
             <CookieSettings
                 isShow={showSettings}
                 onHide={() => setShowSettings(false)}
+                onSetCookie={setCookies}
             />
         </footer>
     )

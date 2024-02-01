@@ -1,7 +1,9 @@
 import React from 'react'
 import { Modal, Form } from 'react-bootstrap'
+import uuid from 'react-uuid'
+import moment from 'moment'
 
-const CookieSettings = ({ isShow, onHide }) => {
+const CookieSettings = ({ isShow, onHide, onSetCookie }) => {
 
     const handleAccept = (e) => {
         onSetCookie('mhc9_consent', { _id: uuid(), datestamp: moment().toISOString(), choices: '' });
@@ -13,6 +15,7 @@ const CookieSettings = ({ isShow, onHide }) => {
             show={isShow}
             onHide={onHide}
             size="lg"
+            backdrop="static"
         >
             <Modal.Header className="py-3">
                 <h3 className="mb-0">ตั้งค่าความเป็นส่วนตัว</h3>
