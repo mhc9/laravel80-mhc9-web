@@ -48,7 +48,7 @@ const NavMenu = () => {
                                 <Link to="/laws" target="_self">กฎ ระเบียบ ข้อบังคับ</Link>
                             </div>
                             <div className="submenu">
-                                <Link to="/laws" target="_self">แผนยุทธศาสตร์</Link>
+                                <Link to="/posts/75" target="_self">แผนยุทธศาสตร์</Link>
                             </div>
                             {/* <div className="submenu has-children">
                                 <a href="#" target="_self">แผนยุทธศาสตร์</a>
