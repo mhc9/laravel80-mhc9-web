@@ -21,30 +21,48 @@ function Appeal() {
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
                 </Link>
-                <a href="#">
+                <Link to="/posts/85">
                     <div className="policy">
-                        <h3>สรุปรายการเรื่องร้องเรียน</h3>
+                        <h3>การประเมินความเสี่ยงการทุจริตประจำปี</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/posts/86">
+                    <div className="policy">
+                        <h3>การดำเนินการเพื่อจัดการความเสี่ยงการทุจริต</h3>
+                        <span><i className="fas fa-angle-down"></i></span>
+                    </div>
+                </Link>
+                <Link to="/posts/">
+                    <div className="policy">
+                        <h3>กิจกรรมส่งเสริมวัฒนธรรมองค์กร</h3>
+                        <span><i className="fas fa-angle-down"></i></span>
+                    </div>
+                </Link>
+                <Link to="/posts/">
                     <div className="policy">
                         <h3>แผนปฏิบัติการป้องกันการทุจริตประจำปี</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/posts/84">
                     <div className="policy">
                         <h3>รายงานการกำกับติดตามการดำเนินการป้องกันการทุจริต</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="/posts/83">
                     <div className="policy">
                         <h3>รายงานผลการดำเนินการป้องกันการทุจริตประจำปี</h3>
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
-                </a>
+                </Link>
+                <Link to="/posts/82">
+                    <div className="policy">
+                        <h3>รายงานผลการวิเคราะห์แบบสำรวจความคิดเห็นด้านคุณธรรมและความโปร่งใสประจำปี</h3>
+                        <span><i className="fas fa-angle-down"></i></span>
+                    </div>
+                </Link>
             </div>
         </section>
     )
