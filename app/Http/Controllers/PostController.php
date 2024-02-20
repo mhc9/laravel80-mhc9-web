@@ -30,7 +30,20 @@ class PostController extends Controller
     {
         $post =  Post::with('category','author')->find($id);
 
-        return view('post._detail', ['post' => $post]);
+        return view('post.detail', ['post' => $post]);
+    }
+
+    public function posts(Request $req)
+    {
+        $limit = !empty($req->get('limit')) ? $req->get('limit') : 5;
+
+        $posts = Post::with('category','author')
+                    ->where('category_id', 2)
+                    ->orderBy('publish_up', 'DESC')
+                    ->orderBy('id', 'DESC')
+                    ->paginate($limit);
+
+        return view('post.list', compact('posts'));
     }
 
     public function search(Request $req)
