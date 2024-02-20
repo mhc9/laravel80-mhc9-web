@@ -26,6 +26,13 @@ class PostController extends Controller
         $this->postService = $postService;
     }
 
+    public function post($id)
+    {
+        $post =  Post::with('category','author')->find($id);
+
+        return view('post._detail', ['post' => $post]);
+    }
+
     public function search(Request $req)
     {
         /** Get params from query string */

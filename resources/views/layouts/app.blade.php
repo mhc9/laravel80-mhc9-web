@@ -36,7 +36,7 @@
                         <div class="container">
                             <div class="menu-wrapper">
                                 <!-- Logo -->
-                                <a href="./" class="nav-logo">
+                                <a href="/" class="nav-logo">
                                     <picture class="logo">
                                         <img
                                             src="https://upload.wikimedia.org/wikipedia/commons/f/f9/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88.png"
@@ -52,7 +52,7 @@
                                 <!-- Menus -->
                                 <div class="bottom-menu" id="topnav-menu-container">
                                     <div class="menu icon-menu active">
-                                        <a href="./" data-label="หน้าหลัก">
+                                        <a href="/" data-label="หน้าหลัก">
                                             <div><i class="fas fa-home"></i></div>
                                         </a>
                                     </div>
@@ -65,36 +65,36 @@
 
                                                 <div class="submenus">
                                                     <div class="submenu">
-                                                        <a href="./about" target="_self">ประวัติความเป็นมา</a>
+                                                        <a href="{{ url('/about') }}" target="_self">ประวัติความเป็นมา</a>
                                                     </div>
                                                     <div class="submenu">
-                                                        <a href="./vision" target="_self">วิสัยทัศน์ พันธกิจ ค่านิยม</a>
+                                                        <a href="{{ url('/vision') }}" target="_self">วิสัยทัศน์ พันธกิจ ค่านิยม</a>
                                                     </div>
                                                     <div class="submenu">
-                                                        <a href="./executives" target="_self">ผู้บริหารหน่วยงาน</a>
+                                                        <a href="{{ url('/executive') }}" target="_self">ผู้บริหารหน่วยงาน</a>
                                                     </div>
                                                     <div class="submenu">
-                                                        <a href="./structure" target="_self">โครงสร้างองค์กร</a>
+                                                        <a href="{{ url('/structure') }}" target="_self">โครงสร้างองค์กร</a>
                                                     </div>
                                                     <div class="submenu">
-                                                        <a href="./authority" target="_self">หน้าที่และอำนาจ</a>
+                                                        <a href="{{ url('/authority') }}" target="_self">หน้าที่และอำนาจ</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="./procedures" target="_self">มาตรฐานการปฏิบัติงาน</a>
+                                                        <a href="{{ url('/procedures') }}" target="_self">มาตรฐานการปฏิบัติงาน</a>
                                                     </div>
                                                     <div class="submenu">
-                                                        <a href="./manuals" target="_self">มาตรฐานการให้บริการ</a>
+                                                        <a href="{{ url('/manuals') }}" target="_self">มาตรฐานการให้บริการ</a>
                                                     </div>
                                                 </div>
                                                 <div class="submenus">
                                                     <div class="submenu">
-                                                        <a href="policies" target="_self">นโยบายองค์กร</a>
+                                                        <a href="{{ url('/policies') }}" target="_self">นโยบายองค์กร</a>
                                                     </div>
                                                     <div class="submenu">
-                                                        <a href="/laws" target="_self">กฎ ระเบียบ ข้อบังคับ</a>
+                                                        <a href="{{ url('/laws') }}" target="_self">กฎ ระเบียบ ข้อบังคับ</a>
                                                     </div>
                                                     <div class="submenu">
-                                                        <a href="/posts/75" target="_self">แผนยุทธศาสตร์</a>
+                                                        <a href="{{ url('/posts/75') }}" target="_self">แผนยุทธศาสตร์</a>
                                                     </div>
                                                     <!-- <div class="submenu has-children">
                                                         <a href="#" target="_self">แผนยุทธศาสตร์</a>
@@ -138,7 +138,13 @@
                                                         <a href="#" target="_self">การกำกับติดตามการดำเนินงาน</a>
                                                     </div> -->
                                                     <div class="submenu">
-                                                        <a href="annual-reports" target="_self">รายงานประจำปี</a>
+                                                        <a href="{{ url('/annual-reports') }}" target="_self">รายงานประจำปี</a>
+                                                    </div>
+                                                    <div class="submenu">
+                                                        <a href="{{ url('/posts/90') }}" target="_self">แผนดำเนินงานและการใช้จ่ายงบประมาณประจำปี</a>
+                                                    </div>
+                                                    <div class="submenu">
+                                                        <a href="{{ url('/posts/91') }}" target="_self">รายงานผลการดำเนินงานประจำปี</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -156,7 +162,7 @@
                                                         <a to="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="/appeal" target="_self">ศูนย์ราชการใสสะอาด</a>
+                                                        <a href="{{ url('/appeal') }}" target="_self">ศูนย์ราชการใสสะอาด</a>
                                                     </div>
                                                     <!-- <div class="submenu ">
                                                         <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
@@ -178,7 +184,7 @@
                                                         <a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
                                                     </div> -->
                                                     <div class="submenu ">
-                                                        <a href="/faq" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
+                                                        <a href="{{ url('/faq') }}" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
                                                     </div>
                                                     <div class="submenu has-children">
                                                         <a href="#" target="_self">คลังความรู้</a>
@@ -201,10 +207,10 @@
                                                         <div class="child-container">
                                                             <div class="childs">
                                                                 <div class="child">
-                                                                    <a href="/articles/list" target="_self">บทความสุขภาพจิต</a>
+                                                                    <a href="{{ url('/articles/list') }}" target="_self">บทความสุขภาพจิต</a>
                                                                 </div>
                                                                 <div class="child">
-                                                                    <a href="/videos/list" target="_self">วีดิโอสุขภาพจิต</a>
+                                                                    <a href="{{ url('/videos/list') }}" target="_self">วีดิโอสุขภาพจิต</a>
                                                                 </div>
                                                                 <div class="child">
                                                                     <a href="#" target="_self">อินโฟกราฟฟิก</a>
@@ -218,10 +224,10 @@
                                                 </div>
                                                 <div class="submenus">
                                                     <div class="submenu ">
-                                                        <a href="e-services" target="_self">ระบบสารสนเทศ (E-Service)</a>
+                                                        <a href="{{ url('/e-services') }}" target="_self">ระบบสารสนเทศ (E-Service)</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="/downloads" target="_self">ดาวน์โหลดเอกสาร</a>
+                                                        <a href="{{ url('/downloads') }}" target="_self">ดาวน์โหลดเอกสาร</a>
                                                     </div>
                                                     <!-- <div class="submenu">
                                                         <a href="#" target="_self">บริการอื่นๆ</a>
@@ -239,7 +245,7 @@
 
                                                 <div class="submenus">
                                                     <div class="submenu ">
-                                                        <a href="/posts/list" target="_self">ข่าวกิจกรรม</a>
+                                                        <a href="{{ url('/posts/list') }}" target="_self">ข่าวกิจกรรม</a>
                                                     </div>
                                                     <!-- <div class="submenu ">
                                                         <a href="#" target="_self">
@@ -247,7 +253,7 @@
                                                         </a>
                                                     </div> -->
                                                     <div class="submenu has-children">
-                                                        <a href="/news/3/list" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
+                                                        <a href="{{ url('/news/3/list') }}" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
                                                         <div class="child-container">
                                                             <div class="childs">
                                                                 <div class="child">
@@ -272,16 +278,16 @@
                                                         </div>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="/news/4/list" target="_self">ข่าวรับสมัครงาน</a>
+                                                        <a href="{{ url('/news/4/list') }}" target="_self">ข่าวรับสมัครงาน</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="/news/5/list" target="_self">ข่าวประกาศ</a>
+                                                        <a href="{{ url('/news/5/list') }}" target="_self">ข่าวประกาศ</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="/onepages/list" target="_self">MHC9 News</a>
+                                                        <a href="{{ url('/onepages/list') }}" target="_self">MHC9 News</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="/calendar" target="_self">ปฏิทินกิจกรรม</a>
+                                                        <a href="{{ url('/calendar') }}" target="_self">ปฏิทินกิจกรรม</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,10 +302,10 @@
 
                                                 <div class="submenus">
                                                     <div class="submenu ">
-                                                        <a href="./contact" target="_self">ติดต่อเรา</a>
+                                                        <a href="{{ url('/contact') }}" target="_self">ติดต่อเรา</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="./links" target="_self">ลิงค์ที่เกี่ยวข้อง</a>
+                                                        <a href="{{ url('/links') }}" target="_self">ลิงค์ที่เกี่ยวข้อง</a>
                                                     </div>
                                                 </div>
                                             </div>

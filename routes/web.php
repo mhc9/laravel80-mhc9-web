@@ -13,13 +13,95 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::get('/contact', function() {
-//     return view('contact');
-// });
+/** รู้จักเรา */
+Route::get('/about', function() {
+    return view('about');
+});
+
+Route::get('/vision', function() {
+    return view('vision');
+});
+
+Route::get('/executive', function() {
+    return view('executive');
+});
+
+Route::get('/structure', function() {
+    return view('structure');
+});
+
+Route::get('/authority', function() {
+    return view('authority');
+});
+
+Route::get('/procedures', function() {
+    return view('procedure');
+});
+
+Route::get('/manuals', function() {
+    return view('manual');
+});
+
+// ...
+Route::get('/annual-reports', function() {
+    $reports = [
+        [
+            'id'        => 1,
+            'title'     => "รายงานประจำปี 2566",
+            'featured'  => "uploads/2024/01/Screenshot 2024-01-24 101332.png",
+            'urls'      => "https://mhc9dmh.com/newweb/public/uploads/2024/01/0123202408375065af7ade1f6d5.pdf",
+        ],
+        [
+            'id'        => 2,
+            'title'     => "รายงานประจำปี 2565",
+            'featured'  => "uploads/2024/01/Screenshot 2024-01-24 101433.png",
+            'urls'      => "https://mhc9dmh.com/newweb/public/uploads/2024/01/0123202408361365af7a7d440ad.pdf",
+        ]
+    ];
+
+    return view('annual-report', ['reports' => $reports]);
+});
+
+/** บริการ */
+Route::get('/appeal', function() {
+    return view('appeal');
+});
+
+// ...
+Route::get('/e-services', function() {
+    return view('e-service');
+});
+
+Route::get('/e-reports', function() {
+    return view('e-report');
+});
+
+Route::get('/sat-servey', function() {
+    return view('sat-servey');
+});
+
+Route::get('/downloads', function() {
+    return view('download');
+});
+
+/** ข่าวประชาสัมพันธ์ */
+
+
+/** ติดต่อเรา */
+Route::get('/contact', function() {
+    return view('contact');
+});
+
+Route::get('/links', function() {
+    return view('link');
+});
+
+
+Route::get('/posts/{id}', [App\Http\Controllers\PostController::class, 'post']);
 
 /** Run into react fronend */
-Route::view('/{path?}', 'app');
+// Route::view('/{path?}', 'app');

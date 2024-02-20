@@ -1,0 +1,50 @@
+@extends('layouts.app')
+
+@section('content')
+<section class="about container">
+    <h1 class="title">{{$post->title}}</h1>
+
+    <hr class="my-2" />
+
+    <div class="px-2 pb-4">
+        <!-- Page Header -->
+        @include('components.page-header', [
+            'author'    => $post->author->name,
+            'publishUp' => $post->publish_up
+        ])
+
+        <div>
+            @if($post->content_type_id === 1 && $post->intro_text)
+                <div>
+                    <div class="p-2 mt-4 flex justify-center">
+                        <div class="flex justify-center w-3/5 rounded-md overflow-hidden border object-cover">
+                            <img src="./{{$post->featured}}" alt="headline-pic" />
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center py-2 text-lg max-md:text-sm">
+                        <div class="post-detail w-4/5">
+                            {{ $post->full_text }}
+                        </div>
+                    </div>
+                </div>
+            @endif
+
+            <!-- Render pdf file -->
+            @if($post->content_type_id === 2 && $post->urls)
+                <div class="px-10 pt-2 pb-4 flex justify-center">
+                    <object
+                        data="{{$post->urls}}"
+                        type="application/pdf"
+                        width="100%"
+                        height="720px"
+                    >
+                        <p>Unable to display PDF file.<a href="{{$post->urls}}" target="_blank" class="ml-2 underline">Download</a> instead.</p>
+                    </object>
+                </div>
+            @endif
+
+        </div>
+    </div>
+</section>
+@endsection

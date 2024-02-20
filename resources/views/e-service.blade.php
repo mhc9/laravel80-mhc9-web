@@ -1,0 +1,47 @@
+@extends('layouts.app')
+
+@section('content')
+<section class="about container">
+    <h1 class="title">ระบบสารสนเทศ (E-Service)</h1>
+
+    <hr class="my-2" />
+
+    <div class="service-wrapper p-4">
+        <div class="row service-list"></div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        const eservices = [
+            { "id": 1, "name": "Mental Health Check In", "img_url": "https://checkin.dmh.go.th/assets_ci/images/logo/mental-icon.png", "link": "https://checkin.dmh.go.th/dashboards", target: "_blank", external: true },
+            { "id": 2, "name": "School Health HERO", "img_url": "https://www.kruachieve.com/wp-content/uploads/2021/03/273553748_309389491153678_311550697631263581_n.jpg", "link": "https://schoolhealthhero.obec.go.th/", target: "_blank", external: true },
+            { "id": 3, "name": "Sabai Jai", "img_url": "https://www.matichonacademy.com/wp-content/uploads/2020/11/Sabaijai-2.jpg", "link": "", target: "_blank", external: true },
+            { "id": 4, "name": "Data Catalog", "img_url": "https://gdcatalog.go.th/uploads/admin/2023-07-04-064640.259684governmentdataok.png", "link": "https://catalog.dmh.go.th/dataset/?organization=mhc09" },
+            { "id": 5, "name": "ตอบรับเข้าร่วมโครงการ", "img_url": "https://www.mhc9dmh.com/PIC/par.jpg", "link": "https://www.mhc9dmh.com/ParticipateList.aspx", target: "_blank", external: true },
+            {
+                "id": 6,
+                "name": "Metaverse MHC9",
+                "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbY5CDP0bln-ued_g4EpN4gIoTW8JWSptNdwdeI1LwHtDb3B9V4Uu2hxRcVHG9htaUtM&usqp=CAU",
+                "link": "https://www.spatial.io/s/suunysukhphaaphcchitthii-9-kaarsngesrimp-ngkanpayhaasukhphaaphcchit-63db7c4ee15d1c23349972fc?share=6678401426426303740&fbclid=IwAR3qiujwiB_Hkbu11_K_VhlSGDXXtToD2jH_3ZWIuoW0et6WydK0Lo1Ne9A",
+                target: "_blank",
+                external: true
+            },
+            { "id": 7, "name": "ข้อมูลสุขภาพจิต MHC9", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": "", target: "_self", external: false },
+            { "id": 8, "name": "E-Report", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": "./e-reports", target: "_self", external: false }
+        ];
+
+        eservices.forEach(service => {
+            $('.service-list').append(`
+                <div class="col-md-3 col-sm-6 flex justify-center text-center">
+                    <a href="${service.link}" target="${service.target}">
+                        <div class="service-item">
+                            <img src="${service.img_url}" alt="${service.name}" />
+                            <h4>${service.name}</h4>
+                        </div>
+                    </a>
+                </div>
+            `)
+        });
+    });
+</script>
+@endsection
