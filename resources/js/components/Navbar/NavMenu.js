@@ -94,6 +94,12 @@ const NavMenu = () => {
                             <div className="submenu">
                                 <Link to="annual-reports" target="_self">รายงานประจำปี</Link>
                             </div>
+                            <div className="submenu">
+                                <Link to="/posts/90" target="_self">แผนดำเนินงานและการใช้จ่ายงบประมาณประจำปี</Link>
+                            </div>
+                            <div className="submenu">
+                                <Link to="/posts/91" target="_self">รายงานผลการดำเนินงานประจำปี</Link>
+                            </div>
                         </div>
                     </div>
                 </div>
