@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/contact', function() {
-    return view('contact');
-});
+// Route::get('/contact', function() {
+//     return view('contact');
+// });
 
 /** Run into react fronend */
-// Route::view('/{path?}', 'app');
+Route::view('/{path?}', 'app');

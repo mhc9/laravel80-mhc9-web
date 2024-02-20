@@ -21,6 +21,12 @@ function Appeal() {
                         <span><i className="fas fa-angle-down"></i></span>
                     </div>
                 </Link>
+                <Link to="/posts/87">
+                    <div className="policy">
+                        <h3>การเปิดโอกาสให้เกิดการมีส่วนร่วม</h3>
+                        <span><i className="fas fa-angle-down"></i></span>
+                    </div>
+                </Link>
                 <Link to="/posts/85">
                     <div className="policy">
                         <h3>การประเมินความเสี่ยงการทุจริตประจำปี</h3>
