@@ -12,8 +12,10 @@
             'author'    => $post->author->name,
             'publishUp' => $post->publish_up
         ])
-
-        <div>
+            
+        <!-- Page Content -->
+        <div class="page-content">
+            <!-- Render string or html -->
             @if($post->content_type_id === 1 && $post->intro_text)
                 <div>
                     <div class="p-2 mt-4 flex justify-center">
@@ -44,7 +46,17 @@
                 </div>
             @endif
 
+            <!-- Render image -->
+            @if($post->content_type_id == 3 && $post->urls)
+                <div class="p-2 mt-4 flex justify-center w-full">
+                    <div class="w-3/5 max-md:w-[90%] rounded-md overflow-hidden">
+                        <img src="{{$post->urls}}" alt="headline-pic" />
+                    </div>
+                </div>
+            @endif
         </div>
+
+        <!-- // comment here... -->
     </div>
 </section>
 @endsection
