@@ -1,5 +1,5 @@
 <div class="flex flex-row items-center justify-between mb-2 px-4">
-    <!-- {/* Author info */} -->
+    <!-- Author info -->
     <div class="flex flex-row items-center gap-3">
         @include('components.avatar', [
             'size'      => "40px",
@@ -11,6 +11,6 @@
         </div>
     </div>
 
-    <!-- {/* Share content */} -->
-    <!-- <ShareButtons post={post} /> -->
+    <!-- Share buttons -->
+    @include('components.share-buttons', ['id' => $post->id, 'title' => $post->title])
 </div>
