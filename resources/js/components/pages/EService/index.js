@@ -1,5 +1,6 @@
 import React from 'react'
 import services from '../../../data/services.json'
+import { Link } from 'react-router-dom'
 
 const EService = () => {
     return (
@@ -12,13 +13,24 @@ const EService = () => {
                 <div className="row service-list">
                     {services.map((service, index) => (
                         <div className="col-md-3 col-sm-6" key={service.id}>
-                            <a href={service.link} target="_blank">
-                                <div className="service-item">
+                            {service.external && (
+                                <a href={service.link} target={service.target ? service.target : "_blank"}>
+                                    <div className="service-item">
 
-                                    <img src={service.img_url} alt={service.name} />
-                                    <h4>{service.name}</h4>
-                                </div>
-                            </a>
+                                        <img src={service.img_url} alt={service.name} />
+                                        <h4>{service.name}</h4>
+                                    </div>
+                                </a>
+                            )}
+                            {!service.external && (
+                                <Link to={service.link} target={service.target ? service.target : "_blank"}>
+                                    <div className="service-item">
+
+                                        <img src={service.img_url} alt={service.name} />
+                                        <h4>{service.name}</h4>
+                                    </div>
+                                </Link>
+                            )}
                         </div>
                     ))}
                 </div>

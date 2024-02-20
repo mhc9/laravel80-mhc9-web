@@ -31,6 +31,8 @@ import Authority from './pages/Authority';
 import Appeal from './pages/Appeal';
 import EServiceList from './pages/EService/List';
 import Procedures from './pages/procedures';
+import EReport from './pages/EService/report';
+import SatServey from './pages/EService/SatServey';
 
 function App() {
     return (
@@ -54,6 +56,8 @@ function App() {
                 <Route path="/downloads" element={<Downloads />} />
                 <Route path="/appeal" element={<Appeal />} />
                 <Route path="/e-services" element={<EServiceList />} />
+                <Route path="/e-reports" element={<EReport />} />
+                <Route path="/sat-servey" element={<SatServey />} />
 
                 {/* ข่าวประชาสัมพันธ์ */}
                 <Route path="/posts/list" element={<PostList />} />
