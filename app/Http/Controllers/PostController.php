@@ -26,14 +26,14 @@ class PostController extends Controller
         $this->postService = $postService;
     }
 
-    public function post($id)
+    public function getPost($id)
     {
         $post =  Post::with('category','author')->find($id);
 
         return view('post.detail', ['post' => $post]);
     }
 
-    public function posts(Request $req)
+    public function getPosts(Request $req)
     {
         $limit = !empty($req->get('limit')) ? $req->get('limit') : 5;
 
@@ -43,7 +43,9 @@ class PostController extends Controller
                     ->orderBy('id', 'DESC')
                     ->paginate($limit);
 
-        return view('post.list', compact('posts'));
+        $title = "ข่าวกิจกรรม";
+
+        return view('post.list', compact('posts', 'title'));
     }
 
     public function search(Request $req)

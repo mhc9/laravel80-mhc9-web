@@ -251,7 +251,7 @@
 
                                                 <div class="submenus">
                                                     <div class="submenu ">
-                                                        <a href="{{ url('/posts/list') }}" target="_self">ข่าวกิจกรรม</a>
+                                                        <a href="{{ url('/posts') }}" target="_self">ข่าวกิจกรรม</a>
                                                     </div>
                                                     <!-- <div class="submenu ">
                                                         <a href="#" target="_self">
@@ -259,38 +259,38 @@
                                                         </a>
                                                     </div> -->
                                                     <div class="submenu has-children">
-                                                        <a href="{{ url('/news/3/list') }}" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
+                                                        <a href="{{ url('/newses/category/3') }}" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
                                                         <div class="child-container">
                                                             <div class="childs">
                                                                 <div class="child">
-                                                                    <a href="news/1/list" target="_self">แผนการจัดซื้อจัดจ้าง</a>
+                                                                    <a href="newses/category/3" target="_self">แผนการจัดซื้อจัดจ้าง</a>
                                                                 </div>
                                                                 <div class="child">
-                                                                    <a href="news/1/list" target="_self">ประกาศราคากลาง</a>
+                                                                    <a href="newses/category/3" target="_self">ประกาศราคากลาง</a>
                                                                 </div>
                                                                 <div class="child">
-                                                                    <a href="news/1/list" target="_self">ประกาศร่าง TOR</a>
+                                                                    <a href="newses/category/3" target="_self">ประกาศร่าง TOR</a>
                                                                 </div>
                                                                 <div class="child">
-                                                                    <a href="news/1/list" target="_self">ประกาศจัดซื้อจัดจ้าง</a>
+                                                                    <a href="newses/category/3" target="_self">ประกาศจัดซื้อจัดจ้าง</a>
                                                                 </div>
                                                                 <div class="child">
-                                                                    <a href="news/1/list" target="_self">ประกาศผู้ชนะการเสนอราคา</a>
+                                                                    <a href="newses/category/3" target="_self">ประกาศผู้ชนะการเสนอราคา</a>
                                                                 </div>
                                                                 <!-- <div class="child">
-                                                                    <a href="news/1/list" target="_self">สรุปผลการจัดซื้อจัดจ้าง</a>
+                                                                    <a href="newses/category/361" target="_self">สรุปผลการจัดซื้อจัดจ้าง</a>
                                                                 </div> -->
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="{{ url('/news/4/list') }}" target="_self">ข่าวรับสมัครงาน</a>
+                                                        <a href="{{ url('/newses/category/4') }}" target="_self">ข่าวรับสมัครงาน</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="{{ url('/news/5/list') }}" target="_self">ข่าวประกาศ</a>
+                                                        <a href="{{ url('/newses/category/5') }}" target="_self">ข่าวประกาศ</a>
                                                     </div>
                                                     <div class="submenu ">
-                                                        <a href="{{ url('/onepages/list') }}" target="_self">MHC9 News</a>
+                                                        <a href="{{ url('/onepages') }}" target="_self">MHC9 News</a>
                                                     </div>
                                                     <div class="submenu ">
                                                         <a href="{{ url('/calendar') }}" target="_self">ปฏิทินกิจกรรม</a>

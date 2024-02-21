@@ -91,6 +91,14 @@ static $PAPER_SIZES = array(
     "11x17" => array(0, 0, 792.00, 1224.00),
 );
 
+const FONT_SIZES = [
+    'xs'    => 'font-size: 0.75rem; line-height: 1rem;',
+    'sm'    => 'font-size: 0.875rem; line-height: 1.25rem;',
+    'base'  => 'font-size: 1rem; line-height: 1.5rem;',
+    'lg'    => 'font-size: 1.125rem; line-height: 1.75rem;',
+    'xl'    => 'font-size: 1.25rem; line-height: 1.75rem;',
+];
+
 function uploadFile($file, $destPath)
 {
     $filename = '';
