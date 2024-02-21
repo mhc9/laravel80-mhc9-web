@@ -24,7 +24,7 @@
             @endforeach
         </div>
 
-        <div class="mt-2">
+        <div class="mt-2 flex justify-center">
             {{ $posts->links() }}
         </div>
     </div>

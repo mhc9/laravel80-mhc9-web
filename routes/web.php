@@ -90,6 +90,9 @@ Route::get('/downloads', function() {
 
 /** ข่าวประชาสัมพันธ์ */
 Route::get('/posts', [App\Http\Controllers\PostController::class, 'posts']);
+Route::get('/posts/{id}', [App\Http\Controllers\PostController::class, 'post']);
+Route::get('/newses', [App\Http\Controllers\NewsController::class, 'posts']);
+Route::get('/newses/category/{cate}', [App\Http\Controllers\NewsController::class, 'post']);
 
 /** ติดต่อเรา */
 Route::get('/contact', function() {
@@ -99,9 +102,6 @@ Route::get('/contact', function() {
 Route::get('/links', function() {
     return view('link');
 });
-
-/** */
-Route::get('/posts/{id}', [App\Http\Controllers\PostController::class, 'post']);
 
 /** Run into react fronend */
 // Route::view('/{path?}', 'app');
