@@ -153,10 +153,11 @@
             <div>
                 <div class="container">
                     <div class="row">
+                        <!-- Headline -->
                         <div class="col-md-12 col-lg-9">
-                            <!-- Headline -->
                             <div class="post-box">
                                 <h1 class="title">
+                                    <i class="fas fa-bullhorn"></i>
                                     ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>ข่าวกิจกรรม
                                 </h1>
 
@@ -165,13 +166,68 @@
                                 <div class="post-list">
                                     <div class="row">
                                         <div class="col-md-12 col-lg-7">
+                                            <div class="post-headline">
+                                                <div class="headline-img">
+                                                    <img src="{{ url('/'.$headline->featured) }}" alt="headline-pic" />
+                                                </div>
+                                                <div class="headline-text">
+                                                    <h4 class="text-xl">{{$headline->title}}</h4>
+
+                                                    @include('components.page-subtitle', [
+                                                        'textSize'  => "xs",
+                                                        'author'    => $headline->author,
+                                                        'publishUp' => $headline->publish_up
+                                                    ])
+
+                                                    <p class="my-2">
+                                                        <span>{{$headline->intro_text}}</span>
+                                                        <span class="readmore">
+                                                            <a href="{{ url('/posts/' . $headline->id) }}">อ่านเพิ่มเติม</a>
+                                                        </span>
+                                                    </p>
+                                                    <!-- {headline?.tags && (
+                                                        <div class="mb-2">
+                                                            {headline?.tags.split(',').map((tag, index) => (
+                                                                <div class="badge rounded-pill bg-secondary me-1" key={index}>{tag}</div>
+                                                            ))}
+                                                        </div>
+                                                    )} -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-lg-5">
+                                            <ul class="post-secondary">
+                                                @foreach($posts as $post)
+                                                    <li>
+                                                        <div class="post__secondary-img">
+                                                            <img src="{{ url('/' . $post->featured) }}" class="lg:h-[100px] max-lg:h-[120px]" alt="post-pic" />
+                                                        </div>
+                                                        <div class="post__secondary-text">
+                                                            <a href="{{ url('/posts/' . $post->id) }}"><h4>{{$post->title}}</h4></a>
+
+                                                            @include('components.page-subtitle', [
+                                                                'textSize'  => "xs",
+                                                                'author'    => $post->author,
+                                                                'publishUp' => $post->publish_up
+                                                            ])
+
+                                                            <!-- <p>{{$post->intro_text}}</p> -->
+                                                        </div>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+
+                                            <div class="post-btn mt-2">
+                                                <a href="/posts" class="all-news">ข่าวกิจกรรมทั้งหมด</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Director -->
                         <div class="col-md-12 col-lg-3">
-                            <!-- Director -->
                             <div class="director-box">
                                 <h1 class="title">ผู้อำนวยการ</h1>
 
@@ -197,7 +253,10 @@
                         <!-- Videos -->
                         <div class="col-md-8 col-lg-9">
                             <div class="video-box">
-                                <h1 class="title">สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>วีดิโอสุขภาพจิต</h1>
+                                <h1 class="title">
+                                    <i class="fas fa-video"></i>
+                                    สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>วีดิโอสุขภาพจิต
+                                </h1>
 
                                 <hr class="my-2" />
 
@@ -246,6 +305,7 @@
                         <div class="col">
                             <div class="news-box">
                                 <h1 class="title">
+                                    <i class="fas fa-rss"></i>
                                     ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>อื่นๆ
                                 </h1>
 
@@ -287,6 +347,7 @@
                         <div class="col">
                             <div class="info-box">
                                 <h1 class="title">
+                                    <i class="fas fa-images"></i>
                                     ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>MHC9 News
                                 </h1>
 
@@ -395,7 +456,10 @@
                     <div class="row">
                         <div class="col">
                             <div class="article-box">
-                                <h1 class="title">สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>บทความสุขภาพจิต</h1>
+                                <h1 class="title">
+                                    <i class="fas fa-file-medical-alt"></i>
+                                    สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>บทความสุขภาพจิต
+                                </h1>
 
                                 <hr class="my-2" />
 
@@ -418,7 +482,10 @@
             <div style="background: #F2F2F2">
                 <div class="container">
                     <div class="service-box">
-                        <h1 class="title">ระบบสารสนเทศ (E-Service)</h1>
+                        <h1 class="title">
+                            <i class="fas fa-poll"></i>
+                            ระบบสารสนเทศ (E-Service)
+                        </h1>
 
                         <hr class="my-2" />
 
