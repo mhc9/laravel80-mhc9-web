@@ -54,7 +54,7 @@
         <div class="option-menus w-full">
             <div class="container">
                 <div class="contents">
-                    <a href="./news/3/list" class="content">
+                    <a href="{{ url('/newses/category/3') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">จัดซื้อจัดจ้าง</h6>
@@ -65,7 +65,7 @@
                             <div class="order">01</div>
                         </div>
                     </a>
-                    <a href=".news/4/list" class="content">
+                    <a href="{{ url('/newses/category/4') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">ร่วมงานกับเรา</h6>
@@ -76,7 +76,7 @@
                             <div class="order">02</div>
                         </div>
                     </a>
-                    <a href="./faq" class="content">
+                    <a href="{{ url('/faq') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">คำถามที่ถามบ่อย</h6>
@@ -98,7 +98,7 @@
                             <div class="order">04</div>
                         </div>
                     </a>
-                    <a href="./downloads" class="content">
+                    <a href="{{ url('/downloads') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">ดาวน์โหลด</h6>
@@ -109,7 +109,7 @@
                             <div class="order">05</div>
                         </div>
                     </a>
-                    <a href="./ita" class="content">
+                    <a href="{{ url('/ita') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">ศูนย์ข้อมูลข่าวสาร</h6>
@@ -120,7 +120,7 @@
                             <div class="order">06</div>
                         </div>
                     </a>
-                    <a href="./ita" class="content">
+                    <a href="{{ url('/ita') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">ควบคุมภายใน</h6>
@@ -131,7 +131,7 @@
                             <div class="order">07</div>
                         </div>
                     </a>
-                    <a href="./moral-club" class="content">
+                    <a href="{{ url('/moral-club') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">ชมรมคุณธรรมฯ</h6>
@@ -261,20 +261,20 @@
                                 <hr class="my-2" />
 
                                 <div class="row video-list">
-                                    <!-- {videos.map((video, index) => (
-                                        <div class="col-md-12 col-lg-6" key={video.id}>
+                                    @foreach($videos as $video)
+                                        <div class="col-md-12 col-lg-6">
                                             <div class="video-item">
                                                 <iframe
                                                     width="100%"
                                                     height="100%"
-                                                    src={video.urls}
-                                                    title={video.title}
+                                                    src="{{$video->urls}}"
+                                                    title="{{$video->title}}"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                     allowFullScreen
                                                 ></iframe>
                                             </div>
                                         </div>
-                                    ))} -->
+                                    @endforeach
                                 </div>
                                 <div class="video-btn">
                                     <a href="/videos/list" class="all-news">วีดิโอทั้งหมด</a>
@@ -315,23 +315,40 @@
                                     <div class="col-lg-4 col-md-12 news-wrapper">
                                         <h4>ข่าวจัดซื้อจัดจ้าง</h4>
 
-                                        <!-- <NewsItems items={procurements} /> -->
+                                        <div class="news-list">
+                                            <ul>
+                                                @foreach($procures as $item)
+                                                    <li>
+                                                        <div>
+                                                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                        </div>
+                                                        <p>
+                                                            <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
+                                                        </p>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
 
-                                        <a href="./news/3/list" class="all-news">ข่าวทั้งหมด</a>
+                                        <a href="./newses/category/3" class="all-news">ข่าวทั้งหมด</a>
                                     </div>
                                     <div class="col-lg-4 col-md-12 news-wrapper">
                                         <h4>ข่าวรับสมัครงาน</h4>
 
-                                        <!-- <NewsItems items={recruitments} /> -->
-
-                                        <a href="./news/4/list" class="all-news">ข่าวทั้งหมด</a>
+                                        <div class="news-list">
+                                            <ul id="jobNews"></ul>
+                                        </div>
+                                        
+                                        <a href="./newses/category/4" class="all-news">ข่าวทั้งหมด</a>
                                     </div>
                                     <div class="col-lg-4 col-md-12 news-wrapper">
                                         <h4>ประกาศ</h4>
 
-                                        <!-- <NewsItems items={notices} /> -->
+                                        <div class="news-list">
+                                            <ul id="noticeNews"></ul>
+                                        </div>
 
-                                        <a href="./news/5/list" class="all-news">ประกาศทั้งหมด</a>
+                                        <a href="./newses/category/5" class="all-news">ประกาศทั้งหมด</a>
                                     </div>
                                 </div>
                             </div>
@@ -356,87 +373,17 @@
                                 <div class="row">
                                     <div class="swiper" id="partner">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
+                                            @foreach($onepages as $onepage)
+                                                <div class="swiper-slide">
+                                                    <div class="p-2">
+                                                        <img
+                                                            class="object-contain w-full h-96"
+                                                            src="{{ url('/' . $onepage->featured) }}"
+                                                            alt="logo-pic"
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="p-2">
-                                                    <img
-                                                        class="object-contain w-full h-96"
-                                                        src="https://mhc9dmh.com/newweb/public/uploads/2024/01/0125202408541965b221bb0ab06.jpg"
-                                                        alt="logo-pic"
-                                                    />
-                                                </div>
-                                            </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>
@@ -463,13 +410,34 @@
 
                                 <hr class="my-2" />
 
-                                <div class="row article-list">
-                                    <!-- {articles?.map((article, index) => (
-                                        <ArticleCard article={article} key={article?.id} />
-                                    ))} -->
+                                <div class="row article-list px-4 py-2">
+                                    @foreach($articles as $article)
+                                        <div class="col-sm-6 col-md-4 col-lg-3 ">
+                                            <div class="card article-item">
+                                                <div class="card-img-top">
+                                                    <img src="{{ url('/' . $article->featured) }}" alt="article-cover" />
+                                                </div>
+                                                <div class="card-body">
+                                                    <a href="{{ url('/posts/' . $article->id) }}">
+                                                        <h3 class="card-title">{{$article->title}}</h3>
+                                                    </a>
+
+                                                    @include('components.page-subtitle', [
+                                                        'textSize'  => "xs",
+                                                        'author'    => $article->author,
+                                                        'publishUp' => $article->publish_up
+                                                    ])
+
+                                                    <p class="card-text">
+                                                        <span>{{$article->intro_text}}</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
 
                                     <div class="post-btn">
-                                        <a href="/articles/list" class="all-news">บทความทั้งหมด</a>
+                                        <a href="{{ url('/articles') }}" class="all-news">บทความทั้งหมด</a>
                                     </div>
                                 </div>
                             </div>
@@ -672,7 +640,7 @@
         }
     ];
 
-    $(document).ready(function () {
+    $(document).ready(async function () {
         services.forEach(service => {
             $('.officer-items').append(`
                 <a href="" target="_blank">
@@ -707,8 +675,42 @@
                         </div>
                     </a>
                 </div>
-            `)
+            `);
         });
+
+        /** Fetch jobs in background */
+        const jobResponse = await fetch(`${API_URL}/posts?page=&cate=4`);
+        if (jobResponse) {
+            const { data, ...pager } = await jobResponse.json();
+
+            data.forEach(job => {
+                $('#jobNews').append(`
+                    <li>
+                        <div>
+                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                        </div>
+                        <p><a href="{{ url('/posts/${job.id}') }}">${job.title}</a></p>
+                    </li>
+                `);
+            })
+        }
+
+        /** Fetch notices in background */
+        const noticeResponse = await fetch(`${API_URL}/posts?page=&cate=5`);
+        if (noticeResponse) {
+            const { data, ...pager } = await noticeResponse.json();
+
+            data.forEach(notice => {
+                $('#noticeNews').append(`
+                    <li>
+                        <div>
+                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                        </div>
+                        <p><a href="{{ url('/posts/${notice.id}') }}">${notice.title}</a></p>
+                    </li>
+                `);
+            })
+        }
     });
 </script>
 @endsection

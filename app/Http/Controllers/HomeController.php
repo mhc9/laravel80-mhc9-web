@@ -37,6 +37,30 @@ class HomeController extends Controller
                     ->offset(1)
                     ->get();
 
-        return view('home', compact('headline', 'posts'));
+        $videos = Post::with('category','author')
+                    ->where('category_id', 7)
+                    ->orderBy('publish_up', 'DESC')
+                    ->limit(4)
+                    ->get();
+
+        $procures = Post::with('category','author')
+                    ->where('category_id', 3)
+                    ->orderBy('publish_up', 'DESC')
+                    ->limit(5)
+                    ->get();
+
+        $onepages = Post::with('category','author')
+                    ->where('category_id', 8)
+                    ->orderBy('publish_up', 'DESC')
+                    ->limit(10)
+                    ->get();
+
+        $articles = Post::with('category','author')
+                    ->where('category_id', 6)
+                    ->orderBy('publish_up', 'DESC')
+                    ->limit(8)
+                    ->get();
+
+        return view('home', compact('headline', 'posts', 'videos', 'procures', 'onepages', 'articles'));
     }
 }
