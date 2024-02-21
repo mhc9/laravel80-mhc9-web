@@ -20,8 +20,8 @@
                 <div>
                     <div class="p-2 mt-4 flex justify-center">
                         @if($post->category_id == 2)
-                            <div class="flex justify-center w-3/5 rounded-md overflow-hidden border object-cover">
-                                <img src="./{{$post->featured}}" alt="headline-pic" />
+                            <div class="flex justify-center w-3/5 rounded-md overflow-hidden object-cover">
+                                <img src="{{ url('/'.$post->featured) }}" alt="headline-pic" />
                             </div>
                         @else
                             <div class="mb-2">
