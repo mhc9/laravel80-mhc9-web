@@ -336,101 +336,101 @@ function committeeNumber($committees, $type) {
 //     })->download();
 // }
 
-$SUFFIX_TIME = array(
-	"th"=>array(
-		"time"=>array(
-			"Seconds"			=>		" วินาทีที่แล้ว",
-			"Minutes"				=>		" นาทีที่แล้ว",
-			"Hours"					=>		" ชั่วโมงที่แล้ว"
+const SUFFIX_TIME = array(
+	"th" => array(
+		"time" => array(
+			"Seconds"   => " วินาทีที่แล้ว",
+			"Minutes"   => " นาทีที่แล้ว",
+			"Hours"     => " ชั่วโมงที่แล้ว"
 		),
-		"day"=>array(
-			"Yesterday"		=>		"เมื่อวาน เวลา ",
-			"Monday"				=>		"วันจันทร์ เวลา ",
-			"Tuesday"			=>		"วันอังคาร เวลา ",
-			"Wednesday"	=>		"วันพุธ เวลา ",
-			"Thursday"			=>		"วันพฤหัสบดี เวลา ",
-			"Friday"				=>		"วันศุกร์ เวลา ",
-			"Saturday"			=>		" วันวันเสาร์ เวลา ",
-			"Sunday"				=>		"วันอาทิตย์ เวลา ",
+		"day" => array(
+			"Yesterday" => "เมื่อวาน เวลา ",
+			"Monday"    => "วันจันทร์ เวลา ",
+			"Tuesday"   => "วันอังคาร เวลา ",
+			"Wednesday"	=> "วันพุธ เวลา ",
+			"Thursday"  => "วันพฤหัสบดี เวลา ",
+			"Friday"    => "วันศุกร์ เวลา ",
+			"Saturday"  => "วันวันเสาร์ เวลา ",
+			"Sunday"    => "วันอาทิตย์ เวลา ",
 		)
 	),
-	"en"=>array(
+	"en" => array(
 		"time"=>array(
-			"Seconds"				=>		" seconds ago",
-			"Minutes"				=>		" minutes ago",
-			"Hours"					=>		" hours ago"
+			"Seconds"   => " seconds ago",
+			"Minutes"   => " minutes ago",
+			"Hours"     => " hours ago"
 		),
-		"day"=>array(
-			"Yesterday"		=>		"Yesterday at ",
-			"Monday"				=>		"Monday at ",
-			"Tuesday"			=>		"Tuesday at ",
-			"Wednesday"	=>		"Wednesday at ",
-			"Thursday"			=>		"Thursday at ",
-			"Friday"				=>		"Friday at ",
-			"Saturday"			=>		"Saturday at ",
-			"Sunday"				=>		"Sunday at ",
+		"day" => array(
+			"Yesterday" => "Yesterday at ",
+			"Monday"    => "Monday at ",
+			"Tuesday"   => "Tuesday at ",
+			"Wednesday"	=> "Wednesday at ",
+			"Thursday"  => "Thursday at ",
+			"Friday"    => "Friday at ",
+			"Saturday"  => "Saturday at ",
+			"Sunday"    => "Sunday at ",
 		)
 	)
 );
 
-$DATE_THAI = array(
+const DATE_THAI = array(
 	// Day
 	"l" => array(	// Full day
-		"Monday"				=>		"วันจันทร์",
-		"Tuesday"			=>		"วันอังคาร",
-		"Wednesday"	=>		"วันพุธ",
-		"Thursday"			=>		"วันพฤหัสบดี",
-		"Friday"				=>		"วันศุกร์",
-		"Saturday"			=>		"วันวันเสาร์",
-		"Sunday"				=>		"วันอาทิตย์",
+		"Monday"    => "วันจันทร์",
+		"Tuesday"   => "วันอังคาร",
+		"Wednesday"	=> "วันพุธ",
+		"Thursday"  => "วันพฤหัสบดี",
+		"Friday"    => "วันศุกร์",
+		"Saturday"  => "วันวันเสาร์",
+		"Sunday"    => "วันอาทิตย์",
 	),
 	"D" => array(	// Abbreviated day
-		"Monday"				=>		"จันทร์",
-		"Tuesday"			=>		"อังคาร",
-		"Wednesday"	=>		"พุธ",
-		"Thursday"			=>		"พฤหัส",
-		"Friday"				=>		"ศุกร์",
-		"Saturday"			=>		"วันเสาร์",
-		"Sunday"				=>		"อาทิตย์",
+		"Monday"    => "จันทร์",
+		"Tuesday"   => "อังคาร",
+		"Wednesday"	=> "พุธ",
+		"Thursday"  => "พฤหัส",
+		"Friday"    => "ศุกร์",
+		"Saturday"  => "วันเสาร์",
+		"Sunday"    => "อาทิตย์",
 	),
 	
 	// Month
 	"F" => array(	// Full month
-		"January"				=>		"มกราคม",
-		"February"			=>		"กุมภาพันธ์",
-		"March"					=>		"มีนาคม",
-		"April"					=>		"เมษายน",
-		"May"					=>		"พฤษภาคม",
-		"June"					=>		"มิถุนายน",
-		"July"						=>		"กรกฎาคม",
-		"August"				=>		"สิงหาคม",
-		"September"		=>		"กันยายน",
-		"October"				=>		"ตุลาคม",
-		"November"		=>		"พฤศจิกายน",
-		"December"		=>		"ธันวาคม"
+		"January"   => "มกราคม",
+		"February"  => "กุมภาพันธ์",
+		"March"     => "มีนาคม",
+		"April"     => "เมษายน",
+		"May"       => "พฤษภาคม",
+		"June"      => "มิถุนายน",
+		"July"      => "กรกฎาคม",
+		"August"    => "สิงหาคม",
+		"September" => "กันยายน",
+		"October"   => "ตุลาคม",
+		"November"  => "พฤศจิกายน",
+		"December"  => "ธันวาคม"
 	),
 	"M" => array(	// Abbreviated month
-		"January"				=>		"ม.ค.",
-		"February"			=>		"ก.พ.",
-		"March"					=>		"มี.ค.",
-		"April"					=>		"เม.ย.",
-		"May"					=>		"พ.ค.",
-		"June"					=>		"มิ.ย.",
-		"July"						=>		"ก.ค.",
-		"August"				=>		"ส.ค.",
-		"September"		=>		"ก.ย.",
-		"October"				=>		"ต.ค.",
-		"November"		=>		"พ.ย.",
-		"December"		=>		"ธ.ค."
+		"January"   => "ม.ค.",
+		"February"  => "ก.พ.",
+		"March"     => "มี.ค.",
+		"April"     => "เม.ย.",
+		"May"       => "พ.ค.",
+		"June"      => "มิ.ย.",
+		"July"      => "ก.ค.",
+		"August"    => "ส.ค.",
+		"September" => "ก.ย.",
+		"October"   => "ต.ค.",
+		"November"  => "พ.ย.",
+		"December"  => "ธ.ค."
 	)
 );
 
 function timeSince($Format, $Timestamp, $Language = "en", $TimeText = true )
 {
-	global $SUFFIX_TIME, $DATE_THAI;
-	//return date("i:H d-m-Y", $Timestamp) ." | ". date("i:H d-m-Y", time());
+	// global $SUFFIX_TIME, $DATE_THAI;
+
 	if( date("Ymd", $Timestamp) >= date("Ymd", (time()-345600)) && $TimeText) // Less than 3 days.
-{
+    {
 		$TimeStampAgo = (time()-$Timestamp);
 		
 		if(($TimeStampAgo < 86400)) // Less than 1 day.
@@ -469,9 +469,9 @@ function timeSince($Format, $Timestamp, $Language = "en", $TimeText = true )
 		}
 		
 		if($TimeDay == "time")
-			$Return .= $SUFFIX_TIME[$Language][$TimeDay][$Values];
+			$Return .= SUFFIX_TIME[$Language][$TimeDay][$Values];
 		else if($TimeDay == "day")
-			$Return = $SUFFIX_TIME[$Language][$TimeDay][$Values] . $Return;
+			$Return = SUFFIX_TIME[$Language][$TimeDay][$Values] . $Return;
 		
 		return $Return;
 	}
@@ -494,60 +494,60 @@ function timeSince($Format, $Timestamp, $Language = "en", $TimeText = true )
 			
 			$AR1 = array ("", "l", "D", "F", "M");
 			$AR2 = array ("", "l", "l", "F", "F");
-			
+
+            $StrCache = '';
+
 			for($i=1; $i<=4; $i++)
 			{
 				if(strstr($DateCache, "|". $i ."|"))
 				{
-					//$Return .= $i;
-					
-					$split = explode("|". $i ."|", $DateCache); 
-					for($j=0; $j<count($split)-1; $j++)
+					$split = explode("|". $i ."|", $DateCache);
+					for($j=0; $j < count($split)-1; $j++)
 					{
 						$StrCache .= $split[$j];
-						$StrCache .= $DATE_THAI[$AR1[$i]][date($AR2[$i], $Timestamp)];
+						$StrCache .= DATE_THAI[$AR1[$i]][date($AR2[$i], $Timestamp)];
 					}
+
 					$StrCache .= $split[count($split)-1];
 					$DateCache = $StrCache;
 					$StrCache = "";
+
 					empty($split);
 				}
 			}
-			
+
 			if(strstr($DateCache, "|x|"))
-				{
-					
-					$split = explode("|x|", $DateCache); 
-					
-					for($i=0; $i<count($split)-1; $i++)
-					{
-						$StrCache .= $split[$i];
-						$StrCache .= substr((date("Y", $Timestamp)+543), -2);
-					}
-					$StrCache .= $split[count($split)-1];
-					$DateCache = $StrCache;
-					$StrCache = "";
-					empty($split);
-				}
+            {
+                $split = explode("|x|", $DateCache); 
+                
+                for($i=0; $i<count($split)-1; $i++)
+                {
+                    $StrCache .= $split[$i];
+                    $StrCache .= substr((date("Y", $Timestamp)+543), -2);
+                }
+                $StrCache .= $split[count($split)-1];
+                $DateCache = $StrCache;
+                $StrCache = "";
+                empty($split);
+            }
 
-			if(strstr($DateCache, "|X|"))
-				{
-					
-					$split = explode("|X|", $DateCache); 
-					
-					for($i=0; $i<count($split)-1; $i++)
-					{
-						$StrCache .= $split[$i];
-						$StrCache .= (date("Y", $Timestamp)+543);
-					}
-					$StrCache .= $split[count($split)-1];
-					$DateCache = $StrCache;
-					$StrCache = "";
-					empty($split);
-				}
+            if(strstr($DateCache, "|X|"))
+            {
+                $split = explode("|X|", $DateCache); 
 
-				$Return = $DateCache;
-				
+                for($i=0; $i<count($split)-1; $i++)
+                {
+                    $StrCache .= $split[$i];
+                    $StrCache .= (date("Y", $Timestamp)+543);
+                }
+                $StrCache .= $split[count($split)-1];
+                $DateCache = $StrCache;
+                $StrCache = "";
+                empty($split);
+            }
+
+            $Return = $DateCache;
+
 			return $Return;
 		}
 	}
