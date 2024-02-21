@@ -24,9 +24,9 @@
             @endforeach
         </div>
 
-        <nav class="flex justify-center mt-2">
+        <div class="mt-2">
             {{ $posts->links() }}
-        </nav>
+        </div>
     </div>
 </section>
 @endsection
