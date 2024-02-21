@@ -204,14 +204,6 @@
                                                         </div>
                                                         <div class="post__secondary-text">
                                                             <a href="{{ url('/posts/' . $post->id) }}"><h4>{{$post->title}}</h4></a>
-
-                                                            @include('components.page-subtitle', [
-                                                                'textSize'  => "xs",
-                                                                'author'    => $post->author,
-                                                                'publishUp' => $post->publish_up
-                                                            ])
-
-                                                            <!-- <p>{{$post->intro_text}}</p> -->
                                                         </div>
                                                     </li>
                                                 @endforeach
@@ -229,7 +221,10 @@
                         <!-- Director -->
                         <div class="col-md-12 col-lg-3">
                             <div class="director-box">
-                                <h1 class="title">ผู้อำนวยการ</h1>
+                                <h1 class="title">
+                                    <i class="fas fa-user-md"></i>
+                                    ผู้อำนวยการ
+                                </h1>
 
                                 <hr class="my-2" />
 
@@ -285,7 +280,10 @@
                         <!-- Services -->
                         <div class="col-md-4 col-lg-3" style="background: #ffffff">
                         <div class="officer-box">
-                            <h1 class="title">สำหรับเจ้าหน้าที่</h1>
+                            <h1 class="title">
+                                <i class="fas fa-stethoscope"></i>
+                                สำหรับเจ้าหน้าที่
+                            </h1>
 
                             <hr class="my-2" />
 
