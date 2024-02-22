@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.default')
 
 @section('content')
 <div>
@@ -7,6 +7,7 @@
         <div class="slide-hero">
             <div class="swiper" id="hero">
                 <div class="swiper-wrapper">
+                    <!-- Director-General's Policy -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
@@ -16,29 +17,32 @@
                             />
                         </div>
                     </div>
+                    <!-- Mental Health Week -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_c550f9c85b119149e89b2ada124649b8.png"
+                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_1c30ffd49c597aa9cd42af147a04514b.jpg"
                                 alt="image"
                             />
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="slide-wrapper">
-                            <img
-                                class="object-cover w-full h-96"
-                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_1c30ffd49c597aa9cd42af147a04514b.png"
-                                alt="image"
-                            />
-                        </div>
-                    </div>
+                    <!-- No Gift Policy -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
                                 src="https://dmh.go.th/images/slides/NoGift1.jpg"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
+                    <!-- PDPA -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-96"
+                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_c550f9c85b119149e89b2ada124649b8.png"
                                 alt="image"
                             />
                         </div>
