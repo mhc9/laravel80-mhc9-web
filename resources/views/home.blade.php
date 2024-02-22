@@ -11,16 +11,7 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://dmh.go.th/images/slides/NoGift1.jpg"
-                                alt="image"
-                            />
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide-wrapper">
-                            <img
-                                class="object-cover w-full h-96"
-                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_1c30ffd49c597aa9cd42af147a04514b.png"
+                                src="https://www.hfocus.org/sites/default/files/2023/users/user288/2023-10/384543452_1162885951335791_9073574731124069578_n.jpg"
                                 alt="image"
                             />
                         </div>
@@ -38,7 +29,16 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://www.hfocus.org/sites/default/files/2023/users/user288/2023-10/384543452_1162885951335791_9073574731124069578_n.jpg"
+                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_1c30ffd49c597aa9cd42af147a04514b.png"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-96"
+                                src="https://dmh.go.th/images/slides/NoGift1.jpg"
                                 alt="image"
                             />
                         </div>
@@ -75,11 +75,11 @@
                             </div> */} -->
                             <div class="order">02</div>
                         </div>
-                    </a>
-                    <a href="{{ url('/faq') }}" class="content">
+                    </a>                    
+                    <a href="https://www.mhc9dmh.com/ParticipateList.aspx" class="content">
                         <div class="wrapper">
                             <div class="text-container">
-                                <h6 class="ellipsis-1">คำถามที่ถามบ่อย</h6>
+                                <h6 class="ellipsis-1">ตอบรับเข้าร่วมโครงการ</h6>
                             </div>
                             <!-- {/* <div class="banner">
                                 <i class="icon fas fa-address-card"></i>
@@ -109,10 +109,10 @@
                             <div class="order">05</div>
                         </div>
                     </a>
-                    <a href="{{ url('/ita') }}" class="content">
+                    <a href="{{ url('/faq') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
-                                <h6 class="ellipsis-1">ศูนย์ข้อมูลข่าวสาร</h6>
+                                <h6 class="ellipsis-1">คำถามที่ถามบ่อย</h6>
                             </div>
                             <!-- {/* <div class="banner">
                                 <i class="icon fas fa-address-card"></i>
@@ -120,10 +120,10 @@
                             <div class="order">06</div>
                         </div>
                     </a>
-                    <a href="{{ url('/ita') }}" class="content">
+                    <a href="{{ url('/annual-reports') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
-                                <h6 class="ellipsis-1">ควบคุมภายใน</h6>
+                                <h6 class="ellipsis-1">รายงานประจำปี</h6>
                             </div>
                             <!-- {/* <div class="banner">
                                 <i class="icon fas fa-address-card"></i>
@@ -131,10 +131,10 @@
                             <div class="order">07</div>
                         </div>
                     </a>
-                    <a href="{{ url('/moral-club') }}" class="content">
+                    <a href="{{ url('/e-services') }}" class="content">
                         <div class="wrapper">
                             <div class="text-container">
-                                <h6 class="ellipsis-1">ชมรมคุณธรรมฯ</h6>
+                                <h6 class="ellipsis-1">E-Service</h6>
                             </div>
                             <!-- {/* <div class="banner">
                                 <FaGavel />
@@ -210,7 +210,7 @@
                                             </ul>
 
                                             <div class="post-btn mt-2">
-                                                <a href="/posts" class="all-news">ข่าวกิจกรรมทั้งหมด</a>
+                                                <a href="{{ url('/posts') }}" class="all-news">ข่าวกิจกรรมทั้งหมด</a>
                                             </div>
                                         </div>
                                     </div>
@@ -593,80 +593,19 @@
         keyboard: true,
     });
 
-    const services = [
-        {
-            "id": 1,
-            "name": "โปรแกรม WPM",
-            "icon": "fa-coins",
-            "link": "https://www.mhc9dmh.com/loginmhc.aspx"
-        },
-        {
-            "id": 2,
-            "name": "ระบบงานสารบรรณอิเล็กทรอนิกส์",
-            "icon": "fa-envelope-open-text",
-            "link": "https://edc.dmh.go.th"
-        },
-        {
-            "id": 3,
-            "name": "ระบบสารสนเทศทรัพยากรบุคคล (DPIS)",
-            "icon": "fa-users",
-            "link": "http://dpis.dmh.go.th"
-        },
-        {
-            "id": 4,
-            "name": "ระบบ กพ.7 ออนไลน์",
-            "icon": "fa-user-tie",
-            "link": "https://app4seis.ocsc.go.th/admin/index.html"
-        },
-        {
-            "id": 5,
-            "name": "ระบบ E-Pay slip",
-            "icon": "fa-credit-card",
-            "link": "https://fin.dmh.go.th/intranet/"
-        },
-        {
-            "id": 6,
-            "name": "ระบบ B&P DMH",
-            "icon": "fa-cogs",
-            "link": "https://bp.dmh.go.th/DMH_PROJECT"
-        },
-        {
-            "id": 7,
-            "name": "ระบบ Satsurvey",
-            "icon": "fa-poll",
-            "link": "https://psdg.datacyber.net/"
-        }
-    ];
-
     $(document).ready(async function () {
         services.forEach(service => {
             $('.officer-items').append(`
-                <a href="" target="_blank">
+                <a href="${service.link}" target="_blank">
                     <i class="fas ${service.icon}"></i><h4>${service.name}</h4>
                 </a>
             `);
         });
 
-        const eservices = [
-            { "id": 1, "name": "Mental Health Check In", "img_url": "https://checkin.dmh.go.th/assets_ci/images/logo/mental-icon.png", "link": "https://checkin.dmh.go.th/dashboards"},
-            { "id": 2, "name": "School Health HERO", "img_url": "https://www.kruachieve.com/wp-content/uploads/2021/03/273553748_309389491153678_311550697631263581_n.jpg", "link": "https://schoolhealthhero.obec.go.th/"},
-            { "id": 3, "name": "Sabai Jai", "img_url": "https://www.matichonacademy.com/wp-content/uploads/2020/11/Sabaijai-2.jpg", "link": ""},
-            { "id": 4, "name": "Data Catalog", "img_url": "https://gdcatalog.go.th/uploads/admin/2023-07-04-064640.259684governmentdataok.png", "link": "https://catalog.dmh.go.th/dataset/?organization=mhc09"},
-            { "id": 5, "name": "ตอบรับเข้าร่วมโครงการ", "img_url": "https://www.mhc9dmh.com/PIC/par.jpg", "link": "https://www.mhc9dmh.com/ParticipateList.aspx"},
-            {
-                "id": 6,
-                "name": "Metaverse MHC9",
-                "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbY5CDP0bln-ued_g4EpN4gIoTW8JWSptNdwdeI1LwHtDb3B9V4Uu2hxRcVHG9htaUtM&usqp=CAU",
-                "link": "https://www.spatial.io/s/suunysukhphaaphcchitthii-9-kaarsngesrimp-ngkanpayhaasukhphaaphcchit-63db7c4ee15d1c23349972fc?share=6678401426426303740&fbclid=IwAR3qiujwiB_Hkbu11_K_VhlSGDXXtToD2jH_3ZWIuoW0et6WydK0Lo1Ne9A"
-            },
-            { "id": 7, "name": "ข้อมูลสุขภาพจิต MHC9", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": ""},
-            { "id": 8, "name": "E-Report", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": ""}
-        ];
-
         eservices.forEach(service => {
             $('.service-list').append(`
                 <div class="col-md-3 col-sm-6">
-                    <a href="${service.link}" target="_blank">
+                    <a href="${service.link}" target="${service.target}">
                         <div class="service-item">
                             <img src="${service.img_url}" alt="${service.name}" />
                             <h4>${service.name}</h4>

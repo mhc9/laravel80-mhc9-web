@@ -1,2 +1,65 @@
 const BASE_URL = 'https://mhc9dmh.com/newweb/public';
 const API_URL = 'http://localhost:32772/laravel80-mhc9web/public/api';
+
+const services = [
+    {
+        "id": 1,
+        "name": "โปรแกรม WPM",
+        "icon": "fa-coins",
+        "link": "https://www.mhc9dmh.com/loginmhc.aspx"
+    },
+    {
+        "id": 2,
+        "name": "ระบบงานสารบรรณอิเล็กทรอนิกส์",
+        "icon": "fa-envelope-open-text",
+        "link": "https://edc.dmh.go.th"
+    },
+    {
+        "id": 3,
+        "name": "ระบบสารสนเทศทรัพยากรบุคคล (DPIS)",
+        "icon": "fa-users",
+        "link": "http://dpis.dmh.go.th"
+    },
+    {
+        "id": 4,
+        "name": "ระบบ กพ.7 ออนไลน์",
+        "icon": "fa-user-tie",
+        "link": "https://app4seis.ocsc.go.th/admin/index.html"
+    },
+    {
+        "id": 5,
+        "name": "ระบบ E-Pay slip",
+        "icon": "fa-credit-card",
+        "link": "https://fin.dmh.go.th/intranet/"
+    },
+    {
+        "id": 6,
+        "name": "ระบบ B&P DMH",
+        "icon": "fa-cogs",
+        "link": "https://bp.dmh.go.th/DMH_PROJECT"
+    },
+    {
+        "id": 7,
+        "name": "ระบบ Satsurvey",
+        "icon": "fa-poll",
+        "link": "https://psdg.datacyber.net/"
+    }
+];
+
+const eservices = [
+    { "id": 1, "name": "Mental Health Check In", "img_url": "https://checkin.dmh.go.th/assets_ci/images/logo/mental-icon.png", "link": "https://checkin.dmh.go.th/dashboards", target: "_blank", external: true },
+    { "id": 2, "name": "School Health HERO", "img_url": "https://www.kruachieve.com/wp-content/uploads/2021/03/273553748_309389491153678_311550697631263581_n.jpg", "link": "https://schoolhealthhero.obec.go.th/", target: "_blank", external: true },
+    { "id": 3, "name": "Sabai Jai", "img_url": "https://www.matichonacademy.com/wp-content/uploads/2020/11/Sabaijai-2.jpg", "link": "", target: "_blank", external: true },
+    { "id": 4, "name": "Data Catalog", "img_url": "https://gdcatalog.go.th/uploads/admin/2023-07-04-064640.259684governmentdataok.png", "link": "https://catalog.dmh.go.th/dataset/?organization=mhc09" },
+    { "id": 5, "name": "ตอบรับเข้าร่วมโครงการ", "img_url": "https://www.mhc9dmh.com/PIC/par.jpg", "link": "https://www.mhc9dmh.com/ParticipateList.aspx", target: "_blank", external: true },
+    {
+        "id": 6,
+        "name": "Metaverse MHC9",
+        "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLbY5CDP0bln-ued_g4EpN4gIoTW8JWSptNdwdeI1LwHtDb3B9V4Uu2hxRcVHG9htaUtM&usqp=CAU",
+        "link": "https://www.spatial.io/s/suunysukhphaaphcchitthii-9-kaarsngesrimp-ngkanpayhaasukhphaaphcchit-63db7c4ee15d1c23349972fc?share=6678401426426303740&fbclid=IwAR3qiujwiB_Hkbu11_K_VhlSGDXXtToD2jH_3ZWIuoW0et6WydK0Lo1Ne9A",
+        target: "_blank",
+        external: true
+    },
+    { "id": 7, "name": "ข้อมูลสุขภาพจิต MHC9", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": "", target: "_self", external: false },
+    { "id": 8, "name": "E-Report", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": "./e-reports", target: "_self", external: false }
+];
