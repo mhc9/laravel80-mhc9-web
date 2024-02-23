@@ -10,7 +10,7 @@
 
     <div class="post__list-wrapper">
         <div class="mb-4">
-            @if($cate)
+            @if($cate == '3')
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="plans-tab" data-bs-toggle="tab" data-bs-target="#plans" type="button" role="tab" aria-controls="plans" aria-selected="true">
@@ -47,30 +47,37 @@
                     <div class="tab-pane fade show active" id="plans" role="tabpanel" aria-labelledby="plans-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @foreach($plans as $plan)
-                                    <div class="col-md-12 post__list-item">
-                                        @if($plan->category_id == 2)
-                                            <div class="post__list-img">
-                                                <img src="./{{$plan->featured}}" alt="post-pic" />
+                                @if(count($plans) > 1)
+                                    @foreach($plans as $plan)
+                                        <div class="col-md-12 post__list-item">
+                                            @if($plan->category_id == 2)
+                                                <div class="post__list-img">
+                                                    <img src="./{{$plan->featured}}" alt="post-pic" />
+                                                </div>
+                                            @else
+                                                <div class="w-[80px] h-[80px] object-contain">
+                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                </div>
+                                            @endif
+                                            <div class="post__list-text flex flex-col gap-1">
+                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+        
+                                                @include('components.page-subtitle', [
+                                                    'textSize'  => "",
+                                                    'author'    => $plan->author,
+                                                    'publishUp' => $plan->publish_up
+                                                ])
+        
+                                                <p>{{$plan->title}}</p>
                                             </div>
-                                        @else
-                                            <div class="w-[80px] h-[80px] object-contain">
-                                                <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                                            </div>
-                                        @endif
-                                        <div class="post__list-text flex flex-col gap-1">
-                                            <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
-    
-                                            @include('components.page-subtitle', [
-                                                'textSize'  => "",
-                                                'author'    => $plan->author,
-                                                'publishUp' => $plan->publish_up
-                                            ])
-    
-                                            <p>{{$plan->title}}</p>
                                         </div>
+                                    @endforeach
+                                @else
+                                    <div class="alert alert-danger flex items-center gap-2" role="alert">
+                                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                                        <div>ไม่มีรายการ</div>
                                     </div>
-                                @endforeach
+                                @endif
                             </div>
 
                             <div class="mt-2 flex justify-center">
@@ -80,8 +87,9 @@
                     </div>
                     <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
                         <div class="min-h-screen">
-                            <div class="row">
-                                @foreach($results as $plan)
+                            <div class="row p-4">
+                                @if(count($results) > 1)
+                                    @foreach($results as $plan)
                                         <div class="col-md-12 post__list-item">
                                             @if($plan->category_id == 2)
                                                 <div class="post__list-img">
@@ -105,18 +113,24 @@
                                             </div>
                                         </div>
                                     @endforeach
-                                </div>
+                                @else
+                                    <div class="alert alert-danger flex items-center gap-2" role="alert">
+                                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                                        <div>ไม่มีรายการ</div>
+                                    </div>
+                                @endif
+                            </div>
 
-                                <div class="mt-2 flex justify-center">
-                                    {{ $results->links() }}
-                                </div>
+                            <div class="mt-2 flex justify-center">
+                                {{ $results->links() }}
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
                         <div class="min-h-screen">
-                            <div class="row">
-                                @foreach($reports as $plan)
+                            <div class="row p-4">
+                                @if(count($reports) > 1)
+                                    @foreach($reports as $plan)
                                         <div class="col-md-12 post__list-item">
                                             @if($plan->category_id == 2)
                                                 <div class="post__list-img">
@@ -140,41 +154,53 @@
                                             </div>
                                         </div>
                                     @endforeach
-                                </div>
+                                @else
+                                    <div class="alert alert-danger flex items-center gap-2" role="alert">
+                                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                                        <div>ไม่มีรายการ</div>
+                                    </div>
+                                @endif
+                            </div>
 
-                                <div class="mt-2 flex justify-center">
-                                    {{ $reports->links() }}
-                                </div>
+                            <div class="mt-2 flex justify-center">
+                                {{ $reports->links() }}
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="procures" role="tabpanel" aria-labelledby="procures-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @foreach($procures as $plan)
-                                    <div class="col-md-12 post__list-item">
-                                        @if($plan->category_id == 2)
-                                            <div class="post__list-img">
-                                                <img src="./{{$plan->featured}}" alt="post-pic" />
+                                @if(count($procures) > 1)
+                                    @foreach($procures as $plan)
+                                        <div class="col-md-12 post__list-item">
+                                            @if($plan->category_id == 2)
+                                                <div class="post__list-img">
+                                                    <img src="./{{$plan->featured}}" alt="post-pic" />
+                                                </div>
+                                            @else
+                                                <div class="w-[80px] h-[80px] object-contain">
+                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                </div>
+                                            @endif
+                                            <div class="post__list-text flex flex-col gap-1">
+                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+        
+                                                @include('components.page-subtitle', [
+                                                    'textSize'  => "",
+                                                    'author'    => $plan->author,
+                                                    'publishUp' => $plan->publish_up
+                                                ])
+        
+                                                <p>{{$plan->title}}</p>
                                             </div>
-                                        @else
-                                            <div class="w-[80px] h-[80px] object-contain">
-                                                <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                                            </div>
-                                        @endif
-                                        <div class="post__list-text flex flex-col gap-1">
-                                            <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
-    
-                                            @include('components.page-subtitle', [
-                                                'textSize'  => "",
-                                                'author'    => $plan->author,
-                                                'publishUp' => $plan->publish_up
-                                            ])
-    
-                                            <p>{{$plan->title}}</p>
                                         </div>
+                                    @endforeach
+                                @else
+                                    <div class="alert alert-danger flex items-center gap-2" role="alert">
+                                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                                        <div>ไม่มีรายการ</div>
                                     </div>
-                                @endforeach
+                                @endif
                             </div>
 
                             <div class="mt-2 flex justify-center">
@@ -185,41 +211,8 @@
                     <div class="tab-pane fade" id="winners" role="tabpanel" aria-labelledby="winners-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @foreach($winners as $plan)
-                                    <div class="col-md-12 post__list-item">
-                                        @if($plan->category_id == 2)
-                                            <div class="post__list-img">
-                                                <img src="./{{$plan->featured}}" alt="post-pic" />
-                                            </div>
-                                        @else
-                                            <div class="w-[80px] h-[80px] object-contain">
-                                                <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                                            </div>
-                                        @endif
-                                        <div class="post__list-text flex flex-col gap-1">
-                                            <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
-    
-                                            @include('components.page-subtitle', [
-                                                'textSize'  => "",
-                                                'author'    => $plan->author,
-                                                'publishUp' => $plan->publish_up
-                                            ])
-    
-                                            <p>{{$plan->title}}</p>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                            
-                            <div class="mt-2 flex justify-center">
-                                {{ $winners->links() }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tors" role="tabpanel" aria-labelledby="tors-tab">
-                        <div class="min-h-screen">
-                            <div class="row">
-                                @foreach($tors as $plan)
+                                @if(count($winners) > 1)
+                                    @foreach($winners as $plan)
                                         <div class="col-md-12 post__list-item">
                                             @if($plan->category_id == 2)
                                                 <div class="post__list-img">
@@ -243,11 +236,51 @@
                                             </div>
                                         </div>
                                     @endforeach
-                                </div>
+                                @else
+                                    <div class="alert alert-danger flex items-center gap-2" role="alert">
+                                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                                        <div>ไม่มีรายการ</div>
+                                    </div>
+                                @endif
+                            </div>
+                            
+                            <div class="mt-2 flex justify-center">
+                                {{ $winners->links() }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tors" role="tabpanel" aria-labelledby="tors-tab">
+                        <div class="min-h-screen">
+                            <div class="row p-4">
+                                @if(count($tors) > 1)
+                                    @foreach($tors as $plan)
+                                        <div class="col-md-12 post__list-item">
+                                            <div class="w-[80px] h-[80px] object-contain">
+                                                <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                            </div>
+                                            <div class="post__list-text flex flex-col gap-1">
+                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+        
+                                                @include('components.page-subtitle', [
+                                                    'textSize'  => "",
+                                                    'author'    => $plan->author,
+                                                    'publishUp' => $plan->publish_up
+                                                ])
+        
+                                                <p>{{$plan->title}}</p>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="alert alert-danger flex items-center gap-2" role="alert">
+                                        <i class="fas fa-exclamation-triangle text-xl"></i>
+                                        <div>ไม่มีรายการ</div>
+                                    </div>
+                                @endif
+                            </div>
 
-                                <div class="mt-2 flex justify-center">
-                                    {{ $tors->links() }}
-                                </div>
+                            <div class="mt-2 flex justify-center">
+                                {{ $tors->links() }}
                             </div>
                         </div>
                     </div>
