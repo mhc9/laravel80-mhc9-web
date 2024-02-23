@@ -559,45 +559,47 @@
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    var swiperHero = new Swiper("#hero", {
-        autoplay: {
-            delay: 3000,
-        },
-        cssMode: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        mousewheel: true,
-        keyboard: true,
-    });
-
-    var swiperOnepage = new Swiper("#onepage", {
-        autoplay: {
-            delay: 3000,
-        },
-        slidesPerView: 4,
-        spaceBetween: 30,
-        cssMode: true,
-        mousewheel: true,
-        keyboard: true,
-    });
-
-    var swiperPartner = new Swiper("#partner", {
-        autoplay: {
-            delay: 3000,
-        },
-        slidesPerView: 4,
-        spaceBetween: 30,
-        cssMode: true,
-        mousewheel: true,
-        keyboard: true,
-    });
-
     $(document).ready(async function () {
+        const API_URL = "{{ env('MIX_APP_URL') }}";
+
+        var swiperHero = new Swiper("#hero", {
+            autoplay: {
+                delay: 3000,
+            },
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        var swiperOnepage = new Swiper("#onepage", {
+            autoplay: {
+                delay: 3000,
+            },
+            slidesPerView: 4,
+            spaceBetween: 30,
+            cssMode: true,
+            mousewheel: true,
+            keyboard: true,
+        });
+
+        var swiperPartner = new Swiper("#partner", {
+            autoplay: {
+                delay: 3000,
+            },
+            slidesPerView: 4,
+            spaceBetween: 30,
+            cssMode: true,
+            mousewheel: true,
+            keyboard: true,
+        });
+
         services.forEach(service => {
             $('.officer-items').append(`
                 <a href="${service.link}" target="_blank">
