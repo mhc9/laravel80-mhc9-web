@@ -203,6 +203,20 @@ nav.c9__pagination {
 }
 /* ================================== End Globals ================================== */
 
+/** ================================== Bootstrap Components ================================== */
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    padding: 10px;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+/** ================================== End Bootstrap ================================== */
 
 /* ================================== Slide Hero ================================== */
 .slide-hero {

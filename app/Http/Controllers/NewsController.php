@@ -36,9 +36,11 @@ class NewsController extends Controller
     public function getPostsByCategory(Request $req, $cate)
     {
         $limit  = !empty($req->get('limit')) ? $req->get('limit') : 5;
+        $title = PostCategory::find($cate)->name;
 
         if ($cate == '3') {
-            $posts = Post::with('category','author')
+            $plans = Post::with('category','author')
+                        ->where('group_id', 31)
                         ->when(!empty($cate), function($q) use ($cate) {
                             $q->where('category_id', $cate);
                         })
@@ -46,9 +48,25 @@ class NewsController extends Controller
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
-            $title = PostCategory::find($cate)->name;
+            $procures = Post::with('category','author')
+                        ->where('group_id', 32)
+                        ->when(!empty($cate), function($q) use ($cate) {
+                            $q->where('category_id', $cate);
+                        })
+                        ->orderBy('publish_up', 'DESC')
+                        ->orderBy('id', 'DESC')
+                        ->paginate($limit);
 
-            return view('news.list', compact('title', 'posts', 'cate'));
+            $winners = Post::with('category','author')
+                        ->where('group_id', 33)
+                        ->when(!empty($cate), function($q) use ($cate) {
+                            $q->where('category_id', $cate);
+                        })
+                        ->orderBy('publish_up', 'DESC')
+                        ->orderBy('id', 'DESC')
+                        ->paginate($limit);
+
+            return view('news.list', compact('title', 'plans', 'procures', 'winners', 'cate'));
         } else {
             $posts = Post::with('category','author')
                         ->when(!empty($cate), function($q) use ($cate) {
@@ -57,8 +75,6 @@ class NewsController extends Controller
                         ->orderBy('publish_up', 'DESC')
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
-
-            $title = PostCategory::find($cate)->name;
 
             return view('post.list', compact('title', 'posts', 'cate'));
         }
