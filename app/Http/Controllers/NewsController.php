@@ -37,17 +37,31 @@ class NewsController extends Controller
     {
         $limit  = !empty($req->get('limit')) ? $req->get('limit') : 5;
 
-        $posts = Post::with('category','author')
-                    ->when(!empty($cate), function($q) use ($cate) {
-                        $q->where('category_id', $cate);
-                    })
-                    ->orderBy('publish_up', 'DESC')
-                    ->orderBy('id', 'DESC')
-                    ->paginate($limit);
+        if ($cate == '3') {
+            $posts = Post::with('category','author')
+                        ->when(!empty($cate), function($q) use ($cate) {
+                            $q->where('category_id', $cate);
+                        })
+                        ->orderBy('publish_up', 'DESC')
+                        ->orderBy('id', 'DESC')
+                        ->paginate($limit);
 
-        $title = PostCategory::find($cate)->name;
+            $title = PostCategory::find($cate)->name;
 
-        return view('post.list', compact('posts', 'title'));
+            return view('news.list', compact('title', 'posts', 'cate'));
+        } else {
+            $posts = Post::with('category','author')
+                        ->when(!empty($cate), function($q) use ($cate) {
+                            $q->where('category_id', $cate);
+                        })
+                        ->orderBy('publish_up', 'DESC')
+                        ->orderBy('id', 'DESC')
+                        ->paginate($limit);
+
+            $title = PostCategory::find($cate)->name;
+
+            return view('post.list', compact('title', 'posts', 'cate'));
+        }
     }
 
     public function search(Request $req)

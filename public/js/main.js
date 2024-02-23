@@ -1,5 +1,5 @@
 const BASE_URL = 'https://mhc9dmh.com/newweb/public';
-const API_URL = 'http://localhost:32772/laravel80-mhc9web/public/api';
+const API_URL = 'http://localhost:8000/laravel80-mhc9-web/public/api';
 
 const services = [
     {
