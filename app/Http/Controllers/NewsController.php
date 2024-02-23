@@ -48,8 +48,26 @@ class NewsController extends Controller
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
-            $procures = Post::with('category','author')
+            $results = Post::with('category','author')
                         ->where('group_id', 32)
+                        ->when(!empty($cate), function($q) use ($cate) {
+                            $q->where('category_id', $cate);
+                        })
+                        ->orderBy('publish_up', 'DESC')
+                        ->orderBy('id', 'DESC')
+                        ->paginate($limit);
+
+            $reports = Post::with('category','author')
+                        ->where('group_id', 34)
+                        ->when(!empty($cate), function($q) use ($cate) {
+                            $q->where('category_id', $cate);
+                        })
+                        ->orderBy('publish_up', 'DESC')
+                        ->orderBy('id', 'DESC')
+                        ->paginate($limit);
+
+            $procures = Post::with('category','author')
+                        ->where('group_id', 35)
                         ->when(!empty($cate), function($q) use ($cate) {
                             $q->where('category_id', $cate);
                         })
@@ -66,7 +84,16 @@ class NewsController extends Controller
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
-            return view('news.list', compact('title', 'plans', 'procures', 'winners', 'cate'));
+            $tors = Post::with('category','author')
+                        ->where('group_id', 36)
+                        ->when(!empty($cate), function($q) use ($cate) {
+                            $q->where('category_id', $cate);
+                        })
+                        ->orderBy('publish_up', 'DESC')
+                        ->orderBy('id', 'DESC')
+                        ->paginate($limit);
+
+            return view('news.list', compact('title', 'plans', 'results', 'reports', 'procures', 'winners', 'tors', 'cate'));
         } else {
             $posts = Post::with('category','author')
                         ->when(!empty($cate), function($q) use ($cate) {
