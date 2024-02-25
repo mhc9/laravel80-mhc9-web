@@ -37,7 +37,7 @@
                 <!-- Col -->
                 <div class="footer-col footer-menu">
                     <h2>สำหรับเจ้าหน้าที่</h2>
-                    <ul class="officer-items"></ul>
+                    <ul class="footer-officers"></ul>
                 </div>
 
                 <!-- Col -->
@@ -92,7 +92,7 @@
 <script>
     $(document).ready(function () {
         services.forEach(service => {
-            $('.officer-items').append(`
+            $('.footer-officers').append(`
                 <li>
                     <a href="${service.link}" target="_blank">${service.name}</a>
                 </li>
