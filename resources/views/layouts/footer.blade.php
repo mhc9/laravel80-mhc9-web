@@ -37,13 +37,7 @@
                 <!-- Col -->
                 <div class="footer-col footer-menu">
                     <h2>สำหรับเจ้าหน้าที่</h2>
-                    <ul>
-                        <!-- {services.map(service => (
-                            <li key={service.id}>
-                                <a href={service.link} target='_blank'>{service.name}</a>
-                            </li>
-                        ))} -->
-                    </ul>
+                    <ul class="officer-items"></ul>
                 </div>
 
                 <!-- Col -->
@@ -94,3 +88,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+    $(document).ready(function () {
+        services.forEach(service => {
+            $('.officer-items').append(`
+                <li>
+                    <a href="${service.link}" target="_blank">${service.name}</a>
+                </li>
+            `);
+        });
+    });
+</script>
