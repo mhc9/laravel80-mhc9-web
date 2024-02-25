@@ -176,10 +176,10 @@
                                                 <div class="child-container">
                                                     <div class="childs">
                                                         <div class="child">
-                                                            <a href="{{ url('/articles/list') }}" target="_self">บทความสุขภาพจิต</a>
+                                                            <a href="{{ url('/articles') }}" target="_self">บทความสุขภาพจิต</a>
                                                         </div>
                                                         <div class="child">
-                                                            <a href="{{ url('/videos/list') }}" target="_self">วีดิโอสุขภาพจิต</a>
+                                                            <a href="{{ url('/videos') }}" target="_self">วีดิโอสุขภาพจิต</a>
                                                         </div>
                                                         <div class="child">
                                                             <a href="#" target="_self">อินโฟกราฟฟิก</a>
