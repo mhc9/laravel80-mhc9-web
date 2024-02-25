@@ -26,7 +26,7 @@
                                         'publishUp' => $video->publish_up
                                     ])
                                 </div>
-                                <div class="video-item md:h-[320px] mb-0">
+                                <div class="video-item mb-0">
                                     <iframe
                                         width="100%"
                                         height="100%"
