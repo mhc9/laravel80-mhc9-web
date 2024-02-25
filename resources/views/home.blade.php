@@ -556,6 +556,24 @@
             </div>
         </div>
     </div>
+
+    <div id="goToSite" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ config('app.name', 'Laravel') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>เนื่องจาก ศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต ได้จัดทำเว็บไซตืใหม่ให้มีรูปแบบที่ทันสมัยและตอบสนองความต้องการของผู้ใช้งาน โดยผู้ใช้งานสามารถเข้าถึงเว็บไซต์เดิมได้โดยคลิกปุ่ม เว็บไซต์เดิม</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">เว็บไซต์รูปแบบใหม่</button>
+                <a href="https://www.mhc9dmh.com/oldweb" class="btn btn-secondary">เว็บไซต์เดิม</a>
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
@@ -654,6 +672,8 @@
                 `);
             })
         }
+
+        $('#goToSite').modal('show');
     });
 </script>
 @endsection
