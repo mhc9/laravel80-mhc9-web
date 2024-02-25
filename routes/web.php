@@ -73,6 +73,8 @@ Route::get('/appeal', function() {
 
 Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'getArticles']);
 
+Route::get('/videos', [App\Http\Controllers\VideoController::class, 'getVideos']);
+
 // ...
 Route::get('/e-services', function() {
     return view('e-service');

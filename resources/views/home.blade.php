@@ -276,7 +276,7 @@
                                     @endforeach
                                 </div>
                                 <div class="video-btn">
-                                    <a href="/videos/list" class="all-news">วีดิโอทั้งหมด</a>
+                                    <a href="{{ url('/videos') }}" class="all-news">วีดิโอทั้งหมด</a>
                                 </div>
                             </div>
                         </div>

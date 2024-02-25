@@ -12,7 +12,7 @@ use App\Models\Post;
 use App\Models\PostCategory;
 use App\Models\User;
 
-class ArticleController extends Controller
+class VideoController extends Controller
 {
     protected $postService;
 
@@ -26,19 +26,19 @@ class ArticleController extends Controller
         $this->postService = $postService;
     }
 
-    public function getArticles(Request $req)
+    public function getVideos(Request $req)
     {
         $limit  = !empty($req->get('limit')) ? $req->get('limit') : 8;
 
         $posts = Post::with('category','author')
-                    ->where('category_id', 6)
+                    ->where('category_id', 7)
                     ->orderBy('publish_up', 'DESC')
                     ->orderBy('id', 'DESC')
                     ->paginate($limit);
 
-        $title = 'บทความสุขภาพจิต';
+        $title = 'วีดิโอสุขภาพจิต';
 
-        return view('article.list', compact('title', 'posts'));
+        return view('video.list', compact('title', 'posts'));
     }
 
     public function search(Request $req)

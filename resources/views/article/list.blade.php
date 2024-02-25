@@ -1,18 +1,18 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="post__list-container container">
+<section class="content-container container">
     <h1 class="title">
         สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>{{$title}}
     </h1>
 
     <hr class="my-2" />
 
-    <div class="article-wrapper">
+    <div class="content-wrapper">
         <div class="p-4">
             <div class="row">
                 @foreach($posts as $article)
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-2">
+                    <div class="col-sm-12 col-md-4 col-lg-3 mb-2">
                         <div class="card article-item">
                             <div class="card-img-top h-[200px]">
                                 <img src="{{ url('/' . $article->featured) }}" alt="article-cover" />
