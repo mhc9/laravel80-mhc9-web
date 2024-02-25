@@ -36,6 +36,7 @@
 <body>
     <div class="defaullt-layout">
         @include('layouts.navbar')
+        @include('layouts.sidebar')
 
         <main>
             @yield('content')

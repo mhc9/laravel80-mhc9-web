@@ -506,6 +506,7 @@ nav.topnav .mobile-menu .sidenav-btn:hover .hamburger > * {
     /* background: #47484d; */
     background: var(--color0);
 }
+
 .hamburger > * { background: #414243; }
 
   /* Layout */
@@ -862,9 +863,31 @@ nav.topnav .mobile-menu .sidenav-btn {
     height: 3.75rem;
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
+
+    &.close {
+        .hamburger {
+            justify-content: center;
+        }
+        .hamburger div {
+            margin-top: -1.2px;
+            margin-bottom: -1.2px;
+        }
+        .hamburger div:first-child {
+            transform: rotate(45deg);
+        }
+        .hamburger div:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        .hamburger div:last-child {
+            transform: rotate(-45deg);
+        }
+    }
 }
 
-.hamburger { cursor:pointer; }
+.hamburger {
+    cursor: pointer;
+}
 
 .hamburger > * {
     width: 2rem;
@@ -993,13 +1016,17 @@ nav.topnav {
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -13em;
     height: 100vh;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     background: #333333;
     width: 13em;
     z-index: 1000;
     transition: all ease-in-out 100ms;
+
+    &.show {
+        left: 0;
+    }
 
     .sidebar-wrapper {
         .close-btn {

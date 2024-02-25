@@ -62,3 +62,21 @@ const eservices = [
     { "id": 7, "name": "ข้อมูลสุขภาพจิต MHC9", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": "", target: "_self", external: false },
     { "id": 8, "name": "E-Report", "img_url": "https://www.mhc9dmh.com/Pic/moph.png", "link": "./e-reports", target: "_self", external: false }
 ];
+
+/* Sidebar */
+const sidebar = document.querySelector('.sidebar');
+const sidebarToggler = document.querySelector('.sidenav-btn');
+
+// Toggling the Sidebar
+sidebarToggler.addEventListener('click', () => {
+    sidebar.classList.toggle("show");
+    sidebarToggler.classList.toggle("close");
+});
+
+// Closing the Sidebar on clicking Outside and on the Sidebar-Links
+// window.addEventListener('click', (e) => {
+//     if (e.target.id !== 'sidebar' && e.target.className !== 'sidebar_toggler') {
+//         sidebar.classList.remove("show");
+            // sidebarToggler.classList.toggle("close");
+//     }
+// });

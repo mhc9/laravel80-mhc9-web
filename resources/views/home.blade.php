@@ -390,9 +390,9 @@
                                     </div>
                                 </div>
 
-                                <div class="text-center m-1">
-                                    <a href="./onepages/list" class="all-news">ดูทั้งหมด</a>
-                                </div>
+                                <!-- <div class="text-center m-1">
+                                    <a href="{{ url('/onepages') }}" class="all-news">ดูทั้งหมด</a>
+                                </div> -->
                             </div>
                         </div>
                     </div>
