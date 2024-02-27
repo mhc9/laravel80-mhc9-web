@@ -141,7 +141,7 @@
                                                 <div class="child-container">
                                                     <div class="childs">
                                                         <div class="child">
-                                                            <a href="https://mhc9dmh.com/Comment.aspx" target="_blank">แจ้งเรื่องร้องเรียน MHC9</a>
+                                                            <a href="https://mhc9dmh.com/oldweb/Comment.aspx" target="_blank">แจ้งเรื่องร้องเรียน MHC9</a>
                                                         </div>
                                                         <div class="child">
                                                             <a href="https://secret.dmh.go.th/main/" target="_blank">แจ้งเรื่องร้องเรียน กรมสุขภาพจิต</a>
@@ -150,7 +150,7 @@
                                                 </div>
                                             </div>
                                             <!-- <div class="submenu ">
-                                                <a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
+                                                <a href="https://mhc9dmh.com/oldweb/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
                                             </div> -->
                                             <div class="submenu ">
                                                 <a href="{{ url('/faq') }}" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
@@ -160,7 +160,7 @@
                                                 <div class="child-container">
                                                     <div class="childs">
                                                         <div class="child">
-                                                            <a href="https://mhc9dmh.com/show.aspx?x=KM" target="_blank">คลังความรู้ MHC9</a>
+                                                            <a href="https://mhc9dmh.com/oldweb/show.aspx?x=KM" target="_blank">คลังความรู้ MHC9</a>
                                                         </div>
                                                         <div class="child">
                                                             <a href="https://www.dmh-elibrary.org/" target="_blank">คลังความรู้ กรมสุขภาพจิต</a>

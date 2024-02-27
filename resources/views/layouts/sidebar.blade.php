@@ -90,7 +90,7 @@
                             <a href="#">แจ้งเรื่องร้องเรียน</a>
                             <ul>
                                 <li>
-                                    <a href="https://mhc9dmh.com/Comment.aspx" target="_blank">
+                                    <a href="https://mhc9dmh.com/oldweb/Comment.aspx" target="_blank">
                                         แจ้งเรื่องร้องเรียน MHC9
                                     </a>
                                 </li>
@@ -102,7 +102,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
+                            <a href="https://mhc9dmh.com/oldweb/Query.aspx" target="_blank">กระดานถาม-ตอบ</a>
                         </li>
                         <!-- {/* <li>
                             <a href="">คำถามที่ถามบ่อย (FAQ)</a>
@@ -111,7 +111,7 @@
                             <a href="#">คลังความรู้</a>
                             <ul>
                                 <li>
-                                    <a href="https://mhc9dmh.com/show.aspx?x=KM" target="_blank">
+                                    <a href="https://mhc9dmh.com/oldweb/show.aspx?x=KM" target="_blank">
                                         คลังความรู้ MHC9
                                     </a>
                                 </li>
