@@ -14,7 +14,7 @@
     <a href="https://line.me/ti/p/@229xqzio" target="_blank" rel="noreferrer" class="hover:text-gray-300">
         <i class="fab fa-line"></i>
     </a>
-    <Link to="/contact" class="hover:text-gray-300">
+    <a href="{{ url('/contact') }}" class="hover:text-gray-300">
         <i class="fas fa-map-marker-alt"></i>
-    </Link>
+    </a>
 </div>
