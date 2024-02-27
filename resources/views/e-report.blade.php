@@ -9,7 +9,7 @@
     <div class="policies-wrapper">
         <a href="{{ url('/mis') }}">
             <div class="policy">
-                <h3>ขอมูลเชิงสถิติการให้บริการ</h3>
+                <h3>ข้อมูลเชิงสถิติการให้บริการ</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
