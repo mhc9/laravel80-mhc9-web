@@ -7,16 +7,16 @@
                 <div class="footer-col footer-menu">
                     <h2>รู้จักเรา</h2>
                     <ul>
-                        <li><a href="/about">ประวัติความเป็นมา</a></li>
-                        <li><a href="/vision">วิสัยทัศน์/พันธกิจ/ค่านิยม</a></li>
-                        <li><a href="/executives">ผู้บริหารหน่วยงาน</a></li>
-                        <li><a href="/structure">โครงสร้างองค์กร</a></li>
-                        <li><a href="/authority">หน้าที่และอำนาจ</a></li>
-                        <li><a href="/procedures">มาตรฐานการปฏิบัติงาน</a></li>
-                        <li><a href="/manuals">มาตรฐานการให้บริการ</a></li>
-                        <li><a href="/laws">กฎ ระเบียบ ข้อบังคับ</a></li>
-                        <li><a href="/policies">นโยบายองค์กร</a></li>
-                        <li><a href="/annual-reports">รายงานประจำปี</a></li>
+                        <li><a href="{{ url('/about') }}">ประวัติความเป็นมา</a></li>
+                        <li><a href="{{ url('/vision') }}">วิสัยทัศน์/พันธกิจ/ค่านิยม</a></li>
+                        <li><a href="{{ url('/executives') }}">ผู้บริหารหน่วยงาน</a></li>
+                        <li><a href="{{ url('/structure') }}">โครงสร้างองค์กร</a></li>
+                        <li><a href="{{ url('/authority') }}">หน้าที่และอำนาจ</a></li>
+                        <li><a href="{{ url('/procedures') }}">มาตรฐานการปฏิบัติงาน</a></li>
+                        <li><a href="{{ url('/manuals') }}">มาตรฐานการให้บริการ</a></li>
+                        <li><a href="{{ url('/laws') }}">กฎ ระเบียบ ข้อบังคับ</a></li>
+                        <li><a href="{{ url('/policies') }}">นโยบายองค์กร</a></li>
+                        <li><a href="{{ url('/annual-reports') }}">รายงานประจำปี</a></li>
                     </ul>
                 </div>
 
@@ -24,13 +24,13 @@
                 <div class="footer-col footer-menu">
                     <h2>บริการ</h2>
                     <ul>
-                        <li><a href="/">ศูนย์ข้อมูลข่าวสาร</a></li>
-                        <li><a href="/appeal">ศูนย์ราชการใสสะอาด</a></li>
+                        <li><a href="{{ url('/') }}">ศูนย์ข้อมูลข่าวสาร</a></li>
+                        <li><a href="{{ url('/appeal') }}">ศูนย์ราชการใสสะอาด</a></li>
                         <li><a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a></li>
-                        <li><a href="https://mhc9dmh.com/Query.aspx" target="_blank">กระดานถาม-ตอบ</a></li>
+                        <li><a href="https://mhc9dmh.com/oldweb/Query.aspx" target="_blank">กระดานถาม-ตอบ</a></li>
                         <!-- <li><a href="/faq">คำถามที่ถามบ่อย (FAQ)</a></li> -->
-                        <li><a href="/e-services">ระบบสารสนเทศ (E-Service)</a></li>
-                        <li><a href="/downloads">ดาวน์โหลดเอกสาร</a></li>
+                        <li><a href="{{ url('/e-services') }}">ระบบสารสนเทศ (E-Service)</a></li>
+                        <li><a href="{{ url('/downloads') }}">ดาวน์โหลดเอกสาร</a></li>
                     </ul>
                 </div>
 
@@ -67,9 +67,9 @@
                         </div>
                     </div>
                     <div class="policy-wrapper">
-                        <a href="/website-policy">นโยบายเว็บไซต์</a> |
-                        <a href="/">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a> |
-                        <a href="/">นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์</a>
+                        <a href="{{ url('/website-policy') }}">นโยบายเว็บไซต์</a> |
+                        <a href="{{ url('/') }}">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</a> |
+                        <a href="{{ url('/') }}">นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์</a>
                     </div>
                 </div>
                 <div class="footer-col footer-stat">
