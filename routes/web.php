@@ -84,6 +84,14 @@ Route::get('/e-reports', function() {
     return view('e-report');
 });
 
+Route::get('/mis', function() {
+    return view('mis');
+});
+
+Route::get('/data-catalog', function() {
+    return view('data-catalog');
+});
+
 Route::get('/sat-servey', function() {
     return view('sat-servey');
 });

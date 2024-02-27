@@ -7,7 +7,7 @@
     <hr class="my-2" />
 
     <div class="policies-wrapper">
-        <a href="#">
+        <a href="{{ url('/mis') }}">
             <div class="policy">
                 <h3>ขอมูลเชิงสถิติการให้บริการ</h3>
                 <span><i class="fas fa-angle-down"></i></span>
