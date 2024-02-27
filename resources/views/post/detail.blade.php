@@ -65,4 +65,10 @@
         <!-- // comment here... -->
     </div>
 </section>
+
+<script>
+    $(document).ready(async function () {
+        // code here...
+    });
+</script>
 @endsection
