@@ -208,6 +208,12 @@
                                                         </div>
                                                         <div class="post__secondary-text">
                                                             <a href="{{ url('/posts/' . $post->id) }}"><h4>{{$post->title}}</h4></a>
+
+                                                            @include('components.page-subtitle', [
+                                                                'textSize'  => "xs",
+                                                                'author'    => $post->author,
+                                                                'publishUp' => $post->publish_up
+                                                            ])
                                                         </div>
                                                     </li>
                                                 @endforeach
@@ -579,6 +585,18 @@
 <script>
     $(document).ready(async function () {
         const API_URL = "{{ env('MIX_APP_URL') }}";
+        let screen = null;
+
+        const getWindowDimensions = function () {
+            const { innerWidth: width, innerHeight: height } = window
+
+            return { width, height }
+        }
+
+        window.onload = (event) => {
+            screen = getWindowDimensions();
+            console.log(screen);
+        }
 
         var swiperHero = new Swiper("#hero", {
             autoplay: {
@@ -605,6 +623,24 @@
             cssMode: true,
             mousewheel: true,
             keyboard: true,
+            breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                430: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                // 1024: {
+                //     slidesPerView: 5,
+                //     spaceBetween: 50,
+                // },
+            },
         });
 
         var swiperPartner = new Swiper("#partner", {
@@ -616,6 +652,29 @@
             cssMode: true,
             mousewheel: true,
             keyboard: true,
+            breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                430: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                // 1024: {
+                //     slidesPerView: 5,
+                //     spaceBetween: 50,
+                // },
+            },
+        });
+
+        window.addEventListener('resize', (e) => {
+            screen = getWindowDimensions();
+            console.log(screen);
         });
 
         services.forEach(service => {
@@ -628,7 +687,7 @@
 
         eservices.forEach(service => {
             $('.service-list').append(`
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-6">
                     <a href="${service.link}" target="${service.target}">
                         <div class="service-item">
                             <img src="${service.img_url}" alt="${service.name}" />

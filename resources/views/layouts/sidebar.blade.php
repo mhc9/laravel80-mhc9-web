@@ -86,7 +86,7 @@
                         <!-- {/* <li>
                             <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
                         </li> */} -->
-                        <li>
+                        <li class="has-sub">
                             <a href="#">แจ้งเรื่องร้องเรียน</a>
                             <ul>
                                 <li>
@@ -107,7 +107,7 @@
                         <!-- {/* <li>
                             <a href="">คำถามที่ถามบ่อย (FAQ)</a>
                         </li> */} -->
-                        <li>
+                        <li class="has-sub">
                             <a href="#">คลังความรู้</a>
                             <ul>
                                 <li>
@@ -127,7 +127,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li class="has-sub">
                             <a href="#">สื่อสุขภาพจิต</a>
                             <ul>
                                 <li>

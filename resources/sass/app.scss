@@ -1448,6 +1448,10 @@ footer {
                         font-weight: 200;
                         line-height: 1rem;
                     }
+
+                    .subtitle {
+                        display: none;
+                    }
                 }
             }
         }
@@ -1495,41 +1499,63 @@ footer {
 
             ul.post-secondary {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 margin-top: 0.5rem;
                 
                 li {
                     height: auto;
-                    padding: 0.25rem 0.75rem;
-                    flex-direction: column;
-                    @apply w-4/12;
-
-                    &:last-child,
-                    &:nth-child(2) {
-                        padding: 0.25rem 0.75rem;
-                    }
-
-                    &:first-child,
-                    &:nth-child(2) {
-                        border-bottom: none;
-                        border-right: 1px dashed var(--bs-secondary);
-                    }
+                    padding: 0.5rem 0;
 
                     .post__secondary-img {
-                        width: 100%;
+                        width: 30%;
                         max-height: 120px;
                     }
 
                     .post__secondary-text {
                         width: 100%;
+
+                        .subtitle {
+                            display: flex;
+                            margin-top: 5px;
+                        }
                     }
                 }
             }
 
             .post-btn {
-                margin-top: 1rem;
+                margin-top: 2rem;
+                padding-top: 1rem;
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .post-box {
+        .post-list {
+            .post-headline {
+                .headline-text {
+                    h4 {
+                        @apply text-base;
+                    }
+                }
+            }
+
+            ul.post-secondary {
+                li {
+                    .post__secondary-img {
+                        width: 50%;
+                        max-height: 100px;
+                    }
+
+                    .post__secondary-text {
+                        h4 {
+                            @apply text-sm
+                        }
+                    }
+                }
             }
         }
     }
