@@ -14,7 +14,7 @@
     $(document).ready(function () {
         eservices.forEach(service => {
             $('.service-list').append(`
-                <div class="col-md-3 col-sm-6 flex justify-center text-center">
+                <div class="col-lg-3 col-6 flex justify-center text-center">
                     <a href="${service.link}" target="${service.target}">
                         <div class="service-item">
                             <img src="${service.img_url}" alt="${service.name}" />
