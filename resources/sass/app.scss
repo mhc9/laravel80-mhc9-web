@@ -2519,10 +2519,10 @@ ol {
 }
 
 .box-label {
-    margin-left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 1rem;
 
     h2 {
         font-size: 16px;
@@ -2806,6 +2806,14 @@ ol {
     .level-2-wrapper > li > div,
     .level-4-wrapper > li > div {
         width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .box-label {
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     /* Horizontal tree's branch */

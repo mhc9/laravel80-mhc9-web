@@ -297,9 +297,7 @@
 
                             <hr class="my-2" />
 
-                            <div class="officer-items">
-                                
-                            </div>
+                            <div class="officer-items"></div>
                         </div>
                         </div>
                     </div>
