@@ -31,7 +31,7 @@
             <div class="flex justify-between">
                 <h3 class="w-[80%] text-lg">สรุปผลการดำเนินงานเฝ้าระวังปัญหาสุขภาพจิตนักเรียนในระบบสุขภาพจิตโรงเรียนวิถีใหม่ (School Health HERO) ภาคเรียนที่ 1 ปีการศึกษา 2566</h3>
                 <div>
-                    <a href="{{ url('/uploads/data-catalog/') }}" class="btn btn-success">
+                    <a href="{{ url('/uploads/data-catalog/DataSet_12_02.csv') }}" class="btn btn-success">
                         <span><i class="fas fa-file-csv"></i></span>
                         download
                     </a>

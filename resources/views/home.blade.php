@@ -381,13 +381,13 @@
                                         <div class="swiper-wrapper">
                                             @foreach($onepages as $onepage)
                                                 <div class="swiper-slide">
-                                                    <div class="p-2">
+                                                    <a href="{{ url('/posts/' . $onepage->id) }}" class="p-2">
                                                         <img
                                                             class="object-contain w-full h-96"
                                                             src="{{ url('/' . $onepage->featured) }}"
                                                             alt="logo-pic"
                                                         />
-                                                    </div>
+                                                    </a>
                                                 </div>
                                             @endforeach
                                         </div>
