@@ -419,26 +419,9 @@
                                 <div class="row article-list px-4 py-2">
                                     @foreach($articles as $article)
                                         <div class="col-sm-6 col-md-4 col-lg-3 ">
-                                            <div class="card article-item">
-                                                <div class="card-img-top">
-                                                    <img src="{{ url('/' . $article->featured) }}" alt="article-cover" />
-                                                </div>
-                                                <div class="card-body">
-                                                    <a href="{{ url('/posts/' . $article->id) }}">
-                                                        <h3 class="card-title">{{$article->title}}</h3>
-                                                    </a>
 
-                                                    @include('components.page-subtitle', [
-                                                        'textSize'  => "xs",
-                                                        'author'    => $article->author,
-                                                        'publishUp' => $article->publish_up
-                                                    ])
+                                            @include('components.article-card', ['article'  => $article])
 
-                                                    <p class="card-text">
-                                                        <span>{{$article->intro_text}}</span>
-                                                    </p>
-                                                </div>
-                                            </div>
                                         </div>
                                     @endforeach
 
