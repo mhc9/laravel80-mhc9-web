@@ -14,6 +14,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Swiper
+@import 'node_modules/swiper/swiper';
+@import 'node_modules/swiper/modules/navigation';
+@import 'node_modules/swiper/modules/pagination';
+
 /* ================================== Globals ================================== */
 :root {
     /* Theme colors */
