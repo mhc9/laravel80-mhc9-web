@@ -1,8 +1,10 @@
+window.BASE_URL = 'https://mhc9dmh.com/newweb/public';
 window.API_URL = process.env.MIX_APP_URL;
 
 window._ = require('lodash');
 
 try {
+    window.$ = window.jQuery = require('jquery');
     require('bootstrap');
 } catch (e) {}
 

@@ -564,6 +564,84 @@
 </div>
 <script>
     $(document).ready(async function () {
+        var swiperHero = new Swiper("#hero", {
+            modules: [Navigation, Pagination],
+            autoplay: {
+                delay: 3000,
+            },
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+            loop: true,
+        });
+
+        var swiperOnepage = new Swiper("#onepage", {
+            autoplay: {
+                delay: 3000,
+            },
+            slidesPerView: 4,
+            spaceBetween: 30,
+            cssMode: true,
+            mousewheel: true,
+            keyboard: true,
+            loop: true,
+            breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                430: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                // 1024: {
+                //     slidesPerView: 5,
+                //     spaceBetween: 50,
+                // },
+            },
+        });
+
+        var swiperPartner = new Swiper("#partner", {
+            autoplay: {
+                delay: 3000,
+            },
+            slidesPerView: 4,
+            spaceBetween: 30,
+            cssMode: true,
+            mousewheel: true,
+            keyboard: true,
+            loop: true,
+            breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                430: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                // 1024: {
+                //     slidesPerView: 5,
+                //     spaceBetween: 50,
+                // },
+            },
+        });
+
         services.forEach(service => {
             $('.officer-items').append(`
                 <a href="${service.link}" target="_blank">
