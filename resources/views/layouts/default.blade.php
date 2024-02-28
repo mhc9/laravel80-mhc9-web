@@ -44,33 +44,33 @@
 
         // Closing the Sidebar on clicking Outside and on the Sidebar-Links
         // window.addEventListener('click', (e) => {
-        //     if (e.target.id !== 'sidebar' && e.target.className !== 'sidebar_toggler') {
+        //     if (e.target.className !== 'sidebar' && e.target.className !== 'sidenav-btn') {
         //         sidebar.classList.remove("show");
-                    // sidebarToggler.classList.toggle("close");
+        //         sidebarToggler.classList.toggle("close");
         //     }
         // });
     </script>
 
     <!-- Facebook SDK -->
-    <!-- <div id="fb-root"></div> -->
-    <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="3W0TiTA5"></script> -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="3W0TiTA5"></script>
     <!-- Facebook SDK -->
 
     <!-- LINE Plugins -->
-    <!-- <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script> -->
+    <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
     <!-- LINE Plugins -->
     
 
     <!-- Messenger ปลั๊กอินแชท Code -->
-    <!-- <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
     <script>
         var chatbox = document.getElementById('fb-customer-chat');
         chatbox.setAttribute("page_id", "766919693659033");
         chatbox.setAttribute("attribution", "biz_inbox");
-    </script> -->
+    </script>
 
     <!-- Your SDK code -->
-    <!-- <script>
+    <script>
         window.fbAsyncInit = function() {
             FB.init({
                 xfbml   : true,
@@ -85,10 +85,10 @@
             js.src = 'https://connect.facebook.net/th_TH/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-    </script> -->
+    </script>
 
     <!-- Cookie Consent of GPPC -->
-    <!-- <script src="https://gppc-app.onde.go.th/cdn/pdpa-cookieconsent.js"></script>
-    <script src="https://gppc-app.onde.go.th/cdn/pdpa-cookieconsent-init.js?client=ca-pub-916473029720240213&adjust=true"></script> -->
+    <script src="https://gppc-app.onde.go.th/cdn/pdpa-cookieconsent.js"></script>
+    <script src="https://gppc-app.onde.go.th/cdn/pdpa-cookieconsent-init.js?client=ca-pub-916473029720240213&adjust=true"></script>
 </body>
 </html>
