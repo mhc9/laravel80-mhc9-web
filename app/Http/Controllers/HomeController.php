@@ -52,7 +52,7 @@ class HomeController extends Controller
         $onepages = Post::with('category','author')
                     ->where('category_id', 8)
                     ->orderBy('publish_up', 'DESC')
-                    ->limit(10)
+                    ->limit(8)
                     ->get();
 
         $articles = Post::with('category','author')
