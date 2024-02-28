@@ -2,62 +2,44 @@
 
 @section('content')
 <section class="policies container">
-    <h1 class="title">มาตรฐานการปฏิบัติงาน</h1>
+    <h1 class="title">มาตรฐานการให้บริการ</h1>
 
     <hr class="my-2" />
 
     <div class="policies-wrapper">
-        <a href="./posts/62">
+        <a href="./posts/76">
             <div class="policy">
-                <h3>แนวทางการบริหารผลการปฏิบัติงาน</h3>
+                <h3>กระบวนงานการรับมือภัยพิบัติในพื้นที่ (MCATT)</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/68">
+        <a href="./posts/77">
             <div class="policy">
-                <h3>คู่มือการลา</h3>
+                <h3>กระบวนงานการวางแผนยุทธศาสตร์การส่งเสริมสุขภาพจิต</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/63">
+        <a href="./posts/78">
             <div class="policy">
-                <h3>คู่มือการยืมใช้ทรัพย์สิน</h3>
+                <h3>กระบวนงานการถ่ายทอดองค์ความรู้และเทคโนโลยีด้านสุขภาพจิต</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/64">
+        <a href="./posts/79">
             <div class="policy">
-                <h3>แนวทางการจัดการเรื่องทุจริต</h3>
+                <h3>กระบวนงานการนิเทศและติดตามผลการปฏิบัติงาน (ตรวจราชการกรณีปกติ)</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/66">
+        <a href="./posts/80">
             <div class="policy">
-                <h3>ขั้นตอนการจัดซื้อวัสดุ</h3>
+                <h3>กระบวนงานการเฝ้าระวังปัญหาสุขภาพจิต</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/65">
+        <a href="./posts/81">
             <div class="policy">
-                <h3>ขั้นตอนการยืมเงินราชการ</h3>
-                <span><i class="fas fa-angle-down"></i></span>
-            </div>
-        </a>
-        <a href="./posts/69">
-            <div class="policy">
-                <h3>คู่มือโปรแกรมเดินทางไปราชการ</h3>
-                <span><i class="fas fa-angle-down"></i></span>
-            </div>
-        </a>
-        <a href="./posts/67">
-            <div class="policy">
-                <h3>คู่มือการใช้งานระบบเครือข่ายไร้สาย</h3>
-                <span><i class="fas fa-angle-down"></i></span>
-            </div>
-        </a>
-        <a href="./posts/70">
-            <div class="policy">
-                <h3>คู่มือการบำรุงรักษาเครื่องคอมพิวเตอร์</h3>
+                <h3>กระบวนงานการวิจัยและพัฒนาองคความรู้ด้านการส่งเสริมสุขภาพจิตและป้องกันปัญหาสุขภาพจิต</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>

@@ -2,56 +2,62 @@
 
 @section('content')
 <section class="policies container">
-    <h1 class="title">มาตรฐานการให้บริการ</h1>
+    <h1 class="title">มาตรฐานการปฏิบัติงาน</h1>
 
     <hr class="my-2" />
 
     <div class="policies-wrapper">
-        <a href="https://www.mhc9dmh.com/DATA/File/1-people_service.pdf">
+        <a href="./posts/62">
             <div class="policy">
-                <h3>คู่มือให้บริการถ่ายทอดนวตกรรมและองค์ความรู้ประชาชน</h3>
+                <h3>แนวทางการบริหารผลการปฏิบัติงาน</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="https://dmh.go.th/Download/Guide/view.asp?id=831">
+        <a href="./posts/68">
             <div class="policy">
-                <h3>คู่มือการร้องเรียนกรมสุขภาพจิต ปี 2563</h3>
+                <h3>คู่มือการลา</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/76">
+        <a href="./posts/63">
             <div class="policy">
-                <h3>กระบวนงานการรับมือภัยพิบัติในพื้นที่ (MCATT)</h3>
+                <h3>คู่มือการยืมใช้ทรัพย์สิน</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/77">
+        <a href="./posts/64">
             <div class="policy">
-                <h3>กระบวนงานการวางแผนยุทธศาสตร์การส่งเสริมสุขภาพจิต</h3>
+                <h3>แนวทางการจัดการเรื่องทุจริต</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/78">
+        <a href="./posts/66">
             <div class="policy">
-                <h3>กระบวนงานการถ่ายทอดองค์ความรู้และเทคโนโลยีด้านสุขภาพจิต</h3>
+                <h3>ขั้นตอนการจัดซื้อวัสดุ</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/79">
+        <a href="./posts/65">
             <div class="policy">
-                <h3>กระบวนงานการนิเทศและติดตามผลการปฏิบัติงาน (ตรวจราชการกรณีปกติ)</h3>
+                <h3>ขั้นตอนการยืมเงินราชการ</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/80">
+        <a href="./posts/69">
             <div class="policy">
-                <h3>กระบวนงานการเฝ้าระวังปัญหาสุขภาพจิต</h3>
+                <h3>คู่มือโปรแกรมเดินทางไปราชการ</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/81">
+        <a href="./posts/67">
             <div class="policy">
-                <h3>กระบวนงานการวิจัยและพัฒนาองคความรู้ด้านการส่งเสริมสุขภาพจิตและป้องกันปัญหาสุขภาพจิต</h3>
+                <h3>คู่มือการใช้งานระบบเครือข่ายไร้สาย</h3>
+                <span><i class="fas fa-angle-down"></i></span>
+            </div>
+        </a>
+        <a href="./posts/70">
+            <div class="policy">
+                <h3>คู่มือการบำรุงรักษาเครื่องคอมพิวเตอร์</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
