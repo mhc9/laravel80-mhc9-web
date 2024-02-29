@@ -17,3 +17,9 @@ Swiper.use(Autoplay);
 window.Swiper = Swiper;
 window.Navigation = Navigation;
 window.Pagination = Pagination;
+
+import Lightbox from 'photoswipe/lightbox';
+import PhotoSwipe from 'photoswipe';
+
+window.Lightbox = Lightbox;
+window.PhotoSwipe = PhotoSwipe;

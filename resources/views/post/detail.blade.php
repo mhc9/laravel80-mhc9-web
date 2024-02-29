@@ -20,8 +20,49 @@
                 <div>
                     <div class="p-2 mt-4 flex justify-center">
                         @if($post->category_id == 2)
-                            <div class="flex justify-center w-3/5 rounded-md overflow-hidden object-cover">
-                                <img src="{{ url('/'.$post->featured) }}" alt="headline-pic" />
+                            <div id="post-gallery" class="flex justify-center gap-2 w-3/4 rounded-md overflow-hidden">
+                                <a href="{{ url('/'.$post->featured) }}" 
+                                    data-pswp-width="2500"
+                                    data-pswp-height="1668"
+                                    target="_blank">
+                                    <img src="{{ url('/'.$post->featured) }}" alt="headline-pic" />
+                                </a>
+                                <!-- ## If post have more than one images -->
+                                <!-- <div class="flex flex-col gap-2 w-2/6"> -->
+                                    <!-- data-pswp-src with custom URL in href -->
+                                    <!-- <a href="https://unsplash.com" 
+                                        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+                                        data-pswp-width="2500"
+                                        data-pswp-height="1666"
+                                        target="_blank">
+                                        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+                                    </a> -->
+                                    <!-- data-pswp-src with custom URL in href -->
+                                    <!-- <a href="https://unsplash.com" 
+                                        data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+                                        data-pswp-width="2500"
+                                        data-pswp-height="1666"
+                                        target="_blank">
+                                        <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+                                    </a> -->
+                                    <!-- wrapped with any element: -->
+                                    <!-- <div>
+                                        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+                                            data-pswp-width="2500"
+                                            data-pswp-height="1667"
+                                            target="_blank">
+                                            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt="" />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+                                            data-pswp-width="2500"
+                                            data-pswp-height="1667"
+                                            target="_blank">
+                                            <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt="" />
+                                        </a>
+                                    </div> -->
+                                <!-- </div> -->
                             </div>
                         @else
                             <div class="mb-2">
@@ -68,7 +109,14 @@
 
 <script>
     $(document).ready(async function () {
-        // code here...
+        const lightbox = new Lightbox({
+            gallery: '#post-gallery',
+            children: 'a',
+            showHideAnimationType: 'fade',
+            pswpModule: () => PhotoSwipe
+        });
+        
+        lightbox.init();
     });
 </script>
 @endsection

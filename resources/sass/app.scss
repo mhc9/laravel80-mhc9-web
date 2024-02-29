@@ -19,6 +19,9 @@
 @import 'node_modules/swiper/modules/navigation';
 @import 'node_modules/swiper/modules/pagination';
 
+// Photowwipe
+@import '~photoswipe/dist/photoswipe.css';
+
 /* ================================== Globals ================================== */
 :root {
     /* Theme colors */
@@ -3333,4 +3336,13 @@ ol {
         margin: 0;
         padding: 0;
     }
+}
+
+// Photoswipe
+#post-gallery {
+    // border: 1px solid red;
+}
+
+.pswp--custom-bg {
+    --pswp-bg: #7079bf;
 }
