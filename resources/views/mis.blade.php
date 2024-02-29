@@ -11,7 +11,7 @@
     <div class="policies-wrapper">
         <a href="{{ url('/data-catalog') }}">
             <div class="policy">
-                <h3>บัญชีข้อมูล (Data Catalog)</h3>
+                <h3>บัญชีข้อมูลภาครัฐ (Data Catalog)</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
