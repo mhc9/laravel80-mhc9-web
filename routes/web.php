@@ -88,9 +88,8 @@ Route::get('/mis', function() {
     return view('mis');
 });
 
-Route::get('/data-catalog', function() {
-    return view('data-catalog');
-});
+Route::get('/data-catalog', [App\Http\Controllers\DataCatalogController::class, 'index']);
+Route::get('/data-catalog/{file}', [App\Http\Controllers\DataCatalogController::class, 'detail']);
 
 Route::get('/sat-servey', function() {
     return view('sat-servey');

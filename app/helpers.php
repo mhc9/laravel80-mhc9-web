@@ -552,3 +552,15 @@ function timeSince($Format, $Timestamp, $Language = "en", $TimeText = true )
 		}
 	}
 }
+
+function readCSV($csvFile, $delimiter = ",")
+{
+    $file_handle = fopen($csvFile, 'r');
+    while ($csvRow = fgetcsv($file_handle, null, $delimiter)) {
+        $line_of_text[] = $csvRow;
+    }
+
+    fclose($file_handle);
+
+    return $line_of_text;
+}

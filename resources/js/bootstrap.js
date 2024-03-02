@@ -1,6 +1,3 @@
-window.BASE_URL = 'https://mhc9dmh.com/newweb/public';
-window.API_URL = process.env.MIX_APP_URL;
-
 window._ = require('lodash');
 
 try {
@@ -34,7 +31,3 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-const { getWindowDimensions } = require('./utils');
-
-window.getWindowDimensions = getWindowDimensions;
