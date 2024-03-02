@@ -1,17 +1,17 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="about container">
+<section class="content-container container">
     <h1 class="title">CSV</h1>
 
     <hr class="my-2" />
 
-    <div class="about-wrapper">
-        <table class="table table-bordered table-striped">
+    <div class="content-wrapper">
+        <table id="csvTable" class="table table-bordered table-striped">
             <thead>
                 <tr>
                     @foreach($header as $col)
-                    <th>{{ $col }}</th>
+                    <th class="text-center">{{ $col }}</th>
                     @endforeach
                 </tr>
             </thead>
@@ -27,4 +27,9 @@
         </table>
     </div>
 </section>
+<script type="module">
+    let table = new DataTable('#csvTable', {
+        pageLength: 25
+    });
+</script>
 @endsection

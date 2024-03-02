@@ -34,3 +34,7 @@ import PhotoSwipe from 'photoswipe';
 
 window.Lightbox = Lightbox;
 window.PhotoSwipe = PhotoSwipe;
+
+/** DataTables */
+import DataTable from 'datatables.net-dt'
+window.DataTable = DataTable;

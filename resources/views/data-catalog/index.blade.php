@@ -17,6 +17,10 @@
                         จำนวนจิตแพทย์ พยาบาลจิตเวช และสหวิชาชีพ ในเขตสุขภาพที่ 9 ปีงบประมาณ 2566
                     </h3>
                     <div>
+                        <a href="{{ url('/data-catalog/DataSet_11_01') }}" class="btn btn-info">
+                            <i class="fas fa-eye"></i>
+                            รายละเอียด
+                        </a>
                         <a href="{{ url('/uploads/data-catalog/DataSet_11_01.csv') }}" class="btn btn-success">
                             <span><i class="fas fa-file-csv"></i></span>
                             ดาวน์โหลด
@@ -31,6 +35,10 @@
                         ผลการประเมินเด็กที่มีผลประเมิน DSPM  ก่อน-หลัง เข้าร่วมกิจกรรมโครงการพัฒนาเด็กและเยาวชนในถิ่นทุรกันดาร ตามพระราชดำริฯ (กพด.) ปีงบประมาณ 2566
                     </h3>
                     <div>
+                        <a href="{{ url('/data-catalog/DataSet_12_01') }}" class="btn btn-info">
+                            <i class="fas fa-eye"></i>
+                            รายละเอียด
+                        </a>
                         <a href="{{ url('/uploads/data-catalog/DataSet_12_01.csv') }}" class="btn btn-success">
                             <span><i class="fas fa-file-csv"></i></span>
                             ดาวน์โหลด
@@ -45,6 +53,10 @@
                         สรุปผลการดำเนินงานเฝ้าระวังปัญหาสุขภาพจิตนักเรียนในระบบสุขภาพจิตโรงเรียนวิถีใหม่ (School Health HERO) ภาคเรียนที่ 1 ปีการศึกษา 2566
                     </h3>
                     <div>
+                        <a href="{{ url('/data-catalog/DataSet_12_02') }}" class="btn btn-info">
+                            <i class="fas fa-eye"></i>
+                            รายละเอียด
+                        </a>
                         <a href="{{ url('/uploads/data-catalog/DataSet_12_02.csv') }}" class="btn btn-success">
                             <span><i class="fas fa-file-csv"></i></span>
                             ดาวน์โหลด
@@ -59,6 +71,10 @@
                         รายชื่อหน่วยงานที่ได้การอบรมหลักสูตรเจ้าหน้าที่ให้คำปรึกษาสุขภาพแบบองค์รวม (Holistic Health Advisor) และโปรแกรมสร้างสุขวัยทำงานในสถานประกอบการและหน่วยงานภาครัฐ ปีงบประมาณ 2566
                     </h3>
                     <div>
+                        <a href="{{ url('/data-catalog/DataSet_13_01') }}" class="btn btn-info">
+                            <i class="fas fa-eye"></i>
+                            รายละเอียด
+                        </a>
                         <a href="{{ url('/uploads/data-catalog/DataSet_13_01.csv') }}" class="btn btn-success">
                             <span><i class="fas fa-file-csv"></i></span>
                             ดาวน์โหลด
@@ -73,6 +89,10 @@
                         รายชื่อพื้นที่ดำเนินการสร้างสุขในผู้สูงอายุ ปีงบประมาณ 2566
                     </h3>
                     <div>
+                        <a href="{{ url('/data-catalog/DataSet_12_03') }}" class="btn btn-info">
+                            <i class="fas fa-eye"></i>
+                            รายละเอียด
+                        </a>
                         <a href="{{ url('/uploads/data-catalog/DataSet_12_03.csv') }}" class="btn btn-success">
                             <span><i class="fas fa-file-csv"></i></span>
                             ดาวน์โหลด
