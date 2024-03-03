@@ -1,21 +1,27 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="policies container">
+<section class="content-container container">
     <h1 class="title">E-Report</h1>
 
     <hr class="my-2" />
 
-    <div class="policies-wrapper">
+    <div class="content-wrapper">
         <a href="{{ url('/mis') }}">
-            <div class="policy">
+            <div class="content-bullet">
                 <h3>ข้อมูลเชิงสถิติการให้บริการ</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
         <a href="{{ url('/sat-servey') }}">
-            <div class="policy">
+            <div class="content-bullet">
                 <h3>รายงานผลสำรวจความพึงพอใจ</h3>
+                <span><i class="fas fa-angle-down"></i></span>
+            </div>
+        </a>
+        <a href="{{ url('/data-catalog') }}">
+            <div class="content-bullet">
+                <h3>บัญชีข้อมูลภาครัฐ (Data Catalog)</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>

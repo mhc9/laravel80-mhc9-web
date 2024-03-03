@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="about container">
+<section class="content-container container">
     <h1 class="title">ระบบสารสนเทศ (E-Service)</h1>
 
     <hr class="my-2" />
 
-    <div class="service-wrapper p-4">
+    <div class="content-wrapper p-4">
         <div class="row service-list"></div>
     </div>
 </section>
