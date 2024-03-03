@@ -29,7 +29,8 @@
 </section>
 <script type="module">
     let table = new DataTable('#csvTable', {
-        pageLength: 25
+        pageLength: 25,
+        responsive: true
     });
 </script>
 @endsection
