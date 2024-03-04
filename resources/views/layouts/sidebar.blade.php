@@ -9,7 +9,7 @@
                     <a href="{{ url('/') }}">หน้าหลัก</a>
                 </li>
                 <li class="has-sub">
-                    <a href="#"><i class="fas fa-home"></i> รู้จักเรา</a>
+                    <a href="#" target="_self"><i class="fas fa-home"></i> รู้จักเรา</a>
                     <ul>
                         <li>
                             <a href="{{ url('/about') }}">ประวัติความเป็นมา</a>
@@ -75,7 +75,7 @@
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href=""><i class="fas fa-stethoscope"></i> บริการ</a>
+                    <a href="#" target="_self"><i class="fas fa-stethoscope"></i> บริการ</a>
                     <ul>
                         <li>
                             <a href="">ศูนย์ข้อมูลข่าวสาร</a>
@@ -87,7 +87,7 @@
                             <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
                         </li> */} -->
                         <li class="has-sub">
-                            <a href="#">แจ้งเรื่องร้องเรียน</a>
+                            <a href="#" target="_self">แจ้งเรื่องร้องเรียน</a>
                             <ul>
                                 <li>
                                     <a href="https://mhc9dmh.com/oldweb/Comment.aspx" target="_blank">
@@ -108,7 +108,7 @@
                             <a href="">คำถามที่ถามบ่อย (FAQ)</a>
                         </li> */} -->
                         <li class="has-sub">
-                            <a href="#">คลังความรู้</a>
+                            <a href="#" target="_self">คลังความรู้</a>
                             <ul>
                                 <li>
                                     <a href="https://mhc9dmh.com/oldweb/show.aspx?x=KM" target="_blank">
@@ -128,7 +128,7 @@
                             </ul>
                         </li>
                         <li class="has-sub">
-                            <a href="#">สื่อสุขภาพจิต</a>
+                            <a href="#" target="_self">สื่อสุขภาพจิต</a>
                             <ul>
                                 <li>
                                     <a href="{{ url('/articles') }}">บทความสุขภาพจิต</a>
@@ -153,11 +153,12 @@
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href=""><i class="fas fa-bullhorn"></i> ข่าวประชาสัมพันธ์</a>
+                    <a href="#" target="_self"><i class="fas fa-bullhorn"></i> ข่าวประชาสัมพันธ์</a>
                     <ul>
                         <li><a href="{{ url('/posts') }}">ข่าวกิจกรรม</a></li>
-                        <li class="has-sub">
-                            <a href="{{ url('/newses/category/3') }}" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
+                        <li><a href="{{ url('/newses/category/3') }}">ข่าวจัดซื้อจัดจ้าง</a></li>
+                        <!-- <li class="has-sub">
+                            <a href="#" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
                             <ul>
                                 <li>
                                     <a href="{{ url('/newses/category/3') }}">แผนการจัดซื้อจัดจ้าง</a>
@@ -175,7 +176,7 @@
                                     <a href="{{ url('/newses/category/3') }}">ประกาศผู้ชนะการเสนอราคา</a>
                                 </li>
                             </ul>    
-                        </li>
+                        </li> -->
                         <li>
                             <a href="{{ url('/newses/category/4') }}">ข่าวรับสมัครงาน</a>
                         </li>
@@ -191,7 +192,7 @@
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href=""><i class="far fa-address-book"></i> ติดต่อเรา</a>
+                    <a href="#" target="_self"><i class="far fa-address-book"></i> ติดต่อเรา</a>
                     <ul>
                         <li>
                             <a href="{{ url('/contact') }}">ติดต่อเรา</a>

@@ -216,17 +216,18 @@
                                             <div class="submenu ">
                                                 <a href="{{ url('/posts') }}" target="_self">ข่าวกิจกรรม</a>
                                             </div>
-                                            <!-- <div class="submenu ">
-                                                <a href="#" target="_self">
-                                                    ข่าวประชาสัมพันธ์ส่วนกลาง
-                                                </a>
-                                            </div> -->
-                                            <div class="submenu has-children">
+                                            <div class="submenu ">
+                                                <a href="{{ url('/newses/category/3') }}" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
+                                            </div>
+                                            <!-- <div class="submenu has-children">
                                                 <a href="{{ url('/newses/category/3') }}" target="_self">ข่าวจัดซื้อจัดจ้าง</a>
                                                 <div class="child-container">
                                                     <div class="childs">
                                                         <div class="child">
                                                             <a href="newses/category/3" target="_self">แผนการจัดซื้อจัดจ้าง</a>
+                                                        </div>
+                                                        <div class="child">
+                                                            <a href="newses/category/361" target="_self">สรุปผลการจัดซื้อจัดจ้าง</a>
                                                         </div>
                                                         <div class="child">
                                                             <a href="newses/category/3" target="_self">ประกาศราคากลาง</a>
@@ -240,12 +241,9 @@
                                                         <div class="child">
                                                             <a href="newses/category/3" target="_self">ประกาศผู้ชนะการเสนอราคา</a>
                                                         </div>
-                                                        <!-- <div class="child">
-                                                            <a href="newses/category/361" target="_self">สรุปผลการจัดซื้อจัดจ้าง</a>
-                                                        </div> -->
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="submenu ">
                                                 <a href="{{ url('/newses/category/4') }}" target="_self">ข่าวรับสมัครงาน</a>
                                             </div>
