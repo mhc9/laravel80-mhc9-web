@@ -9,9 +9,9 @@
     <hr class="my-2" />
 
     <div class="content-wrapper">
-        <div class="min-h-screen p-4">
+        <div class="min-h-screen min-lg:p-4">
             <div class="row">
-                <div class="col-4 mb-4">
+                <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
                             <img src="{{ url('/uploads/2023/11/11092023061910654c79de9d657.JPG') }}" alt="culture-cover" />
@@ -27,7 +27,7 @@
                     </div>
                 </div>
     
-                <div class="col-4 mb-4">
+                <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
                             <img src="{{ url('/uploads/2023/11/11092023063058654c7ca28bcfc.JPG') }}" alt="culture-cover" />
@@ -43,7 +43,7 @@
                     </div>
                 </div>
     
-                <div class="col-4 mb-4">
+                <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
                             <img src="{{ url('/uploads/2024/03/0304202406375465e56c427ee39.jpg') }}" alt="culture-cover" />
@@ -59,7 +59,7 @@
                     </div>
                 </div>
     
-                <div class="col-4 mb-4">
+                <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
                             <img src="{{ url('/uploads/2024/03/0304202406422365e56d4f5c790.jpg') }}" alt="culture-cover" />
@@ -75,7 +75,7 @@
                     </div>
                 </div>
     
-                <div class="col-4 mb-4">
+                <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
                             <img src="{{ url('/uploads/2024/01/0123202407434465af6e30eea5e.jpg') }}" alt="culture-cover" />
@@ -91,7 +91,7 @@
                     </div>
                 </div>
     
-                <div class="col-4 mb-4">
+                <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden h-[200px] flex justify-center items-center bg-white">
                             <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" class="w-[150px] h-[150px]" />
