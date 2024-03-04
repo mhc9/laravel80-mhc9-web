@@ -35,7 +35,7 @@ class NewsController extends Controller
 
     public function getPostsByCategory(Request $req, $cate)
     {
-        $limit  = !empty($req->get('limit')) ? $req->get('limit') : 5;
+        $limit  = !empty($req->get('limit')) ? $req->get('limit') : 10;
         $group  = $req->get('group');
         $title  = PostCategory::find($cate)->name;
 
