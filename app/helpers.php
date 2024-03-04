@@ -523,7 +523,7 @@ function timeSince($Format, $Timestamp, $Language = "en", $TimeText = true )
                 for($i=0; $i<count($split)-1; $i++)
                 {
                     $StrCache .= $split[$i];
-                    $StrCache .= substr((date("Y", $Timestamp)+543), -2);
+                    $StrCache .= substr(((int)date("Y", $Timestamp)+543), -2);
                 }
                 $StrCache .= $split[count($split)-1];
                 $DateCache = $StrCache;
@@ -538,7 +538,7 @@ function timeSince($Format, $Timestamp, $Language = "en", $TimeText = true )
                 for($i=0; $i<count($split)-1; $i++)
                 {
                     $StrCache .= $split[$i];
-                    $StrCache .= (date("Y", $Timestamp)+543);
+                    $StrCache .= ((int)date("Y", $Timestamp)+543);
                 }
                 $StrCache .= $split[count($split)-1];
                 $DateCache = $StrCache;
