@@ -8,13 +8,13 @@
 
     <div class="content-wrapper">
         <a href="{{ url('/posts/88') }}">
-            <div class="policy">
+            <div class="content-bullet">
                 <h3>สรุปผลความพึงพอใจของผู้รับบริการต่อการบริการ (ผู้รับบริการ)</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
         <a href="{{ url('/posts/89') }}">
-            <div class="policy">
+            <div class="content-bullet">
                 <h3>สรุปผลความพึงพอใจของผู้รับบริการต่อการบริการ (เครือข่าย สธ.)</h3>
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
