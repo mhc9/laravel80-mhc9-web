@@ -9,7 +9,7 @@
     <hr class="my-2" />
 
     <div class="content-wrapper">
-        <div class="py-4 px-2">
+        <div class="min-h-screen py-4 px-2">
             <div class="border rounded-xl overflow-hidden p-4 mb-2">
                 <div class="flex justify-between">
                     <h3 class="w-[80%] text-lg">

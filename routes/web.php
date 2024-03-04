@@ -75,25 +75,34 @@ Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'getArti
 
 Route::get('/videos', [App\Http\Controllers\VideoController::class, 'getVideos']);
 
-// ...
 Route::get('/e-services', function() {
     return view('e-service');
 });
 
+/** ================= E-Report ================= */
 Route::get('/e-reports', function() {
-    return view('e-report');
+    return view('e-report.index');
 });
 
 Route::get('/mis', function() {
-    return view('mis');
+    return view('e-report.mis');
+});
+
+Route::get('/mis/project', function() {
+    return view('e-report.project');
+});
+
+Route::get('/mis/corruption', function() {
+    return view('e-report.corruption');
+});
+
+Route::get('/sat-servey', function() {
+    return view('e-report.sat-servey');
 });
 
 Route::get('/data-catalog', [App\Http\Controllers\DataCatalogController::class, 'index']);
 Route::get('/data-catalog/{file}', [App\Http\Controllers\DataCatalogController::class, 'detail']);
-
-Route::get('/sat-servey', function() {
-    return view('sat-servey');
-});
+/** ================= E-Report ================= */
 
 Route::get('/downloads', function() {
     return view('download');
