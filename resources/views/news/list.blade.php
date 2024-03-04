@@ -47,12 +47,12 @@
                     <div class="tab-pane fade show active" id="plans" role="tabpanel" aria-labelledby="plans-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @if(count($plans) > 1)
-                                    @foreach($plans as $plan)
+                                @if(count($plans) > 0)
+                                    @foreach($plans as $post)
                                         <div class="col-md-12 post__list-item">
-                                            @if($plan->category_id == 2)
+                                            @if($post->category_id == 2)
                                                 <div class="post__list-img">
-                                                    <img src="./{{$plan->featured}}" alt="post-pic" />
+                                                    <img src="./{{$post->featured}}" alt="post-pic" />
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
@@ -60,15 +60,15 @@
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
-                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+                                                <a href="{{ url('/posts/'.$post->id) }}"><h4>{{$post->title}}</h4></a>
         
                                                 @include('components.page-subtitle', [
                                                     'textSize'  => "",
-                                                    'author'    => $plan->author,
-                                                    'publishUp' => $plan->publish_up
+                                                    'author'    => $post->author,
+                                                    'publishUp' => $post->publish_up
                                                 ])
         
-                                                <p>{{$plan->title}}</p>
+                                                <p>{{$post->title}}</p>
                                             </div>
                                         </div>
                                     @endforeach
@@ -88,12 +88,12 @@
                     <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @if(count($results) > 1)
-                                    @foreach($results as $plan)
+                                @if(count($results) > 0)
+                                    @foreach($results as $post)
                                         <div class="col-md-12 post__list-item">
-                                            @if($plan->category_id == 2)
+                                            @if($post->category_id == 2)
                                                 <div class="post__list-img">
-                                                    <img src="./{{$plan->featured}}" alt="post-pic" />
+                                                    <img src="./{{$post->featured}}" alt="post-pic" />
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
@@ -101,15 +101,15 @@
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
-                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+                                                <a href="{{ url('/posts/'.$post->id) }}"><h4>{{$post->title}}</h4></a>
         
                                                 @include('components.page-subtitle', [
                                                     'textSize'  => "",
-                                                    'author'    => $plan->author,
-                                                    'publishUp' => $plan->publish_up
+                                                    'author'    => $post->author,
+                                                    'publishUp' => $post->publish_up
                                                 ])
         
-                                                <p>{{$plan->title}}</p>
+                                                <p>{{$post->title}}</p>
                                             </div>
                                         </div>
                                     @endforeach
@@ -129,12 +129,12 @@
                     <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @if(count($reports) > 1)
-                                    @foreach($reports as $plan)
+                                @if(count($reports) > 0)
+                                    @foreach($reports as $post)
                                         <div class="col-md-12 post__list-item">
-                                            @if($plan->category_id == 2)
+                                            @if($post->category_id == 2)
                                                 <div class="post__list-img">
-                                                    <img src="./{{$plan->featured}}" alt="post-pic" />
+                                                    <img src="./{{$post->featured}}" alt="post-pic" />
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
@@ -142,15 +142,15 @@
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
-                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+                                                <a href="{{ url('/posts/'.$post->id) }}"><h4>{{$post->title}}</h4></a>
         
                                                 @include('components.page-subtitle', [
                                                     'textSize'  => "",
-                                                    'author'    => $plan->author,
-                                                    'publishUp' => $plan->publish_up
+                                                    'author'    => $post->author,
+                                                    'publishUp' => $post->publish_up
                                                 ])
         
-                                                <p>{{$plan->title}}</p>
+                                                <p>{{$post->title}}</p>
                                             </div>
                                         </div>
                                     @endforeach
@@ -170,12 +170,12 @@
                     <div class="tab-pane fade" id="procures" role="tabpanel" aria-labelledby="procures-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @if(count($procures) > 1)
-                                    @foreach($procures as $plan)
+                                @if(count($procures) > 0)
+                                    @foreach($procures as $post)
                                         <div class="col-md-12 post__list-item">
-                                            @if($plan->category_id == 2)
+                                            @if($post->category_id == 2)
                                                 <div class="post__list-img">
-                                                    <img src="./{{$plan->featured}}" alt="post-pic" />
+                                                    <img src="./{{$post->featured}}" alt="post-pic" />
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
@@ -183,15 +183,15 @@
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
-                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+                                                <a href="{{ url('/posts/'.$post->id) }}"><h4>{{$post->title}}</h4></a>
         
                                                 @include('components.page-subtitle', [
                                                     'textSize'  => "",
-                                                    'author'    => $plan->author,
-                                                    'publishUp' => $plan->publish_up
+                                                    'author'    => $post->author,
+                                                    'publishUp' => $post->publish_up
                                                 ])
         
-                                                <p>{{$plan->title}}</p>
+                                                <p>{{$post->title}}</p>
                                             </div>
                                         </div>
                                     @endforeach
@@ -211,12 +211,12 @@
                     <div class="tab-pane fade" id="winners" role="tabpanel" aria-labelledby="winners-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @if(count($winners) > 1)
-                                    @foreach($winners as $plan)
+                                @if(count($winners) > 0)
+                                    @foreach($winners as $post)
                                         <div class="col-md-12 post__list-item">
-                                            @if($plan->category_id == 2)
+                                            @if($post->category_id == 2)
                                                 <div class="post__list-img">
-                                                    <img src="./{{$plan->featured}}" alt="post-pic" />
+                                                    <img src="./{{$post->featured}}" alt="post-pic" />
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
@@ -224,15 +224,15 @@
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
-                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+                                                <a href="{{ url('/posts/'.$post->id) }}"><h4>{{$post->title}}</h4></a>
         
                                                 @include('components.page-subtitle', [
                                                     'textSize'  => "",
-                                                    'author'    => $plan->author,
-                                                    'publishUp' => $plan->publish_up
+                                                    'author'    => $post->author,
+                                                    'publishUp' => $post->publish_up
                                                 ])
         
-                                                <p>{{$plan->title}}</p>
+                                                <p>{{$post->title}}</p>
                                             </div>
                                         </div>
                                     @endforeach
@@ -252,22 +252,22 @@
                     <div class="tab-pane fade" id="tors" role="tabpanel" aria-labelledby="tors-tab">
                         <div class="min-h-screen">
                             <div class="row p-4">
-                                @if(count($tors) > 1)
-                                    @foreach($tors as $plan)
+                                @if(count($tors) > 0)
+                                    @foreach($tors as $post)
                                         <div class="col-md-12 post__list-item">
                                             <div class="w-[80px] h-[80px] object-contain">
                                                 <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
                                             </div>
                                             <div class="post__list-text flex flex-col gap-1">
-                                                <a href="{{ url('/posts/'.$plan->id) }}"><h4>{{$plan->title}}</h4></a>
+                                                <a href="{{ url('/posts/'.$post->id) }}"><h4>{{$post->title}}</h4></a>
         
                                                 @include('components.page-subtitle', [
                                                     'textSize'  => "",
-                                                    'author'    => $plan->author,
-                                                    'publishUp' => $plan->publish_up
+                                                    'author'    => $post->author,
+                                                    'publishUp' => $post->publish_up
                                                 ])
         
-                                                <p>{{$plan->title}}</p>
+                                                <p>{{$post->title}}</p>
                                             </div>
                                         </div>
                                     @endforeach

@@ -40,55 +40,43 @@ class NewsController extends Controller
 
         if ($cate == '3') {
             $plans = Post::with('category','author')
+                        ->where('category_id', $cate)
                         ->where('group_id', 31)
-                        ->when(!empty($cate), function($q) use ($cate) {
-                            $q->where('category_id', $cate);
-                        })
                         ->orderBy('publish_up', 'DESC')
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
             $results = Post::with('category','author')
+                        ->where('category_id', $cate)
                         ->where('group_id', 32)
-                        ->when(!empty($cate), function($q) use ($cate) {
-                            $q->where('category_id', $cate);
-                        })
                         ->orderBy('publish_up', 'DESC')
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
             $reports = Post::with('category','author')
+                        ->where('category_id', $cate)
                         ->where('group_id', 34)
-                        ->when(!empty($cate), function($q) use ($cate) {
-                            $q->where('category_id', $cate);
-                        })
                         ->orderBy('publish_up', 'DESC')
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
             $procures = Post::with('category','author')
+                        ->where('category_id', $cate)
                         ->where('group_id', 35)
-                        ->when(!empty($cate), function($q) use ($cate) {
-                            $q->where('category_id', $cate);
-                        })
                         ->orderBy('publish_up', 'DESC')
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
             $winners = Post::with('category','author')
+                        ->where('category_id', $cate)
                         ->where('group_id', 33)
-                        ->when(!empty($cate), function($q) use ($cate) {
-                            $q->where('category_id', $cate);
-                        })
                         ->orderBy('publish_up', 'DESC')
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
             $tors = Post::with('category','author')
+                        ->where('category_id', $cate)
                         ->where('group_id', 36)
-                        ->when(!empty($cate), function($q) use ($cate) {
-                            $q->where('category_id', $cate);
-                        })
                         ->orderBy('publish_up', 'DESC')
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);

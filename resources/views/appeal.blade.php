@@ -43,7 +43,7 @@
                 <span><i class="fas fa-angle-down"></i></span>
             </div>
         </a>
-        <a href="./posts/">
+        <a href="./posts/97">
             <div class="policy">
                 <h3>แผนปฏิบัติการป้องกันการทุจริตประจำปี</h3>
                 <span><i class="fas fa-angle-down"></i></span>
