@@ -36,7 +36,8 @@ class NewsController extends Controller
     public function getPostsByCategory(Request $req, $cate)
     {
         $limit  = !empty($req->get('limit')) ? $req->get('limit') : 5;
-        $title = PostCategory::find($cate)->name;
+        $group  = $req->get('group');
+        $title  = PostCategory::find($cate)->name;
 
         if ($cate == '3') {
             $plans = Post::with('category','author')
@@ -81,7 +82,7 @@ class NewsController extends Controller
                         ->orderBy('id', 'DESC')
                         ->paginate($limit);
 
-            return view('news.list', compact('title', 'plans', 'results', 'reports', 'procures', 'winners', 'tors', 'cate'));
+            return view('news.list', compact('title', 'plans', 'results', 'reports', 'procures', 'winners', 'tors', 'cate', 'group'));
         } else {
             $posts = Post::with('category','author')
                         ->when(!empty($cate), function($q) use ($cate) {

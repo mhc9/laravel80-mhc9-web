@@ -13,32 +13,32 @@
             @if($cate == '3')
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="plans-tab" data-bs-toggle="tab" data-bs-target="#plans" type="button" role="tab" aria-controls="plans" aria-selected="true">
+                        <button class="nav-link active" id="tab-31" data-bs-toggle="tab" data-bs-target="#plans" type="button" role="tab" aria-controls="plans" aria-selected="true">
                             แผนการจัดซื้อจัดจ้าง
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="results-tab" data-bs-toggle="tab" data-bs-target="#results" type="button" role="tab" aria-controls="results" aria-selected="false">
+                        <button class="nav-link" id="tab-32" data-bs-toggle="tab" data-bs-target="#results" type="button" role="tab" aria-controls="results" aria-selected="false">
                             สรุปผลการจัดซื้อจัดจ้าง
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="reports-tab" data-bs-toggle="tab" data-bs-target="#reports" type="button" role="tab" aria-controls="reports" aria-selected="false">
+                        <button class="nav-link" id="tab-34" data-bs-toggle="tab" data-bs-target="#reports" type="button" role="tab" aria-controls="reports" aria-selected="false">
                             รายงานผลการจัดซื้อจัดจ้าง
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="procures-tab" data-bs-toggle="tab" data-bs-target="#procures" type="button" role="tab" aria-controls="procures" aria-selected="false">
+                        <button class="nav-link" id="tab-35" data-bs-toggle="tab" data-bs-target="#procures" type="button" role="tab" aria-controls="procures" aria-selected="false">
                             ประกาศจัดซื้อจัดจ้าง
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="winners-tab" data-bs-toggle="tab" data-bs-target="#winners" type="button" role="tab" aria-controls="winners" aria-selected="false">
+                        <button class="nav-link" id="tab-33" data-bs-toggle="tab" data-bs-target="#winners" type="button" role="tab" aria-controls="winners" aria-selected="false">
                             ประกาศผู้ชนะการเสนอราคา
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="tors-tab" data-bs-toggle="tab" data-bs-target="#tors" type="button" role="tab" aria-controls="tors" aria-selected="false">
+                        <button class="nav-link" id="tab-36" data-bs-toggle="tab" data-bs-target="#tors" type="button" role="tab" aria-controls="tors" aria-selected="false">
                             ประกาศร่าง TOR
                         </button>
                     </li>
@@ -320,4 +320,12 @@
         </div>
     </div>
 </section>
+<script>
+    $(document).ready(function () {
+        const group = '{{ $group }}';
+
+        let activedTab = new bootstrap.Tab($(`#tab-${group == '' ? '31' : group}`));
+        activedTab.show();
+    });
+</script>
 @endsection
