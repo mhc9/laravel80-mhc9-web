@@ -17,6 +17,16 @@
                             />
                         </div>
                     </div>
+                    <!-- DMH E-Learning -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-96"
+                                src="https://mhc9dmh.com/newweb/public/img/QedmTbSsLorfSsZydiTFVflvu5dty1kA3Qd7itev.png"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
                     <!-- Mental Health Week -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
