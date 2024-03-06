@@ -28,11 +28,14 @@
             <div class="flex flex-col gap-2 pt-2 pb-4">
                 <div class="my-2">
                     <h4>หมวดคู่มือการให้บริการ/ปฏิบัติงาน</h4>
-                    <div class="border rounded-md px-4 p-2">
-    
-                        @include('components.download-item')
-    
-                    </div>
+
+                    @foreach($posts as $post)
+                        <div class="border rounded-md px-4 p-2">
+        
+                            @include('components.download-item', ['post' => $post])
+        
+                        </div>
+                    @endforeach
                 </div>
     
                 <!-- <div class="my-2">
@@ -76,16 +79,21 @@
 </section>
 
 <script>
-    const modal = new bootstrap.Modal(document.getElementById('downloadModal'), {
-        // options ...
-    });
+    let modal;
+    function showModal(event, id) {
+        modal = new bootstrap.Modal(document.getElementById(`modal-${id}`), {
+            // options ...
+        });
 
-    async function handleDownload(event) {
+        modal.show();
+    }
+
+    async function handleDownload(event, id) {
         event.preventDefault();
 
         //TODO: To update downloaded field of web_posts table
-        // const res = await axios.post(`${API_URL}/posts/46/download`);
-        // console.log(res);
+        const res = await axios.post(`${API_URL}/posts/${id}/download`);
+        console.log(res);
 
         window.open(event.target.href);
         modal.toggle();

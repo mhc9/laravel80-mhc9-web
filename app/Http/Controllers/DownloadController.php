@@ -36,7 +36,7 @@ class DownloadController extends Controller
                     ->orderBy('id', 'DESC')
                     ->paginate($limit);
 
-        return view('download', compact('posts'));
+        return view('download.list', compact('posts'));
     }
 
     public function search(Request $req)
