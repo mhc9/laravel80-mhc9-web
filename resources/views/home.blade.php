@@ -4,7 +4,7 @@
 <div>
     <section">
         <!-- Hero -->
-        <div class="slide-hero">
+        <div class="slide-hero max-md:hidden">
             <div class="swiper" id="hero">
                 <div class="swiper-wrapper">
                     <!-- Director-General's Policy -->

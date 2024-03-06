@@ -80,11 +80,11 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <div>
-            ©2020 ศูนย์สุขภาพจิตที่ 9 All Rights Reserved | DESIGNED BY 
-            <a href="https://www.query-studio.com" target="_blank" rel="noreferrer">
-                นายสัญญา ธรรมวงษ์
-            </a>
+        <div class="flex max-sm:flex-col justify-center items-center">
+            <span>©2020 ศูนย์สุขภาพจิตที่ 9 All Rights Reserved<span class="ml-1 sm:after:content-['|']"></span></span>
+            <span class="mx-1">
+                DESIGNED BY<a href="#" target="_blank" rel="noreferrer">นายสัญญา ธรรมวงษ์</a>
+            </span>
         </div>
     </div>
 </footer>
