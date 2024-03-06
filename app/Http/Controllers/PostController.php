@@ -211,4 +211,30 @@ class PostController extends Controller
             ];
         }
     }
+
+    public function download(Request $req, $id)
+    {
+        try {
+            $post = $this->postService->getPost($id);
+            $post->downloads = (int)$post->downloads + 1;
+
+            if($post->save()) {
+                return [
+                    'status'    => 1,
+                    'message'   => 'Downloading successfully!!',
+                    'post'      => $post->load(['category','author'])
+                ];
+            } else {
+                return [
+                    'status'    => 0,
+                    'message'   => 'Something went wrong!!'
+                ];
+            }
+        } catch (\Exception $ex) {
+            return [
+                'status'    => 0,
+                'message'   => $ex->getMessage()
+            ];
+        }
+    }
 }

@@ -100,6 +100,7 @@ Route::middleware('auth:api')->group(function() {
 
 Route::get('/posts', 'App\Http\Controllers\PostController@search');
 Route::get('/posts/{id}', 'App\Http\Controllers\PostController@getById');
+Route::post('/posts/{id}/download', 'App\Http\Controllers\PostController@download');
 
 Route::get('/db-connection', function () {
     try {

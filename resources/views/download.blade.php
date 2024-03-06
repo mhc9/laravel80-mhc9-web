@@ -33,8 +33,8 @@
                                 href="https://mhc9dmh.com/newweb/public/uploads/2024/01/0124202401543065b06dd6a7611.pdf"
                                 target="_blank"
                                 class="btn btn-success"
-                                data-bs-dismiss="modal"
                                 id="download"
+                                onclick="handleDownload(event)"
                             >
                                 <i class="fas fa-download"></i> ดาวน์โหลด
                             </a>
@@ -125,11 +125,20 @@
         </div>
     </div>
 </section>
-<script>
-    const modal = document.getElementById('downloadModal');
-    modal.addEventListener('hidden.bs.modal', function (event) {
-        window.open('https://mhc9dmh.com/newweb/public/uploads/2024/01/0124202401543065b06dd6a7611.pdf');
-        return false;
+<script type="module">
+    const modal = new bootstrap.Modal(document.getElementById('downloadModal'), {
+        // options ...
     });
+
+    async function handleDownload(event) {
+        event.preventDefault();
+
+        //TODO: To update downloaded field of web_posts table
+        // const res = await axios.post(`${API_URL}/posts/46/download`);
+        // console.log(res);
+
+        window.open(event.target.href);
+        modal.toggle();
+    }
 </script>
 @endsection
