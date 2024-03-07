@@ -404,9 +404,9 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="text-center m-1">
+                                <div class="text-center m-1">
                                     <a href="{{ url('/onepages') }}" class="all-news">ดูทั้งหมด</a>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>

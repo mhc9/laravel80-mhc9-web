@@ -113,7 +113,9 @@ Route::get('/downloads', [App\Http\Controllers\DownloadController::class, 'getDo
 /** ข่าวประชาสัมพันธ์ */
 Route::get('/posts', [App\Http\Controllers\PostController::class, 'getPosts']);
 Route::get('/posts/{id}', [App\Http\Controllers\PostController::class, 'getPost']);
+Route::get('/posts/category/{cate}', [App\Http\Controllers\PostController::class, 'getPostsByCategory']);
 Route::get('/newses/category/{cate}', [App\Http\Controllers\NewsController::class, 'getPostsByCategory']);
+Route::get('/onepages', [App\Http\Controllers\OnepageController::class, 'getOnepages']);
 
 /** ติดต่อเรา */
 Route::get('/contact', function() {
@@ -123,6 +125,3 @@ Route::get('/contact', function() {
 Route::get('/links', function() {
     return view('link');
 });
-
-/** Run into react fronend */
-// Route::view('/{path?}', 'app');

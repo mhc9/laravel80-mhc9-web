@@ -115,6 +115,24 @@ class PostController extends Controller
         return $post;
     }
 
+    public function getPostsByCategory(Request $req, $cate)
+    {
+        $limit  = !empty($req->get('limit')) ? $req->get('limit') : 10;
+        $group  = $req->get('group');
+
+        $title  = PostCategory::find($cate)->name;
+
+        $posts = Post::with('category','author')
+                    ->when(!empty($cate), function($q) use ($cate) {
+                        $q->where('category_id', $cate);
+                    })
+                    ->orderBy('publish_up', 'DESC')
+                    ->orderBy('id', 'DESC')
+                    ->paginate($limit);
+
+        return compact('title', 'posts', 'cate');
+    }
+
     public function getInitialFormData()
     {
         return [
