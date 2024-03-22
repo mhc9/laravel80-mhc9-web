@@ -123,42 +123,78 @@
                 <ol class="level-4-wrapper">
                     <li>
                         <div class="level-4 rectangle4">
-                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2292Img.jpg"])
+                            <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <h2 class="my-[2px]">น.ส.ภัทราพร ตันนุกูล</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตปฐมวัย</h4>
+                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <h4 class="my-[2px]">งานพัฒนาคุณภาพ</h4>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="level-4 rectangle4">
-                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2133Img.jpg"])
+                            <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <h2 class="my-[2px]">น.ส.นุชนาฏ ชิดตะคุ</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตวัยเรียน/วัยรุ่น</h4>
+                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <h4 class="my-[2px]">งานวิจัยและพัฒนา</h4>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="level-4 rectangle4">
-                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/39Img.jpg"])
+                            <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <h2 class="my-[2px]">นายพนัส ศรีไชยบาล</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตวัยทำงาน</h4>
+                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <h4 class="my-[2px]">งานแผนงานและประเมินผล</h4>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="level-4 rectangle4">
-                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/43Img.jpg"])
+                            <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <h2 class="my-[2px]">น.ส.กาญจนาวดี ปินะถา</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตผู้สูงอายุ</h4>
+                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <h4 class="my-[2px]">งานพัฒนาเครือข่ายสุขภาพจิต</h4>
                             </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level-4 rectangle4">
+                            <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
+                            <div class="box-label">
+                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <h4 class="my-[2px]">งานนิเทศและติดตาม</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level-4 rectangle4">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#officerModal">
+                                <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
+                                <div class="box-label">
+                                    <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                    <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                    <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย</h4>
+                                    <ul class="flex flex-col p-0">
+                                        <li class="m-0">
+                                            - น.ส.ภัทราพร ตันนุกูล <span class="font-thin">งานสุขภาพจิตปฐมวัย</span>
+                                        </li>
+                                        <li class="m-0">
+                                            - น.ส.นุชนาฏ ชิดตะคุ <span class="font-thin">งานสุขภาพจิตวัยเรียน/วัยรุ่น</span>
+                                        </li>
+                                        <li class="m-0">
+                                            - นายพนัส ศรีไชยบาล <span class="font-thin">งานสุขภาพจิตวัยทำงาน</span>
+                                        </li>
+                                        <li class="m-0">
+                                            - น.ส.กาญจนาวดี ปินะถา <span class="font-thin">งานสุขภาพจิตผู้สูงอายุ</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
                         </div>
                     </li>
                     <li>
@@ -187,13 +223,21 @@
                     </li>
                     <li>
                         <div class="level-4 rectangle4">
-                            <div>
-                                @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2320Img.jpg"])
-                            </div>
+                            <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <h2 class="my-[2px]">น.ส.เบญจมาภรณ์ จงกลนิธารณ์</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]"></h4>
+                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <h4 class="my-[2px]">งานเฝ้าระวังและป้องกันการฆ่าตัวตาย</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level-4 rectangle4">
+                            <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
+                            <div class="box-label">
+                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <h4 class="my-[2px]">งานสุขภาพจิตระหว่างประเทศ</h4>
                             </div>
                         </div>
                     </li>
