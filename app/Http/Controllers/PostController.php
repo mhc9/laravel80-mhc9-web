@@ -29,6 +29,8 @@ class PostController extends Controller
     public function getPost($id)
     {
         $post =  Post::with('category','author')->find($id);
+        $post->hits = (int)$post->hits + 1;
+        $post->save();
 
         return view('post.detail', ['post' => $post]);
     }
