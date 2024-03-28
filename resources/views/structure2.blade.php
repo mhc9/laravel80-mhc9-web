@@ -125,8 +125,8 @@
                         <div class="level-4 rectangle4">
                             <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <!-- <h2 class="my-[2px]">ชื่อ สกุล</h2>
+                                <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                 <h4 class="my-[2px]">งานพัฒนาคุณภาพ</h4>
                             </div>
                         </div>
@@ -135,8 +135,8 @@
                         <div class="level-4 rectangle4">
                             <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <!-- <h2 class="my-[2px]">ชื่อ สกุล</h2>
+                                <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                 <h4 class="my-[2px]">งานวิจัยและพัฒนา</h4>
                             </div>
                         </div>
@@ -145,8 +145,8 @@
                         <div class="level-4 rectangle4">
                             <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <!-- <h2 class="my-[2px]">ชื่อ สกุล</h2>
+                                <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                 <h4 class="my-[2px]">งานแผนงานและประเมินผล</h4>
                             </div>
                         </div>
@@ -155,8 +155,8 @@
                         <div class="level-4 rectangle4">
                             <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <!-- <h2 class="my-[2px]">ชื่อ สกุล</h2>
+                                <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                 <h4 class="my-[2px]">งานพัฒนาเครือข่ายสุขภาพจิต</h4>
                             </div>
                         </div>
@@ -165,8 +165,8 @@
                         <div class="level-4 rectangle4">
                             <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <!-- <h2 class="my-[2px]">ชื่อ สกุล</h2>
+                                <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                 <h4 class="my-[2px]">งานนิเทศและติดตาม</h4>
                             </div>
                         </div>
@@ -176,8 +176,8 @@
                             <a href="#" data-bs-toggle="modal" data-bs-target="#officerModal">
                                 <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                                 <div class="box-label">
-                                    <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                    <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                    <!-- <h2 class="my-[2px]">ชื่อ สกุล</h2>
+                                    <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                     <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย</h4>
                                     <ul class="flex flex-col p-0">
                                         <li class="m-0">
@@ -225,8 +225,8 @@
                         <div class="level-4 rectangle4">
                             <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <!-- <h2 class="my-[2px]">ชื่อ-สกุล</h2>
+                                <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                 <h4 class="my-[2px]">งานเฝ้าระวังและป้องกันการฆ่าตัวตาย</h4>
                             </div>
                         </div>
@@ -235,8 +235,8 @@
                         <div class="level-4 rectangle4">
                             <!-- @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"]) -->
                             <div class="box-label">
-                                <!-- <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3> -->
+                                <!-- <h2 class="my-[2px]">ชื่อ-สกุล</h2>
+                                <h3 class="my-[2px]">ตำแหน่ง</h3> -->
                                 <h4 class="my-[2px]">งานสุขภาพจิตระหว่างประเทศ</h4>
                             </div>
                         </div>

@@ -146,7 +146,7 @@
                             @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/39Img.jpg"])
                             <div class="box-label">
                                 <h2 class="my-[2px]">นายพนัส ศรีไชยบาล</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
+                                <h3 class="my-[2px]">นักสังคมสงเคราะห์ปฏิบัติการ</h3>
                                 <h4 class="my-[2px]">งานสุขภาพจิตวัยทำงาน</h4>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
                             <div class="box-label">
                                 <h2 class="my-[2px]">น.ส.เบญจมาภรณ์ จงกลนิธารณ์</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]"></h4>
+                                <h4 class="my-[2px]">งานเฝ้าระวังปัญหาสุขภาพจิต/งานสุขภาพจิตกลุ่มวัย</h4>
                             </div>
                         </div>
                     </li>
