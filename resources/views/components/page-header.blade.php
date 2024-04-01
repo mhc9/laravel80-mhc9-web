@@ -7,7 +7,7 @@
         ])
         <div class="flex flex-col justify-center items-start gap-1 text-muted text-xs max-md:hidden">
             <span class="font-bold"><i class="fas fa-user-alt"></i> {{$author}}</span>
-            <span class="font-thin"><i class="fas fa-calendar-alt"></i> {{timeSince("d M Y H:i", strtotime($publishUp), "th")}}</span>
+            <span class="font-thin"><i class="fas fa-calendar-alt"></i> {{facebookTimeAgo($publishUp)}}</span>
         </div>
     </div>
 

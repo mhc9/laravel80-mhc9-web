@@ -49,6 +49,18 @@ class HomeController extends Controller
                     ->limit(5)
                     ->get();
 
+        $jobs = Post::with('category','author')
+                    ->where('category_id', 4)
+                    ->orderBy('publish_up', 'DESC')
+                    ->limit(5)
+                    ->get();
+
+        $notices = Post::with('category','author')
+                    ->where('category_id', 5)
+                    ->orderBy('publish_up', 'DESC')
+                    ->limit(5)
+                    ->get();
+
         $onepages = Post::with('category','author')
                     ->where('category_id', 8)
                     ->orderBy('publish_up', 'DESC')
@@ -61,6 +73,6 @@ class HomeController extends Controller
                     ->limit(8)
                     ->get();
 
-        return view('home', compact('headline', 'posts', 'videos', 'procures', 'onepages', 'articles'));
+        return view('home', compact('headline', 'posts', 'videos', 'procures', 'jobs', 'notices', 'onepages', 'articles'));
     }
 }

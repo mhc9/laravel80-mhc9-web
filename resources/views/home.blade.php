@@ -340,6 +340,7 @@
                                                         </div>
                                                         <p>
                                                             <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
+                                                            <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
                                                         </p>
                                                     </li>
                                                 @endforeach
@@ -352,7 +353,19 @@
                                         <h4>ข่าวรับสมัครงาน</h4>
 
                                         <div class="news-list">
-                                            <ul id="jobNews"></ul>
+                                            <ul id="jobNews">
+                                                @foreach($jobs as $item)
+                                                    <li>
+                                                        <div>
+                                                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                        </div>
+                                                        <p>
+                                                            <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
+                                                            <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
+                                                        </p>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
                                         </div>
                                         
                                         <a href="./newses/category/4" class="all-news">ข่าวทั้งหมด</a>
@@ -361,7 +374,19 @@
                                         <h4>ประกาศ</h4>
 
                                         <div class="news-list">
-                                            <ul id="noticeNews"></ul>
+                                            <ul id="noticeNews">
+                                                @foreach($notices as $item)
+                                                    <li>
+                                                        <div>
+                                                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                        </div>
+                                                        <p>
+                                                            <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
+                                                            <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
+                                                        </p>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
                                         </div>
 
                                         <a href="./newses/category/5" class="all-news">ประกาศทั้งหมด</a>
@@ -672,40 +697,6 @@
                 </div>
             `);
         });
-
-        /** Fetch jobs in background */
-        const jobResponse = await fetch(`${API_URL}/posts?page=&cate=4`);
-        if (jobResponse) {
-            const { data, ...pager } = await jobResponse.json();
-
-            data.forEach(job => {
-                $('#jobNews').append(`
-                    <li>
-                        <div>
-                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                        </div>
-                        <p><a href="{{ url('/posts/${job.id}') }}">${job.title}</a></p>
-                    </li>
-                `);
-            })
-        }
-
-        /** Fetch notices in background */
-        const noticeResponse = await fetch(`${API_URL}/posts?page=&cate=5`);
-        if (noticeResponse) {
-            const { data, ...pager } = await noticeResponse.json();
-
-            data.forEach(notice => {
-                $('#noticeNews').append(`
-                    <li>
-                        <div>
-                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                        </div>
-                        <p><a href="{{ url('/posts/${notice.id}') }}">${notice.title}</a></p>
-                    </li>
-                `);
-            })
-        }
 
         $('#goToSite').modal('show');
     });
