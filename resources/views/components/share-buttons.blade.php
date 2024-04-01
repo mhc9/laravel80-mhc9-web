@@ -6,6 +6,8 @@
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2Fposts%2F{{$id}}"
             onclick="popupWindow($(this).attr('href'), 'facebook-share', 500, 300)"
             target="_blank"
+            data-toggle="tooltip"
+            title="แชร์ใน Facebook"
         >
             <i class="fab fa-facebook"></i>
         </a>
@@ -14,6 +16,8 @@
             href="http://twitter.com/share?text={{$title}}&url=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2Fposts%2F{{$id}}&via=sanyath007"
             onclick="popupWindow($(this).attr('href'), 'twitter-share', 500, 300)"
             target="_blank"
+            data-toggle="tooltip"
+            title="แชร์ใน Twitter"
         >
             <i class="fab fa-twitter"></i>
         </a>
@@ -22,6 +26,8 @@
             href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fwww.mhc9dmh.com%2Fnewweb%2Fpublic%2Fposts%2F{{$id}}"
             onclick="popupWindow($(this).attr('href'), 'line-share', 500, 300)"
             target="_blank"
+            data-toggle="tooltip"
+            title="แชร์ใน Line"
         >
             <i class="fab fa-line"></i>
         </a>
@@ -33,4 +39,8 @@
         var x = window.outerWidth / 2 + window.screenX - (w / 2)
         return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + y + ', left=' + x);
     }
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+    });
 </script>
