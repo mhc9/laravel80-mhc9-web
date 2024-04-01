@@ -42,7 +42,7 @@
 
                 <!-- Col -->
                 <div class="footer-col footer-menu">
-                    <h2>ติอต่อเรา</h2>
+                    <h2 class="max-[640px]:hidden">ติอต่อเรา</h2>
                     <ul class="footer-address">
                         <li>ศูนย์สุขภาพจิตที่ 9</li>
                         <li>เลขที่ 86 ถ.ช้างเผือก ต.ในเมือง อ.เมือง จ.นครราชสีมา 30000</li>
