@@ -70,7 +70,7 @@ class HomeController extends Controller
         $articles = Post::with('category','author')
                     ->where('category_id', 6)
                     ->orderBy('publish_up', 'DESC')
-                    ->limit(8)
+                    ->limit(6)
                     ->get();
 
         return view('home', compact('headline', 'posts', 'videos', 'procures', 'jobs', 'notices', 'onepages', 'articles'));

@@ -147,7 +147,7 @@ main {
     &:hover {
         transform: translateX(2px);
         transition: all 3ms ease-in-out;
-        text-decoration: underline;
+        // text-decoration: underline;
 
         &::after {
             content: " \f101";

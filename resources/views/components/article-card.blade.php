@@ -1,5 +1,5 @@
 <div class="card article-item">
-    <div class="card-img-top h-[200px]">
+    <div class="card-img-top h-[210px]">
         <img src="{{ url('/' . $article->featured) }}" alt="article-cover" />
     </div>
     <div class="card-body">

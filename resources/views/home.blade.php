@@ -455,7 +455,7 @@
 
                                 <div class="row article-list px-4 py-2">
                                     @foreach($articles as $article)
-                                        <div class="col-sm-6 col-md-4 col-lg-3 ">
+                                        <div class="col-sm-12 col-md-6 col-lg-4 ">
 
                                             @include('components.article-card', ['article'  => $article])
 
