@@ -6,8 +6,10 @@
 
     <hr class="my-2" />
 
-    <div class="content-wrapper p-4">
-        <div class="row service-list"></div>
+    <div class="content-wrapper">
+        <div class="min-h-screen p-4">
+            <div class="row service-list"></div>
+        </div>
     </div>
 </section>
 <script>

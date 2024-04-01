@@ -47,7 +47,7 @@ Route::get('/manuals', function() {
 });
 
 Route::get('/policies', function() {
-    return view('policies');
+    return view('policy');
 });
 
 // ...
