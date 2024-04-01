@@ -12,7 +12,7 @@
             'author'    => $post->author->name,
             'publishUp' => $post->publish_up
         ])
-            
+
         <!-- Page Content -->
         <div class="page-content">
             <!-- Render string or html -->
@@ -105,6 +105,16 @@
 
         <!-- // comment here... -->
     </div>
+
+    <hr class="my-2" />
+
+    @include('components.page-footer', [
+        'hits'      => ['value' => $post->hits, 'show' => true],
+        'likes'     => ['value' => $post->likes, 'show' => true],
+        'downloads' => ['value' => $post->downloads, 'show' => false],
+        'comments'  => ['value' => $post->comments, 'show' => true],
+        'shares'    => ['value' => $post->shares, 'show' => true],
+    ])
 </section>
 
 <script>
