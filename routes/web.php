@@ -46,6 +46,10 @@ Route::get('/manuals', function() {
     return view('manual');
 });
 
+Route::get('/policies', function() {
+    return view('policies');
+});
+
 // ...
 Route::get('/annual-reports', function() {
     $reports = [
