@@ -224,6 +224,8 @@
                                                                 'author'    => $post->author,
                                                                 'publishUp' => $post->publish_up
                                                             ])
+
+                                                            <span class="publish-time">{{facebookTimeAgo($post->publish_up)}}</span>
                                                         </div>
                                                     </li>
                                                 @endforeach

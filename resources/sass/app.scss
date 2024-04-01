@@ -268,6 +268,10 @@ nav.c9__pagination {
         font-size: 18px;
     }
 }
+
+.publish-time {
+    @apply text-gray-500 font-thin
+}
 /* ================================== End Globals ================================== */
 
 /** ================================== Bootstrap Components ================================== */
@@ -1585,6 +1589,10 @@ footer {
                         .subtitle {
                             display: flex;
                             margin-top: 5px;
+                        }
+
+                        .publish-time {
+                            display: none;
                         }
                     }
                 }
