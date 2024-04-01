@@ -232,7 +232,7 @@
                                             </ul>
 
                                             <div class="post-btn mt-2">
-                                                <a href="{{ url('/posts') }}" class="all-news">ข่าวกิจกรรมทั้งหมด</a>
+                                                <a href="{{ url('/posts') }}" class="all-news">ข่าวทั้งหมด</a>
                                             </div>
                                         </div>
                                     </div>
@@ -432,7 +432,7 @@
                                 </div>
 
                                 <div class="text-center m-1">
-                                    <a href="{{ url('/onepages') }}" class="all-news">ดูทั้งหมด</a>
+                                    <a href="{{ url('/onepages') }}" class="all-news">ข่าวทั้งหมด</a>
                                 </div>
                             </div>
                         </div>
