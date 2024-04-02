@@ -26,7 +26,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden max-h-[200px]">
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-lg-4 mb-4">
                     <div class="card">
                         <div class="card-img-top overflow-hidden h-[200px] flex justify-center items-center bg-white">
@@ -98,6 +98,38 @@
                         </div>
                         <div class="card-body min-h-[260px]">
                             <a href="{{ url('/posts/60') }}">
+                                <h3 class="card-title">กิจกรรม "รักที่จะมอบ ชอบที่จะให้" จัดโรงทาน</h3>
+                            </a>
+                            <p class="card-text">
+                                ศูนย์สุขภาพจิตที่ 9 โดยคณะเจ้าหน้าที่ดำเนินการตามข้อตกลงการพัฒนาให้เป็นองค์กรคุณธรรมจัดกิจกรรม “รักที่จะมอบ ชอบที่จะให้” จัดโรงทาน ในวันที่ 18 มีนาคม 2567 ณ บริเวณหน้าหอกรองจิต โรงพยาบาลจิตเวชนครราชสีมาราชนครินทร์ จังหวัดนครราชสีมา
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-img-top overflow-hidden max-h-[200px]">
+                            <img src="{{ url('/uploads/2024/03/0318202409332965f80a6957991.jpg') }}" alt="culture-cover" />
+                        </div>
+                        <div class="card-body min-h-[260px]">
+                            <a href="{{ url('/posts/120') }}">
+                                <h3 class="card-title">กิจกรรม "จิตอาสาทำความดีเพื่อความดี" ตักบาตรทำบุญพระสงฆ์</h3>
+                            </a>
+                            <p class="card-text">
+                                ศูนย์สุขภาพจิตที่ 9 ร่วมงานวันครบรอบสถาปนา 59 ปี โรงพยาบาลจิตเวชนครราชสีมาราชนครินทร์ โดยคณะเจ้าหน้าที่ร่วมดำเนินการตามข้อตกลงการพัฒนาให้เป็นองค์กรคุณธรรม "จิตอาสาทำความดีเพื่อความดี” ตักบาตรทำบุญพระสงฆ์ จำนวน 9 รูป ในวันที่ 18 มีนาคม 2567 ณ บริเวณหน้าหอกรองจิต โรงพยาบาลจิตเวชนครราชสีมาราชนครินทร์ จังหวัดนครราชสีมา
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-img-top overflow-hidden max-h-[200px]">
+                            <img src="{{ url('/uploads/2024/03/0318202409404265f80c1a10d95.jpg') }}" alt="culture-cover" />
+                        </div>
+                        <div class="card-body min-h-[260px]">
+                            <a href="{{ url('/posts/122') }}">
                                 <h3 class="card-title">ประกาศเจตนารมณ์การป้องกันและแก้ไขปัญหาการล่วงละเมิดหรือคุกคามทางเพศในการทำงาน</h3>
                             </a>
                             <p class="card-text">
