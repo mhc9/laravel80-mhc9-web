@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="content-container container">
-    <h1 class="title">CSV</h1>
+    <h1 class="title">{{$title}}</h1>
 
     <hr class="my-2" />
 

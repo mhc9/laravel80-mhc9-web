@@ -16,7 +16,7 @@ class DataCatalogController extends Controller
         return view('data-catalog.index');
     }
 
-    public function detail($file)
+    public function detail($file, $title)
     {
         $csvFileName = $file . ".csv";
         $csvFile = public_path('uploads/data-catalog/' . $csvFileName);
@@ -25,7 +25,7 @@ class DataCatalogController extends Controller
         $header = reset($data);
         array_shift($data);
 
-        return view('data-catalog.detail', compact('header', 'data'));
+        return view('data-catalog.detail', compact('header','data','title'));
     }
 
     public function search(Request $req)

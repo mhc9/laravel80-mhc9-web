@@ -109,7 +109,7 @@ Route::get('/sat-servey', function() {
 });
 
 Route::get('/data-catalog', [App\Http\Controllers\DataCatalogController::class, 'index']);
-Route::get('/data-catalog/{file}', [App\Http\Controllers\DataCatalogController::class, 'detail']);
+Route::get('/data-catalog/{file}/{title}', [App\Http\Controllers\DataCatalogController::class, 'detail']);
 /** ================= E-Report ================= */
 
 Route::get('/downloads', [App\Http\Controllers\DownloadController::class, 'getDownloads']);
