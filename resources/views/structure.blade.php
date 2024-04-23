@@ -197,6 +197,18 @@
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <div class="level-4 rectangle4">
+                            <div>
+                                @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2330Img.jpg"])
+                            </div>
+                            <div class="box-label">
+                                <h2 class="my-[2px]">น.ส.จุฬารัตน์ ไชยดีจันทร์</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
+                                <!-- <h4 class="my-[2px]">งานเฝ้าระวังปัญหาสุขภาพจิต/งานสุขภาพจิตกลุ่มวัย</h4> -->
+                            </div>
+                        </div>
+                    </li>
                 </ol>
             </li>
         </ol>
