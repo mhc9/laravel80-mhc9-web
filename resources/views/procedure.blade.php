@@ -16,7 +16,7 @@
             </a>
             <a href="./posts/68">
                 <div class="content-bullet">
-                    <h3>คู่มือการลา</h3>
+                    <h3>คู่มือการใช้งานโปรแกรมการลา</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
@@ -46,7 +46,13 @@
             </a>
             <a href="./posts/69">
                 <div class="content-bullet">
-                    <h3>คู่มือโปรแกรมเดินทางไปราชการ</h3>
+                    <h3>คู่มือการใช้งานโปรแกรมเดินทางไปราชการ</h3>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+            </a>
+            <a href="./posts/142">
+                <div class="content-bullet">
+                    <h3>คู่มือการใช้งานโปรแกรมตอบรับและเครือข่าย</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
