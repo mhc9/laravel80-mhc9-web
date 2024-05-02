@@ -22,7 +22,7 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://mhc9dmh.com/newweb/public/img/QedmTbSsLorfSsZydiTFVflvu5dty1kA3Qd7itev.png"
+                                src="{{ asset('/img/QedmTbSsLorfSsZydiTFVflvu5dty1kA3Qd7itev.png') }}"
                                 alt="image"
                             />
                         </div>
@@ -32,7 +32,7 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_1c30ffd49c597aa9cd42af147a04514b.jpg"
+                                src="{{ asset('/img/job_2024-05-02.jpg') }}"
                                 alt="image"
                             />
                         </div>
@@ -52,7 +52,7 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://mhc9dmh.com/newweb/public/img/thumbnail_c550f9c85b119149e89b2ada124649b8.png"
+                                src="{{ asset('/img/thumbnail_c550f9c85b119149e89b2ada124649b8.png') }}"
                                 alt="image"
                             />
                         </div>
@@ -604,7 +604,7 @@
         var swiperHero = new Swiper("#hero", {
             modules: [Navigation, Pagination],
             autoplay: {
-                delay: 3000,
+                delay: 4000,
             },
             cssMode: true,
             navigation: {
@@ -621,7 +621,7 @@
 
         var swiperOnepage = new Swiper("#onepage", {
             autoplay: {
-                delay: 3000,
+                delay: 4000,
             },
             slidesPerView: 4,
             spaceBetween: 30,
@@ -651,7 +651,7 @@
 
         var swiperPartner = new Swiper("#partner", {
             autoplay: {
-                delay: 3000,
+                delay: 4000,
             },
             slidesPerView: 4,
             spaceBetween: 30,
