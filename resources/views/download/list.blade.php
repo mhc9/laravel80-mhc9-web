@@ -30,11 +30,13 @@
                     <h4>หมวดคู่มือการให้บริการ/ปฏิบัติงาน</h4>
 
                     @foreach($posts as $post)
-                        <div class="border rounded-md px-4 p-2">
-        
-                            @include('components.download-item', ['post' => $post])
-        
-                        </div>
+                        @if($post->group_id == 91)
+                            <div class="border rounded-md px-4 p-2">
+            
+                                @include('components.download-item', ['post' => $post])
+            
+                            </div>
+                        @endif
                     @endforeach
                 </div>
     
@@ -64,14 +66,21 @@
                     <div class="border rounded-md px-4 p-2">
     
                     </div>
-                </div>
+                </div> -->
     
                 <div class="my-2">
                     <h4>หมวดอื่นๆ</h4>
-                    <div class="border rounded-md px-4 p-2">
-    
-                    </div>
-                </div> -->
+
+                    @foreach($posts as $post)
+                        @if($post->group_id == 99)
+                            <div class="border rounded-md px-4 p-2">
+            
+                                @include('components.download-item', ['post' => $post])
+            
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
     
             </div>
         </div>

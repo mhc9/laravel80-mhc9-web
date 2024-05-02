@@ -11,9 +11,20 @@
             <span><i class="fas fa-download"></i> {{ $post->downloads }}</span>
         </div>
     </div>
-    <button type="button" class="btn btn-success" onclick="showModal(event, {{ $post->id }})">
-        <i class="fas fa-download"></i> ดาวน์โหลด
-    </button>
+    @if ($post->satsurvey_url)
+        <button type="button" class="btn btn-success" onclick="showModal(event, {{ $post->id }})">
+            <i class="fas fa-download"></i> ดาวน์โหลด
+        </button>
+    @else
+        <a
+            href="{{ $post->urls }}"
+            target="_blank"
+            class="btn btn-success"
+            onclick="handleDownload(event, {{ $post->id }})"
+        >
+            <i class="fas fa-download"></i> ดาวน์โหลด
+        </a>
+    @endif
 </div>
 
 <!-- Download Modal -->
