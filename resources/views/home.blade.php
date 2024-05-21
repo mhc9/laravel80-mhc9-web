@@ -27,16 +27,6 @@
                             />
                         </div>
                     </div>
-                    <!-- Mental Health Week -->
-                    <div class="swiper-slide">
-                        <div class="slide-wrapper">
-                            <img
-                                class="object-cover w-full h-96"
-                                src="{{ asset('/img/job_2024-05-02.jpg') }}"
-                                alt="image"
-                            />
-                        </div>
-                    </div>
                     <!-- No Gift Policy -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
