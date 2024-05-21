@@ -89,6 +89,6 @@
 
     <!-- Cookie Consent of GPPC -->
     <script src="https://gppc-app.onde.go.th/cdn/pdpa-cookieconsent.js"></script>
-    <script src="https://gppc-app.onde.go.th/cdn/pdpa-cookieconsent-init.js?client=ca-pub-916473029720240213&adjust=true"></script>
+    <script src="https://gppc-app.onde.go.th/cdn/pdpa-cookieconsent-init.js?client=ca-pub-311584378020240521&adjust=true"></script>
 </body>
 </html>
