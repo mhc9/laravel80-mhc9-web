@@ -47,7 +47,11 @@ Route::get('/manuals', function() {
 });
 
 Route::get('/policies', function() {
-    return view('policy');
+    return view('policies.index');
+});
+
+Route::get('/policies/pdpa', function() {
+    return view('policies.pdpa');
 });
 
 // ...

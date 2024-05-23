@@ -10,16 +10,16 @@
         <div class="min-h-screen px-4">
             <a href="./posts/132">
                 <div class="content-bullet">
-                    <h3>ประกาศนโยบายการปฏิบัติงานศูนย์สุขภาพจิตที่ 9</h3>
+                    <h3>นโยบายการปฏิบัติงานศูนย์สุขภาพจิตที่ 9</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
-            <!-- <a href="./posts/77">
+            <a href="{{ url('/policies/pdpa') }}">
                 <div class="content-bullet">
-                    <h3>กระบวนงานการวางแผนยุทธศาสตร์การส่งเสริมสุขภาพจิต</h3>
+                    <h3>นโยบายด้านการคุ้มครองข้อมูลส่วนบุคคล (PDPA)</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
-            </a> -->
+            </a>
         </div>
     </div>
 </section>
