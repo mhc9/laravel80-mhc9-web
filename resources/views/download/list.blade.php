@@ -24,7 +24,7 @@
                 </div>
             </div>
             <!-- ================== Filtering Inputs ================== -->
-    
+
             <div class="flex flex-col gap-2 pt-2 pb-4">
                 <div class="my-2">
                     <h4>หมวดคู่มือการให้บริการ/ปฏิบัติงาน</h4>
@@ -32,56 +32,70 @@
                     @foreach($posts as $post)
                         @if($post->group_id == 91)
                             <div class="border rounded-md px-4 p-2">
-            
+
                                 @include('components.download-item', ['post' => $post])
-            
+
                             </div>
                         @endif
                     @endforeach
                 </div>
-    
-                <!-- <div class="my-2">
+
+                <div class="my-2">
                     <h4>หมวดสื่อความรู้สุขภาพจิต</h4>
-                    <div class="border rounded-md px-4 p-2">
-    
-                    </div>
+
+                    @foreach($posts as $post)
+                        @if($post->group_id == 92)
+                            <div class="border rounded-md px-4 p-2">
+
+                                @include('components.download-item', ['post' => $post])
+
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
-    
+
                 <div class="my-2">
                     <h4>หมวดงานวิจัย/บทความวิชาการ</h4>
-                    <div class="border rounded-md px-4 p-2">
-    
-                    </div>
+
+                    @foreach($posts as $post)
+                        @if($post->group_id == 93)
+                            <div class="border rounded-md px-4 p-2">
+
+                                @include('components.download-item', ['post' => $post])
+
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
-    
-                <div class="my-2">
+
+                <!-- <div class="my-2">
                     <h4>หมวดการจัดการความรู้/ถอดบทเรียน</h4>
                     <div class="border rounded-md px-4 p-2">
-    
+
                     </div>
                 </div>
-    
+
                 <div class="my-2">
                     <h4>หมวดนวัตกรรม</h4>
                     <div class="border rounded-md px-4 p-2">
-    
+
                     </div>
                 </div> -->
-    
+
                 <div class="my-2">
                     <h4>หมวดอื่นๆ</h4>
 
                     @foreach($posts as $post)
                         @if($post->group_id == 99)
                             <div class="border rounded-md px-4 p-2">
-            
+
                                 @include('components.download-item', ['post' => $post])
-            
+
                             </div>
                         @endif
                     @endforeach
                 </div>
-    
+
             </div>
         </div>
     </div>
