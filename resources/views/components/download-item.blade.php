@@ -1,8 +1,8 @@
-<div class="flex flex-row justify-between items-center">
-    <div>
+<div class="flex flex-row justify-between items-center gap-4">
+    <div class="w-[80%]">
         <div class="flex justify-start items-start">
             <span class="text-xl text-red-500 mr-2"><i class="far fa-file-pdf"></i></span>
-            <h3 class="text-lg m-0"> {{ $post->title }}</h3>
+            <h3 class="text-base m-0"> {{ $post->title }}</h3>
         </div>
         <div class="text-muted text-xs font-thin flex items-center gap-4 mb-2 pl-6">
             <span><i class="fas fa-user-alt"></i> {{ $post->author->name }}</span>
@@ -11,20 +11,22 @@
             <span><i class="fas fa-download"></i> {{ $post->downloads }}</span>
         </div>
     </div>
-    @if ($post->satsurvey_url)
-        <button type="button" class="btn btn-success" onclick="showModal(event, {{ $post->id }})">
-            <i class="fas fa-download"></i> ดาวน์โหลด
-        </button>
-    @else
-        <a
-            href="{{ $post->urls }}"
-            target="_blank"
-            class="btn btn-success"
-            onclick="handleDownload(event, {{ $post->id }})"
-        >
-            <i class="fas fa-download"></i> ดาวน์โหลด
-        </a>
-    @endif
+    <div>
+        @if ($post->satsurvey_url)
+            <button type="button" class="btn btn-success" onclick="showModal(event, {{ $post->id }})">
+                <i class="fas fa-download"></i> ดาวน์โหลด
+            </button>
+        @else
+            <a
+                href="{{ $post->urls }}"
+                target="_blank"
+                class="btn btn-success"
+                onclick="handleDownload(event, {{ $post->id }})"
+            >
+                <i class="fas fa-download"></i> ดาวน์โหลด
+            </a>
+        @endif
+    </div>
 </div>
 
 <!-- Download Modal -->
