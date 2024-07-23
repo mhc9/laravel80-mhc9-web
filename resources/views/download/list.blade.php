@@ -31,7 +31,7 @@
 
                     @foreach($posts as $post)
                         @if($post->group_id == 91)
-                            <div class="border rounded-md px-4 p-2">
+                            <div class="border rounded-md px-4 p-2 mb-1">
 
                                 @include('components.download-item', ['post' => $post])
 
@@ -45,7 +45,7 @@
 
                     @foreach($posts as $post)
                         @if($post->group_id == 92)
-                            <div class="border rounded-md px-4 p-2">
+                            <div class="border rounded-md px-4 p-2 mb-1">
 
                                 @include('components.download-item', ['post' => $post])
 
@@ -59,7 +59,7 @@
 
                     @foreach($posts as $post)
                         @if($post->group_id == 93)
-                            <div class="border rounded-md px-4 p-2">
+                            <div class="border rounded-md px-4 p-2 mb-1">
 
                                 @include('components.download-item', ['post' => $post])
 
@@ -70,14 +70,14 @@
 
                 <!-- <div class="my-2">
                     <h4>หมวดการจัดการความรู้/ถอดบทเรียน</h4>
-                    <div class="border rounded-md px-4 p-2">
+                    <div class="border rounded-md px-4 p-2 mb-1">
 
                     </div>
                 </div>
 
                 <div class="my-2">
                     <h4>หมวดนวัตกรรม</h4>
-                    <div class="border rounded-md px-4 p-2">
+                    <div class="border rounded-md px-4 p-2 mb-1">
 
                     </div>
                 </div> -->
@@ -87,7 +87,7 @@
 
                     @foreach($posts as $post)
                         @if($post->group_id == 99)
-                            <div class="border rounded-md px-4 p-2">
+                            <div class="border rounded-md px-4 p-2 mb-1">
 
                                 @include('components.download-item', ['post' => $post])
 
