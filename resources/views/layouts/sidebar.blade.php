@@ -111,7 +111,7 @@
                             <a href="#" target="_self">คลังความรู้</a>
                             <ul>
                                 <li>
-                                    <a href="https://mhc9dmh.com/oldweb/show.aspx?x=KM" target="_blank">
+                                    <a href="{{ url('/knowledges') }}" target="_blank">
                                         คลังความรู้ MHC9
                                     </a>
                                 </li>

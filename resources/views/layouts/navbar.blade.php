@@ -160,7 +160,7 @@
                                                 <div class="child-container">
                                                     <div class="childs">
                                                         <div class="child">
-                                                            <a href="https://mhc9dmh.com/oldweb/show.aspx?x=KM" target="_blank">คลังความรู้ MHC9</a>
+                                                            <a href="{{ url('/knowledges') }}" target="_blank">คลังความรู้ MHC9</a>
                                                         </div>
                                                         <div class="child">
                                                             <a href="https://www.dmh-elibrary.org/" target="_blank">คลังความรู้ กรมสุขภาพจิต</a>
