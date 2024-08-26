@@ -111,7 +111,7 @@
                             <a href="#" target="_self">คลังความรู้</a>
                             <ul>
                                 <li>
-                                    <a href="{{ url('/knowledges') }}" target="_blank">
+                                    <a href="{{ url('/knowledges') }}">
                                         คลังความรู้ MHC9
                                     </a>
                                 </li>
