@@ -40,5 +40,11 @@
         "name": "ระบบ Satsurvey",
         "icon": "fas fa-poll",
         "link": "https://psdg.datacyber.net/"
+    },
+    {
+        "id": 8,
+        "name": "ระบบวางแผนทรัพยากร",
+        "icon": "fas fa-sliders-h",
+        "link": "https://app.mhc9dmh.com/erp"
     }
 ]
