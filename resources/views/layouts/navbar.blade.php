@@ -182,7 +182,7 @@
                                                             <a href="{{ url('/videos') }}" target="_self">วีดิโอสุขภาพจิต</a>
                                                         </div>
                                                         <div class="child">
-                                                            <a href="#" target="_self">อินโฟกราฟฟิก</a>
+                                                            <a href="{{ url('/infographics') }}" target="_self">อินโฟกราฟฟิก</a>
                                                         </div>
                                                         <!-- <div class="child">
                                                             <a href="#" target="_self">อนามัยบุ๊ค</a>

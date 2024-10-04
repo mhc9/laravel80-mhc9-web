@@ -89,6 +89,8 @@ Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'getArti
 
 Route::get('/videos', [App\Http\Controllers\VideoController::class, 'getVideos']);
 
+Route::get('/infographics', [App\Http\Controllers\InfographicController::class, 'getInfos']);
+
 Route::get('/e-services', function() {
     return view('e-service');
 });

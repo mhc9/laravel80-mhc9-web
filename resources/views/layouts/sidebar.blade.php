@@ -137,7 +137,7 @@
                                     <a href="{{ url('/videos') }}">วีดิโอสุขภาพจิต</a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('/') }}">อินโฟกราฟฟิก</a>
+                                    <a href="{{ url('/infographics') }}">อินโฟกราฟฟิก</a>
                                 </li>
                             </ul>
                         </li>
