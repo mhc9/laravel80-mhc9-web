@@ -12,7 +12,7 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://www.hfocus.org/sites/default/files/2023/users/user288/2023-10/384543452_1162885951335791_9073574731124069578_n.jpg"
+                                src="{{ asset('/img/20241001090037.png') }}"
                                 alt="image"
                             />
                         </div>
