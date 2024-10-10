@@ -43,7 +43,7 @@
     },
     {
         "id": 8,
-        "name": "ระบบวางแผนทรัพยากร",
+        "name": "ระบบจัดการทรัพยากร (ERP)",
         "icon": "fas fa-sliders-h",
         "link": "https://app.mhc9dmh.com/erp"
     }
