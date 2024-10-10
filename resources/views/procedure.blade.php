@@ -68,6 +68,12 @@
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
+            <a href="./posts/202">
+                <div class="content-bullet">
+                    <h3>คู่มือการใช้งานโปรแกรมจัดซื้อจัดจ้างและโปรแกรมยืมเงินราชการ</h3>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
