@@ -78,7 +78,7 @@
                     <a href="#" target="_self"><i class="fas fa-stethoscope"></i> บริการ</a>
                     <ul>
                         <li>
-                            <a href="">ศูนย์ข้อมูลข่าวสาร</a>
+                            <a href="{{ url('/info-center') }}">ศูนย์ข้อมูลข่าวสาร</a>
                         </li>
                         <li>
                             <a href="{{ url('/appeal') }}">ศูนย์ราชการใสสะอาด</a>

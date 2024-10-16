@@ -86,8 +86,8 @@ Route::get('/annual-reports', function() {
 
 /** ================= บริการ ================= */
 // ศูนย์ข้อมูลข่าวสาร
-Route::get('/appeal', function() {
-    return view('appeal');
+Route::get('/info-center', function() {
+    return view('info-center');
 });
 
 // ศูนย์ราชการใสสะอาด

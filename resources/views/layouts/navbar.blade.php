@@ -128,7 +128,7 @@
 
                                         <div class="submenus">
                                             <div class="submenu ">
-                                                <a to="#" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
+                                                <a href="{{ url('/info-center') }}" target="_self">ศูนย์ข้อมูลข่าวสาร</a>
                                             </div>
                                             <div class="submenu ">
                                                 <a href="{{ url('/appeal') }}" target="_self">ศูนย์ราชการใสสะอาด</a>
