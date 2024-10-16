@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="content-container container">
-    <h1 class="title">นโยบายด้านการคุ้มครองข้อมูลส่วนบุคคล (PDPA)</h1>
+    <h1 class="title">นโยบายองค์กร <i class="fas fa-angle-right"></i>นโยบายด้านการคุ้มครองข้อมูลส่วนบุคคล (PDPA)</h1>
 
     <hr class="my-2" />
 

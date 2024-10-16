@@ -17,44 +17,54 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Auth::routes();
 
-/** รู้จักเรา */
+/** ================= รู้จักเรา ================= */
+// ประวัติความเป็นมา
 Route::get('/about', function() {
     return view('about');
 });
 
+// วิสัยทัศน์ พันธกิจ ค่านิยม
 Route::get('/vision', function() {
     return view('vision');
 });
 
+// ผู้บริหารหน่วยงาน
 Route::get('/executive', function() {
     return view('executive');
 });
 
+// โครงสร้างองค์กร
 Route::get('/structure', function() {
     return view('structure');
 });
 
+// หน้าที่และอำนาจ
 Route::get('/authority', function() {
     return view('authority');
 });
 
+// มาตรฐานการปฏิบัติงาน
 Route::get('/procedures', function() {
     return view('procedure');
 });
 
+// มาตรฐานการให้บริการ
 Route::get('/manuals', function() {
     return view('manual');
 });
 
-Route::get('/policies', function() {
-    return view('policies.index');
+// นโยบายองค์กร
+Route::prefix('policies')->group(function() {
+    Route::get('/', function() {
+        return view('policies.index');
+    });
+    
+    Route::get('/pdpa', function() {
+        return view('policies.pdpa');
+    });
 });
 
-Route::get('/policies/pdpa', function() {
-    return view('policies.pdpa');
-});
-
-// ...
+// รายงานประจำปี
 Route::get('/annual-reports', function() {
     $reports = [
         [
@@ -74,7 +84,13 @@ Route::get('/annual-reports', function() {
     return view('annual-report', ['reports' => $reports]);
 });
 
-/** บริการ */
+/** ================= บริการ ================= */
+// ศูนย์ข้อมูลข่าวสาร
+Route::get('/appeal', function() {
+    return view('appeal');
+});
+
+// ศูนย์ราชการใสสะอาด
 Route::get('/appeal', function() {
     return view('appeal');
 });
@@ -83,53 +99,59 @@ Route::get('/appeal/culture', function() {
     return view('culture');
 });
 
+// คลังความรู้
 Route::get('/knowledges', [App\Http\Controllers\KnowledgeController::class, 'getKnowledges']);
 
+// บทความ
 Route::get('/articles', [App\Http\Controllers\ArticleController::class, 'getArticles']);
 
+// วีดิโอ
 Route::get('/videos', [App\Http\Controllers\VideoController::class, 'getVideos']);
 
+// อินโฟกราฟฟิก
 Route::get('/infographics', [App\Http\Controllers\InfographicController::class, 'getInfos']);
 
+// E-Service
 Route::get('/e-services', function() {
     return view('e-service');
 });
 
-/** ================= E-Report ================= */
-Route::get('/e-reports', function() {
-    return view('e-report.index');
-});
+// E-Report
+Route::prefix('e-reports')->group(function() {
+    Route::get('/', function() {
+        return view('e-report.index');
+    });
 
-Route::get('/mis', function() {
-    return view('e-report.mis');
-});
+    Route::get('/mis', function() {
+        return view('e-report.mis');
+    });
 
-Route::get('/mis/project', function() {
-    return view('e-report.project');
-});
+    Route::get('/mis/project', function() {
+        return view('e-report.project');
+    });
 
-Route::get('/mis/corruption', function() {
-    return view('e-report.corruption');
-});
+    Route::get('/mis/corruption', function() {
+        return view('e-report.corruption');
+    });
 
-Route::get('/sat-servey', function() {
-    return view('e-report.sat-servey');
-});
+    Route::get('/sat-servey', function() {
+        return view('e-report.sat-servey');
+    });
 
-Route::get('/data-catalog', [App\Http\Controllers\DataCatalogController::class, 'index']);
-Route::get('/data-catalog/{file}/{title}', [App\Http\Controllers\DataCatalogController::class, 'detail']);
-/** ================= E-Report ================= */
+    Route::get('/data-catalog', [App\Http\Controllers\DataCatalogController::class, 'index']);
+    Route::get('/data-catalog/{file}/{title}', [App\Http\Controllers\DataCatalogController::class, 'detail']);
+});
 
 Route::get('/downloads', [App\Http\Controllers\DownloadController::class, 'getDownloads']);
 
-/** ข่าวประชาสัมพันธ์ */
+/** ================= ข่าวประชาสัมพันธ์ ================= */
 Route::get('/posts', [App\Http\Controllers\PostController::class, 'getPosts']);
 Route::get('/posts/{id}', [App\Http\Controllers\PostController::class, 'getPost']);
 Route::get('/posts/category/{cate}', [App\Http\Controllers\PostController::class, 'getPostsByCategory']);
 Route::get('/newses/category/{cate}', [App\Http\Controllers\NewsController::class, 'getPostsByCategory']);
 Route::get('/onepages', [App\Http\Controllers\OnepageController::class, 'getOnepages']);
 
-/** ติดต่อเรา */
+/** ================= ติดต่อเรา ================= */
 Route::get('/contact', function() {
     return view('contact');
 });
