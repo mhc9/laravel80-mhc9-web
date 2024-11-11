@@ -55,7 +55,7 @@
         </div>
 
         <!-- Options Menu -->
-        <div class="option-menus w-full">
+        <div class="option-menus w-full max-md:hidden">
             <div class="container">
                 <div class="contents">
                     <a href="{{ url('/newses/category/3') }}" class="content">
