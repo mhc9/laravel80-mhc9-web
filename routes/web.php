@@ -95,6 +95,11 @@ Route::get('/appeal', function() {
     return view('appeal');
 });
 
+// องค์กรคุณธรรมต้นแบบ
+Route::get('/moral-org', function() {
+    return view('moral-org.index');
+});
+
 Route::get('/appeal/culture', function() {
     return view('culture');
 });

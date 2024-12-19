@@ -222,7 +222,7 @@ nav.c9__pagination {
 }
 
 .content-bullet {
-    padding: 1rem;
+    padding: 0.75rem;
     margin: 0.5rem 0;
     border: 1px solid var(--color0);
     border-radius: 10px;
@@ -246,8 +246,8 @@ nav.c9__pagination {
     }
 
     span {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         padding: 0.25rem;
         border-radius: 50%;
         border: 2px solid var(--color0);
@@ -265,7 +265,7 @@ nav.c9__pagination {
 
     i {
         color: var(--color0);
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 

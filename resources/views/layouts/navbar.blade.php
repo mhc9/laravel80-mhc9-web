@@ -133,6 +133,9 @@
                                             <div class="submenu ">
                                                 <a href="{{ url('/appeal') }}" target="_self">ศูนย์ราชการใสสะอาด</a>
                                             </div>
+                                            <div class="submenu ">
+                                                <a href="{{ url('/moral-org') }}" target="_self">องค์กรคุณธรรมต้นแบบ</a>
+                                            </div>
                                             <!-- <div class="submenu ">
                                                 <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
                                             </div> -->

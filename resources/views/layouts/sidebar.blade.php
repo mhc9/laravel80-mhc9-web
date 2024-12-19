@@ -83,6 +83,9 @@
                         <li>
                             <a href="{{ url('/appeal') }}">ศูนย์ราชการใสสะอาด</a>
                         </li>
+                        <li>
+                            <a href="{{ url('/moral-org') }}">องค์กรคุณธรรมต้นแบบ</a>
+                        </li>
                         <!-- {/* <li>
                             <a href="https://secret.dmh.go.th/main" target="_blank">แจ้งเรื่องร้องเรียน</a>
                         </li> */} -->
