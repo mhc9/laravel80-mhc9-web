@@ -13,19 +13,19 @@
             <div>
                 <h2 class="text-xl">1. ประกาศเจตนารมณ์ของผู้บริหารและบุคลากรขององค์กร</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/210') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.1 ประกาศเจตนารมณ์ร่วมกันในการขับเคลื่อนหน่วยงานให้เป็นองค์กรคุณธรรมต้นแบบ</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/posts/59') }}">
+                <a href="{{ url('/posts/211') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.2 ประกาศเจตนารมณ์ร่วมกันในการต่อต้านการทุจริตและไม่รับของขวัญและของกำนัลทุกชนิดจากการปฏิบัติหน้าที่ (No Gift Policy)</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/posts/60') }}">
+                <a href="{{ url('/posts/212') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.3 ประกาศเจตนารมณ์การป้องกันและแก้ไขปัญหาการแสวงหาประโยชน์ทางเพศ และการคุกคามทางเพศในการทำงาน</h4>
                         <span><i class="fas fa-angle-down"></i></span>
@@ -47,7 +47,7 @@
             <div class="mt-4">
                 <h2 class="text-xl">3. แผนการดำเนินงานตามเป้าหมาย</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/213') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">3.1 คำสั่งแต่งตั้งคณะทำงานจัดทำและขับเคลื่อนแผนปฏิบัติการส่งเสริมคุณธรรมของหน่วยงาน</h4>
                         <span><i class="fas fa-angle-down"></i></span>
