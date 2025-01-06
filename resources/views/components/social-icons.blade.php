@@ -3,7 +3,7 @@
         <i class="fab fa-facebook"></i>
     </a>
     <a href="https://x.com/dmh_mhc9" target="_blank" rel="noreferrer" class="hover:text-gray-300">
-        <i class="fab fa-twitter"></i>
+        <i class="fa-brands fa-x-twitter"></i>
     </a>
     <a href="https://www.instagram.com/mentalhealthcenter_9" target="_blank" rel="noreferrer" class="hover:text-gray-300">
         <i class="fab fa-instagram"></i>
