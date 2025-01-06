@@ -46,7 +46,7 @@
                                                 <a href="{{ url('/structure') }}" target="_self">โครงสร้างองค์กร</a>
                                             </div>
                                             <div class="submenu">
-                                                <a href="{{ url('/authority') }}" target="_self">หน้าที่และอำนาจ</a>
+                                                <a href="{{ url('/authority') }}" target="_self">อำนาจหน้าที่</a>
                                             </div>
                                             <div class="submenu ">
                                                 <a href="{{ url('/procedures') }}" target="_self">มาตรฐานการปฏิบัติงาน</a>

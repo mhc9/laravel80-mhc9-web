@@ -24,7 +24,7 @@
                             <a href="{{ url('/structure') }}">โครงสร้างองค์กร</a>
                         </li>
                         <li>
-                            <a href="{{ url('/authority') }}">หน้าที่และอำนาจ</a>
+                            <a href="{{ url('/authority') }}">อำนาจหน้าที่</a>
                         </li>
                         <li>
                             <a href="{{ url('/procedures') }}">มาตรฐานการปฏิบัติงาน</a>
