@@ -2,14 +2,14 @@
 
 @section('content')
 <section class="authority container">
-    <h1 class="title">หน้าที่และอำนาจ</h1>
+    <h1 class="title">อำนาจหน้าที่</h1>
 
     <hr class="my-2" />
 
     <div class="authority-wrapper">
         <div class="min-h-[640px] relative">
             <div class="text-center my-4">
-                <h2>หน้าที่และอำนาจศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</h2>
+                <h2>อำนาจหน้าที่ศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</h2>
                 <h4 class="relative">
                     ตามกฎกระทรวงแบ่งส่วนราชการกรมสุขภาพจิต กระทรวงสาธารณสุข พ.ศ.2560
                     <span class="absolute top-0 text-xs ml-1 text-red-500">[1]</span>
