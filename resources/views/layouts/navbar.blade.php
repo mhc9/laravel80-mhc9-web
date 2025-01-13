@@ -63,7 +63,7 @@
                                                 <a href="{{ url('/laws') }}" target="_self">กฎ ระเบียบ ข้อบังคับ</a>
                                             </div>
                                             <div class="submenu">
-                                                <a href="{{ url('/posts/75') }}" target="_self">แผนยุทธศาสตร์</a>
+                                                <a href="{{ url('/strategic-plans') }}" target="_self">แผนยุทธศาสตร์</a>
                                             </div>
                                             <!-- <div class="submenu has-children">
                                                 <a href="#" target="_self">แผนยุทธศาสตร์</a>

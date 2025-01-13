@@ -39,7 +39,7 @@
                             <a href="{{ url('/policies') }}">นโยบายองค์กร</a>
                         </li>
                         <li>
-                            <a href="{{ url('/posts/75') }}">แผนยุทธศาสตร์</a>
+                            <a href="{{ url('/strategic-plans') }}">แผนยุทธศาสตร์</a>
                         </li>
                         <!-- {/* <li class="has-sub text-sm">
                             <a href="#">แผนยุทธศาสตร์</a>

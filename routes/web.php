@@ -64,6 +64,11 @@ Route::prefix('policies')->group(function() {
     });
 });
 
+// มาตรฐานการให้บริการ
+Route::get('/strategic-plans', function() {
+    return view('strategic-plans.index');
+});
+
 // รายงานประจำปี
 Route::get('/annual-reports', function() {
     $reports = [
