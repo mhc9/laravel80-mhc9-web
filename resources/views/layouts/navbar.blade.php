@@ -37,7 +37,7 @@
                                                 <a href="{{ url('/about') }}" target="_self">ประวัติความเป็นมา</a>
                                             </div>
                                             <div class="submenu">
-                                                <a href="{{ url('/vision') }}" target="_self">วิสัยทัศน์ พันธกิจ ค่านิยม</a>
+                                                <a href="{{ url('/vision') }}" target="_self">วิสัยทัศน์/พันธกิจ/ค่านิยม/ตัวชี้วัด</a>
                                             </div>
                                             <div class="submenu">
                                                 <a href="{{ url('/executive') }}" target="_self">ผู้บริหารหน่วยงาน</a>

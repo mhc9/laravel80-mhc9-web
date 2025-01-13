@@ -117,37 +117,18 @@
                     <div class="box-label">
                         <h2 class="my-[2px]">นางสาววรวรรณ หนึ่งด่านจาก</h2>
                         <h3 class="my-[2px]">นักวิชาการสาธารณสุขชำนาญการ</h3>
-                        <h4 class="my-[2px]">หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h4>
+                        <h4 class="my-[2px]">รักษาการในตำแหน่งหัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h4>
+                        <h4 class="my-[2px]">และงานพัฒนาคุณภาพ/งานวิจัยและพัฒนา/งานนิเทศติดตาม/<br />งานเฝ้าระวังและป้องกันการฆ่าตัวตาย/งานสุขภาพจิตระหว่างประเทศ/<br />งานสารเสพติด</h4>
                     </div>
                 </div>
                 <ol class="level-4-wrapper">
-                    <li>
-                        <div class="level-4 rectangle4">
-                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2292Img.jpg"])
-                            <div class="box-label">
-                                <h2 class="my-[2px]">น.ส.ภัทราพร ตันนุกูล</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตปฐมวัย</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="level-4 rectangle4">
-                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2133Img.jpg"])
-                            <div class="box-label">
-                                <h2 class="my-[2px]">น.ส.นุชนาฏ ชิดตะคุ</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตวัยเรียน/วัยรุ่น</h4>
-                            </div>
-                        </div>
-                    </li>
                     <li>
                         <div class="level-4 rectangle4">
                             @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/39Img.jpg"])
                             <div class="box-label">
                                 <h2 class="my-[2px]">นายพนัส ศรีไชยบาล</h2>
                                 <h3 class="my-[2px]">นักสังคมสงเคราะห์ปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตวัยทำงาน</h4>
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตวัยทำงาน)</h4>
                             </div>
                         </div>
                     </li>
@@ -157,19 +138,7 @@
                             <div class="box-label">
                                 <h2 class="my-[2px]">น.ส.กาญจนาวดี ปินะถา</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตผู้สูงอายุ</h4>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="level-4 rectangle4">
-                            <div>
-                                @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"])
-                            </div>
-                            <div class="box-label">
-                                <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตในระบบบริการปฐมภูมิ/งานสื่อสารและประชาสัมพันธ์</h4>
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตผู้สูงอายุ)</h4>
                             </div>
                         </div>
                     </li>
@@ -181,7 +150,39 @@
                             <div class="box-label">
                                 <h2 class="my-[2px]">น.ส.พนิดา นครานุรักษ์</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานวิกฤตสุขภาพจิต/งานสร้างความรอบรู้</h4>
+                                <h4 class="my-[2px]">งานวิกฤตสุขภาพจิต/งานพระราชบัญญัติสุขภาพจิต</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level-4 rectangle4">
+                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2133Img.jpg"])
+                            <div class="box-label">
+                                <h2 class="my-[2px]">น.ส.นุชนาฏ ชิดตะคุ</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
+                                <!-- <h4 class="my-[2px]">งานสุขภาพจิตวัยเรียน/วัยรุ่น</h4> -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level-4 rectangle4">
+                            <div>
+                                @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2306Img.jpg"])
+                            </div>
+                            <div class="box-label">
+                                <h2 class="my-[2px]">น.ส.ปฐมาภรณ์ สุทธิคีรีสุข</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
+                                <h4 class="my-[2px]">งานสุขภาพจิตในระบบบริการปฐมภูมิ/งานพัฒนาเครือข่ายสุขภาพจิต/งานแผนงานและประเมินผล</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="level-4 rectangle4">
+                            @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2292Img.jpg"])
+                            <div class="box-label">
+                                <h2 class="my-[2px]">น.ส.ภัทราพร ตันนุกูล</h2>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตปฐมวัย)</h4>
                             </div>
                         </div>
                     </li>
@@ -193,7 +194,7 @@
                             <div class="box-label">
                                 <h2 class="my-[2px]">น.ส.เบญจมาภรณ์ จงกลนิธารณ์</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานเฝ้าระวังปัญหาสุขภาพจิต/งานสุขภาพจิตกลุ่มวัย</h4>
+                                <h4 class="my-[2px]">งานสร้างความรอบรู้สุขภาพจิตสื่อสารและประชาสัมพันธ์</h4>
                             </div>
                         </div>
                     </li>
@@ -205,7 +206,7 @@
                             <div class="box-label">
                                 <h2 class="my-[2px]">น.ส.จุฬารัตน์ ไชยดีจันทร์</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <!-- <h4 class="my-[2px]">งานเฝ้าระวังปัญหาสุขภาพจิต/งานสุขภาพจิตกลุ่มวัย</h4> -->
+                                <h4 class="my-[2px]">งานสุขภาพจิตในระบบบริการปฐมภูมิ</h4>
                             </div>
                         </div>
                     </li>
@@ -217,7 +218,7 @@
                             <div class="box-label">
                                 <h2 class="my-[2px]">นายภาคิน อำรุงจิตชัย</h2>
                                 <h3 class="my-[2px]">นักจิตวิทยา</h3>
-                                <!-- <h4 class="my-[2px]">งานเฝ้าระวังปัญหาสุขภาพจิต/งานสุขภาพจิตกลุ่มวัย</h4> -->
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตวัยเรียน/วัยรุ่น)</h4>
                             </div>
                         </div>
                     </li>
@@ -243,7 +244,7 @@
                             <div class="box-label text-center">
                                 <h2 class="my-[2px]">น.ส.ภัทราพร ตันนุกูล</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตปฐมวัย</h4>
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตปฐมวัย)</h4>
                             </div>
                         </div>
                     </div>
@@ -254,7 +255,7 @@
                             <div class="box-label text-center">
                                 <h2 class="my-[2px]">น.ส.นุชนาฏ ชิดตะคุ</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตวัยเรียน/วัยรุ่น</h4>
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตวัยเรียน/วัยรุ่น)</h4>
                             </div>
                         </div>
                     </div>
@@ -264,7 +265,7 @@
                             <div class="box-label text-center">
                                 <h2 class="my-[2px]">นายพนัส ศรีไชยบาล</h2>
                                 <h3 class="my-[2px]">นักสังคมสงเคราะห์ปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตวัยทำงาน</h4>
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตวัยทำงาน)</h4>
                             </div>
                         </div>
                     </div>
@@ -274,7 +275,7 @@
                             <div class="box-label text-center">
                                 <h2 class="my-[2px]">น.ส.กาญจนาวดี ปินะถา</h2>
                                 <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
-                                <h4 class="my-[2px]">งานสุขภาพจิตผู้สูงอายุ</h4>
+                                <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตผู้สูงอายุ)</h4>
                             </div>
                         </div>
                     </div>
