@@ -31,7 +31,7 @@
                         <div class="mt-2 flex flex-col justify-center items-center">
                             <h3 class="font-bold text-xl">นายแพทย์จุมภฎ พรมสีดา</h3>
                             <h4 class="font-semibold text-lg">รองอธิบดีกรมสุขภาพจิต</h4>
-                            <h5 class="font-normal text-base">โทรศัพท์ 02 590 8015</h5>
+                            <h5 class="font-normal text-base">โทรศัพท์ 0 2590 8015</h5>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <div class="mt-2 flex flex-col justify-center items-center">
                             <h3 class="font-bold text-xl">นายแพทย์ศิริศักดิ์ ธิติดิลกรัตน์</h3>
                             <h4 class="font-semibold text-lg">รองอธิบดีกรมสุขภาพจิต</h4>
-                            <h5 class="font-normal text-base">โทรศัพท์ 02 590 8014</h5>
+                            <h5 class="font-normal text-base">โทรศัพท์ 0 2590 8014</h5>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                         <div class="mt-2 flex flex-col justify-center items-center">
                             <h3 class="font-bold text-xl">แพทย์หญิงณิชาภา สวัสดิกานนท์</h3>
                             <h4 class="font-semibold text-lg">รองอธิบดีกรมสุขภาพจิต</h4>
-                            <h5 class="font-normal text-base">โทรศัพท์ -</h5>
+                            <h5 class="font-normal text-base">โทรศัพท์ 0 2590 8012</h5>
                         </div>
                     </div>
                 </div>
