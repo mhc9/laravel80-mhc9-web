@@ -10,7 +10,7 @@
         <div class="min-h-screen px-4">
             <a href="{{ url('/e-reports/mis') }}">
                 <div class="content-bullet">
-                    <h3>ข้อมูลเชิงสถิติการให้บริการ</h3>
+                    <h3>ข้อมูลเชิงสถิติ</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>

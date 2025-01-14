@@ -3,7 +3,7 @@
 @section('content')
 <section class="content-container container">
     <h1 class="title">
-        ข้อมูลเชิงสถิติการให้บริการ <i class="fas fa-angle-right"></i>จำนวนเรื่องร้องเรียนการทุจริตประจำปี
+        E-Report <i class="fas fa-angle-right"></i>ข้อมูลเชิงสถิติ <i class="fas fa-angle-right"></i>ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตประจำปี
     </h1>
 
     <hr class="my-2" />
