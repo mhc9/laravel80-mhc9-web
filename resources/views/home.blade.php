@@ -430,6 +430,48 @@
                 </div>
             </div>
 
+            <!-- Social media content -->
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="article-box">
+                                <h1 class="title">
+                                <i class="fas fa-images"></i>
+                                ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>Social Network
+                                </h1>
+
+                                <hr class="my-2" />
+
+                                <div class="row px-4 py-2">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center px-1">
+                                        <div
+                                            class="fb-post" 
+                                            data-href="https://www.facebook.com/20531316728/posts/1049328133898804/"
+                                            data-width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center px-1">
+                                        <div
+                                            class="fb-post" 
+                                            data-href="https://www.facebook.com/20531316728/posts/1049210387243912/"
+                                            data-width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center px-1">
+                                        <div
+                                            class="fb-post" 
+                                            data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
+                                            data-width="100%">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Articles -->
             <div>
                 <div class="container">
@@ -445,7 +487,7 @@
 
                                 <div class="row article-list px-4 py-2">
                                     @foreach($articles as $article)
-                                        <div class="col-sm-12 col-md-6 col-lg-4 ">
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
 
                                             @include('components.article-card', ['article'  => $article])
 
@@ -455,34 +497,6 @@
                                     <div class="post-btn">
                                         <a href="{{ url('/articles') }}" class="all-news">บทความทั้งหมด</a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social media content -->
-            <div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="article-box">
-                                <h1 class="title">
-                                    <i class="fas fa-file-medical-alt"></i>
-                                    สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>Social Network
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div>
-                                    <!-- <div class="fb-page" data-href="https://www.facebook.com/766919693659033" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                        <blockquote cite="https://www.facebook.com/766919693659033" class="fb-xfbml-parse-ignore">
-                                            <a href="https://www.facebook.com/766919693659033">ศูนย์สุขภาพจิตที่ 9</a>
-                                        </blockquote>
-                                    </div> -->
-
-                                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02azxUwZbPZkwRZSEaYM4EeMAFKX9MLf1PoT488aZSRMiaJwfYhVYg1G2jAS7c4vTDl%26id%3D100064648815470&show_text=true&width=500" width="500" height="735" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                 </div>
                             </div>
                         </div>

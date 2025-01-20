@@ -57,11 +57,11 @@
     <!-- ================== LINE Plugins ================== -->
 
     <!-- ================== Facebook ปลั๊กอิน ================== -->
-    <!-- option 1 -->
-    <!-- <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="3W0TiTA5"></script> -->
+    <!-- Facebook SDK -->
+    <!-- <div id="fb-root"></div> -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="3W0TiTA5"></script>
     
-    <!-- option 2 -->
+    <!-- option 1 -->
     <!-- <div id="fb-customer-chat" class="fb-customerchat"></div>
     <script>
         var chatbox = document.getElementById('fb-customer-chat');
@@ -69,7 +69,7 @@
         chatbox.setAttribute("attribution", "biz_inbox");
     </script> -->
 
-    <!-- option 3 -->
+    <!-- option 2 -->
     <div class="fb-customerchat" page_id="766919693659033" logged_in_greeting="สอบถามเพิ่มเติม ?" logged_out_greeting="สอบถามเพิ่มเติม"></div>
     <script>
         window.fbAsyncInit = function() {
