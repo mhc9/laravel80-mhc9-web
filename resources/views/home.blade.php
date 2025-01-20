@@ -482,7 +482,7 @@
 
             <!-- Social media content -->
             <div>
-                <div class="fb-page" data-href="https://www.facebook.com/google" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <div class="fb-page" page_id="766919693659033" data-href="https://www.facebook.com/google" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                     <blockquote cite="https://www.facebook.com/google" class="fb-xfbml-parse-ignore">
                         <a href="https://www.facebook.com/google">Google</a>
                     </blockquote>
