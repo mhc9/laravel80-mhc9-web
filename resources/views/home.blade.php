@@ -2,9 +2,9 @@
 
 @section('content')
 <div>
-    <section class="border">
+    <section class="max-md:hidden">
         <!-- Hero -->
-        <div class="slide-hero max-md:hidden">
+        <div class="slide-hero">
             <div class="swiper" id="hero">
                 <div class="swiper-wrapper">
                     <!-- Director-General's Policy -->
@@ -55,7 +55,7 @@
         </div>
 
         <!-- Options Menu -->
-        <div class="option-menus w-full max-md:hidden">
+        <div class="option-menus w-full">
             <div class="container">
                 <div class="contents">
                     <a href="{{ url('/newses/category/3') }}" class="content">
