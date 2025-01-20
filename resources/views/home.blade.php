@@ -482,13 +482,11 @@
 
             <!-- Social media content -->
             <div>
-                <iframe
-                    src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F766919693659033&width=600&colorscheme=light&show_faces=true&border_color&stream=true&header=true&height=435"
-                    scrolling="yes"
-                    style="border:none; overflow:hidden; width:600px; height:430px; background: white; float:left;"
-                    allowtransparency="true"
-                    frameborder="0"
-                ></iframe>
+                <div class="fb-page" data-href="https://www.facebook.com/google" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/google" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/google">Google</a>
+                    </blockquote>
+                </div>
             </div>
         </div>
     </section>
