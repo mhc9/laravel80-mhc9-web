@@ -444,21 +444,21 @@
                                 <hr class="my-2" />
 
                                 <div class="row px-4 py-2">
-                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center px-1">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center py-2">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1049328133898804/"
                                             data-width="100%">
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center px-1">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center py-2">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1049210387243912/"
                                             data-width="100%">
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center px-1">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center py-2">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
