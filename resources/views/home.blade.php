@@ -462,6 +462,34 @@
                 </div>
             </div>
 
+            <!-- Social media content -->
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="article-box">
+                                <h1 class="title">
+                                    <i class="fas fa-file-medical-alt"></i>
+                                    สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>Social Network
+                                </h1>
+
+                                <hr class="my-2" />
+
+                                <div>
+                                    <!-- <div class="fb-page" data-href="https://www.facebook.com/766919693659033" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                        <blockquote cite="https://www.facebook.com/766919693659033" class="fb-xfbml-parse-ignore">
+                                            <a href="https://www.facebook.com/766919693659033">ศูนย์สุขภาพจิตที่ 9</a>
+                                        </blockquote>
+                                    </div> -->
+
+                                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02azxUwZbPZkwRZSEaYM4EeMAFKX9MLf1PoT488aZSRMiaJwfYhVYg1G2jAS7c4vTDl%26id%3D100064648815470&show_text=true&width=500" width="500" height="735" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- E-Services -->
             <div style="background: #F2F2F2">
                 <div class="container">
@@ -477,15 +505,6 @@
                             <div class="row service-list"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Social media content -->
-            <div>
-                <div class="fb-page" data-href="https://www.facebook.com/766919693659033" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                    <blockquote cite="https://www.facebook.com/766919693659033" class="fb-xfbml-parse-ignore">
-                        <a href="https://www.facebook.com/766919693659033">ศูนย์สุขภาพจิตที่ 9</a>
-                    </blockquote>
                 </div>
             </div>
         </div>
