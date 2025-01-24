@@ -105,6 +105,11 @@ Route::get('/moral-org', function() {
     return view('moral-org.index');
 });
 
+// ITA
+Route::get('/ita/risk-assessments', function() {
+    return view('ita.risk-assessments.index');
+});
+
 Route::get('/appeal/culture', function() {
     return view('culture');
 });
