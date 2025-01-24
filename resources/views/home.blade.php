@@ -437,7 +437,7 @@
                         <div class="col">
                             <div class="article-box">
                                 <h1 class="title">
-                                <i class="fas fa-images"></i>
+                                </i><i class="fas fa-share-alt-square"></i>
                                 ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>Social Network
                                 </h1>
 

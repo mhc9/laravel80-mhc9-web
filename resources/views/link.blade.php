@@ -13,14 +13,14 @@
             <li>
                 <a href="#" target="_self">กลุ่มศูนย์สุขภาพจิต กรมสุขภาพจิต</a>
                 <ul>
-                    <li><a href="http://mhc01.net" target="_blank">ศูนย์สุขภาพจิต 1 เชียงใหม่</a></li>
+                    <li><a href="https://mhc1.dmh.go.th" target="_blank">ศูนย์สุขภาพจิต 1 เชียงใหม่</a></li>
                     <li><a href="https://www.mhc2.go.th" target="_blank">ศูนย์สุขภาพจิต 2 พิษณุโลก</a></li>
-                    <li><a href="http://www.mhc03.go.th" target="_blank">ศูนย์สุขภาพจิต 3 นครสวรรค์</a></li>
+                    <li><a href="https://mhc3.dmh.go.th" target="_blank">ศูนย์สุขภาพจิต 3 นครสวรรค์</a></li>
                     <li><a href="https://mhc4.dmh.go.th" target="_blank">ศูนย์สุขภาพจิต 4 ปทุมธานี</a></li>
                     <li><a href="https://mhc5.dmh.go.th" target="_blank">ศูนย์สุขภาพจิต 5 สมุทรสงคราม</a></li>
                     <li><a href="https://mhc6.dmh.go.th" target="_blank">ศูนย์สุขภาพจิต 6 ชลบุรี</a></li>
                     <li><a href="https://mhc7.dmh.go.th" target="_blank">ศูนย์สุขภาพจิต 7 ขอนแก่น</a></li>
-                    <li><a href="https://www.mhc8.go.th" target="_blank">ศูนย์สุขภาพจิต 8 อุดรธานี</a></li>
+                    <li><a href="http://mhc8.dmh.go.th" target="_blank">ศูนย์สุขภาพจิต 8 อุดรธานี</a></li>
                     <li><a href="{{ url('/') }}" target="_blank">ศูนย์สุขภาพจิต 9 นครราชสีมา</a></li>
                     <li><a href="https://www.mhc10.go.th" target="_blank">ศูนย์สุขภาพจิต 10 อุบลราชธานี</a></li>
                     <li><a href="https://www.mhc11.go.th" target="_blank">ศูนย์สุขภาพจิต 11 สุราษฎร์ธานี</a></li>
