@@ -528,6 +528,7 @@
     <div class="slide-logos">
         <div class="swiper" id="partner">
             <div class="swiper-wrapper">
+                <!-- กระทรวง -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
@@ -537,15 +538,17 @@
                         />
                     </div>
                 </div>
+                <!-- กรมสุขภาพจิต -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
                             class="object-cover w-full h-96"
-                            src="https://yt3.googleusercontent.com/ytc/AOPolaSIu-JusJzxTngKVh3IqhZXhyZVMSJGkzquVw73Vg=s900-c-k-c0x00ffffff-no-rj"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Seal_of_the_Department_of_Mental_health.svg/1200px-Seal_of_the_Department_of_Mental_health.svg.png"
                             alt="logo-pic"
                         />
                     </div>
                 </div>
+                <!-- เขตสุขภาพที่ 9 -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
@@ -555,6 +558,7 @@
                         />
                     </div>
                 </div>
+                <!-- รพ.จิตเวชนครราชสีมาฯ -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
@@ -564,6 +568,7 @@
                         />
                     </div>
                 </div>
+                <!-- รพ.มหาราชฯ -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
@@ -573,6 +578,7 @@
                         />
                     </div>
                 </div>
+                <!-- จังหวัดนครราชสีมา -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
@@ -582,6 +588,7 @@
                         />
                     </div>
                 </div>
+                <!-- สพฐ -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
@@ -591,6 +598,7 @@
                         />
                     </div>
                 </div>
+                <!-- สสส -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
@@ -600,11 +608,12 @@
                         />
                     </div>
                 </div>
+                <!-- กพร -->
                 <div class="swiper-slide">
                     <div class="slide-logo">
                         <img
                             class="object-cover w-full h-96"
-                            src="https://upload.wikimedia.org/wikipedia/th/thumb/c/ca/Opdc.JPG/1200px-Opdc.JPG"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf0PtUH5sGFD7_JdmL2EEOxoyl6G7TqvW6NQ&s"
                             alt="logo-pic"
                         />
                     </div>
