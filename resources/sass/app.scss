@@ -2949,7 +2949,8 @@ ol {
 
 /* ================================== Executives ================================== */
 .executives {
-    .executives-wrapper {
+    .mhc9-wrapper {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -2961,7 +2962,8 @@ ol {
             margin-bottom: 1rem;
         }
 
-        .director-wrapper {
+        
+        .mhc9__director-wrapper {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2988,13 +2990,15 @@ ol {
             }
         }
 
-        .vice-wrapper {
+        .mhc9__vice-wrapper {
+            position: relative;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             text-align: center;
             width: 80%;
+            padding: 1.25rem 0 2rem;
 
             h3 {
                 font-size: 18px;
@@ -3014,6 +3018,134 @@ ol {
                 line-height: 1.25rem;
             }
         }
+    }
+
+    /** Executives structure */
+    .level1 {
+        position: relative;
+    }
+
+    // Vertical line down of level1
+    .level1::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 24px;
+        background: var(--black);
+    }
+
+    .level2 {
+        position: relative;
+    }
+
+    .dmh__vice-wrapper {
+        position: relative;
+        margin: 1.25rem 0;
+        padding-top: 1.25rem;
+    }
+
+    // Horizontal line
+    .dmh__vice-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 16.7%;
+        width: calc(100% - 33.3%);
+        height: 2px;
+        background: var(--black);
+    }
+
+    // Vertical line up of level2
+    .level2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 2px;
+        height: 20px;
+        background: var(--black);
+    }
+
+    // Vertical line down of level2
+    .level2:first-child::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 22px;
+        background: var(--black);
+    }
+
+    .level3 {
+        position: relative;
+    }
+
+    // Horizontal line
+    .mhc9-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 18.25%;
+        width: calc(50% - 18.25%);
+        height: 2px;
+        background: var(--black);
+    }
+
+    // Vertical line up of level3
+    .level3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 2px;
+        height: 20px;
+        background: var(--black);
+    }
+
+    // Vertical line down of level3
+    .level3::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 24px;
+        background: var(--black);
+    }
+
+    .level4 {
+        position: relative;
+    }
+
+    // Horizontal line
+    .mhc9__vice-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 25%;
+        width: 50%;
+        height: 2px;
+        background: var(--black);
+    }
+
+    // Vertical line up of level4
+    .level4::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        width: 2px;
+        height: 20px;
+        background: var(--black);
     }
 }
 /* ================================== End Executives ================================== */

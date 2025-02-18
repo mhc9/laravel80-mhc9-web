@@ -6,11 +6,10 @@
 
     <hr class="my-2" />
 
-    <div>
-
+    <div class="executives-wrapper">
         <!-- ผู้บริหารกรมฯ -->
-        <div class="px-8 mb-4">
-            <div class="my-4 flex flex-col justify-center items-center">
+        <div class="px-8">
+            <div class="my-4 flex flex-col justify-center items-center level1">
                 @include('components.avatar', [
                     'size'      => "120px",
                     'imageUrl'  => "https://www.mhc9dmh.com/newweb/public/img/kittisak.jpg"
@@ -21,8 +20,8 @@
                     <h5 class="font-normal text-base">โทรศัพท์ 02 590 8009</h5>
                 </div>
             </div>
-            <div class="row my-4">
-                <div class="col-md-4">
+            <div class="row dmh__vice-wrapper">
+                <div class="col-md-4 level2">
                     <div class="flex flex-col justify-center items-center">
                         @include('components.avatar', [
                             'size'      => "120px",
@@ -35,7 +34,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 level2">
                     <div class="flex flex-col justify-center items-center">
                         @include('components.avatar', [
                             'size'      => "120px",
@@ -48,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 level2">
                     <div class="flex flex-col justify-center items-center">
                         @include('components.avatar', [
                             'size'      => "120px",
@@ -65,8 +64,8 @@
         </div>
 
         <!-- ศูนย์สุขภาพจิตที่ 9 -->
-        <div class="executives-wrapper">
-            <div class="director-wrapper">
+        <div class="mhc9-wrapper">
+            <div class="mhc9__director-wrapper level3 mb-4">
                 @include('components.avatar', [
                     'size'      => "120px",
                     'imageUrl'  => "https://www.mhc9dmh.com/data/photo/boss67.jpg"
@@ -77,8 +76,8 @@
                     <h5 class="font-thin text-base">โทรศัพท์ 09 7918 6374</h5>
                 </div>
             </div>
-            <div class="row vice-wrapper">
-                <div class="col-md-6">
+            <div class="row mhc9__vice-wrapper">
+                <div class="col-md-6 level4">
                     <div class="flex flex-col justify-center items-center">
                         @include('components.avatar', [
                             'size'      => "120px",
@@ -91,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 level4">
                     <div class="flex flex-col justify-center items-center">
                         @include('components.avatar', [
                             'size'      => "120px",
@@ -106,7 +105,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 @endsection
