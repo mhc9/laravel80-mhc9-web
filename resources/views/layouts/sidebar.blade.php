@@ -18,7 +18,7 @@
                             <a href="{{ url('/vision') }}">วิสัยทัศน์/พันธกิจ/ค่านิยม/ตัวชี้วัด</a>
                         </li>
                         <li>
-                            <a href="{{ url('/executives') }}">ผู้บริหารหน่วยงาน</a>
+                            <a href="{{ url('/executive') }}">ผู้บริหารหน่วยงาน</a>
                         </li>
                         <li>
                             <a href="{{ url('/structure') }}">โครงสร้างองค์กร</a>
