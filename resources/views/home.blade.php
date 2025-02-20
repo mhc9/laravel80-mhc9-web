@@ -622,6 +622,7 @@
         </div>
     </div>
 
+    <!-- Modal go to old or new site -->
     <div id="goToSite" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -639,6 +640,8 @@
             </div>
         </div>
     </div>
+    <!-- Modal go to old or new site -->
+
 </div>
 <script>
     $(document).ready(async function () {
@@ -741,7 +744,8 @@
             `);
         });
 
-        $('#goToSite').modal('show');
+        /** show modal go to old or new site */
+        //$('#goToSite').modal('show');
     });
 </script>
 @endsection
