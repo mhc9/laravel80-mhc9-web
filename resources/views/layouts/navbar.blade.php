@@ -110,7 +110,7 @@
                                                 <a href="{{ url('/annual-reports') }}" target="_self">รายงานประจำปี</a>
                                             </div>
                                             <div class="submenu">
-                                                <a href="{{ url('/posts/90') }}" target="_self">แผนดำเนินงานและการใช้จ่ายงบประมาณประจำปี</a>
+                                                <a href="{{ url('/posts/292') }}" target="_self">แผนดำเนินงานและการใช้จ่ายงบประมาณประจำปี</a>
                                             </div>
                                             <div class="submenu">
                                                 <a href="{{ url('/posts/238') }}" target="_self">รายงานผลการดำเนินงานประจำปี</a>
