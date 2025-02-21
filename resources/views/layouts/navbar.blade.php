@@ -283,13 +283,13 @@
                             </div>
 
                             <div class="menu icon-menu">
-                                <a href="#" class="global-search-toggle">
+                                <a href="#" class="global-search-toggle" data-label="ค้นหา">
                                     <div><i class="fas fa-search"></i></div>
                                 </a>
                             </div>
 
                             <div class="menu icon-menu">
-                                <a href="#" class="global-search-toggle">
+                                <a href="#" class="global-search-toggle" data-label="ไซต์แม็พ">
                                     <div><i class="fas fa-sitemap"></i></div>
                                 </a>
                             </div>
