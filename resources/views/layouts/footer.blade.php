@@ -8,13 +8,13 @@
                     <h2>รู้จักเรา</h2>
                     <ul>
                         <li><a href="{{ url('/about') }}">ประวัติความเป็นมา</a></li>
-                        <li><a href="{{ url('/vision') }}">วิสัยทัศน์/พันธกิจ/ค่านิยม</a></li>
+                        <li><a href="{{ url('/vision') }}">วิสัยทัศน์/พันธกิจ/ค่านิยม/ตัวชี้วัด</a></li>
                         <li><a href="{{ url('/executives') }}">ผู้บริหารหน่วยงาน</a></li>
                         <li><a href="{{ url('/structure') }}">โครงสร้างองค์กร</a></li>
-                        <li><a href="{{ url('/authority') }}">หน้าที่และอำนาจ</a></li>
+                        <li><a href="{{ url('/authority') }}">อำนาจหน้าที่</a></li>
                         <li><a href="{{ url('/procedures') }}">มาตรฐานการปฏิบัติงาน</a></li>
                         <li><a href="{{ url('/manuals') }}">มาตรฐานการให้บริการ</a></li>
-                        <li><a href="{{ url('/laws') }}">กฎ ระเบียบ ข้อบังคับ</a></li>
+                        <li><a href="{{ url('/laws') }}">กฎหมาย ระเบียบ ข้อบังคับ</a></li>
                         <li><a href="{{ url('/policies') }}">นโยบายองค์กร</a></li>
                         <li><a href="{{ url('/annual-reports') }}">รายงานประจำปี</a></li>
                     </ul>
