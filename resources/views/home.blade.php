@@ -80,7 +80,7 @@
                             <div class="order">02</div>
                         </div>
                     </a>                    
-                    <a href="https://mhc9.dmh.go.th/oldweb/ParticipateList.aspx" class="content">
+                    <a href="https://mhc9.dmh.go.th/oldweb/ParticipateList.aspx" target="_blank" class="content">
                         <div class="wrapper">
                             <div class="text-container">
                                 <h6 class="ellipsis-1">ตอบรับเข้าร่วมโครงการ</h6>
