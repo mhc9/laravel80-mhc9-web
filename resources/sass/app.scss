@@ -70,7 +70,6 @@ a {
     text-decoration: none;
 }
 
-
 main { 
     margin-top: 52px;
 
@@ -97,6 +96,32 @@ main {
                 font-size: 0.875rem/* 14px */;
             }
         }
+    }
+}
+
+#to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: black;
+    background-color: #fff;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transform: scale(0);
+    transition: bottom 200ms, transform 200ms;
+
+    &:hover {
+        bottom: 35px;
+    }
+
+    &.show {
+        transform: scale(1);
     }
 }
 

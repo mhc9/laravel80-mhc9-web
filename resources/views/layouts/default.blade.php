@@ -32,12 +32,28 @@
         @include('layouts.footer')
     </div>
 
+    <a href="#">
+        <div id="to-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </a>
+
     <!--  Sidebar -->
     <script>
+        /** To top button */
+        document.addEventListener('scroll', () => {
+            const toTopButton = document.querySelector('#to-top');
+
+            if (window.scrollY > 200) {
+                toTopButton.classList.add('show');
+            } else {
+                toTopButton.classList.remove('show');
+            }
+        });
+
+        /** Toggling the Sidebar */
         const sidebar = document.querySelector('.sidebar');
         const sidebarToggler = document.querySelector('.sidenav-btn');
-
-        // Toggling the Sidebar
         sidebarToggler.addEventListener('click', () => {
             sidebar.classList.toggle("show");
             sidebarToggler.classList.toggle("close");
