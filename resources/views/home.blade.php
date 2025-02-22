@@ -435,7 +435,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <div class="article-box">
+                            <div class="news-box">
                                 <h1 class="title">
                                 </i><i class="fas fa-share-alt-square"></i>
                                 ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>Social Network
@@ -443,22 +443,22 @@
 
                                 <hr class="my-2" />
 
-                                <div class="row px-4 py-2">
-                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center py-2">
+                                <div class="row py-2">
+                                    <div class="col-md-12 col-lg-6 flex justify-center py-2">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1049328133898804/"
                                             data-width="100%">
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center py-2">
+                                    <div class="col-md-12 col-lg-6 flex justify-center py-2">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1049210387243912/"
                                             data-width="100%">
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-4 flex justify-center py-2">
+                                    <div class="col-md-12 col-lg-6 flex justify-center py-2">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
