@@ -2,7 +2,7 @@
 
 @section('content')
 <div>
-    <section class="max-md:hidden">
+    <section class="hero max-md:hidden">
         <!-- Hero -->
         <div class="slide-hero">
             <div class="swiper" id="hero">

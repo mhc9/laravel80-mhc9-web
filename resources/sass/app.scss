@@ -86,7 +86,8 @@ main {
     }
 
     section.home { padding-top: 30px; }
-    section:not(.home) { padding-top: 25px; }
+    section.hero { padding-top: 25px; }
+    section:not(.home, .hero) { padding-top: 40px; }
 }
 
 @media (max-width: 640px) {
@@ -315,33 +316,37 @@ nav.c9__pagination {
 }
 /** ================================== End Bootstrap ================================== */
 
-/* ================================== Slide Hero ================================== */
-.slide-hero {
-    background: white;
+/* ================================== Hero ================================== */
+.hero {
+    /* Slide Hero */
+    .slide-hero {
+        background: white;
+        
+        .slide-wrapper {
+            position: relative;
+            overflow: hidden;
+            object-fit: contain;
+            object-position: center;
+            height: calc(100vh - 150px);
     
-    .slide-wrapper {
-        position: relative;
-        overflow: hidden;
-        object-fit: contain;
-        object-position: center;
-        height: calc(100vh - 150px);
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        .slide-text {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            opacity: 0.3;
-            padding: 1rem;
-            background: #BFBFBF;
+            img {
+                width: 100%;
+                height: auto;
+            }
+    
+            .slide-text {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                opacity: 0.3;
+                padding: 1rem;
+                background: #BFBFBF;
+            }
         }
     }
+    /* End Slide Hero */
 }
-/* ================================== End Slide Hero ================================== */
+/* ================================== End Hero ================================== */
 
 
 /* ================================== Slide Logo ================================== */
