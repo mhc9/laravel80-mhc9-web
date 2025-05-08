@@ -17,6 +17,16 @@
                             />
                         </div>
                     </div>
+                    <!-- ศูนย์บริการให้การปรึกษา -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-96"
+                                src="{{ asset('/img/banner-02.png') }}"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
                     <!-- DMH E-Learning -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
