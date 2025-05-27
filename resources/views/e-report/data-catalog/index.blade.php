@@ -14,6 +14,24 @@
                 <div class="flex justify-between">
                     <h3 class="w-[80%] text-lg">
                         <span class="badge rounded-pill bg-info">ข้อมูลพื้นฐาน</span>
+                        จำนวนประชากรกลางปี 2567 จำแนกตามกลุ่มอายุ รายจังหวัด เขตพื้นที่เครือข่ายบริการที่ 9
+                    </h3>
+                    <div>
+                        <a href="{{ url('/e-reports/data-catalog/DataSet_09_007/จำนวนประชากรกลางปี 2567 จำแนกตามกลุ่มอายุ รายจังหวัด เขต9') }}" class="btn btn-info">
+                            <i class="fas fa-eye"></i>
+                            รายละเอียด
+                        </a>
+                        <a href="{{ url('/uploads/data-catalog/DataSet_09_007.csv') }}" class="btn btn-success">
+                            <span><i class="fas fa-file-csv"></i></span>
+                            ดาวน์โหลด
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded-xl overflow-hidden p-4 mb-2">
+                <div class="flex justify-between">
+                    <h3 class="w-[80%] text-lg">
+                        <span class="badge rounded-pill bg-info">ข้อมูลพื้นฐาน</span>
                         จำนวนจิตแพทย์ พยาบาลจิตเวช และสหวิชาชีพ ในเขตสุขภาพที่ 9 ปีงบประมาณ 2566
                     </h3>
                     <div>
