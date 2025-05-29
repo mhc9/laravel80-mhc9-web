@@ -8,13 +8,13 @@
 
     <div class="content-wrapper">
         <div class="min-h-screen px-4">
-            <a href="{{ url('/posts/153') }}">
+            <a href="{{ url('/posts/354') }}">
                 <div class="content-bullet">
                     <h3>1. นโยบายการคุ้มครองข้อมูลส่วนบุคคล (Privacy Policy)</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
-            <a href="{{ url('/posts/154') }}">
+            <a href="{{ url('/posts/355') }}">
                 <div class="content-bullet">
                     <h3>2. คำประกาศเกี่ยวกับความเป็นส่วนตัว (Privacy Notice)</h3>
                     <span><i class="fas fa-angle-down"></i></span>
@@ -26,13 +26,13 @@
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
-            <a href="{{ url('/posts/155') }}">
+            <a href="{{ url('/posts/356') }}">
                 <div class="content-bullet">
                     <h3>4. เอกสารแสดงความยินยอม (Consent Form)</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
-            <a href="{{ url('/posts/156') }}">
+            <a href="{{ url('/posts/357') }}">
                 <div class="content-bullet">
                     <h3>5. แจ้งความยินยอมในการเก็บและใช้ข้อมูลคุกกี้ (Cookie Consent)</h3>
                     <span><i class="fas fa-angle-down"></i></span>
