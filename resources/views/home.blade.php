@@ -454,26 +454,41 @@
                                 <hr class="my-2" />
 
                                 <div class="row py-2">
-                                    <div class="col-md-12 col-lg-6 flex justify-center py-2">
+                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
                                         <div
                                             class="fb-post" 
-                                            data-href="https://www.facebook.com/20531316728/posts/1049328133898804/"
-                                            data-width="100%">
-                                        </div>
+                                            data-href="https://www.facebook.com/20531316728/posts/1170459215119028/"
+                                            data-width="100%"></div>
                                     </div>
-                                    <div class="col-md-12 col-lg-6 flex justify-center py-2">
+                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                        <div
+                                            class="fb-post" 
+                                            data-href="https://www.facebook.com/20531316728/posts/1168097345355215/"
+                                            data-width="100%"></div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                        <div
+                                            class="fb-post" 
+                                            data-href="https://www.facebook.com/20531316728/posts/1168066772024939/"
+                                            data-width="100%"></div>
+                                    </div>                                    
+                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                        <div
+                                            class="fb-post" 
+                                            data-href="https://www.facebook.com/20531316728/posts/1165439678954315/"
+                                            data-width="100%"></div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1049210387243912/"
-                                            data-width="100%">
-                                        </div>
+                                            data-width="100%"></div>
                                     </div>
-                                    <div class="col-md-12 col-lg-6 flex justify-center py-2">
+                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
-                                            data-width="100%">
-                                        </div>
+                                            data-width="100%"></div>
                                     </div>
                                 </div>
                             </div>

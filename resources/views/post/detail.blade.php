@@ -19,7 +19,7 @@
             @if($post->content_type_id === 1 && $post->intro_text)
                 <div>
                     <div class="p-2 mt-4 flex justify-center">
-                        @if($post->category_id == 2)
+                        @if($post->category_id == 2 || $post->category_id == 6)
                             <div id="post-gallery" class="flex justify-center gap-2 w-3/4 rounded-md overflow-hidden">
                                 <a href="{{ url('/'.$post->featured) }}" 
                                     data-pswp-width="2500"
