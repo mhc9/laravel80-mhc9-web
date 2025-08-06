@@ -104,6 +104,16 @@
                                     </div>
                                 </div>
                             </li>
+                            <li>
+                                <div class="level-4 rectangle">
+                                    @include('components.avatar', ['size' => "", 'imageUrl'  => "https://mhc9dmh.com/DATA/Photo/2332Img.jpg"])
+                                    <div class="box-label">
+                                        <h2 class="my-[2px]">นายธีรวัฒน์ ผันกลาง</h2>
+                                        <h3 class="my-[2px]">พนักงานบริการ</h3>
+                                        <h4 class="my-[2px]">งานยานพาหนะ</h4>
+                                    </div>
+                                </div>
+                            </li>
                         </ol>
                     <!-- {/* </li>
                 </ol> */} -->
