@@ -131,7 +131,7 @@
             <div class="mt-4">
                 <h2 class="text-xl">8. องค์ความรู้หรือผลสำเร็จการดำเนินกิจกรรม</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/387') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">8.1 เอกสารองค์ความรู้หรือผลกสำเร็จการดำเนินกิจกรรมตามแผนปฏิบัติการส่งเสริมคุณธรรมของหน่วยงาน</h4>
                         <span><i class="fas fa-angle-down"></i></span>

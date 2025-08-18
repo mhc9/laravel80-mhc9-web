@@ -112,3 +112,7 @@ Route::get('/db-connection', function () {
         echo $e->getMessage();
     }
 });
+
+Route::get('/uuid', function () {
+    return response()->json(['status' => 'ok', 'uuid' => date('mdYHis') . uniqid()]);
+});
