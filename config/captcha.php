@@ -4,7 +4,7 @@
  * */
 return [
     'secret' => env('CAPTCHA_SECRET', 'default_secret'),
-    'sitekey' => env('CAPTCHA_SITE_KEY', 'default_sitekey'),
+    'sitekey' => env('CAPTCHA_SITEKEY', 'default_sitekey'),
     /**
      * @var string|null Default ``null``.
      * Custom with function name (example customRequestCaptcha) or class@method (example \App\CustomRequestCaptcha@custom).

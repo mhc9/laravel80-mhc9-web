@@ -19,6 +19,7 @@
 
     <!-- JS -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcjkK0rAAAAAFTr0YBGOIJEjASvwyQAXwEKlnvJ"></script>
 </head>
 <body>
     <div class="defaullt-layout">
