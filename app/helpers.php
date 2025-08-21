@@ -623,3 +623,9 @@ function readCSV($csvFile, $delimiter = ",")
 
     return $line_of_text;
 }
+
+
+/** Captcha Request */
+function customRequestCaptcha(){
+    return new \ReCaptcha\RequestMethod\Post();
+}
