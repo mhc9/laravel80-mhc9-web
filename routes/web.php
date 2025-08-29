@@ -127,20 +127,22 @@ Route::get('/videos', [App\Http\Controllers\VideoController::class, 'getVideos']
 Route::get('/infographics', [App\Http\Controllers\InfographicController::class, 'getInfos']);
 
 // Q&A
-// Route::prefix('q&a')->group(function() {
-//     Route::get('/', function() {
-//         return view('q&a.index');
-//     });
+Route::prefix('q&a')->group(function() {
+    Route::get('/', function() {
+        return view('q&a.index');
+    });
 
-//     Route::get('/question', function() {
-//         return view('q&a.question', [
-//             'attributes' => [
-//                 'data-theme' => 'dark',
-//                 'data-type' => 'audio',
-//             ],
-//         ]);
-//     });
-// });
+    Route::get('/question', function() {
+        return view('q&a.question', [
+            'attributes' => [
+                'data-theme' => 'dark',
+                'data-type' => 'audio',
+            ],
+        ]);
+    });
+
+    Route::post('/question', [App\Http\Controllers\QuestionController::class, 'store']);
+});
 
 // E-Service
 Route::get('/e-services', function() {
