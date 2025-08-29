@@ -2,9 +2,9 @@
     <a href="https://www.facebook.com/profile.php?id=100064648815470" target="_blank" rel="noreferrer" class="hover:text-gray-300">
         <i class="fab fa-facebook"></i>
     </a>
-    <a href="https://x.com/dmh_mhc9" target="_blank" rel="noreferrer" class="hover:text-gray-300">
+    <!-- <a href="https://x.com/dmh_mhc9" target="_blank" rel="noreferrer" class="hover:text-gray-300">
         <i class="fa-brands fa-x-twitter"></i>
-    </a>
+    </a> -->
     <a href="https://www.instagram.com/mentalhealthcenter_9" target="_blank" rel="noreferrer" class="hover:text-gray-300">
         <i class="fab fa-instagram"></i>
     </a>
