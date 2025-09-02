@@ -87,7 +87,7 @@
                                     เอกสารแนบ (ขนาดของไฟล์ไม่เกิน 1 MB และรองรับไฟล์ jpg, gif, png, และ pdf เท่านั้น)
                                 </div>
                                 <div class="mb-3">
-                                    <input type="file" id="upload" name="upload" accept=".jpg,.gif,.png,.pdf" />
+                                    <input type="file" id="file_attach" name="file_attach" accept=".jpg,.gif,.png,.pdf" />
                                 </div>
                                 <div class="captcha mb-3">
                                     {!! Captcha::display($attributes) !!}

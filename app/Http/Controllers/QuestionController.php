@@ -139,27 +139,32 @@ class QuestionController extends Controller
         }
 
         $data = [
-            'question_type_id' => $req->input('question_type_id'),
             'title' => $req->input('title'),
+            'description' => $req->input('description'),
+            'question_type_id' => $req->input('question_type_id'),
+            'question_date' => date('Y-m-d'),
             'full_name' => $req->input('full_name'),
             'email' => $req->input('email'),
-            'description' => $req->input('description'),
-            // 'file_path' => '',
+            'file_path' => '',
             // 'file_name' => '',
-            // 'file_mime' => '',
+            'file_mime' => '',
             // 'file_size' => 0,
-            // 'ip_address' => $req->ip(),
-            // 'user_agent' => $req->header('User-Agent'),
+            'ip_address' => $req->ip(),
+            'user_agent' => $req->header('User-Agent'),
             // 'created_by' => Auth::check() ? Auth::user()->id : null,
+            'published' => 0,
+            'status' => 'new',
         ];
 
         if ($req->hasFile('file_attach')) {
             $file = $req->file('file_attach');
             $path = $file->store('public/questions');
             $data['file_path'] = $path;
-            $data['file_name'] = $file->getClientOriginalName();
+            // $data['file_name'] = $file->getClientOriginalName();
             $data['file_mime'] = $file->getClientMimeType();
-            $data['file_size'] = $file->getSize();
+            // $data['file_size'] = $file->getSize();
         }
+
+        dd($data);
     }
 }
