@@ -56,7 +56,7 @@
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
-            <a href="#">
+            <a href="{{ url('/posts/390') }}">
                 <div class="content-bullet">
                     <h3>9. คำประกาศเกี่ยวกับความเป็นส่วนตัวสำหรับผู้สมัครงานและผู้ปฏิบัติงาน</h3>
                     <span><i class="fas fa-angle-down"></i></span>
