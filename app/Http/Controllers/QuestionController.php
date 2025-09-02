@@ -165,6 +165,13 @@ class QuestionController extends Controller
             // $data['file_size'] = $file->getSize();
         }
 
-        dd($data);
+        if (Question::create($data)) {
+            return redirect('/q&a/question')->with('success', 'ส่งคำถามเรียบร้อยแล้ว');
+        } else {
+            $errors = new MessageBag(['error' => 'เกิดข้อผิดพลาด ไม่สามารถส่งคำถามได้']);
+            return redirect('/q&a/question')
+                        ->withErrors($errors)
+                        ->withInput();
+        }
     }
 }
