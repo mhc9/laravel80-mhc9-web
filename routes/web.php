@@ -128,18 +128,9 @@ Route::get('/infographics', [App\Http\Controllers\InfographicController::class, 
 
 // Q&A
 Route::prefix('q&a')->group(function() {
-    // Route::get('/', function() {
-    //     return view('q&a.index');
-    // });
+    Route::get('/', [App\Http\Controllers\QAndAController::class, 'index']);
 
-    // Route::get('/question', function() {
-    //     return view('q&a.question', [
-    //         'attributes' => [
-    //             'data-theme' => 'dark',
-    //             'data-type' => 'audio',
-    //         ],
-    //     ]);
-    // });
+    Route::get('/question', [App\Http\Controllers\QuestionController::class, 'addQuestion']);
 
     Route::post('/question', [App\Http\Controllers\QuestionController::class, 'store']);
 });

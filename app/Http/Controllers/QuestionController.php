@@ -91,6 +91,16 @@ class QuestionController extends Controller
         // return $post;
     }
 
+    public function addQuestion()
+    {
+        return view('q&a.question', [
+            'attributes' => [
+                'data-theme' => 'dark',
+                'data-type' => 'audio',
+            ],
+        ]);
+    }
+
     public function store(Request $req)
     {
         $rules = [
