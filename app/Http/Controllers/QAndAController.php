@@ -25,7 +25,9 @@ class QAndAController extends Controller
     // }
 
     public function index() {
-        return view('q&a.index');
+        return view('q&a.index', [
+            'questions' => Question::all()
+        ]);
     }
 
     public function search(Request $req)
