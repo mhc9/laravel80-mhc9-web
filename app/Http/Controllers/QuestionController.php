@@ -95,7 +95,13 @@ class QuestionController extends Controller
     {
         $question =  Question::find($id);
 
-        return $question;
+        return view('q&a.detail', [
+            'question'      => $question,
+            'attributes'    => [
+                'data-theme' => 'dark',
+                'data-type' => 'audio',
+            ],
+        ]);
     }
 
     public function addQuestion()

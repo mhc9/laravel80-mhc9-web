@@ -8,10 +8,42 @@
 
     <div class="about-wrapper">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 p-4">
+
+                <!-- Question detail -->
+                <div class="card">
+                    <h5 class="card-header">คำถาม : {{ $question->title }}</h5>
+                    <div class="card-body">
+                        <div class="mb-3 flex items-center justify-start gap-4">
+                            <h6 class="card-subtitle mb-2 text-body-secondary">โดย <i class="fas fa-user"></i> {{ $question->fullname }}</h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary"><i class="fas fa-calendar"></i> {{ $question->created_at->format('d/m/Y H:i') }}</h6>
+                        </div>
+                        <p class="card-text">{{ $question->description }}</p>
+                        <div>
+                            @if ($question->file_path)
+                                @if ($question->file_mime == 'application/pdf')
+                                    <div class="mb-3">
+                                        <embed src="{{ url('storage/' . $question->file_path) }}" type="application/pdf" width="100%" height="600px" />
+                                    </div>
+                                @elseif (in_array($question->file_mime, ['image/jpeg', 'image/png', 'image/gif']))
+                                    <div class="w-[50%] mb-3 object-contain">
+                                        <img src="{{ asset('storage/' . $question->file_path) }}" alt="Attachment" />
+                                    </div>
+                                @endif
+
+                                <a href="{{ asset('storage/' . $question->file_path) }}" target="_blank" class="card-link">
+                                    <i class="fas fa-paperclip"></i> เอกสารแนบ
+                                </a>
+                            @else
+                                <span class="text-gray-500"><i class="fas fa-paperclip"></i> -- ไม่มีเอกสารแนบ --</span>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+                <!-- Question detail -->
 
                 <!-- FORM -->
-                <div class="flex justify-center">
+                <!-- <div class="flex justify-center">
                     <form action="{{ url('/q&a/question') }}" class="form-horizontal mt-4 w-3/5 needs-validation" novalidate method="post" enctype="multipart/form-data" id="form1">
                         @csrf
 
@@ -102,7 +134,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
                 <!-- FORM -->
 
             </div>

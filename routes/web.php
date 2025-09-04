@@ -129,9 +129,8 @@ Route::get('/infographics', [App\Http\Controllers\InfographicController::class, 
 // Q&A
 Route::prefix('q&a')->group(function() {
     Route::get('/', [App\Http\Controllers\QAndAController::class, 'index']);
-
+    Route::get('/question/{id}', [App\Http\Controllers\QuestionController::class, 'show']);
     Route::get('/question', [App\Http\Controllers\QuestionController::class, 'addQuestion']);
-
     Route::post('/question', [App\Http\Controllers\QuestionController::class, 'store']);
 });
 
