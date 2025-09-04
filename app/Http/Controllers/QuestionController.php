@@ -86,9 +86,16 @@ class QuestionController extends Controller
 
     public function getById($id)
     {
-        // $post =  Post::with('category','author')->find($id);
+        // $post =  Question::with('category','author')->find($id);
 
         // return $post;
+    }
+
+    public function show($id)
+    {
+        $question =  Question::find($id);
+
+        return $question;
     }
 
     public function addQuestion()
