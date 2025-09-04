@@ -113,7 +113,7 @@ class QuestionController extends Controller
         $rules = [
             'question_type_id' => 'required', // |exists:question_types,id
             'title' => 'required|string|max:255',
-            'full_name' => 'required|string',
+            'fullname' => 'required|string',
             'email' => 'required|email|max:255',
             'description' => 'required|string',
             'g-recaptcha-response' => 'required|captcha',
@@ -125,8 +125,8 @@ class QuestionController extends Controller
             'title.required' => 'กรุณากรอกคำถาม',
             'title.string' => 'คำถามต้องเป็นตัวอักษร',
             'title.max' => 'คำถามต้องไม่เกิน 255 ตัวอักษร',
-            'full_name.required' => 'กรุณากรอกชื่อ-นามสกุล',
-            'full_name.string' => 'ชื่อ-นามสกุลต้องเป็นตัวอักษร',
+            'fullname.required' => 'กรุณากรอกชื่อ-นามสกุล',
+            'fullname.string' => 'ชื่อ-นามสกุลต้องเป็นตัวอักษร',
             'email.required' => 'กรุณากรอก Email',
             'email.email' => 'รูปแบบ Email ไม่ถูกต้อง',
             'email.max' => 'Email ต้องไม่เกิน 255 ตัวอักษร',
@@ -150,7 +150,7 @@ class QuestionController extends Controller
             'description' => $req->input('description'),
             'question_type_id' => $req->input('question_type_id'),
             'question_date' => date('Y-m-d'),
-            'full_name' => $req->input('full_name'),
+            'fullname' => $req->input('fullname'),
             'email' => $req->input('email'),
             'file_path' => '',
             // 'file_name' => '',
