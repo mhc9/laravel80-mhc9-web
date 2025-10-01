@@ -68,12 +68,13 @@
             <div class="mhc9__director-wrapper level3 mb-4">
                 @include('components.avatar', [
                     'size'      => "120px",
-                    'imageUrl'  => "https://www.mhc9dmh.com/data/photo/boss67.jpg"
+                    'imageUrl'  => "https://mhc9dmh.com/DATA/Photo/48Img.jpg"
                 ])
                 <div class="mt-2">
-                    <h3>นายนิตย์ ทองเพชรศรี</h3>
-                    <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
-                    <h5 class="font-thin text-base">โทรศัพท์ 09 7918 6374</h5>
+                    <h3>นางสาวจุฑามาศ วรรณศิลป์</h3>
+                    <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 7</h4>
+                    <h4>รักษาราชการแทนผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
+                    <h5 class="font-thin text-base">โทรศัพท์ 08 1878 3025</h5>
                 </div>
             </div>
             <div class="row mhc9__vice-wrapper">

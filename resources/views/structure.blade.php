@@ -10,11 +10,12 @@
         <div class="level-1 rectangle">
             @include('components.avatar', [
                 'size'      => "80px",
-                'imageUrl'  => "https://www.mhc9dmh.com/data/photo/boss67.jpg"
+                'imageUrl'  => "https://mhc9dmh.com/DATA/Photo/48Img.jpg"
             ])
             <div class="box-label">
-                <h2>นายนิตย์ ทองเพชรศรี</h2>
-                <h3>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h3>
+                <h2>นางสาวจุฑามาศ วรรณศิลป์</h2>
+                <h3>ผู้อำนวยการศูนย์สุขภาพจิตที่ 7</h3>
+                <h3>รักษาราชการแทนผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h3>
             </div>
         </div>
         <ol class="level-2-wrapper">

@@ -252,10 +252,11 @@
 
                                 <div class="director-info">
                                     <div>
-                                        <img src="https://www.mhc9dmh.com/data/photo/boss67.jpg" alt="director-image" />
+                                        <img src="https://mhc9dmh.com/DATA/Photo/48Img.jpg" alt="director-image" />
                                     </div>
-                                    <h2>นายนิตย์ ทองเพชรศรี</h2>
-                                    <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
+                                    <h2>นางสาวจุฑามาศ วรรณศิลป์</h2>
+                                    <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 7</h4>
+                                    <h4>รักษาราชการแทนผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
                                 </div>
                             </div>
                         </div>
