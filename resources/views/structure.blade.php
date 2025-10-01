@@ -148,7 +148,7 @@
                             @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/43Img.jpg"])
                             <div class="box-label">
                                 <h2 class="my-[2px]">น.ส.กาญจนาวดี ปินะถา</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขชำนาญการ</h3>
                                 <h4 class="my-[2px]">งานสุขภาพจิตกลุ่มวัย (งานสุขภาพจิตผู้สูงอายุ)</h4>
                             </div>
                         </div>
@@ -170,7 +170,7 @@
                             @include('components.avatar', ['imageUrl'  => "https://www.mhc9dmh.com/data/photo/2133Img.jpg"])
                             <div class="box-label">
                                 <h2 class="my-[2px]">น.ส.นุชนาฏ ชิดตะคุ</h2>
-                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขปฏิบัติการ</h3>
+                                <h3 class="my-[2px]">นักวิชาการสาธารณสุขชำนาญการ</h3>
                                 <!-- <h4 class="my-[2px]">งานสุขภาพจิตวัยเรียน/วัยรุ่น</h4> -->
                             </div>
                         </div>
