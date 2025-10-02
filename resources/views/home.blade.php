@@ -12,7 +12,7 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="{{ asset('/img/20241001090037.png') }}"
+                                src="{{ asset('/img/1759131040082.jpg') }}"
                                 alt="image"
                             />
                         </div>
@@ -42,7 +42,7 @@
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-96"
-                                src="https://dmh.go.th/images/slides/NoGift1.jpg"
+                                src="{{ asset('/img/202410160655.jpg') }}"
                                 alt="image"
                             />
                         </div>
