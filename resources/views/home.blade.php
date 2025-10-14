@@ -17,6 +17,26 @@
                             />
                         </div>
                     </div>
+                    <!-- นโยบายอธิบดี -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-96"
+                                src="{{ asset('/img/20251014132831.jpg') }}"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
+                    <!-- นโยบายปลัดฯ -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-96"
+                                src="{{ asset('/img/20251014133215.jpg') }}"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
                     <!-- ศูนย์บริการให้การปรึกษา -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
@@ -33,26 +53,6 @@
                             <img
                                 class="object-cover w-full h-96"
                                 src="{{ asset('/img/QedmTbSsLorfSsZydiTFVflvu5dty1kA3Qd7itev.png') }}"
-                                alt="image"
-                            />
-                        </div>
-                    </div>
-                    <!-- No Gift Policy -->
-                    <div class="swiper-slide">
-                        <div class="slide-wrapper">
-                            <img
-                                class="object-cover w-full h-96"
-                                src="{{ asset('/img/202410160655.jpg') }}"
-                                alt="image"
-                            />
-                        </div>
-                    </div>
-                    <!-- PDPA -->
-                    <div class="swiper-slide">
-                        <div class="slide-wrapper">
-                            <img
-                                class="object-cover w-full h-96"
-                                src="{{ asset('/img/thumbnail_c550f9c85b119149e89b2ada124649b8.png') }}"
                                 alt="image"
                             />
                         </div>
