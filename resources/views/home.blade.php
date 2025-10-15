@@ -642,7 +642,7 @@
                     <div class="slide-logo">
                         <img
                             class="object-cover w-full h-96"
-                            src="https://upload.wikimedia.org/wikipedia/th/7/7c/Logo-thaihealth_Thai_with_Text.png"
+                            src="https://scontent.fnak3-1.fna.fbcdn.net/v/t39.30808-6/311702633_479913944183824_5109273623997684967_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_q1ez_KPKisQ7kNvwHoSvvA&_nc_oc=AdnN9guAnqXZE7n7LlC5EqRhDOiUmKv5S8pG5Si-CM2csnMSF-K-04UwBBP3F2IF0Bo&_nc_zt=23&_nc_ht=scontent.fnak3-1.fna&_nc_gid=XWvCmjNiGvzN3r9-Ugaigw&oh=00_AfcPO-invM0V1sdwkJ3XF-rapMc-v1BEV5rNARuxP2qCGw&oe=68F4EAAB"
                             alt="logo-pic"
                         />
                     </div>
