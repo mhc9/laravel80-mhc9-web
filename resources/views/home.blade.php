@@ -455,7 +455,20 @@
                                 <hr class="my-2" />
 
                                 <div class="row py-2">
-                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                    <div class="col-md-6 flex justify-center mt-2">
+                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid06WDPgysyXqraUargyhPjgeFoJ4wY8xsxYcubxY98KPiTQGo8LV77Vj6FhKiP9Uzbl%26id%3D100064648815470&show_text=true&width=500" width="500" height="995" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                    </div>
+                                    <div class="col-md-6 flex justify-center mt-2">
+                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid06KjLNm4iFU1HtzoX7mLDKbaPgRebdpGg3YKNrAWNB8Q7UGEPPb6TswDSfxFApVawl%26id%3D100064648815470&show_text=true&width=500" width="500" height="885" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                    </div>
+                                    <div class="col-md-6 flex justify-center mt-2">
+                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02eTBUGRZukHsRGM9cMdGSGvPE8ynxKz9pNmjs8VowJTfQjJPdCpKwXnXs5PvZQnmQl%26id%3D100064648815470&show_text=true&width=500" width="500" height="475" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                    </div>
+                                    <div class="col-md-6 flex justify-center mt-2">
+                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0UUG1VJcmthd5AA7LFioAujh4KmbpxC1uqPd8AN2NMrntKBwz7ZcgzLiZe4eCDrS2l%26id%3D100064648815470&show_text=true&width=500" width="500" height="835" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                    </div>
+
+                                    <!-- <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
                                         <div
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1170459215119028/"
@@ -490,7 +503,7 @@
                                             class="fb-post" 
                                             data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
                                             data-width="100%"></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
