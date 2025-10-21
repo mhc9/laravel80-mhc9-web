@@ -26,7 +26,7 @@
 // DataTables
 @import '~datatables.net-dt/css/dataTables.dataTables.min.css';
 
-/* ================================== Globals ================================== */
+/* ==================================  Global Styles  ================================== */
 :root {
     /* Theme colors */
     --color0:#47484d;
@@ -231,7 +231,16 @@ nav.c9__pagination {
     }
 }
 
-// .defaullt-layout { position: relative; }
+// .defaullt-layout { 
+//     position: relative;
+// }
+/* ================================== End Global Styles ================================== */
+
+/* ================================== Swiper Slide ================================== */
+// .swiper-slide {
+//     display: block;
+// }
+/* ================================== End Swiper Slide ================================== */
 
 .structure-avatar {
     position: relative;
@@ -301,7 +310,7 @@ nav.c9__pagination {
 }
 /* ================================== End Globals ================================== */
 
-/** ================================== Bootstrap Components ================================== */
+/* ================================== Bootstrap Components ================================== */
 .tab-content {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -314,7 +323,7 @@ nav.c9__pagination {
 .nav-tabs {
     margin-bottom: 0;
 }
-/** ================================== End Bootstrap ================================== */
+/* ================================== End Bootstrap ================================== */
 
 /* ================================== Hero ================================== */
 .hero {

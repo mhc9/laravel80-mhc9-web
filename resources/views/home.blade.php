@@ -2,8 +2,9 @@
 
 @section('content')
 <div>
+    <!-- Hero Section -->
     <section class="hero max-md:hidden">
-        <!-- Hero -->
+        <!-- Hero Slide -->
         <div class="slide-hero">
             <div class="swiper" id="hero">
                 <div class="swiper-wrapper">
@@ -45,6 +46,22 @@
                                 src="{{ asset('/img/banner-02.png') }}"
                                 alt="image"
                             />
+                        </div>
+                    </div>
+                    <!-- สุขภาพจิต.com -->
+                    <div class="swiper-slide relative">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-96"
+                                src="{{ asset('/img/3b5QfjX9IClnXrZXTfWltRZ7arVHObEP.png') }}"
+                                alt="image"
+                            />
+                        </div>
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                            <a href="https://สุขภาพจิต.com/" target="_blank" class="btn btn-danger">
+                                ไปที่เว็บไซต์ สุขภาพจิต.com
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
                         </div>
                     </div>
                     <!-- DMH E-Learning -->
