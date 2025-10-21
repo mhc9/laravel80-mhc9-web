@@ -178,401 +178,100 @@
         </div>
     </section>
 
-    <section class="home">
-        <div class="home-contents">
-            <!-- Headlines and Director -->
-            <div>
-                <div class="container">
-                    <div class="row">
-                        <!-- Headline -->
-                        <div class="col-md-12 col-lg-9">
-                            <div class="post-box">
-                                <h1 class="title">
-                                    <i class="fas fa-bullhorn"></i>
-                                    ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>ข่าวกิจกรรม
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div class="post-list">
-                                    <div class="row">
-                                        <div class="col-md-12 col-lg-7">
-                                            <div class="post-headline">
-                                                <div class="headline-img">
-                                                    <img src="{{ url('/'.$headline->featured) }}" alt="headline-pic" />
-                                                </div>
-                                                <div class="headline-text">
-                                                    <h4 class="text-xl">{{$headline->title}}</h4>
-
-                                                    @include('components.page-subtitle', [
-                                                        'textSize'  => "xs",
-                                                        'author'    => $headline->author,
-                                                        'publishUp' => $headline->publish_up
-                                                    ])
-
-                                                    <p class="my-2">
-                                                        <span>{{$headline->intro_text}}</span>
-                                                        <span class="readmore">
-                                                            <a href="{{ url('/posts/' . $headline->id) }}">อ่านเพิ่มเติม</a>
-                                                        </span>
-                                                    </p>
-                                                    <!-- {headline?.tags && (
-                                                        <div class="mb-2">
-                                                            {headline?.tags.split(',').map((tag, index) => (
-                                                                <div class="badge rounded-pill bg-secondary me-1" key={index}>{tag}</div>
-                                                            ))}
-                                                        </div>
-                                                    )} -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-lg-5">
-                                            <ul class="post-secondary">
-                                                @foreach($posts as $post)
-                                                    <li>
-                                                        <div class="post__secondary-img">
-                                                            <img src="{{ url('/' . $post->featured) }}" class="lg:h-[100px] max-lg:h-[120px]" alt="post-pic" />
-                                                        </div>
-                                                        <div class="post__secondary-text">
-                                                            <a href="{{ url('/posts/' . $post->id) }}"><h4>{{$post->title}}</h4></a>
-
-                                                            @include('components.page-subtitle', [
-                                                                'textSize'  => "xs",
-                                                                'author'    => $post->author,
-                                                                'publishUp' => $post->publish_up
-                                                            ])
-
-                                                            <span class="publish-time">{{facebookTimeAgo($post->publish_up)}}</span>
-                                                        </div>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-
-                                            <div class="post-btn mt-2">
-                                                <a href="{{ url('/posts') }}" class="all-news">ข่าวทั้งหมด</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Director -->
-                        <div class="col-md-12 col-lg-3">
-                            <div class="director-box">
-                                <h1 class="title">
-                                    <i class="fas fa-user-md"></i>
-                                    ผู้อำนวยการ
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div class="director-info">
-                                    <div>
-                                        <img src="https://mhc9dmh.com/DATA/Photo/48Img.jpg" alt="director-image" />
-                                    </div>
-                                    <h2>นางสาวจุฑามาศ วรรณศิลป์</h2>
-                                    <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
-                                    <!-- <h4>รักษาราชการแทนผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Videos and Service -->
-            <div  style="background: #F2F2F2">
-                <div class="container">
-                    <div class="row">
-                        <!-- Videos -->
-                        <div class="col-md-8 col-lg-9">
-                            <div class="video-box">
-                                <h1 class="title">
-                                    <i class="fas fa-video"></i>
-                                    สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>วีดิโอสุขภาพจิต
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div class="row video-list">
-                                    @foreach($videos as $video)
-                                        <div class="col-md-12 col-lg-6">
-                                            <div class="video-item">
-                                                <iframe
-                                                    width="100%"
-                                                    height="100%"
-                                                    src="{{$video->urls}}"
-                                                    title="{{$video->title}}"
-                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                    allowFullScreen
-                                                ></iframe>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                                <div class="video-btn">
-                                    <a href="{{ url('/videos') }}" class="all-news">วีดิโอทั้งหมด</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Services -->
-                        <div class="col-md-4 col-lg-3" style="background: #ffffff">
-                        <div class="officer-box">
-                            <h1 class="title">
-                                <i class="fas fa-stethoscope"></i>
-                                สำหรับเจ้าหน้าที่
-                            </h1>
-
-                            <hr class="my-2" />
-
-                            <div class="officer-items"></div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- News -->
-            <div style="background: #f3e2a9">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="news-box">
-                                <h1 class="title">
-                                    <i class="fas fa-rss"></i>
-                                    ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>อื่นๆ
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-12 news-wrapper">
-                                        <h4>ข่าวจัดซื้อจัดจ้าง</h4>
-
-                                        <div class="news-list">
-                                            <ul>
-                                                @foreach($procures as $item)
-                                                    <li>
-                                                        <div>
-                                                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                                                        </div>
-                                                        <p>
-                                                            <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
-                                                            <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
-                                                        </p>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-
-                                        <a href="./newses/category/3" class="all-news">ข่าวทั้งหมด</a>
-                                    </div>
-                                    <div class="col-lg-4 col-md-12 news-wrapper">
-                                        <h4>ข่าวรับสมัครงาน</h4>
-
-                                        <div class="news-list">
-                                            <ul id="jobNews">
-                                                @foreach($jobs as $item)
-                                                    <li>
-                                                        <div>
-                                                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                                                        </div>
-                                                        <p>
-                                                            <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
-                                                            <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
-                                                        </p>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                        
-                                        <a href="./newses/category/4" class="all-news">ข่าวทั้งหมด</a>
-                                    </div>
-                                    <div class="col-lg-4 col-md-12 news-wrapper">
-                                        <h4>ประกาศ</h4>
-
-                                        <div class="news-list">
-                                            <ul id="noticeNews">
-                                                @foreach($notices as $item)
-                                                    <li>
-                                                        <div>
-                                                            <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
-                                                        </div>
-                                                        <p>
-                                                            <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
-                                                            <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
-                                                        </p>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-
-                                        <a href="./newses/category/5" class="all-news">ประกาศทั้งหมด</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Onepages -->
-            <div style="background: #F2F2F2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="info-box">
-                                <h1 class="title">
-                                    <i class="fas fa-images"></i>
-                                    ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>MHC9 News
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div class="row">
-                                    <div class="swiper" id="partner">
-                                        <div class="swiper-wrapper">
-                                            @foreach($onepages as $onepage)
-                                                <div class="swiper-slide">
-                                                    <a href="{{ url('/posts/' . $onepage->id) }}" class="p-2">
-                                                        <img
-                                                            class="object-contain w-full h-96"
-                                                            src="{{ url('/' . $onepage->featured) }}"
-                                                            alt="logo-pic"
-                                                        />
-                                                    </a>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="text-center m-1">
-                                    <a href="{{ url('/onepages') }}" class="all-news">ข่าวทั้งหมด</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social media content -->
-            <div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="news-box">
-                                <h1 class="title">
-                                </i><i class="fas fa-share-alt-square"></i>
-                                ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>Social Network
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div class="row py-2">
-                                    <div class="col-md-6 flex justify-center mt-2">
-                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid06WDPgysyXqraUargyhPjgeFoJ4wY8xsxYcubxY98KPiTQGo8LV77Vj6FhKiP9Uzbl%26id%3D100064648815470&show_text=true&width=500" width="500" height="995" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                    </div>
-                                    <div class="col-md-6 flex justify-center mt-2">
-                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid06KjLNm4iFU1HtzoX7mLDKbaPgRebdpGg3YKNrAWNB8Q7UGEPPb6TswDSfxFApVawl%26id%3D100064648815470&show_text=true&width=500" width="500" height="885" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                    </div>
-                                    <div class="col-md-6 flex justify-center mt-2">
-                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02eTBUGRZukHsRGM9cMdGSGvPE8ynxKz9pNmjs8VowJTfQjJPdCpKwXnXs5PvZQnmQl%26id%3D100064648815470&show_text=true&width=500" width="500" height="475" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                    </div>
-                                    <div class="col-md-6 flex justify-center mt-2">
-                                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0UUG1VJcmthd5AA7LFioAujh4KmbpxC1uqPd8AN2NMrntKBwz7ZcgzLiZe4eCDrS2l%26id%3D100064648815470&show_text=true&width=500" width="500" height="835" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                                    </div>
-
-                                    <!-- <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                        <div
-                                            class="fb-post" 
-                                            data-href="https://www.facebook.com/20531316728/posts/1170459215119028/"
-                                            data-width="100%"></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                        <div
-                                            class="fb-post" 
-                                            data-href="https://www.facebook.com/20531316728/posts/1168097345355215/"
-                                            data-width="100%"></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                        <div
-                                            class="fb-post" 
-                                            data-href="https://www.facebook.com/20531316728/posts/1168066772024939/"
-                                            data-width="100%"></div>
-                                    </div>                                    
-                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                        <div
-                                            class="fb-post" 
-                                            data-href="https://www.facebook.com/20531316728/posts/1165439678954315/"
-                                            data-width="100%"></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                        <div
-                                            class="fb-post" 
-                                            data-href="https://www.facebook.com/20531316728/posts/1049210387243912/"
-                                            data-width="100%"></div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                        <div
-                                            class="fb-post" 
-                                            data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
-                                            data-width="100%"></div>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Articles -->
-            <div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="article-box">
-                                <h1 class="title">
-                                    <i class="fas fa-file-medical-alt"></i>
-                                    สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>บทความสุขภาพจิต
-                                </h1>
-
-                                <hr class="my-2" />
-
-                                <div class="row article-list px-4 py-2">
-                                    @foreach($articles as $article)
-                                        <div class="col-sm-12 col-md-6 col-lg-4">
-
-                                            @include('components.article-card', ['article'  => $article])
-
-                                        </div>
-                                    @endforeach
-
-                                    <div class="post-btn">
-                                        <a href="{{ url('/articles') }}" class="all-news">บทความทั้งหมด</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- E-Services -->
-            <div style="background: #F2F2F2">
-                <div class="container">
-                    <div class="service-box">
+    <!-- Headlines and Director -->
+    <section class="headline">
+        <div class="container">
+            <div class="row">
+                <!-- Headline -->
+                <div class="col-md-12 col-lg-9">
+                    <div class="post-box">
                         <h1 class="title">
-                            <i class="fas fa-poll"></i>
-                            ระบบสารสนเทศ (E-Service)
+                            <i class="fas fa-bullhorn"></i>
+                            ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>ข่าวกิจกรรม
                         </h1>
 
                         <hr class="my-2" />
 
-                        <div class="service-wrapper">
-                            <div class="row service-list"></div>
+                        <div class="post-list">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-7">
+                                    <div class="post-headline">
+                                        <div class="headline-img">
+                                            <img src="{{ url('/'.$headline->featured) }}" alt="headline-pic" />
+                                        </div>
+                                        <div class="headline-text">
+                                            <h4 class="text-xl">{{$headline->title}}</h4>
+
+                                            @include('components.page-subtitle', [
+                                                'textSize'  => "xs",
+                                                'author'    => $headline->author,
+                                                'publishUp' => $headline->publish_up
+                                            ])
+
+                                            <p class="my-2">
+                                                <span>{{$headline->intro_text}}</span>
+                                                <span class="readmore">
+                                                    <a href="{{ url('/posts/' . $headline->id) }}">อ่านเพิ่มเติม</a>
+                                                </span>
+                                            </p>
+                                            <!-- {headline?.tags && (
+                                                <div class="mb-2">
+                                                    {headline?.tags.split(',').map((tag, index) => (
+                                                        <div class="badge rounded-pill bg-secondary me-1" key={index}>{tag}</div>
+                                                    ))}
+                                                </div>
+                                            )} -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-5">
+                                    <ul class="post-secondary">
+                                        @foreach($posts as $post)
+                                            <li>
+                                                <div class="post__secondary-img">
+                                                    <img src="{{ url('/' . $post->featured) }}" class="lg:h-[100px] max-lg:h-[120px]" alt="post-pic" />
+                                                </div>
+                                                <div class="post__secondary-text">
+                                                    <a href="{{ url('/posts/' . $post->id) }}"><h4>{{$post->title}}</h4></a>
+
+                                                    @include('components.page-subtitle', [
+                                                        'textSize'  => "xs",
+                                                        'author'    => $post->author,
+                                                        'publishUp' => $post->publish_up
+                                                    ])
+
+                                                    <span class="publish-time">{{facebookTimeAgo($post->publish_up)}}</span>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+
+                                    <div class="post-btn mt-2">
+                                        <a href="{{ url('/posts') }}" class="all-news">ข่าวทั้งหมด</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director -->
+                <div class="col-md-12 col-lg-3">
+                    <div class="director-box">
+                        <h1 class="title">
+                            <i class="fas fa-user-md"></i>
+                            ผู้อำนวยการ
+                        </h1>
+
+                        <hr class="my-2" />
+
+                        <div class="director-info">
+                            <div>
+                                <img src="https://mhc9dmh.com/DATA/Photo/48Img.jpg" alt="director-image" />
+                            </div>
+                            <h2>นางสาวจุฑามาศ วรรณศิลป์</h2>
+                            <h4>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
+                            <!-- <h4>รักษาราชการแทนผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4> -->
                         </div>
                     </div>
                 </div>
@@ -580,8 +279,305 @@
         </div>
     </section>
 
+    <!-- Videos and Service -->
+    <section style="background: #F2F2F2">
+        <div class="container">
+            <div class="row">
+                <!-- Videos -->
+                <div class="col-md-8 col-lg-9">
+                    <div class="video-box">
+                        <h1 class="title">
+                            <i class="fas fa-video"></i>
+                            สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>วีดิโอสุขภาพจิต
+                        </h1>
+
+                        <hr class="my-2" />
+
+                        <div class="row video-list">
+                            @foreach($videos as $video)
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="video-item">
+                                        <iframe
+                                            width="100%"
+                                            height="100%"
+                                            src="{{$video->urls}}"
+                                            title="{{$video->title}}"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="video-btn">
+                            <a href="{{ url('/videos') }}" class="all-news">วีดิโอทั้งหมด</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-md-4 col-lg-3" style="background: #ffffff">
+                <div class="officer-box">
+                    <h1 class="title">
+                        <i class="fas fa-stethoscope"></i>
+                        สำหรับเจ้าหน้าที่
+                    </h1>
+
+                    <hr class="my-2" />
+
+                    <div class="officer-items"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section style="background: #f3e2a9">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="news-box">
+                        <h1 class="title">
+                            <i class="fas fa-rss"></i>
+                            ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>อื่นๆ
+                        </h1>
+
+                        <hr class="my-2" />
+
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 news-wrapper">
+                                <h4>ข่าวจัดซื้อจัดจ้าง</h4>
+
+                                <div class="news-list">
+                                    <ul>
+                                        @foreach($procures as $item)
+                                            <li>
+                                                <div>
+                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                </div>
+                                                <p>
+                                                    <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
+                                                    <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
+                                                </p>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+
+                                <a href="./newses/category/3" class="all-news">ข่าวทั้งหมด</a>
+                            </div>
+                            <div class="col-lg-4 col-md-12 news-wrapper">
+                                <h4>ข่าวรับสมัครงาน</h4>
+
+                                <div class="news-list">
+                                    <ul id="jobNews">
+                                        @foreach($jobs as $item)
+                                            <li>
+                                                <div>
+                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                </div>
+                                                <p>
+                                                    <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
+                                                    <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
+                                                </p>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                                
+                                <a href="./newses/category/4" class="all-news">ข่าวทั้งหมด</a>
+                            </div>
+                            <div class="col-lg-4 col-md-12 news-wrapper">
+                                <h4>ประกาศ</h4>
+
+                                <div class="news-list">
+                                    <ul id="noticeNews">
+                                        @foreach($notices as $item)
+                                            <li>
+                                                <div>
+                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                </div>
+                                                <p>
+                                                    <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
+                                                    <span class="text-gray-500 font-thin">{{facebookTimeAgo($item->publish_up)}}</span>
+                                                </p>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+
+                                <a href="./newses/category/5" class="all-news">ประกาศทั้งหมด</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Onepages -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="info-box">
+                        <h1 class="title">
+                            <i class="fas fa-images"></i>
+                            ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>MHC9 News
+                        </h1>
+
+                        <hr class="my-2" />
+
+                        <div class="row">
+                            <div class="swiper" id="partner">
+                                <div class="swiper-wrapper">
+                                    @foreach($onepages as $onepage)
+                                        <div class="swiper-slide">
+                                            <a href="{{ url('/posts/' . $onepage->id) }}" class="p-2">
+                                                <img
+                                                    class="object-contain w-full h-96"
+                                                    src="{{ url('/' . $onepage->featured) }}"
+                                                    alt="logo-pic"
+                                                />
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center m-1">
+                            <a href="{{ url('/onepages') }}" class="all-news">ข่าวทั้งหมด</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social media content -->
+    <section style="background: #F2F2F2">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="news-box">
+                        <h1 class="title">
+                        </i><i class="fas fa-share-alt-square"></i>
+                        ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>Social Network
+                        </h1>
+
+                        <hr class="my-2" />
+
+                        <div class="row py-2">
+                            <div class="col-md-6 flex justify-center mt-2">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid06WDPgysyXqraUargyhPjgeFoJ4wY8xsxYcubxY98KPiTQGo8LV77Vj6FhKiP9Uzbl%26id%3D100064648815470&show_text=true&width=500" width="500" height="995" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="col-md-6 flex justify-center mt-2">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid06KjLNm4iFU1HtzoX7mLDKbaPgRebdpGg3YKNrAWNB8Q7UGEPPb6TswDSfxFApVawl%26id%3D100064648815470&show_text=true&width=500" width="500" height="885" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="col-md-6 flex justify-center mt-2">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02eTBUGRZukHsRGM9cMdGSGvPE8ynxKz9pNmjs8VowJTfQjJPdCpKwXnXs5PvZQnmQl%26id%3D100064648815470&show_text=true&width=500" width="500" height="475" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="col-md-6 flex justify-center mt-2">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0UUG1VJcmthd5AA7LFioAujh4KmbpxC1uqPd8AN2NMrntKBwz7ZcgzLiZe4eCDrS2l%26id%3D100064648815470&show_text=true&width=500" width="500" height="835" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+
+                            <!-- <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                <div
+                                    class="fb-post" 
+                                    data-href="https://www.facebook.com/20531316728/posts/1170459215119028/"
+                                    data-width="100%"></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                <div
+                                    class="fb-post" 
+                                    data-href="https://www.facebook.com/20531316728/posts/1168097345355215/"
+                                    data-width="100%"></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                <div
+                                    class="fb-post" 
+                                    data-href="https://www.facebook.com/20531316728/posts/1168066772024939/"
+                                    data-width="100%"></div>
+                            </div>                                    
+                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                <div
+                                    class="fb-post" 
+                                    data-href="https://www.facebook.com/20531316728/posts/1165439678954315/"
+                                    data-width="100%"></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                <div
+                                    class="fb-post" 
+                                    data-href="https://www.facebook.com/20531316728/posts/1049210387243912/"
+                                    data-width="100%"></div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
+                                <div
+                                    class="fb-post" 
+                                    data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
+                                    data-width="100%"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="article-box">
+                        <h1 class="title">
+                            <i class="fas fa-file-medical-alt"></i>
+                            สื่อสุขภาพจิต <i class="fas fa-angle-right"></i>บทความสุขภาพจิต
+                        </h1>
+
+                        <hr class="my-2" />
+
+                        <div class="row article-list px-4 py-2">
+                            @foreach($articles as $article)
+                                <div class="col-sm-12 col-md-6 col-lg-4">
+
+                                    @include('components.article-card', ['article'  => $article])
+
+                                </div>
+                            @endforeach
+
+                            <div class="post-btn">
+                                <a href="{{ url('/articles') }}" class="all-news">บทความทั้งหมด</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-Services -->
+    <section style="background: #F2F2F2">
+        <div class="container">
+            <div class="service-box">
+                <h1 class="title">
+                    <i class="fas fa-poll"></i>
+                    ระบบสารสนเทศ (E-Service)
+                </h1>
+
+                <hr class="my-2" />
+
+                <div class="service-wrapper">
+                    <div class="row service-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Partners Logo --> 
-    <div class="slide-logos">
+    <section class="slide-logos">
         <div class="swiper" id="partner">
             <div class="swiper-wrapper">
                 <!-- กระทรวง -->
@@ -676,7 +672,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Modal go to old or new site -->
     <div id="goToSite" class="modal" tabindex="-1">
@@ -697,7 +693,6 @@
         </div>
     </div>
     <!-- Modal go to old or new site -->
-
 </div>
 <script>
     $(document).ready(async function () {

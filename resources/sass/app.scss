@@ -73,7 +73,7 @@ a {
 main { 
     margin-top: 52px;
 
-    section {
+    section:not(.slide-logos) {
         min-height: 500px;
         background: white;
 
@@ -85,9 +85,9 @@ main {
         }
     }
 
-    section.home { padding-top: 30px; }
     section.hero { padding-top: 25px; }
-    section:not(.home, .hero) { padding-top: 40px; }
+    section.headline { padding-top: 30px; }
+    section:not(.hero, .headline, .slide-logos) { padding-top: 0; }
 }
 
 @media (max-width: 640px) {
@@ -365,6 +365,10 @@ nav.c9__pagination {
     overflow: hidden;
     background: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+
+    .swiper {
+        height: 100%;
+    }
 
     .slide-logo {
         position: relative;
