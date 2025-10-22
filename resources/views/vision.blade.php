@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="vision container py-6 px-0">
+<article class="vision container py-6 px-0">
     <h1 class="title">วิสัยทัศน์/พันธกิจ/ค่านิยม/ตัวชี้วัด</h1>
 
     <hr class="my-2" />
@@ -40,7 +40,7 @@
             </blockquote>
         </div>
 
-        <div class="px-10 pt-2 pb-4 flex flex-col justify-center items-center gap-4">
+        <div class="duty-wrapper px-10 pt-4 pb-4 flex flex-col justify-center items-center gap-4">
             <h2 class="font-bold text-3xl">ตัวชี้วัด</h2>
             <object
                 data="https://mhc9dmh.com/newweb/public/uploads/2025/01/0113202504550667849caa0cd8e.pdf"
@@ -52,5 +52,5 @@
             </object>
         </div>
     </div>
-</section>
+</article>
 @endsection

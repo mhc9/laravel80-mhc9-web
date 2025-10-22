@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="about container">
+<article class="about container">
     <h1 class="title">ประวัติความเป็นมา</h1>
 
     <hr class="my-2" />
@@ -60,5 +60,5 @@
             </div>
         </div>
     </div>
-</section>
+</article>
 @endsection

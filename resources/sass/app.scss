@@ -88,13 +88,26 @@ main {
     section.hero { padding-top: 25px; }
     section.headline { padding-top: 30px; }
     section:not(.hero, .headline, .slide-logos) { padding-top: 0; }
+
+    article {
+        padding-top: 30px;
+        min-height: 500px;
+        background: white;
+
+        .title {
+            margin: 10px 10px 0;
+            font-size: 24px;
+
+            i { margin-right: 5px; }
+        }
+    }
 }
 
 @media (max-width: 640px) {
     main {
         margin-top: 62px;
 
-        section {
+        section, article {
             .title {
                 font-size: 0.875rem/* 14px */;
             }
