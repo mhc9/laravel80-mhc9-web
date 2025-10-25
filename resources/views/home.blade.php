@@ -692,7 +692,22 @@
             </div>
         </div>
     </div>
-    <!-- Modal go to old or new site -->
+    <!-- End modal go to old or new site -->
+
+    <!-- Modal mourning -->
+    <div id="mourning" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ config('app.name', 'Laravel') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="padding: 5px;">
+                <img src="{{ asset('/img/jUZ1hVPqtPQK3mSHeXdmPuMtVW5N7VdM.png') }}" alt="mourning-pic" />
+            </div>
+        </div>
+    </div>
+    <!-- End modal mourning -->
 </div>
 <script>
     $(document).ready(async function () {
@@ -797,6 +812,9 @@
 
         /** show modal go to old or new site */
         //$('#goToSite').modal('show');
+
+        /** show modal mourning */
+        $('#mourning').modal('show');
     });
 </script>
 @endsection
