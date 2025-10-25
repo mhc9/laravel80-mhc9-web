@@ -8,11 +8,21 @@
         <div class="slide-hero">
             <div class="swiper" id="hero">
                 <div class="swiper-wrapper">
+                    <!-- Mourning -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-fill w-full [@media(min-width:1280px)]:h-[calc(100%-2%)]"
+                                src="{{ asset('/img/bJiwrsv0yuAmCVd26zfMaWqZBr8akERJ.png') }}"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
                     <!-- Director-General's Policy -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
-                                class="object-cover w-full h-96"
+                                class="object-cover w-full h-auto"
                                 src="{{ asset('/img/1759131040082.jpg') }}"
                                 alt="image"
                             />
@@ -22,7 +32,7 @@
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
-                                class="object-cover w-full h-96"
+                                class="object-cover w-full h-auto"
                                 src="{{ asset('/img/20251014132831.jpg') }}"
                                 alt="image"
                             />
@@ -32,7 +42,7 @@
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
-                                class="object-cover w-full h-96"
+                                class="object-cover w-full h-auto"
                                 src="{{ asset('/img/20251014133215.jpg') }}"
                                 alt="image"
                             />
@@ -42,7 +52,7 @@
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
-                                class="object-cover w-full h-96"
+                                class="object-cover w-full h-auto"
                                 src="{{ asset('/img/banner-02.png') }}"
                                 alt="image"
                             />
@@ -52,7 +62,7 @@
                     <div class="swiper-slide relative">
                         <div class="slide-wrapper">
                             <img
-                                class="object-cover w-full h-96"
+                                class="object-cover w-full h-auto"
                                 src="{{ asset('/img/3b5QfjX9IClnXrZXTfWltRZ7arVHObEP.png') }}"
                                 alt="image"
                             />
@@ -65,15 +75,15 @@
                         </div>
                     </div>
                     <!-- DMH E-Learning -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
-                                class="object-cover w-full h-96"
+                                class="object-cover w-full h-auto"
                                 src="{{ asset('/img/QedmTbSsLorfSsZydiTFVflvu5dty1kA3Qd7itev.png') }}"
                                 alt="image"
                             />
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>

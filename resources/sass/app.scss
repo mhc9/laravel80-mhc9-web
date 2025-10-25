@@ -343,19 +343,19 @@ nav.c9__pagination {
     /* Slide Hero */
     .slide-hero {
         background: white;
-        
+
         .slide-wrapper {
             position: relative;
             overflow: hidden;
             object-fit: contain;
             object-position: center;
             height: calc(100vh - 150px);
-    
-            img {
-                width: 100%;
-                height: auto;
-            }
-    
+
+            // img {
+            //     width: 100%;
+            //     height: auto;
+            // }
+
             .slide-text {
                 position: absolute;
                 bottom: 0;
