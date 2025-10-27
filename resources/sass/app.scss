@@ -29,12 +29,33 @@
 /* ==================================  Global Styles  ================================== */
 :root {
     /* Theme colors */
-    --color0:#47484d;
-    --color1:#c0ca67;
-    --color2:#1d684a;
-    --color3:#284e51;
-    --color4:#0d838d;
-    --color5:#d7d8d0;
+    /* ## normal */
+    --color0: #47484d;
+    --color1: #c0ca67;
+    --color2: #1d684a;
+    --color3: #284e51;
+    --color4: #0d838d;
+    --color5: #d7d8d0;
+    --color6: #2e8260;
+    --color7: #403f44;
+    --color8: #909090;
+
+    /* ## square dot colors */
+    --square-dot1: #0d838d;
+    --square-dot2: #284e51;
+    --square-dot3: #c0ca67;
+    --square-dot4: #d7d8d0;
+    --square-dot5: #4d4e52;
+    --square-dot-mourning: #666666;
+
+    --submenu-bg-color: rgba(29, 104, 74, .95);
+
+    /* ## mourning */
+    --bg-mourning-1: #989898;
+    --bg-mourning-2: #7f7f7f;
+    --bg-mourning-3: #666666;
+    --bg-mourning-4: #4c4c4c;
+    --bg-mourning-5: #333333;
 
     /* Swiper slide colors */
     --swiper-navigation-color: #47484d;
@@ -572,12 +593,12 @@ nav.topnav {
 nav.topnav .logo { color:#393939 }
 nav.topnav .top-menu { background:#ebebeb }
 nav.topnav .top-menu > .option p { color:#393939 }
-nav.topnav .top-menu > .option .btn { background:#fff;color:#000 }
-nav.topnav .top-menu > .option .btn[data-theme="0"] { background:#fff;color:#1d684a }
-nav.topnav .top-menu > .option .btn[data-theme="1"] { background:#010101;color:#fff }
-nav.topnav .top-menu > .option .btn[data-theme="2"] { background:#010101;color:#ff0 }
-nav.topnav .top-menu > .menu-option { color:#fff;background:#1d684a;background:var(--color2) }
-nav.topnav .top-menu > .menu-option:hover { color:#c0ca67;color:var(--color1) }
+nav.topnav .top-menu > .option .btn { background:#fff; color:#000 }
+nav.topnav .top-menu > .option .btn[data-theme="0"] { background: #fff; color: var(--color2) }
+nav.topnav .top-menu > .option .btn[data-theme="1"] { background: #010101; color:#fff }
+nav.topnav .top-menu > .option .btn[data-theme="2"] { background: #010101; color:#ff0 }
+nav.topnav .top-menu > .menu-option { color:#fff; background: var(--color2); background: var(--color2) }
+nav.topnav .top-menu > .menu-option:hover { color: #c0ca67; color: var(--color1) }
 
 /* Nav Menu
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -588,29 +609,31 @@ nav.topnav .menu:hover > a {
     color:#fff
 }
 
-nav.topnav .menu.icon-menu:last-child > a { border-color:#ebebeb }
-nav.topnav .menu > a::before { background-image: linear-gradient(to right, #47484d, #403f44) }
-nav.topnav .menu > a::after { background: #4d4e52; }
+/** Square dot */
+nav.topnav .menu.icon-menu:last-child > a { border-color: #ebebeb }
+nav.topnav .menu > a::before { background-image: linear-gradient(to right, var(--color0), var(--color7)) }
+nav.topnav .menu > a::after { background: var(--square-dot-mourning); } /* bg --square-dot5 */ 
 
 /** all child menus except 1st and 2 last child menus */
-nav.topnav .menu:nth-child(n+2) > a::before { background-image: linear-gradient(to right, #284e51, #2e8260) }
+nav.topnav .menu:nth-child(n+2) > a::before { background-image: linear-gradient(to right, var(--bg-mourning-5), var(--bg-mourning-3)) } /* bg-image --color3 --color6 */
 /** 2 last child menus */
-nav.topnav .menu:nth-last-child(-n+2) > a::before { background-image: linear-gradient(to right, #47484d, #403f44) }
+nav.topnav .menu:nth-last-child(-n+2) > a::before { background-image: linear-gradient(to right, var(--color0), var(--color7)) }
 /** old child menus styles */
 // nav.topnav .menu:nth-child(5n+2) > a::before { background-image: linear-gradient(to right, #0d838d, #8ad0ce) }
-// nav.topnav .menu:nth-child(5n+3) > a::before { background-image: linear-gradient(to right, #284e51, #2e8260) }
+// nav.topnav .menu:nth-child(5n+3) > a::before { background-image: linear-gradient(to right, var(--color3), #2e8260) }
 // nav.topnav .menu:nth-child(5n+4) > a::before { background-image: linear-gradient(to right, #c0ca67, #cad765) }
 // nav.topnav .menu:nth-child(5n) > a::before { background-image: linear-gradient(to right, #d7d8d0, #9a9b95) }
 
-nav.topnav .menu:nth-child(5n+2) > a::after { background: #0d838d; background: var(--color4) }
-nav.topnav .menu:nth-child(5n+3) > a::after { background: #284e51; background: var(--color3) }
-nav.topnav .menu:nth-child(5n+4) > a::after { background: #c0ca67; background: var(--color1) }
-nav.topnav .menu:nth-child(5n) > a::after { background: #d7d8d0; background: var(--color5) }
+nav.topnav .menu:nth-child(5n+2) > a::after { background: var(--square-dot-mourning); }  /* bg --color4 */
+nav.topnav .menu:nth-child(5n+3) > a::after { background: var(--square-dot-mourning); } /* bg --color3 */
+nav.topnav .menu:nth-child(5n+4) > a::after { background: var(--square-dot-mourning); } /* bg --color1  */
+nav.topnav .menu:nth-child(5n) > a::after { background: var(--square-dot-mourning) } /* bg --color5 */
+/** End square dot */
 
 nav.topnav .ui.fluid.dropdown.active,
-nav.topnav .ui.selection.active.dropdown .menu { border-color: #47484d; border-color: var(--color0) }
+nav.topnav .ui.selection.active.dropdown .menu { border-color: var(--color0); } /* border-color --color0 */
 nav.topnav .ui.fluid.dropdown .item,
-nav.topnav .ui.fluid.dropdown > .text { color:#909090 }
+nav.topnav .ui.fluid.dropdown > .text { color: #909090 }
 
 /* SubMenu
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -622,7 +645,7 @@ nav.topnav .submenu > a::after { background:#fff; }
 nav.topnav .submenu.has-children > a::before { color:#fff; }
 nav.topnav .submenu .child > a { color:#fff; }
 nav.topnav .submenu .child > a::after { background:#fff; }
-nav.topnav .menu .submenus { background:rgba(29,104,74,.95); }
+nav.topnav .menu .submenus { background: var(--bg-mourning-3); } /** bg --submenu-bg-color */
 
 nav.topnav .menu .submenu:hover > a {
     background:#0d838d;
@@ -677,7 +700,7 @@ nav .logo-text p {
     opacity: 1 !important;
 }
 
-nav .nav-bottom { background: #1d684a; }
+nav .nav-bottom { background: var(--bg-mourning-4); }
 
 /* Anamai css */
 nav.topnav {
@@ -732,11 +755,21 @@ nav.topnav.sticky .logo p{ opacity:0;margin:0;font-size:0; }
 
 /* Top Menu
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-nav.topnav .top-menu{ display:flex;justify-content:space-between;align-items:center;margin:0;width:100%;padding:0 0 0 1rem; }
-nav.topnav .top-menu > .option{ display:flex;align-items:center;padding:.5rem .25rem; }
-nav.topnav .top-menu > .option p{ margin:0 .5rem 0 0;font-size:1.0625rem;font-weight:400;white-space:nowrap; }
-nav.topnav .top-menu > .option .btn{ width:1.5rem;height:1.5rem;border-radius:.25rem;margin:0 .125rem;text-align:center;line-height:1.5rem;font-size:1.0625rem;font-weight:600;cursor:pointer; }
-nav.topnav .top-menu > .menu-option { display:block;height:2.875rem;width:3.75rem;text-align:center;line-height:2.875rem;font-size:1rem;transition:color .3s; }
+nav.topnav .top-menu{ display:flex; justify-content:space-between; align-items:center; margin:0; width:100%; padding:0 0 0 1rem; }
+nav.topnav .top-menu > .option{ display:flex; align-items:center; padding:.5rem .25rem; }
+nav.topnav .top-menu > .option p{ margin:0 .5rem 0 0; font-size:1.0625rem; font-weight:400; white-space:nowrap; }
+nav.topnav .top-menu > .option .btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: .25rem;
+    margin: 0 .125rem;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+nav.topnav .top-menu > .menu-option { display:block;height:2.875rem;width:3.75rem;text-align:center;line-height:2.875rem;font-size:1rem;transition: color .3s; }
 nav.topnav .ui.fluid.dropdown { width:8.5rem;padding:.375rem .5rem;min-height:0; }
 nav.topnav .ui.fluid.dropdown > .dropdown.icon { right:.875rem;padding:.4125rem; }
 nav.topnav .ui.fluid.dropdown .item,
@@ -796,7 +829,7 @@ nav.topnav .menu.icon-menu > a {
 }
 
 /* Sub menu */
-nav.topnav .submenu-container{
+nav.topnav .submenu-container {
     position: absolute;
     top: calc(100% + .5rem);
     left: 0;
@@ -1306,7 +1339,7 @@ footer {
     left: 0;
     height: auto;
     width: 100%;
-    background: #1d684a;
+    background: var(--bg-mourning-3); /** bg --color2 */
 
     .footer-top {
         color: white;
@@ -1406,7 +1439,7 @@ footer {
     }
 
     .footer-bottom {
-        background: var(--color0);
+        background: var(--color0); /* normal bg --color0 */
 
         div:first-child {
             color: white;
