@@ -56,7 +56,7 @@
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
@@ -97,7 +97,7 @@
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
@@ -138,7 +138,7 @@
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
@@ -179,7 +179,7 @@
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
@@ -220,7 +220,7 @@
                                                 </div>
                                             @else
                                                 <div class="w-[80px] h-[80px] object-contain">
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                             @endif
                                             <div class="post__list-text flex flex-col gap-1">
@@ -256,7 +256,7 @@
                                     @foreach($tors as $post)
                                         <div class="col-md-12 post__list-item">
                                             <div class="w-[80px] h-[80px] object-contain">
-                                                <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                             </div>
                                             <div class="post__list-text flex flex-col gap-1">
                                                 <a href="{{ url('/posts/'.$post->id) }}"><h4>{{$post->title}}</h4></a>
@@ -295,7 +295,7 @@
                                 </div>
                             @else
                                 <div class="w-[80px] h-[80px] object-contain">
-                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                 </div>
                             @endif
                             <div class="post__list-text flex flex-col gap-1">

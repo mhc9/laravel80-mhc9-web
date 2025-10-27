@@ -7,7 +7,7 @@
                         <!-- Logo -->
                         <a href="{{ url('/') }}" class="nav-logo">
                             <div class="logo">
-                                <img src="{{ asset('img/logo_black.jpg') }}" alt="logo" />
+                                <img src="{{ asset('img/logo_black.png') }}" alt="logo" />
                             </div>
                             <div class="logo-text">
                                 <h2>ศูนย์สุขภาพจิตที่ 9</h2>

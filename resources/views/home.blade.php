@@ -364,7 +364,7 @@
                                         @foreach($procures as $item)
                                             <li>
                                                 <div>
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                                 <p>
                                                     <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
@@ -385,7 +385,7 @@
                                         @foreach($jobs as $item)
                                             <li>
                                                 <div>
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                                 <p>
                                                     <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
@@ -406,7 +406,7 @@
                                         @foreach($notices as $item)
                                             <li>
                                                 <div>
-                                                    <img src="{{ asset('img/logo_dmh.png') }}" alt="logo-pic" />
+                                                    <img src="{{ asset('img/logo_black.png') }}" alt="logo-pic" />
                                                 </div>
                                                 <p>
                                                     <a href="{{ url('/posts/' . $item->id) }}">{{$item->title}}</a>
