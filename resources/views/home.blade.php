@@ -586,6 +586,33 @@
         </div>
     </section>
 
+    <!-- Weekly calendar -->
+    <section>
+        <div class="container p-4">
+            <h1 class="title">
+                <i class="fas fa-calendar"></i>
+                ปฏิทินกิจกรรม <i class="fas fa-angle-right"></i>กิจกรรมประจำสัปดาห์
+            </h1>
+
+            <hr class="my-2" />
+
+            <div class="relative mt-3" style="height: 640px; width: 100%;">
+                <iframe
+                    src="https://app.mhc9dmh.com/calendar"
+                    title="กิจกรรมประจำสัปดาห์"
+                    style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"
+                ></iframe>
+
+                <!-- Floating button -->
+                <div class="absolute top-2 left-2 flex justify-center items-center z-10 w-[50px] h-[50px] bg-indigo-600 hover:bg-indigo-800 backdrop-blur-lg rounded-full border-2 text-white shadow-lg p-3">
+                    <a href="https://app.mhc9dmh.com/calendar" target="_blank" class="transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-expand text-xl mt-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Partners Logo --> 
     <section class="slide-logos">
         <div class="swiper" id="partner">
