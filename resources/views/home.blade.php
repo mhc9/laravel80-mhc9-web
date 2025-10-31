@@ -206,7 +206,8 @@
                             <div class="row">
                                 <div class="col-md-12 col-lg-7">
                                     <div class="post-headline">
-                                        <div class="headline-img">
+                                        <!-- Headline normal -->
+                                        <!-- <div class="headline-img">
                                             <img src="{{ url('/'.$headline->featured) }}" alt="headline-pic" />
                                         </div>
                                         <div class="headline-text">
@@ -223,7 +224,7 @@
                                                 <span class="readmore">
                                                     <a href="{{ url('/posts/' . $headline->id) }}">อ่านเพิ่มเติม</a>
                                                 </span>
-                                            </p>
+                                            </p> -->
                                             <!-- {headline?.tags && (
                                                 <div class="mb-2">
                                                     {headline?.tags.split(',').map((tag, index) => (
@@ -231,7 +232,84 @@
                                                     ))}
                                                 </div>
                                             )} -->
+                                        <!-- </div> -->
+
+                                        <!-- Headline with slider -->
+                                        <div class="swiper-wrapper">
+                                            <!-- 1 -->
+                                            <div class="swiper-slide">
+                                                <div class="slide-wrapper">
+                                                    <img
+                                                        class="object-fill w-full [@media(min-width:1280px)]:h-[calc(100%-2%)]"
+                                                        src="{{ asset('/img/queen-sirikit/aQND3zGBhczgWVW3bJPld8FRbNUju0Am.jpg') }}"
+                                                        alt="image"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- 2 -->
+                                            <div class="swiper-slide">
+                                                <div class="slide-wrapper">
+                                                    <img
+                                                        class="object-cover w-full h-auto"
+                                                        src="{{ asset('/img/queen-sirikit/lPcfrI4uyG7uuJKVqwB6lgXEWO8M3DXJ.jpg') }}"
+                                                        alt="image"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- 3 -->
+                                            <div class="swiper-slide">
+                                                <div class="slide-wrapper">
+                                                    <img
+                                                        class="object-cover w-full h-auto"
+                                                        src="{{ asset('/img/queen-sirikit/F4DvPIHxSrF0dcyBmcBdLT1N69ehEp4K.jpg') }}"
+                                                        alt="image"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- 4 -->
+                                            <div class="swiper-slide">
+                                                <div class="slide-wrapper">
+                                                    <img
+                                                        class="object-cover w-full h-auto"
+                                                        src="{{ asset('/img/queen-sirikit/V6HsuaPqGsK8b87eenTtUIWh2aDWiRSR.jpg') }}"
+                                                        alt="image"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- 5 -->
+                                            <div class="swiper-slide">
+                                                <div class="slide-wrapper">
+                                                    <img
+                                                        class="object-cover w-full h-auto"
+                                                        src="{{ asset('/img/queen-sirikit/R5mQOPrrKABJMx0UXC5mB7rGlGEMZmFC.jpg') }}"
+                                                        alt="image"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- 6 -->
+                                            <div class="swiper-slide relative">
+                                                <div class="slide-wrapper">
+                                                    <img
+                                                        class="object-cover w-full h-auto"
+                                                        src="{{ asset('/img/queen-sirikit/BnOCmPFxPJ9y8Se48mY3l3heRf4F96yd.jpg') }}"
+                                                        alt="image"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <!-- 7 -->
+                                            <div class="swiper-slide relative">
+                                                <div class="slide-wrapper">
+                                                    <img
+                                                        class="object-cover w-full h-auto"
+                                                        src="{{ asset('/img/queen-sirikit/EHk2e4KIRRkKotcQl58xhJHzok9k9s7u.jpg') }}"
+                                                        alt="image"
+                                                    />
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-pagination"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-5">
@@ -587,7 +665,7 @@
     </section>
 
     <!-- Weekly calendar -->
-    <section>
+    <!-- <section>
         <div class="container p-4">
             <h1 class="title">
                 <i class="fas fa-calendar"></i>
@@ -601,17 +679,17 @@
                     src="https://app.mhc9dmh.com/calendar"
                     title="กิจกรรมประจำสัปดาห์"
                     style="position: absolute; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;"
-                ></iframe>
+                ></iframe> -->
 
                 <!-- Floating button -->
-                <div class="absolute top-2 left-2 flex justify-center items-center z-10 w-[50px] h-[50px] bg-indigo-600 hover:bg-indigo-800 backdrop-blur-lg rounded-full border-2 text-white shadow-lg p-3">
+                <!-- <div class="absolute top-2 left-2 flex justify-center items-center z-10 w-[50px] h-[50px] bg-indigo-600 hover:bg-indigo-800 backdrop-blur-lg rounded-full border-2 text-white shadow-lg p-3">
                     <a href="https://app.mhc9dmh.com/calendar" target="_blank" class="transition-all duration-300 hover:scale-110">
                         <i class="fas fa-expand text-xl mt-1"></i>
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Partners Logo --> 
     <section class="slide-logos">
@@ -749,6 +827,24 @@
 <script>
     $(document).ready(async function () {
         var swiperHero = new Swiper("#hero", {
+            modules: [Navigation, Pagination],
+            autoplay: {
+                delay: 4000,
+            },
+            cssMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+            loop: true,
+        });
+
+        var swiperHero = new Swiper("#headline", {
             modules: [Navigation, Pagination],
             autoplay: {
                 delay: 4000,

@@ -33,8 +33,8 @@ class HomeController extends Controller
         $posts = Post::with('category','author')
                     ->where('category_id', 2)
                     ->orderBy('publish_up', 'DESC')
-                    ->limit(4)
-                    ->offset(1)
+                    ->limit(5)
+                    // ->offset(1) // to skip first record if headline is used remove commented
                     ->get();
 
         $videos = Post::with('category','author')
