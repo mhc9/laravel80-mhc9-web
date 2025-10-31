@@ -224,92 +224,94 @@
                                                 <span class="readmore">
                                                     <a href="{{ url('/posts/' . $headline->id) }}">อ่านเพิ่มเติม</a>
                                                 </span>
-                                            </p> -->
-                                            <!-- {headline?.tags && (
+                                            </p>
+                                            {headline?.tags && (
                                                 <div class="mb-2">
                                                     {headline?.tags.split(',').map((tag, index) => (
                                                         <div class="badge rounded-pill bg-secondary me-1" key={index}>{tag}</div>
                                                     ))}
                                                 </div>
-                                            )} -->
-                                        <!-- </div> -->
+                                            )}
+                                        </div> -->
 
-                                        <!-- Headline with slider -->
-                                        <div class="swiper-wrapper">
-                                            <!-- 1 -->
-                                            <div class="swiper-slide">
-                                                <div class="slide-wrapper">
-                                                    <img
-                                                        class="object-fill w-full [@media(min-width:1280px)]:h-[calc(100%-2%)]"
-                                                        src="{{ asset('/img/queen-sirikit/aQND3zGBhczgWVW3bJPld8FRbNUju0Am.jpg') }}"
-                                                        alt="image"
-                                                    />
+                                        <div class="swiper" id="headline">
+                                            <!-- Headline with slider -->
+                                            <div class="swiper-wrapper">
+                                                <!-- 1 -->
+                                                <div class="swiper-slide">
+                                                    <div class="slide-wrapper">
+                                                        <img
+                                                            class="object-fill w-full [@media(min-width:1280px)]:h-[calc(100%-2%)]"
+                                                            src="{{ asset('/img/queen-sirikit/aQND3zGBhczgWVW3bJPld8FRbNUju0Am.jpg') }}"
+                                                            alt="image"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <!-- 2 -->
+                                                <div class="swiper-slide">
+                                                    <div class="slide-wrapper">
+                                                        <img
+                                                            class="object-cover w-full h-auto"
+                                                            src="{{ asset('/img/queen-sirikit/lPcfrI4uyG7uuJKVqwB6lgXEWO8M3DXJ.jpg') }}"
+                                                            alt="image"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <!-- 3 -->
+                                                <div class="swiper-slide">
+                                                    <div class="slide-wrapper">
+                                                        <img
+                                                            class="object-cover w-full h-auto"
+                                                            src="{{ asset('/img/queen-sirikit/F4DvPIHxSrF0dcyBmcBdLT1N69ehEp4K.jpg') }}"
+                                                            alt="image"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <!-- 4 -->
+                                                <div class="swiper-slide">
+                                                    <div class="slide-wrapper">
+                                                        <img
+                                                            class="object-cover w-full h-auto"
+                                                            src="{{ asset('/img/queen-sirikit/V6HsuaPqGsK8b87eenTtUIWh2aDWiRSR.jpg') }}"
+                                                            alt="image"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <!-- 5 -->
+                                                <div class="swiper-slide">
+                                                    <div class="slide-wrapper">
+                                                        <img
+                                                            class="object-cover w-full h-auto"
+                                                            src="{{ asset('/img/queen-sirikit/R5mQOPrrKABJMx0UXC5mB7rGlGEMZmFC.jpg') }}"
+                                                            alt="image"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <!-- 6 -->
+                                                <div class="swiper-slide relative">
+                                                    <div class="slide-wrapper">
+                                                        <img
+                                                            class="object-cover w-full h-auto"
+                                                            src="{{ asset('/img/queen-sirikit/BnOCmPFxPJ9y8Se48mY3l3heRf4F96yd.jpg') }}"
+                                                            alt="image"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <!-- 7 -->
+                                                <div class="swiper-slide relative">
+                                                    <div class="slide-wrapper">
+                                                        <img
+                                                            class="object-cover w-full h-auto"
+                                                            src="{{ asset('/img/queen-sirikit/EHk2e4KIRRkKotcQl58xhJHzok9k9s7u.jpg') }}"
+                                                            alt="image"
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <!-- 2 -->
-                                            <div class="swiper-slide">
-                                                <div class="slide-wrapper">
-                                                    <img
-                                                        class="object-cover w-full h-auto"
-                                                        src="{{ asset('/img/queen-sirikit/lPcfrI4uyG7uuJKVqwB6lgXEWO8M3DXJ.jpg') }}"
-                                                        alt="image"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- 3 -->
-                                            <div class="swiper-slide">
-                                                <div class="slide-wrapper">
-                                                    <img
-                                                        class="object-cover w-full h-auto"
-                                                        src="{{ asset('/img/queen-sirikit/F4DvPIHxSrF0dcyBmcBdLT1N69ehEp4K.jpg') }}"
-                                                        alt="image"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- 4 -->
-                                            <div class="swiper-slide">
-                                                <div class="slide-wrapper">
-                                                    <img
-                                                        class="object-cover w-full h-auto"
-                                                        src="{{ asset('/img/queen-sirikit/V6HsuaPqGsK8b87eenTtUIWh2aDWiRSR.jpg') }}"
-                                                        alt="image"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- 5 -->
-                                            <div class="swiper-slide">
-                                                <div class="slide-wrapper">
-                                                    <img
-                                                        class="object-cover w-full h-auto"
-                                                        src="{{ asset('/img/queen-sirikit/R5mQOPrrKABJMx0UXC5mB7rGlGEMZmFC.jpg') }}"
-                                                        alt="image"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- 6 -->
-                                            <div class="swiper-slide relative">
-                                                <div class="slide-wrapper">
-                                                    <img
-                                                        class="object-cover w-full h-auto"
-                                                        src="{{ asset('/img/queen-sirikit/BnOCmPFxPJ9y8Se48mY3l3heRf4F96yd.jpg') }}"
-                                                        alt="image"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- 7 -->
-                                            <div class="swiper-slide relative">
-                                                <div class="slide-wrapper">
-                                                    <img
-                                                        class="object-cover w-full h-auto"
-                                                        src="{{ asset('/img/queen-sirikit/EHk2e4KIRRkKotcQl58xhJHzok9k9s7u.jpg') }}"
-                                                        alt="image"
-                                                    />
-                                                </div>
-                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-pagination"></div>
                                         </div>
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-pagination"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-5">
