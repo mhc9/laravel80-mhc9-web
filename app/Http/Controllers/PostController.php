@@ -37,7 +37,7 @@ class PostController extends Controller
 
     public function getPosts(Request $req)
     {
-        $limit = !empty($req->get('limit')) ? $req->get('limit') : 5;
+        $limit = !empty($req->get('limit')) ? $req->get('limit') : 8;
 
         $posts = Post::with('category','author')
                     ->where('category_id', 2)
