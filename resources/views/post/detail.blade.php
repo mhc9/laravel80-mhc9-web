@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="about container">
+<article class="container">
     <h1 class="title">{{$post->title}}</h1>
 
     <hr class="my-2" />
 
-    <div class="px-2 pb-4">
+    <div class="p-4">
         <!-- Page Header -->
         @include('components.page-header', [
             'author'    => $post->author->name,
@@ -115,7 +115,7 @@
         'comments'  => ['value' => $post->comments, 'show' => true],
         'shares'    => ['value' => $post->shares, 'show' => true],
     ])
-</section>
+</article>
 
 <script>
     $(document).ready(async function () {

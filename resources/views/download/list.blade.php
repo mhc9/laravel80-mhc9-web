@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">ดาวน์โหลดเอกสาร</h1>
 
     <hr class="my-2" />
@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-</section>
+</article>
 
 <script>
     let modal;

@@ -1,13 +1,13 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">แผนยุทธศาสตร์</h1>
 
     <hr class="my-2" />
 
     <div class="content-wrapper">
-        <div class="min-h-screen px-4 mb-4">
+        <div class="min-h-screen p-4">
             <!-- <div class="text-lg text-center font-bold mb-3">การดำเนินการเป็นองค์กรคุณธรรมต้นแบบ ประจำปีงบประมาณ พ.ศ. 2568 ของศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</div> -->
 
             <div>
@@ -32,5 +32,5 @@
             </div>
         </div>
     </div>
-</section>
+</article>
 @endsection

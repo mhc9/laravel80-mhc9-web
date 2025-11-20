@@ -1,13 +1,13 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">ศูนย์ราชการใสสะอาด</h1>
 
     <hr class="my-2" />
 
     <div class="content-wrapper">
-        <div class="min-h-screen px-4">
+        <div class="min-h-screen p-4">
             <a href="{{ url('/posts/64') }}">
                 <div class="content-bullet">
                     <h3>แนวทางจัดการข้อร้องเรียน</h3>
@@ -70,5 +70,5 @@
             </a>
         </div>
     </div>
-</section>
+</article>
 @endsection

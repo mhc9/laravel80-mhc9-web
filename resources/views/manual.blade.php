@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">มาตรฐานการให้บริการ</h1>
 
     <hr class="my-2" />
@@ -64,5 +64,5 @@
             </a>
         </div>
     </div>
-</section>
+</article>
 @endsection

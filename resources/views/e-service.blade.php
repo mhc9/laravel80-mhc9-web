@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">ระบบสารสนเทศ (E-Service)</h1>
 
     <hr class="my-2" />
@@ -11,7 +11,7 @@
             <div class="row service-list"></div>
         </div>
     </div>
-</section>
+</article>
 <script>
     $(document).ready(function () {
         eservices.forEach(service => {

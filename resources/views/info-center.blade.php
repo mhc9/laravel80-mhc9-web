@@ -1,13 +1,13 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">ศูนย์ข้อมูลข่าวสาร</h1>
 
     <hr class="my-2" />
 
     <div class="content-wrapper">
-        <div class="min-h-screen px-4 mb-4">
+        <div class="min-h-screen p-4">
             <div>
                 <h3>มาตรา 7</h3>
 
@@ -91,5 +91,5 @@
             </div>
         </div>
     </div>
-</section>
+</article>
 @endsection

@@ -1,14 +1,14 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="post__list-container container">
+<article class="container">
     <h1 class="title">
         ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>{{$title}}
     </h1>
 
     <hr class="my-2" />
 
-    <div class="post__list-wrapper px-4">
+    <div class="content-wrapper p-4">
         <div class="row">
             @foreach($posts as $post)
                 <div class="col-md-12 post__list-item" key={post.id}>
@@ -40,5 +40,5 @@
             {{ $posts->links() }}
         </div>
     </div>
-</section>
+</article>
 @endsection

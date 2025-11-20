@@ -254,7 +254,7 @@
                                                 <a href="{{ url('/onepages') }}" target="_self">MHC9 News</a>
                                             </div>
                                             <div class="submenu ">
-                                                <a href="{{ url('/calendar') }}" target="_self">ปฏิทินกิจกรรม</a>
+                                                <a href="https://app.mhc9dmh.com/calendar/" target="_self">ปฏิทินกิจกรรม</a>
                                             </div>
                                         </div>
                                     </div>
