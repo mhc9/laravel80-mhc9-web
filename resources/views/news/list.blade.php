@@ -2,15 +2,15 @@
 
 @section('content')
 <article class="container">
-    <div class="post__list-container">
-        <h1 class="title">
-            ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>{{$title}}
-        </h1>
+    <h1 class="title">
+        ข่าวประชาสัมพันธ์ <i class="fas fa-angle-right"></i>{{$title}}
+    </h1>
 
-        <hr class="my-2" />
+    <hr class="my-2" />
 
-        <div class="post__list-wrapper">
-            <div class="mb-4">
+    <div class="content-wrapper">
+        <div class="min-h-screen pt-2 pb-4">
+            <div class="post__list">
                 @if($cate == '3')
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
