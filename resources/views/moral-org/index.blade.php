@@ -55,13 +55,13 @@
             <div class="mt-4">
                 <h2 class="text-xl">3. การจัดทำแผนการดำเนินงานตามเป้าหมายที่กำหนดไว้ในข้อที่ 2</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/post/412') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">3.1 คำสั่งแต่งตั้งคณะทำงานจัดทำและขับเคลื่อนแผนปฏิบัติการส่งเสริมคุณธรรมของหน่วยงาน ประจำปีงบประมาณ พ.ศ. 2569</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/post/413') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">3.2 แผนปฏิบัติการส่งเสริมคุณธรรมของหน่วยงาน ประจำปีงบประมาณ พ.ศ. 2569</h4>
                         <span><i class="fas fa-angle-down"></i></span>
