@@ -15,19 +15,19 @@
             <div>
                 <h2 class="text-xl">1. ผู้บริหารองค์กรและบุคลากรในหน่วยงานไม่น้อยกว่าร้อยละ 80 ร่วมกันประกาศเจตนารมณ์เป็นลายลักษณ์อักษร ดังนี้</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/442') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.1 ประกาศเจตนารมณ์ร่วมกันในการขับเคลื่อนหน่วยงานให้เป็นองค์กรคุณธรรมต้นแบบ</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/443') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.2 ประกาศเจตนารมณ์ร่วมกันในการต่อต้านการทุจริตและไม่รับของขวัญและของกำนัลทุกชนิดจากการปฏิบัติหน้าที่ (No Gift Policy)</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/444') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.3 ประกาศเจตนารมณ์การป้องกันและแก้ไขปัญหาการล่วงละเมิด และการคุกคามทางเพศในการทำงาน</h4>
                         <span><i class="fas fa-angle-down"></i></span>
@@ -38,13 +38,13 @@
             <div class="mt-4">
                 <h2 class="text-xl">2. การกำหนดคุณธรรมเป้าหมายจาก “ปัญหาที่อยากแก้” และ “ความดีที่อยากทำ” และปฏิญญาคุณธรรม (Do & Don’t)</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/445') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">2.1 กำหนดปัญหาที่อยากแก้ ความดีที่อยากทำ ไม่น้อยกว่า 5 เรื่อง</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/'posts/445) }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">2.2 กำหนดปฏิญญาคุณธรรม (ขั้นต้น) (Do & Don’t) ไม่น้อยกว่า 3 เรื่อง</h4>
                         <span><i class="fas fa-angle-down"></i></span>
