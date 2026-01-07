@@ -44,7 +44,7 @@
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/'posts/445) }}">
+                <a href="{{ url('/'posts/445') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">2.2 กำหนดปฏิญญาคุณธรรม (ขั้นต้น) (Do & Don’t) ไม่น้อยกว่า 3 เรื่อง</h4>
                         <span><i class="fas fa-angle-down"></i></span>
