@@ -57,7 +57,7 @@
                                                 <a href="{{ url('/policies') }}" target="_self">นโยบายองค์กร</a>
                                             </div>
                                             <div class="submenu">
-                                                <a href="{{ url('/laws') }}" target="_self">กฎหมาย ระเบียบ ข้อบังคับ</a>
+                                                <a href="{{ url('/regulations') }}" target="_self">กฎหมาย/ระเบียบ/ข้อบังคับ</a>
                                             </div>
                                             <div class="submenu">
                                                 <a href="{{ url('/strategic-plans') }}" target="_self">แผนยุทธศาสตร์</a>

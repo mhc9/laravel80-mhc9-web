@@ -43,9 +43,14 @@ Route::get('/authority', function() {
     return view('authority');
 });
 
-// มาตรฐานการปฏิบัติงาน
-Route::get('/procedures', function() {
-    return view('procedure');
+// หน้าที่และอำนาจ
+Route::get('/authority', function() {
+    return view('authority');
+});
+
+// กฎหมาย/ระเบียบ
+Route::get('/regulations', function() {
+    return view('regulations');
 });
 
 // มาตรฐานการให้บริการ
