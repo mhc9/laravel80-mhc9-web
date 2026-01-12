@@ -20,6 +20,16 @@
     <!-- JS -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcjkK0rAAAAAFTr0YBGOIJEjASvwyQAXwEKlnvJ"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7573M1TWW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-S7573M1TWW');
+    </script>
 </head>
 <body>
     <div class="defaullt-layout">
