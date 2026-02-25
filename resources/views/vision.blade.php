@@ -11,7 +11,7 @@
             <div class="vision-wrapper">
                 <h2 class="font-bold text-3xl">วิสัยทัศน์</h2>
                 <blockquote class="vision-quote">
-                    <p>ศูนย์สุขภาพจิตที่ 9 เป็นองค์กรหลักด้านการส่งเสริมป้องกันปัญหาสุขภาพจิตและสารเสพติด ระดับเขตสุขภาพ เพื่อประชาชนสุขภาพจิตดี</p>
+                    <p>ศูนย์สุขภาพจิตที่ 9 เป็นองค์กรหลักด้านการส่งเสริมป้องกันปัญหาสุขภาพจิตและสารเสพติด ระดับเขตสุขภาพ เพื่อประชาชนสุขภาพจิตดี สังคมเป็นสุข</p>
                 </blockquote>
             </div>
 
@@ -30,15 +30,14 @@
             <div class="core__values-wrapper">
                 <h2 class="font-bold text-3xl">ค่านิยม</h2>
                 <blockquote class="core__values-quote">
-                    <p>
-                        มีหัวใจบริการ
-                        ทำงานเป็นทีม
-                        มุ่งเน้นงานคุณภาพ
-                        สร้างเครือข่ายเข้มแข็ง<br />
-                        ด้วยเทคโนโลยีที่ทันสมัย
-                        โปร่งใสตรวจสอบได้
-                    </p>
+                    <p>MHC 9 : รอบรู้สุขภาพจิต คิดสร้างสรรค์ ร่วมใจกันพัฒนาเครือข่าย ก้าวสู่ความเป็นเลิศ</p>
                 </blockquote>
+                <ul class="text-2xl">
+                    <li><span class="font-semibold">M (Mindfulness)</span> : มีสติ รอบรู้สุขภาพจิต</li>
+                    <li><span class="font-semibold">H (Harmony)</span> : สามัคคี ร่วมใจ เครือข่ายเข้มแข็ง</li>
+                    <li><span class="font-semibold">C (Creative Thinking)</span> :  คิดสร้างสรรค์ พัฒนาต่อเนื่อง</li>
+                    <li><span class="font-semibold">9 (Nine ; Next step)</span> : ก้าวสู่ความเป็นเลิศ</li>
+                </ul>
             </div>
 
             <div class="duty-wrapper px-10 pt-4 flex flex-col justify-center items-center gap-4">
@@ -46,12 +45,12 @@
 
                 <div class="w-full pb-4">
                     <object
-                        data="https://mhc9dmh.com/newweb/public/uploads/2025/01/0113202504550667849caa0cd8e.pdf"
+                        data="https://mhc9dmh.com/newweb/public/uploads/2026/02/02232026070144699bfb58c357c.pdf"
                         type="application/pdf"
                         width="100%"
                         height="720px"
                     >
-                        <p>Unable to display PDF file.<a href="https://mhc9dmh.com/newweb/public/uploads/2025/01/0113202504550667849caa0cd8e.pdf" target="_blank" class="ml-2 underline">Download</a> instead.</p>
+                        <p>Unable to display PDF file.<a href="https://mhc9dmh.com/newweb/public/uploads/2026/02/02232026070144699bfb58c357c.pdf" target="_blank" class="ml-2 underline">Download</a> instead.</p>
                     </object>
                 </div>
             </div>

@@ -11,8 +11,8 @@
     <div class="content-wrapper p-4">
         <div class="min-h-screen">
             <div class="flex flex-col justify-center items-center mb-2">
-                <h3 class="text-center">รายงานสถิติเรื่องร้องเรียนการทุจริตหรือประพฤติมิชอบของเจ้าหน้าที่<br />ศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</h3>
-                <h5>(ประจำปีงบประมาณ 2568 (ข้อมูลตั้งแต่ 1 ตุลาคม 2567- 28 กุมภาพันธ์ 2568)</h5>
+                <h3 class="text-center">รายงานประจำปีงบประมาณ 2568<br />ศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</h3>
+                <h5>ประจำปีงบประมาณ 2568 (ข้อมูลตั้งแต่ 1 ตุลาคม 2567 - 30 กันยายน 2568)</h5>
             </div>
 
             <table class="table table-bordered table-striped table-hover text-lg">
@@ -31,56 +31,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center">ตุลาคม 2567</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">พฤศจิกายน 2567</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">ธันวาคม 2567</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">มกราคม 2568</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">&nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">กุมภาพันธ์ 2568</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">-</td>
-                        <td class="text-center">&nbsp;</td>
-                    </tr>
-                    <tr>
+                    @foreach ($months as $month)
+                        <tr>
+                            <td class="text-center">{{ $month }}</td>
+                            <td class="text-center">ไม่มี</td>
+                            <td class="text-center">ไม่มี</td>
+                            <td class="text-center">ไม่มี</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">-</td>
+                            <td class="text-center">&nbsp;</td>
+                        </tr>
+                    @endforeach
+                    <tr class="font-semibold">
                         <td class="text-center">รวม</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
+                        <td class="text-center">ไม่มี</td>
+                        <td class="text-center">ไม่มี</td>
+                        <td class="text-center">ไม่มี</td>
                         <td class="text-center">-</td>
                         <td class="text-center">-</td>
                         <td class="text-center">&nbsp;</td>

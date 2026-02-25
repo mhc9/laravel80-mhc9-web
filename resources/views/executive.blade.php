@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="row mhc9__vice-wrapper">
-                <div class="col-md-6 level4">
+                <div class="col-md-4 level4">
                     <div class="flex flex-col justify-center items-center">
                         @include('components.avatar', [
                             'size'      => "120px",
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 level4">
+                <div class="col-md-4 level4">
                     <div class="flex flex-col justify-center items-center">
                         @include('components.avatar', [
                             'size'      => "120px",
@@ -101,7 +101,21 @@
                         <div class="mt-2">
                             <h3>นางสาววรวรรณ หนึ่งด่านจาก</h3>
                             <h3 class="my-[2px]">นักวิชาการสาธารณสุขชำนาญการพิเศษ</h3>
-                            <h4>รักษาการในตำแหน่งหัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h4>
+                            <h4>หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h4>
+                            <h5>โทรศัพท์ 08 1266 6053</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 level4">
+                    <div class="flex flex-col justify-center items-center">
+                        @include('components.avatar', [
+                            'size'      => "120px",
+                            'imageUrl'  => "https://www.mhc9dmh.com/data/photo/9Img.jpg"
+                        ])
+                        <div class="mt-2">
+                            <h3>นางสาววรวรรณ หนึ่งด่านจาก</h3>
+                            <h3 class="my-[2px]">นักวิชาการสาธารณสุขชำนาญการพิเศษ</h3>
+                            <h4>หัวหน้ากลุ่มงานบริการสุขภาพจิต</h4>
                             <h5>โทรศัพท์ 08 1266 6053</h5>
                         </div>
                     </div>
