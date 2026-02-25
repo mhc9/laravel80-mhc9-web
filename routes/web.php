@@ -53,6 +53,11 @@ Route::get('/regulations', function() {
     return view('regulations');
 });
 
+// มาตรฐานการปฏิบัติงาน
+Route::get('/procedures', function() {
+    return view('procedure');
+});
+
 // มาตรฐานการให้บริการ
 Route::get('/manuals', function() {
     return view('manual');

@@ -10,7 +10,7 @@
 
     <div class="content-wrapper p-4">
         <div class="min-h-screen">
-            <div class="flex flex-col justify-center items-center mb-2">
+            <div class="flex flex-col justify-center items-center gap-2 mb-2">
                 <h3 class="text-center">รายงานสถิติเรื่องข้อมูลการให้บริการผ่านช่องทางออนไลน์<br />ศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</h3>
                 <h5>ประจำปีงบประมาณ 2569 (ข้อมูลตั้งแต่ 1 ตุลาคม 2568- 28 กุมภาพันธ์ 2569)</h5>
             </div>
