@@ -8,6 +8,12 @@
 
     <div class="content-wrapper">
         <div class="min-h-screen p-4">
+            <a href="./posts/478">
+                <div class="content-bullet">
+                    <h3>แนวทางการให้บริการศูนย์ให้การปรึกษาสุขภาพจิต</h3>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+            </a>
             <a href="./posts/76">
                 <div class="content-bullet">
                     <h3>กระบวนงานการรับมือภัยพิบัติในพื้นที่ (MCATT)</h3>
