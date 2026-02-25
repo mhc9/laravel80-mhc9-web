@@ -10,8 +10,8 @@
 
     <div class="content-wrapper p-4">
         <div class="min-h-screen">
-            <div class="flex flex-col justify-center items-center mb-2">
-                <h3 class="text-center">รายงานสถิติเรื่องข้อมูลการให้บริการผ่านช่องทางออนไลน์<br />ศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</h3>
+            <div class="flex flex-col justify-center items-center gap-3 mb-2">
+                <h3 class="text-center">รายงานสถิติเรื่องข้อมูลการให้บริการจุดรับบริการ<br />ศูนย์สุขภาพจิตที่ 9 กรมสุขภาพจิต</h3>
                 <h5>ประจำปีงบประมาณ 2569 (ข้อมูลตั้งแต่ 1 ตุลาคม 2568- 28 กุมภาพันธ์ 2569)</h5>
             </div>
 
@@ -23,45 +23,45 @@
                         <th class="text-center w-[20%]" rowspan="2">หมายเหตุ</th>
                     </tr>
                     <tr>
-                        <th class="text-center w-[20%]">ตอบรับเข้าร่วมประชุม</th>
-                        <th class="text-center w-[20%]">Data Catalog MHC 9</th>
+                        <th class="text-center w-[20%]">งานให้การปรึกษาสุขภาพจิต</th>
+                        <th class="text-center w-[20%]">งานพัฒนาเครือข่ายสุขภาพจิต</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="text-center">ตุลาคม 2567</td>
+                        <td class="text-center">1</td>
                         <td class="text-center">0</td>
-                        <td class="text-center"></td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">พฤศจิกายน 2567</td>
-                        <td class="text-center">64</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">2</td>
+                        <td class="text-center">90</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">ธันวาคม 2567</td>
+                        <td class="text-center">1</td>
                         <td class="text-center">40</td>
-                        <td class="text-center"></td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">มกราคม 2568</td>
-                        <td class="text-center">160</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">3</td>
+                        <td class="text-center">188</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">กุมภาพันธ์ 2568</td>
-                        <td class="text-center">4</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">117</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">รวม</td>
-                        <td class="text-center">369</td>
-                        <td class="text-center">4,962</td>
+                        <td class="text-center">8</td>
+                        <td class="text-center">435</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                 </tbody>

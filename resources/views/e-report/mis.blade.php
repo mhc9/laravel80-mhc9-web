@@ -12,7 +12,13 @@
         <div class="min-h-screen px-4">
             <a href="{{ url('/e-reports/mis/project') }}">
                 <div class="content-bullet">
-                    <h4 class="text-[16px]">ข้อมูลการให้บริการจัดโครงการ</h4>
+                    <h4 class="text-[16px]">ข้อมูลการให้บริการผ่านช่องทางออนไลน์</h4>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+            </a>
+            <a href="{{ url('/e-reports/mis/counselling') }}">
+                <div class="content-bullet">
+                    <h4 class="text-[16px]">ข้อมูลการให้บริการจุดรับบริการ</h4>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>

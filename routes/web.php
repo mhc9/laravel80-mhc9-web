@@ -158,6 +158,10 @@ Route::prefix('e-reports')->group(function() {
         return view('e-report.project');
     });
 
+    Route::get('/mis/counselling', function() {
+        return view('e-report.counselling');
+    });
+
     Route::get('/mis/corruption', function() {
         return view('e-report.corruption', [
             'months' => ['ตุลาคม 2567','พฤศจิกายน 2567','ธันวาคม 2567','มกราคม 2568','กุมภาพันธ์ 2568','มีนาคม 2568','เมษายน 2568','พฤษภาคม 2568','มิถุนายน 2568','กรกฎาคม 2568','สิงหาคม 2568','กันยายน 2568'],
