@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('content')
-<article class="about container">
+<article class="container">
     <h1 class="title">ประวัติความเป็นมา</h1>
 
     <hr class="my-2" />
 
-    <div class="about-wrapper">
+    <div class="content-wrapper">
         <div class="row">
             <div class="col-md-12">
                 <div class="paragraph flex max-md:flex-col justify-center items-start gap-8 max-md:gap-4 px-8 max-md:px-2">
