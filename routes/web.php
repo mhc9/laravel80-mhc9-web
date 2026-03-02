@@ -38,6 +38,11 @@ Route::get('/structure', function() {
     return view('structure');
 });
 
+// โครงสร้างการแบ่งส่วนราชาการ
+Route::get('/organization', function() {
+    return view('organization');
+});
+
 // หน้าที่และอำนาจ
 Route::get('/authority', function() {
     return view('authority');

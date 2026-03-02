@@ -8,6 +8,18 @@
 
     <div class="content-wrapper">
         <div class="min-h-screen p-4">
+            <a href="./posts/202">
+                <div class="content-bullet">
+                    <h3>คู่มือการใช้งานโปรแกรมจัดซื้อจัดจ้างและโปรแกรมยืมเงินราชการ</h3>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+            </a>
+            <a href="./posts/67">
+                <div class="content-bullet">
+                    <h3>คู่มือการใช้งานระบบเครือข่ายไร้สาย</h3>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+            </a>
             <a href="./posts/62">
                 <div class="content-bullet">
                     <h3>แนวทางการบริหารผลการปฏิบัติงาน</h3>
@@ -56,21 +68,9 @@
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
-            <a href="./posts/67">
-                <div class="content-bullet">
-                    <h3>คู่มือการใช้งานระบบเครือข่ายไร้สาย</h3>
-                    <span><i class="fas fa-angle-down"></i></span>
-                </div>
-            </a>
             <a href="./posts/70">
                 <div class="content-bullet">
                     <h3>คู่มือการบำรุงรักษาเครื่องคอมพิวเตอร์</h3>
-                    <span><i class="fas fa-angle-down"></i></span>
-                </div>
-            </a>
-            <a href="./posts/202">
-                <div class="content-bullet">
-                    <h3>คู่มือการใช้งานโปรแกรมจัดซื้อจัดจ้างและโปรแกรมยืมเงินราชการ</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
