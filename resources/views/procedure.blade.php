@@ -8,6 +8,12 @@
 
     <div class="content-wrapper">
         <div class="min-h-screen p-4">
+            <a href="./posts/65">
+                <div class="content-bullet">
+                    <h3>ขั้นตอนการยืมเงินราชการ</h3>
+                    <span><i class="fas fa-angle-down"></i></span>
+                </div>
+            </a>
             <a href="./posts/202">
                 <div class="content-bullet">
                     <h3>คู่มือการใช้งานโปรแกรมจัดซื้อจัดจ้างและโปรแกรมยืมเงินราชการ</h3>
@@ -47,12 +53,6 @@
             <a href="./posts/66">
                 <div class="content-bullet">
                     <h3>ขั้นตอนการจัดซื้อวัสดุ</h3>
-                    <span><i class="fas fa-angle-down"></i></span>
-                </div>
-            </a>
-            <a href="./posts/65">
-                <div class="content-bullet">
-                    <h3>ขั้นตอนการยืมเงินราชการ</h3>
                     <span><i class="fas fa-angle-down"></i></span>
                 </div>
             </a>
