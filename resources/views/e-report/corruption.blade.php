@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">
         E-Report <i class="fas fa-angle-right"></i>ข้อมูลเชิงสถิติ <i class="fas fa-angle-right"></i>ข้อมูลเชิงสถิติเรื่องร้องเรียนการทุจริตประจำปี
     </h1>
@@ -61,5 +61,5 @@
             </div>
         </div>
     </div>
-</section>
+</article>
 @endsection

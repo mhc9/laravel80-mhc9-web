@@ -1,9 +1,9 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="content-container container">
+<article class="container">
     <h1 class="title">
-        E-Report <i class="fas fa-angle-right"></i>ข้อมูลเชิงสถิติ <i class="fas fa-angle-right"></i>ข้อมูลการให้บริการจัดโครงการ
+        E-Report <i class="fas fa-angle-right"></i>ข้อมูลเชิงสถิติ <i class="fas fa-angle-right"></i>ข้อมูลการให้บริการผ่านช่องทางออนไลน์
     </h1>
 
     <hr class="my-2" />
@@ -24,49 +24,52 @@
                     </tr>
                     <tr>
                         <th class="text-center w-[20%]">ตอบรับเข้าร่วมประชุม</th>
-                        <th class="text-center w-[20%]">Data Catalog MHC 9</th>
+                        <th class="text-center w-[20%]">
+                            Data Catalog MHC 9 <br />
+                            <span class="text-sm font-thin">(เข้าชม และ ดาวน์โหลด)</span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="text-center">ตุลาคม 2567</td>
                         <td class="text-center">0</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">80</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">พฤศจิกายน 2567</td>
                         <td class="text-center">64</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">14</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">ธันวาคม 2567</td>
                         <td class="text-center">40</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">44</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">มกราคม 2568</td>
                         <td class="text-center">160</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">40</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">กุมภาพันธ์ 2568</td>
                         <td class="text-center">4</td>
-                        <td class="text-center"></td>
+                        <td class="text-center">38</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                     <tr>
                         <td class="text-center">รวม</td>
                         <td class="text-center">369</td>
-                        <td class="text-center">4,962</td>
+                        <td class="text-center">216</td>
                         <td class="text-center">&nbsp;</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-</section>
+</article>
 @endsection
