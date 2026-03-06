@@ -9,7 +9,10 @@
     <div class="content-wrapper">
         <div class="min-h-screen p-4">
 
-            <img src="{{ url(asset('/img/structure69.png')) }}" />
+            <div class="relative border">
+                <div><img src="{{ url(asset('/img/structure69.png')) }}" /></div>
+                <div><img src="{{ url(asset('/img/structure69-02.png')) }}" /></div>
+            </div>
 
         </div>
     </div>
