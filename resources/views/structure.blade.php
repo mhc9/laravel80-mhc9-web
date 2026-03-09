@@ -9,9 +9,8 @@
     <div class="content-wrapper">
         <div class="min-h-screen p-4">
 
-            <div class="relative border">
+            <div class="relative flex items-center justify-center">
                 <div><img src="{{ url(asset('/img/structure69.png')) }}" /></div>
-                <div><img src="{{ url(asset('/img/structure69-02.png')) }}" /></div>
             </div>
 
         </div>
