@@ -78,13 +78,13 @@
             <div class="mt-4">
                 <h2 class="text-xl">4. องค์กรมีผลสำเร็จของการดำเนินกิจกรรมตามแผนปฏิบัติการฯ (ไม่น้อยกว่าร้อยละ 70)</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/493') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">4.1 รายงานผลการดำเนินการตามแผนปฏิบัติการส่งเสริมคุณธรรมของหน่วยงาน รอบ 6 เดือน</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/494') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">4.2 รายงานผลสำเร็จของการดำเนินกิจกรรมตามแผนปฏิบัติการฯ (ไม่น้อยกว่าร้อยละ 70)</h4>
                         <span><i class="fas fa-angle-down"></i></span>
