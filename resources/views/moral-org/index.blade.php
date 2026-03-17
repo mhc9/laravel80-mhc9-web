@@ -15,13 +15,13 @@
             <div>
                 <h2 class="text-xl">1. ผู้บริหารองค์กรและบุคลากรในหน่วยงานไม่น้อยกว่าร้อยละ 80 ร่วมกันประกาศเจตนารมณ์เป็นลายลักษณ์อักษร ดังนี้</h2>
 
-                <a href="{{ url('/posts/442') }}">
+                <a href="{{ url('/posts/495') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.1 ประกาศเจตนารมณ์ร่วมกันในการขับเคลื่อนหน่วยงานให้เป็นองค์กรคุณธรรมต้นแบบ</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/posts/443') }}">
+                <a href="{{ url('/posts/442') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">1.2 ประกาศเจตนารมณ์ร่วมกันในการต่อต้านการทุจริตและไม่รับของขวัญและของกำนัลทุกชนิดจากการปฏิบัติหน้าที่ (No Gift Policy)</h4>
                         <span><i class="fas fa-angle-down"></i></span>
