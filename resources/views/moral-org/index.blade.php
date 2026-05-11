@@ -176,7 +176,7 @@
                             <h4 class="text-[16px]">8.1 เอกสารองค์ความรู้หรือผลสำเร็จการดำเนินกิจกรรมตามแผนปฏิบัติการส่งเสริมคุณธรรมของหน่วยงาน</h4>
                             <ul class="m-0">
                                 <li class="m-0"><a href="{{ url('/') }}">คลิปวิดีโอ</a></li>
-                                <li class="m-0"><a href="{{ url('/') }}">Powerpoint</a></li>
+                                <li class="m-0"><a href="{{ url('/posts/522') }}">Powerpoint</a></li>
                             </ul>
                         </div>
                         <span><i class="fas fa-angle-down"></i></span>
