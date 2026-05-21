@@ -31,9 +31,9 @@
     },
     {
         "id": 6,
-        "name": "ระบบ B&P DMH",
+        "name": "ระบบจัดการงบประมาณฯ (BPM-DMH)",
         "icon": "fas fa-cogs",
-        "link": "https://bp.dmh.go.th/DMH_PROJECT"
+        "link": "https://bpm.dmh.go.th/Account/Login"
     },
     {
         "id": 7,
