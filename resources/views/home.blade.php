@@ -372,7 +372,7 @@
     <!-- Videos and Service -->
     <section style="background: #F2F2F2">
         <div class="container">
-            <div class="row">
+            <div class="row max-sm:flex-col-reverse">
                 <!-- Videos -->
                 <div class="col-md-8 col-lg-9">
                     <div class="video-box">
@@ -407,16 +407,16 @@
                 
                 <!-- Services -->
                 <div class="col-md-4 col-lg-3" style="background: #ffffff">
-                <div class="officer-box">
-                    <h1 class="title">
-                        <i class="fas fa-stethoscope"></i>
-                        สำหรับเจ้าหน้าที่
-                    </h1>
+                    <div class="officer-box">
+                        <h1 class="title">
+                            <i class="fas fa-stethoscope"></i>
+                            สำหรับเจ้าหน้าที่
+                        </h1>
 
-                    <hr class="my-2" />
+                        <hr class="my-2" />
 
-                    <div class="officer-items"></div>
-                </div>
+                        <div class="officer-items"></div>
+                    </div>
                 </div>
             </div>
         </div>
