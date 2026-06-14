@@ -792,7 +792,7 @@
     </section>
 
     <!-- Modal go to old or new site -->
-    <div id="goToSite" class="modal" tabindex="-1">
+    <!-- <div id="goToSite" class="modal" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -808,11 +808,11 @@
             </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End modal go to old or new site -->
 
     <!-- Modal mourning -->
-    <div id="mourning" class="modal" tabindex="-1">
+    <!-- <div id="mourning1" class="modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
             <div class="modal-header">
@@ -823,9 +823,27 @@
                 <img src="{{ asset('/img/jUZ1hVPqtPQK3mSHeXdmPuMtVW5N7VdM.png') }}" alt="mourning-pic" />
             </div>
         </div>
+    </div> -->
+
+    <div id="mourning2" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ config('app.name', 'Laravel') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="padding: 5px;">
+                <img
+                    src="{{ asset('/img/721368833_1475294621302151_3818888131286289469_n.jpg') }}"
+                    alt="mourning2-pic"
+                    class="object-cover h-[50%]"
+                />
+            </div>
+        </div>
     </div>
     <!-- End modal mourning -->
 </div>
+
 <script>
     $(document).ready(async function () {
         var swiperHero = new Swiper("#hero", {
@@ -949,7 +967,8 @@
         //$('#goToSite').modal('show');
 
         /** show modal mourning */
-        $('#mourning').modal('show');
+        // $('#mourning1').modal('show');
+        $('#mourning2').modal('show');
     });
 </script>
 @endsection
