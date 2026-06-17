@@ -18,14 +18,20 @@
                             />
                         </div>
                     </div>
-                    <!-- Director-General's Policy -->
+                    <!-- 25th International Mental Health Conference -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-auto"
-                                src="{{ asset('/img/1759131040082.jpg') }}"
+                                src="{{ asset('/img/S__132325432.jpg') }}"
                                 alt="image"
                             />
+                        </div>
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                            <a href="https://srithanya.go.th/24aimhc" target="_blank" class="btn btn-danger">
+                                ลงทะเบียนเข้าร่วมประชุม
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
                         </div>
                     </div>
                     <!-- นโยบายอธิบดี -->
