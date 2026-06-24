@@ -67,7 +67,7 @@
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/524') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">3.3 การดำเนินกิจกรรมการขับเคลื่อนคุณธรรม “ชีวิตดีวิถีพอเพียง”</h4>
                         <span><i class="fas fa-angle-down"></i></span>
@@ -95,13 +95,13 @@
             <div class="mt-4">
                 <h2 class="text-xl">5. กิจกรรมถอดบทเรียนจากการดำเนินงานองค์กรคุณธรรมต้นแบบของกรมสุขภาพจิต</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/525') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">5.1 การดำเนินการ “ปฏิญญาคุณธรรม (Do & Don’t)” หลังได้ทดลองปฏิบัติแล้วไม่น้อยกว่า 3 เดือน</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/526') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">5.2 กิจกรรมถอดบทเรียนการดำเนินงานเป็นองค์กรคุณธรรมต้นแบบ</h4>
                         <span><i class="fas fa-angle-down"></i></span>
@@ -118,7 +118,7 @@
             <div class="mt-4">
                 <h2 class="text-xl">6. กิจกรรมยกย่อง เชิดชู บุคลากร และกลุ่ม / กลุ่มงาน ที่ทำความดีจนเป็นแบบอย่างได้</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/527') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">6.1 กิจกรรมยกย่อง เชิดชู บุคลากร</h4>
                         <span><i class="fas fa-angle-down"></i></span>
