@@ -147,19 +147,19 @@
             <div class="mt-4">
                 <h2 class="text-xl">7. ผลสำเร็จของการดำเนินงานตามเป้าหมายของแผนการดำเนินงานที่กำหนดไว้ในข้อที่ 3 เพิ่มมากขึ้น</h2>
 
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/528') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">7.1 รายงานผลสำเร็จของการดำเนินกิจกรรมตามแผนปฏิบัติการฯ (ไม่น้อยกว่าร้อยละ 90)</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/529') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">7.2 ผู้บริหารดำเนินการประเมินกระบวนการดำเนินงานตามแผนและพฤติกรรมที่เปลี่ยนแปลง</h4>
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/530') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">7.3 รายงานผลการประเมินพฤติกรรมที่เปลี่ยนแปลงตามคุณธรรมเป้าหมาย 5 ประการ พอเพียง วินัย สุจริต จิตอาสา กตัญญู</h4>
                         <span><i class="fas fa-angle-down"></i></span>
