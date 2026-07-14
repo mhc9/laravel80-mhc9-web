@@ -182,7 +182,7 @@
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/532') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">8.2 ผลการประเมินองค์กรคุณธรรมต้นแบบของหน่วยงาน</h4>
                         <span><i class="fas fa-angle-down"></i></span>
@@ -206,7 +206,7 @@
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/533') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">9.2 รายงานผลการดำเนินการตามแผนปฏิบัติการส่งเสริมคุณธรรมของหน่วยงาน รอบ 12 เดือน</h4>
                         <span><i class="fas fa-angle-down"></i></span>
