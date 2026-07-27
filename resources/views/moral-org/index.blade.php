@@ -212,6 +212,12 @@
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
+                <a href="{{ url('/posts/534') }}">
+                    <div class="content-bullet">
+                        <h4 class="text-[16px]">9.3 การดำเนินการ กิจกรรมที่ 3 Moral Credit</h4>
+                        <span><i class="fas fa-angle-down"></i></span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
