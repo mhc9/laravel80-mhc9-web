@@ -124,7 +124,7 @@
                         <span><i class="fas fa-angle-down"></i></span>
                     </div>
                 </a>
-                <a href="{{ url('/') }}">
+                <a href="{{ url('/posts/535') }}">
                     <div class="content-bullet">
                         <h4 class="text-[16px]">6.2 กิจกรรมยกย่อง เชิดชู หน่วยงานภายในองค์กร</h4>
                         <span><i class="fas fa-angle-down"></i></span>
