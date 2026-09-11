@@ -80,16 +80,22 @@
                             </a>
                         </div>
                     </div>
-                    <!-- DMH E-Learning -->
-                    <!-- <div class="swiper-slide">
+                    <!-- โครงการมายด์ -->
+                    <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-auto"
-                                src="{{ asset('/img/QedmTbSsLorfSsZydiTFVflvu5dty1kA3Qd7itev.png') }}"
+                                src="{{ asset('/img/download_cert.png') }}"
                                 alt="image"
                             />
                         </div>
-                    </div> -->
+                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                            <a href="{{ url('/posts/541') }}" target="_blank" class="btn btn-danger">
+                                ดูรายละเอียด
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
