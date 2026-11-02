@@ -43,8 +43,14 @@
     },
     {
         "id": 8,
-        "name": "ระบบจัดการทรัพยากร (ERP)",
-        "icon": "fas fa-sliders-h",
+        "name": "ระบบจัดการทรัพยากร (MHC9 ERP)",
+        "icon": "fas fa-chart-pie",
         "link": "https://app.mhc9dmh.com/erp"
+    },
+    {
+        "id": 9,
+        "name": "ระบบลงเวลาเข้างาน (MHC9 Time Attendance)",
+        "icon": "fas fa-history",
+        "link": "https://app.mhc9dmh.com/check-in"
     }
 ]

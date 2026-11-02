@@ -572,53 +572,25 @@
                         <hr class="my-2" />
 
                         <div class="row py-2">
+                            <!-- User fb embed code -->
+                            <div class="col-md-6 flex justify-center mt-2">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02SF4Qh6TwtWD4VWW3wxYQFzwtqtCLBSvbbhuP9in4oa8cwhbBANdp3oxTEuZY4t7Kl%26id%3D100064648815470&show_text=true&width=500" width="500" height="754" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="col-md-6 flex justify-center mt-2">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02Dy7sd8zFgi6jWY4qTKjXwp8s4kHN8aZTNd1Vb8NPeEYPUzcjpUMQG7mBc2sueoh3l%26id%3D100064648815470&show_text=true&width=500" width="500" height="815" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
+                            <div class="col-md-6 flex justify-center mt-2">
+                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0nkFSxQK8B4by7b5yNcgJ3ocq6iAtpfC28vtZopvgkXh1rchNuq4U2EjTaRNoF9Pel%26id%3D100064648815470&show_text=true&width=500" width="500" height="837" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
                             <div class="col-md-6 flex justify-center mt-2">
                                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02RzzWdUSxGNJBFcv4cCGTA2B4ZZWkWja7rGbhxNg2BTwWZyY8j2EqXiYmZ2EipDnol%26id%3D100064648815470&show_text=true&width=500" width="500" height="796" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                             </div>
-                            <div class="col-md-6 flex justify-center mt-2">
-                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0kkcjT4kdLBnkyrDukZ7xfwpoCv1hupzieFe5gzErH4VUHtngqPnyfMnMwRNRUVU7l%26id%3D100064648815470&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            </div>
-                            <div class="col-md-6 flex justify-center mt-2">
-                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02FempjcRbwywCfLp25z5zv2UmWNmUZrcEeDhtKaQ2vec81JPnuMATPSqBkPEQMLJ1l%26id%3D100064648815470&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            </div>
-                            <div class="col-md-6 flex justify-center mt-2">
-                                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid023598Db3KWWXowc469XpCS92nxxUKESZFFyoY6AiiF4zj7ee6jDrdvWtnwErhMSvml%26id%3D100064648815470&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                            </div>
 
+                            <!-- User fb post ID -->
                             <!-- <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
                                 <div
                                     class="fb-post" 
                                     data-href="https://www.facebook.com/20531316728/posts/1170459215119028/"
-                                    data-width="100%"></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                <div
-                                    class="fb-post" 
-                                    data-href="https://www.facebook.com/20531316728/posts/1168097345355215/"
-                                    data-width="100%"></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                <div
-                                    class="fb-post" 
-                                    data-href="https://www.facebook.com/20531316728/posts/1168066772024939/"
-                                    data-width="100%"></div>
-                            </div>                                    
-                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                <div
-                                    class="fb-post" 
-                                    data-href="https://www.facebook.com/20531316728/posts/1165439678954315/"
-                                    data-width="100%"></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                <div
-                                    class="fb-post" 
-                                    data-href="https://www.facebook.com/20531316728/posts/1049210387243912/"
-                                    data-width="100%"></div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 flex justify-center py-2 px-0">
-                                <div
-                                    class="fb-post" 
-                                    data-href="https://www.facebook.com/20531316728/posts/1047059660792318/"
                                     data-width="100%"></div>
                             </div> -->
                         </div>
@@ -837,7 +809,7 @@
         </div>
     </div> -->
 
-    <div id="mourning2" class="modal" tabindex="-1">
+    <!-- <div id="mourning2" class="modal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
             <div class="modal-header">
@@ -852,7 +824,7 @@
                 />
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End modal mourning -->
 </div>
 
@@ -979,8 +951,8 @@
         //$('#goToSite').modal('show');
 
         /** show modal mourning */
-        // $('#mourning1').modal('show');
-        $('#mourning2').modal('show');
+        $('#mourning1').modal('show');
+        // $('#mourning2').modal('show');
     });
 </script>
 @endsection
