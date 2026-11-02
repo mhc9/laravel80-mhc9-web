@@ -18,34 +18,18 @@
                             />
                         </div>
                     </div>
-                    <!-- 25th International Mental Health Conference -->
-                    <div class="swiper-slide">
-                        <div class="slide-wrapper">
-                            <img
-                                class="object-cover w-full h-auto"
-                                src="{{ asset('/img/S__132325432.jpg') }}"
-                                alt="image"
-                            />
-                        </div>
-                        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                            <a href="https://srithanya.go.th/24aimhc" target="_blank" class="btn btn-danger">
-                                ลงทะเบียนเข้าร่วมประชุม
-                                <i class="fas fa-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div>
                     <!-- นโยบายอธิบดี -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-auto"
-                                src="{{ asset('/img/20251014132831.jpg') }}"
+                                src="{{ asset('/img/dmh-policy70.jpg') }}"
                                 alt="image"
                             />
                         </div>
                     </div>
                     <!-- นโยบายปลัดฯ -->
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="slide-wrapper">
                             <img
                                 class="object-cover w-full h-auto"
@@ -53,17 +37,7 @@
                                 alt="image"
                             />
                         </div>
-                    </div>
-                    <!-- ศูนย์บริการให้การปรึกษา -->
-                    <div class="swiper-slide">
-                        <div class="slide-wrapper">
-                            <img
-                                class="object-cover w-full h-auto"
-                                src="{{ asset('/img/banner-02.png') }}"
-                                alt="image"
-                            />
-                        </div>
-                    </div>
+                    </div> -->
                     <!-- สุขภาพจิต.com -->
                     <div class="swiper-slide relative">
                         <div class="slide-wrapper">
@@ -80,6 +54,16 @@
                             </a>
                         </div>
                     </div>
+                    <!-- ศูนย์บริการให้การปรึกษา -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-auto"
+                                src="{{ asset('/img/banner-02.png') }}"
+                                alt="image"
+                            />
+                        </div>
+                    </div>
                     <!-- โครงการมายด์ -->
                     <div class="swiper-slide">
                         <div class="slide-wrapper">
@@ -94,6 +78,16 @@
                                 ดูรายละเอียด
                                 <i class="fas fa-chevron-right"></i>
                             </a>
+                        </div>
+                    </div>
+                    <!-- โครงการซีรีส์ เบนซ์ -->
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img
+                                class="object-cover w-full h-auto"
+                                src="{{ asset('/img/series__80330762.jpg') }}"
+                                alt="image"
+                            />
                         </div>
                     </div>
                 </div>
